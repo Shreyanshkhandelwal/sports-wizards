@@ -21,7 +21,7 @@ const HeroCarousel = () => {
     height: typeof window !== "undefined" ? window.innerHeight : 800,
   });
 
-  const [activeIndex, setActiveIndex] = useState(1);
+  const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
     const handleResize = () => {

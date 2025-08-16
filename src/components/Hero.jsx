@@ -3,7 +3,7 @@ import HeroCarousel from "./HeroCarousel";
 
 const Hero = () => {
   return (
-    <section className=" w-full min-h-[650px] md:min-h-[700px] lg:h-screen mx-auto overflow-hidden">
+    <section className=" relative w-full min-h-[650px] md:min-h-[700px] lg:h-screen lg:max-h-[900px] mx-auto overflow-hidden">
       <Header />
 
       <img
@@ -23,7 +23,7 @@ const Hero = () => {
         className="absolute inset-0 w-full h-full object-cover z-1 opacity-50"
       />
 
-      <div className="relative z-10 flex flex-col lg:hidden pt-16">
+      <div className="relative z-10 flex flex-col lg:hidden pt-16 w-full h-full">
         <div className="px-4 text-center z-50">
           <h1 className="text-4xl md:text-5xl font-black text-white uppercase tracking-wide">
             <span className="bg-gradient-to-b from-teal-300 to-green-500 bg-clip-text text-transparent">
