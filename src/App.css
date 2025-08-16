@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+
+@theme {
+  --color-accent: #00FF01;
+  --color-bg: #0B0B0B;
+  --color-bg-secondary: #161616;
+  --color-bg-foreground: #F2F2F2;
+  --color-bg-foreground-secondary: #B0B0B0;
+  --color-misc: #2C2C2C;
+}
+
+
+
+body {
+  @apply bg-bg text-bg-foreground;
+}
+
+
+/* CAROUSEL STYLES */
+.mySwiper {
+  overflow: hidden !important;
+}
+
+.hero-carousel {
+  padding: 25px 0;
+  overflow: visible !important;
+}
+
+.hero-carousel .swiper-slide {
+  width: 65%;
+  transition: transform 0.4s ease-in-out, filter 0.4s ease-in-out;
+  filter: brightness(0.5);
+  border: 3px solid transparent;
+  border-radius: 1.25rem;
+}
+
+.hero-carousel .swiper-slide-active {
+  transform: scale(1.05);
+  filter: brightness(1);
+}
+
+.hero-carousel .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/* Gradient Border */
+.gradient-border-b::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to right, transparent 0%, #00ff00 20%, #00ff00 80%, transparent 100%);
+}
+
+
+.gradient-border-r::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent 0%, #00ff00 20%, #00ff00 80%, transparent 100%);
+}

@@ -1,0 +1,208 @@
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Autoplay, EffectCoverflow } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/effect-coverflow";
+
+const projects = [
+  {
+    id: 1,
+    title: "BASKET BALL COURTVILLA",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
+    imageUrl: "/bb-court.jpg",
+  },
+  {
+    id: 2,
+    title: "THE CRICKET PITCH",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
+    imageUrl: "/cricket-court.png",
+  },
+  {
+    id: 3,
+    title: "COMMUNITY SOCCER FIELD",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
+    imageUrl: "/soccer-field.png",
+  },
+  {
+    id: 4,
+    title: "INDOOR BADMINTON HALL",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
+    imageUrl: "/badminton-court.png",
+  },
+  {
+    id: 5,
+    title: "THE CRICKET PITCH",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
+    imageUrl: "/cricket-court.png",
+  },
+];
+
+const ProjectCard = ({ imageUrl, title, description }) => (
+  <div className="relative w-full h-full overflow-hidden group">
+    <img
+      src={imageUrl}
+      alt={title}
+      className="w-[90vw] h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
+    />
+    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+    <div className="absolute bottom-0 left-0 p-4 md:p-6 text-white">
+      <h3 className="text-lg md:text-xl font-bold uppercase tracking-wide">
+        {title}
+      </h3>
+      <p className="mt-2 text-xs md:text-sm text-gray-300 max-w-md leading-relaxed">
+        {description}
+      </p>
+    </div>
+  </div>
+);
+
+export default function FeaturedProjects() {
+  return (
+    <>
+      <style>{`
+        .featured-projects-swiper .swiper-pagination-bullet {
+          background-color: #ffffff;
+          opacity: 0.5;
+          width: 8px;
+          height: 8px;
+          transition: all 0.3s ease;
+        }
+        .featured-projects-swiper .swiper-pagination-bullet-active {
+          background-color: #65F455;
+          opacity: 1;
+          transform: scale(1.25);
+        }
+        .featured-projects-swiper .swiper-slide {
+          transition: opacity 0.3s ease-in-out;
+        }
+        .featured-projects-swiper .swiper-slide:not(.swiper-slide-active) {
+          opacity: 0.6;
+        }
+        .featured-projects-swiper .swiper-pagination {
+          position: relative;
+          bottom: auto;
+          margin-top: 2rem;
+        }
+        @media (min-width: 768px) {
+          .featured-projects-swiper .swiper-slide-active {
+            opacity: 1;
+          }
+        }
+      `}</style>
+
+      <div className="overflow-hidden">
+        <div className="hidden lg:block py-16">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="flex justify-between items-center mb-16">
+              <div className="flex-1">
+                <div className="mb-4 flex items-center justify-center">
+                  <h1 className="bg-gradient-to-r from-teal-300 to-green-500 bg-clip-text text-transparent text-center text-base font-bold uppercase tracking-widest mb-6 underline underline-offset-8 decoration-green-500">
+                    Featured Projects
+                  </h1>
+                </div>
+                <h1 className="text-4xl xl:text-5xl font-bold text-white leading-tight">
+                  SHOWCASING OUR SIGNATURE
+                  <br />
+                  <span className="bg-gradient-to-b from-teal-300 to-green-500 bg-clip-text text-transparent">
+                    CREATIONS
+                  </span>{" "}
+                  ACROSS COMMUNITIES.
+                </h1>
+              </div>
+              <button className="bg-gradient-to-r from-teal-300 via-green-400 to-green-500 font-bold text-sm md:text-base py-2 px-5 md:py-3 md:px-6 rounded-full transition-transform hover:scale-105 text-black">
+                Build my Court
+              </button>
+            </div>
+          </div>
+
+          <div className="w-full">
+            <Swiper
+              className="featured-projects-swiper"
+              modules={[Pagination, Autoplay, EffectCoverflow]}
+              effect="coverflow"
+              grabCursor={true}
+              centeredSlides={true}
+              loop={true}
+              autoplay={{
+                delay: 3500,
+                disableOnInteraction: false,
+              }}
+              pagination={{ clickable: true }}
+              coverflowEffect={{
+                rotate: 0,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                scale: 0.9,
+                slideShadows: false,
+              }}
+              slidesPerView={1.5}
+              spaceBetween={50}
+            >
+              {projects.map((project) => (
+                <SwiperSlide key={project.id} className="!h-auto">
+                  <div className="h-[60vh]">
+                    <ProjectCard {...project} />
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
+        </div>
+
+        <div className="block lg:hidden py-12">
+          <div className="px-4">
+            <div className="text-center mb-8">
+              <div className="inline-block mb-4">
+                <h1 className="bg-gradient-to-r from-teal-300 to-green-500 bg-clip-text text-transparent text-center text-base font-bold uppercase tracking-widest mb-6 underline underline-offset-8 decoration-green-500">
+                  Featured Projects
+                </h1>
+              </div>
+              <h1 className="text-2xl sm:text-3xl font-bold text-white leading-tight mb-6">
+                SHOWCASING OUR SIGNATURE
+                <br />
+                <span className="bg-gradient-to-b from-teal-300 to-green-500 bg-clip-text text-transparent">
+                  CREATIONS
+                </span>{" "}
+                ACROSS COMMUNITIES.
+              </h1>
+              <button className="bg-gradient-to-r from-teal-300 via-green-400 to-green-500 font-bold text-sm md:text-base py-2 px-5 md:py-3 md:px-6 rounded-full transition-transform hover:scale-105 text-black">
+                Build my Court
+              </button>
+            </div>
+
+            <div className="w-full mt-12">
+              <Swiper
+                className="featured-projects-swiper"
+                modules={[Pagination, Autoplay]}
+                grabCursor={true}
+                centeredSlides={true}
+                loop={true}
+                autoplay={{
+                  delay: 3500,
+                  disableOnInteraction: false,
+                }}
+                pagination={{ clickable: true }}
+                slidesPerView={1}
+                spaceBetween={20}
+              >
+                {projects.map((project) => (
+                  <SwiperSlide key={project.id} className="!h-auto">
+                    <div className="aspect-video max-w-[90vw] mx-auto">
+                      <ProjectCard {...project} />
+                    </div>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
