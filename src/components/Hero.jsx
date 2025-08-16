@@ -3,8 +3,9 @@ import HeroCarousel from "./HeroCarousel";
 
 const Hero = () => {
   return (
-    <section className="relative w-full min-h-[650px] md:min-h-[700px] lg:h-screen mx-auto overflow-hidden">
+    <section className=" w-full min-h-[650px] md:min-h-[700px] lg:h-screen mx-auto overflow-hidden">
       <Header />
+
       <img
         src="/bg-1.png"
         alt="Background 1"
@@ -98,17 +99,17 @@ const Hero = () => {
             <img
               src="/p1.png"
               alt="player 1"
-              className="absolute bottom-0 left-[35%] -translate-x-1/2 w-[55%] h-auto max-w-none z-10 transform -scale-x-100"
+              className="absolute bottom-0 left-[35%] -translate-x-1/2 w-[55%] h-[100%] max-w-none z-10 transform -scale-x-100"
             />
             <img
               src="/p2.png"
               alt="player 2"
-              className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[50%] h-auto max-w-none z-20"
+              className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[50%] h-[100%] max-w-none z-20"
             />
             <img
               src="/p3.png"
               alt="player 3"
-              className="absolute bottom-0 left-[70%] -translate-x-1/2 w-[60%] h-auto max-w-none z-10"
+              className="absolute bottom-0 left-[70%] -translate-x-1/2 w-[60%] h-[100%] max-w-none z-10"
             />
           </div>
         </div>
