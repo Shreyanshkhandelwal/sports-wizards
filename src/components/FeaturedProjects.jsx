@@ -101,7 +101,10 @@ export default function FeaturedProjects() {
             <div className="flex justify-between items-center mb-16">
               <div className="flex-1">
                 <div className="mb-4 flex items-center justify-center">
-                  <h1 className="bg-gradient-to-r from-teal-300 to-green-500 bg-clip-text text-transparent text-center text-base font-bold uppercase tracking-widest mb-6 underline underline-offset-8 decoration-green-500">
+                  <h1
+                    style={{ fontSize: "24px" }}
+                    className="bg-gradient-to-r from-teal-300 to-green-500 bg-clip-text text-transparent text-center text-base font-bold uppercase tracking-widest mb-6 underline underline-offset-8 decoration-green-500"
+                  >
                     Featured Projects
                   </h1>
                 </div>
