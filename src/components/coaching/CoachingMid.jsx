@@ -1,14 +1,16 @@
 import React from "react";
 import {
-  Check,
-  Users,
-  Trophy,
-  Target,
-  BookOpen,
-  Zap,
-  Download,
-} from "lucide-react";
-import { Dumbbell, Building2, Globe, Goal, Megaphone } from "lucide-react";
+  FaCheck,
+  FaUsers,
+  FaTrophy,
+  FaBullseye,
+  FaBook,
+  FaBolt,
+  FaDownload,
+  FaBuilding,
+  FaGlobe,
+} from "react-icons/fa";
+import { IoMdMegaphone } from "react-icons/io";
 
 const CoachingMid = () => {
   return (
@@ -43,23 +45,25 @@ const CoachingMid = () => {
             <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
               {[
                 {
-                  icon: <Dumbbell className="text-accent w-10 h-10 mb-3" />,
+                  icon: <CgGym className="text-accent w-10 h-10 mb-3" />,
                   title: "Clubs & Gymkhanas",
                 },
                 {
-                  icon: <Building2 className="text-accent w-10 h-10 mb-3" />,
+                  icon: <FaBuilding className="text-accent w-10 h-10 mb-3" />,
                   title: "Residential Societies",
                 },
                 {
-                  icon: <Globe className="text-accent w-10 h-10 mb-3" />,
+                  icon: <FaGlobe className="text-accent w-10 h-10 mb-3" />,
                   title: "Sports Associations",
                 },
                 {
-                  icon: <Goal className="text-accent w-10 h-10 mb-3" />,
+                  icon: <FaGlobe className="text-accent w-10 h-10 mb-3" />,
                   title: "Court & Turf Owners",
                 },
                 {
-                  icon: <Megaphone className="text-accent w-10 h-10 mb-3" />,
+                  icon: (
+                    <IoMdMegaphone className="text-accent w-10 h-10 mb-3" />
+                  ),
                   title: "Brand-Led Campaigns",
                 },
               ].map((service, index) => (
@@ -157,22 +161,25 @@ const CoachingMid = () => {
                 <div className="space-y-3">
                   {[
                     {
-                      icon: Users,
+                      icon: FaUsers,
                       text: "5 sports coached by certified professionals",
                     },
                     {
-                      icon: Target,
+                      icon: FaBullseye,
                       text: "Equipment + Curriculum + On-site team",
                     },
                     {
-                      icon: Trophy,
+                      icon: FaTrophy,
                       text: "A revenue earning stream for the School",
                     },
                     {
-                      icon: BookOpen,
+                      icon: FaBook,
                       text: "Monthly engagement session with parents (tournaments or camps)",
                     },
-                    { icon: Zap, text: "No overheads for school management" },
+                    {
+                      icon: FaBolt,
+                      text: "No overheads for school management",
+                    },
                   ].map((item, index) => (
                     <div
                       key={index}
@@ -187,7 +194,7 @@ const CoachingMid = () => {
               </div>
 
               <button className="bg-gradient-to-r from-green-400 to-green-600 hover:from-green-500 hover:to-green-700 text-black font-bold py-3 px-6 rounded-full text-sm shadow-lg hover:shadow-green-500/25 hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300 flex items-center content-center gap-2">
-                <Download /> Download Program Deck
+                <FaDownload /> Download Program Deck
               </button>
             </div>
 

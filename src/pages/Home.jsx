@@ -8,11 +8,13 @@ import TestimonialsSection from "../components/utils/TestimonialsSection";
 import WhoAreWe from "../components/WhoAreWe";
 import HeroCarousel from "../components/HeroCarousel";
 import CursorTrail from "../components/utils/CursorTrail";
+import RibbonTrail from "../components/utils/NeonCursor";
+import NeonCursor from "../components/utils/NeonCursor";
 
 const Home = () => {
   return (
     <>
-      <CursorTrail />
+      <NeonCursor />
       <main className="w-full overflow-x-hidden">
         <HeroCarousel />
         <div className="relative z-50 -mt-5 sm:mt-2">

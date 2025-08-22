@@ -1,5 +1,5 @@
 // import { useState } from "react";
-// import { MapPin, Phone, Mail } from "lucide-react";
+// import { MapPin, Phone, Mail } from "react-icons";
 
 // const ContactForm = () => {
 //   const [formData, setFormData] = useState({
@@ -213,7 +213,11 @@
 // export default ContactForm;
 
 import { useState } from "react";
-import { MapPin, Phone, Mail, X, CheckCircle } from "lucide-react";
+// import { MapPin, Phone, Mail, X } from "react-icons";
+import { MdLocationOn, MdEmail } from "react-icons/md";
+import { FaPhone } from "react-icons/fa";
+import { IoClose } from "react-icons/io5";
+import { CiCircleCheck } from "react-icons/ci";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -455,21 +459,21 @@ const ContactForm = () => {
 
             <div className="space-y-4">
               <div className="flex items-start space-x-4">
-                <MapPin className="w-6 h-6 flex-shrink-0 mt-0.5" />
+                <MdLocationOn className="w-6 h-6 flex-shrink-0 mt-0.5" />
                 <span className="font-semibold text-lg">
                   Mumbai | Pan-India Projects
                 </span>
               </div>
 
               <div className="flex items-start space-x-4">
-                <Phone className="w-6 h-6 flex-shrink-0 mt-0.5" />
+                <FaPhone className="w-6 h-6 flex-shrink-0 mt-0.5" />
                 <span className="font-semibold text-lg">
                   +91 8655819716 | +91 8779706509
                 </span>
               </div>
 
               <div className="flex items-start space-x-4">
-                <Mail className="w-6 h-6 flex-shrink-0 mt-0.5" />
+                <MdEmail className="w-6 h-6 flex-shrink-0 mt-0.5" />
                 <span className="font-semibold text-lg">
                   connect@sportswizards.in
                 </span>
@@ -645,7 +649,7 @@ const ContactForm = () => {
         <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center p-4 z-50">
           <div className="bg-[#161616] rounded-2xl p-8 max-w-sm w-full text-center border border-[#2C2C2C]">
             <div className="mb-6">
-              <CheckCircle className="w-16 h-16 text-[#00FF01] mx-auto mb-4" />
+              <CiCircleCheck className="w-16 h-16 text-[#00FF01] mx-auto mb-4" />
               <h3 className="text-2xl font-bold text-[#F2F2F2] mb-2">
                 Success!
               </h3>
