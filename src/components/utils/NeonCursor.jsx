@@ -443,7 +443,7 @@ const NeonCursor = ({
       animationFrameRef.current = requestAnimationFrame(loop);
     };
 
-    targetElement.addEventListener("mousemove", onMouseMove);
+    targetElement.addEventListener("pointermove", onMouseMove);
     window.addEventListener("resize", onWindowResize);
     loop();
 
@@ -454,7 +454,7 @@ const NeonCursor = ({
       if (animationFrameRef.current) {
         cancelAnimationFrame(animationFrameRef.current);
       }
-      targetElement.removeEventListener("mousemove", onMouseMove);
+      targetElement.removeEventListener("pointermove", onMouseMove);
       window.removeEventListener("resize", onWindowResize);
     };
   }, [element, length, size, trailSpeed, blur, baseColor, numThreads]);
