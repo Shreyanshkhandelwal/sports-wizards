@@ -53,7 +53,7 @@ const Story = () => {
             style={{ fontSize: "24px" }}
             className="bg-gradient-to-r from-teal-300 to-green-500 bg-clip-text text-transparent text-center text-base font-bold uppercase tracking-widest mb-6 underline underline-offset-8 decoration-green-500"
           >
-            What Sets Us Apart
+            Our Vision & Mission
           </h1>
 
           <div className="flex flex-col md:flex-row items-center justify-center gap-8 lg:gap-10 text-center mt-16">
@@ -96,7 +96,7 @@ const Story = () => {
             style={{ fontSize: "24px" }}
             className="bg-gradient-to-r from-teal-300 to-green-500 bg-clip-text text-transparent text-center text-base font-bold uppercase tracking-widest mb-6 underline underline-offset-8 decoration-green-500"
           >
-            Our Vision & Mission
+            What Sets Us Apart
           </h1>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-16 px-4">
