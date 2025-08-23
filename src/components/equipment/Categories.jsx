@@ -82,113 +82,92 @@ const Categories = () => {
             Available for Bulk Orders
           </h1>
         </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 text-white">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-            {/* Left Side - Team Apparel */}
-            <div className="space-y-8">
-              {/* Product Image Card */}
-              <div className="relative bg-black rounded-2xl overflow-hidden ">
-                <div className="p-8 flex items-center justify-center min-h-96">
-                  {/* Training Equipment Display */}
-                  <div className="relative w-full max-w-sm">
-                    <img
-                      src="/order1.png"
-                      alt="Training equipment kit with cones, hurdles, and agility tools"
-                      className="w-full h-auto object-cover rounded-lg shadow-xl"
-                    />
-                  </div>
-                </div>
 
-                {/* Customizable Badge */}
-                <div className="absolute bottom-4 right-4">
-                  <span className="bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-semibold text-gray-800 shadow-lg">
-                    Customizable
-                  </span>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 text-white space-y-20">
+          {/* Row 1 - Image left, Text right */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Left Image */}
+            <div className="relative bg-black rounded-2xl overflow-hidden">
+              <div className="p-8 flex items-center justify-center min-h-96">
+                <div className="relative w-full max-w-sm">
+                  <img
+                    src="/order1.png"
+                    alt="Custom team jerseys and bibs"
+                    className="w-full h-auto object-cover rounded-lg shadow-xl"
+                  />
                 </div>
               </div>
-
-              {/* Left Content */}
-              <div className="space-y-6">
-                <p className="text-white text-lg leading-relaxed">
-                  Custom team apparel & training bibs available in multiple
-                  colors, sizes, and branding options.
-                </p>
-
-                <div className="space-y-3">
-                  <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-white rounded-full"></div>
-                    <span className="text-white text-base">Jerseys</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-white rounded-full"></div>
-                    <span className="text-white text-base">Bibs</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-white rounded-full"></div>
-                    <span className="text-white text-base">Tracksuits</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-white rounded-full"></div>
-                    <span className="text-white text-base">
-                      Custom Printing
-                    </span>
-                  </div>
-                </div>
-
-                <button className="bg-gradient-to-r from-green-400 to-green-600 hover:from-green-500 hover:to-green-700 text-black font-bold py-3 px-8 rounded-full text-lg shadow-lg hover:shadow-green-500/25 hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300">
-                  Get Quote
-                </button>
+              <div className="absolute bottom-4 right-4">
+                <span className="bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-semibold text-gray-800 shadow-lg">
+                  Customizable
+                </span>
               </div>
             </div>
 
-            {/* Right Side - Training Equipment */}
-            <div className="space-y-8">
-              {/* Training Equipment Content */}
-              <div className="space-y-6">
-                <p className="text-white text-lg leading-relaxed">
-                  Essential training aids - from cones & hurdles to timers &
-                  agility ladders - for any sport.
-                </p>
+            {/* Right Text */}
+            <div className="space-y-6">
+              <h2 className="text-xl font-bold uppercase">
+                Team Jerseys & Bibs
+              </h2>
+              <p className="text-white text-lg leading-relaxed">
+                Custom team apparel & training bibs available in multiple
+                colors, sizes, and branding options.
+              </p>
+              <ul className="space-y-3">
+                {["Jerseys", "Bibs", "Tracksuits", "Custom Printing"].map(
+                  (item) => (
+                    <li key={item} className="flex items-center space-x-3">
+                      <div className="w-2 h-2 bg-white rounded-full"></div>
+                      <span className="text-white text-base">{item}</span>
+                    </li>
+                  )
+                )}
+              </ul>
+              <button className="bg-gradient-to-r from-teal-300 via-green-400 to-green-500 hover:from-green-500 hover:to-green-700 text-black font-bold py-3 px-8 rounded-full text-lg shadow-lg hover:shadow-green-500/25 hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300">
+                Get Quote
+              </button>
+            </div>
+          </div>
 
-                <div className="space-y-3 ">
-                  <div className="flex items-center space-x-3">
+          {/* Row 2 - Text left, Image right */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Left Text */}
+            <div className="space-y-6">
+              <h2 className="text-xl font-bold uppercase">
+                Recreational Equipment
+              </h2>
+              <p className="text-white text-lg leading-relaxed">
+                Essential training aids — from cones & hurdles to timers &
+                agility ladders — for any sport.
+              </p>
+              <ul className="space-y-3">
+                {[
+                  "Cones",
+                  "Hurdles",
+                  "Agility Kits",
+                  "Stopwatches",
+                  "& more",
+                ].map((item) => (
+                  <li key={item} className="flex items-center space-x-3">
                     <div className="w-2 h-2 bg-white rounded-full"></div>
-                    <span className="text-white text-base">Cones</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-white rounded-full"></div>
-                    <span className="text-white text-base">Hurdles</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-white rounded-full"></div>
-                    <span className="text-white text-base">Agility Kits</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-white rounded-full"></div>
-                    <span className="text-white text-base">Stopwatches</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-white rounded-full"></div>
-                    <span className="text-white text-base">& more</span>
-                  </div>
-                </div>
+                    <span className="text-white text-base">{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <button className="bg-gradient-to-r from-teal-300 via-green-400 to-green-500 hover:from-green-500 hover:to-green-700 text-black font-bold py-3 px-8 rounded-full text-lg shadow-lg hover:shadow-green-500/25 hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300">
+                Get Quote
+              </button>
+            </div>
 
-                <button className="bg-gradient-to-r from-green-400 to-green-600 hover:from-green-500 hover:to-green-700 text-black font-bold py-3 px-8 rounded-full text-lg shadow-lg hover:shadow-green-500/25 hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300">
-                  Get Quote
-                </button>
-              </div>
-
-              {/* Product Image Card */}
-              <div className="relative bg-black rounded-2xl overflow-hidden ">
-                <div className="p-8 flex items-center justify-center min-h-96">
-                  {/* Training Equipment Display */}
-                  <div className="relative w-full max-w-sm">
-                    <img
-                      src="/order2.png"
-                      alt="Training equipment kit with cones, hurdles, and agility tools"
-                      className="w-full h-auto object-cover rounded-lg shadow-xl"
-                    />
-                  </div>
+            {/* Right Image */}
+            <div className="relative bg-black rounded-2xl overflow-hidden">
+              <div className="p-8 flex items-center justify-center min-h-96">
+                <div className="relative w-full max-w-sm">
+                  <img
+                    src="/order2.png"
+                    alt="Training equipment kit with cones, hurdles, and agility tools"
+                    className="w-full h-auto object-cover rounded-lg shadow-xl"
+                  />
                 </div>
               </div>
             </div>
