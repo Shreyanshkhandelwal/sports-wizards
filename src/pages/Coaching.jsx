@@ -5,12 +5,12 @@ import Footer from "../components/utils/Footer";
 import TestimonialsSection from "../components/utils/TestimonialsSection";
 import CTAReuse from "../components/utils/CTAReuse";
 import CoachingMid from "../components/coaching/CoachingMid";
-import CursorTrail from "../components/utils/CursorTrail";
+import NeonCursor from "../components/utils/NeonCursor";
 
 const Coaching = () => {
   return (
     <>
-      <CursorTrail />
+      <NeonCursor />
       <main className="w-full overflow-x-hidden">
         <ReuseHero
           heading="Playground to Podium: Coaching That Builds Character"
@@ -25,10 +25,11 @@ const Coaching = () => {
         <CoachingMid />
         <TestimonialsSection />
         <CTAReuse
-          heading="Let’s build your next play zone together."
-          accentWord="play zone"
-          paragraph="Curious how we can transform play for your school, turf, or workplace?"
-          primaryButtonText="Build my court now"
+          heading="Sport isn’t extra. It’s essential"
+          accentWord="essential"
+          paragraph="“Partner with Sports Wizards to build a culture of play on campus.”"
+          primaryButtonText="Talk To A Program Advisor"
+          secondaryButtonText="Schedule Campus Walkthrough"
         />
         <Footer />
       </main>

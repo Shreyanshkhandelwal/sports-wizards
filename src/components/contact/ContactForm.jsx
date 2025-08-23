@@ -500,7 +500,7 @@ const ContactForm = () => {
                 onClick={closeModal}
                 className="text-[#B0B0B0] hover:text-[#F2F2F2] transition-colors"
               >
-                <X className="w-6 h-6" />
+                <IoClose className="w-6 h-6" />
               </button>
             </div>
 

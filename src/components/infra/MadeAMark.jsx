@@ -61,7 +61,7 @@ const ProjectCard = ({ imageUrl, title, description }) => (
   </div>
 );
 
-export default function FeaturedProjects() {
+export default function MadeAMark() {
   return (
     <>
       <style>{`
@@ -105,21 +105,8 @@ export default function FeaturedProjects() {
                     style={{ fontSize: "24px" }}
                     className="bg-gradient-to-r from-teal-300 to-green-500 bg-clip-text text-transparent text-center text-base font-bold uppercase tracking-widest mb-6 underline underline-offset-8 decoration-green-500"
                   >
-                    Featured Projects
+                    Where We’ve Made a Mark
                   </h1>
-                </div>
-                <div className="flex items-center justify-between">
-                  <h1 className="text-4xl xl:text-5xl font-bold text-white leading-tight">
-                    SHOWCASING OUR SIGNATURE
-                    <br />
-                    <span className="bg-gradient-to-b from-teal-300 to-green-500 bg-clip-text text-transparent">
-                      CREATIONS
-                    </span>{" "}
-                    ACROSS COMMUNITIES.
-                  </h1>
-                  <button className="bg-gradient-to-r from-teal-300 via-green-400 to-green-500 font-bold text-sm md:text-base py-2 px-5 md:py-3 md:px-6 rounded-full transition-transform hover:scale-105 text-black">
-                    Build my Court
-                  </button>
                 </div>
               </div>
             </div>

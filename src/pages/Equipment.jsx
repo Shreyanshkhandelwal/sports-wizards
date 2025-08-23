@@ -3,12 +3,12 @@ import ReuseHero from "../components/utils/ReuseHero";
 import LogoRibbon from "../components/LogoRibbon";
 import Footer from "../components/utils/Footer";
 import Categories from "../components/equipment/Categories";
-import CursorTrail from "../components/utils/CursorTrail";
+import NeonCursor from "../components/utils/NeonCursor";
 
 const Equipment = () => {
   return (
     <>
-    <CursorTrail />
+      <NeonCursor />
       <main className="w-full overflow-x-hidden">
         <ReuseHero
           heading="Play Starts with The Right Gear"

@@ -11,6 +11,7 @@ import {
   FaGlobe,
 } from "react-icons/fa";
 import { IoMdMegaphone } from "react-icons/io";
+import { CgGym } from "react-icons/cg";
 
 const CoachingMid = () => {
   return (

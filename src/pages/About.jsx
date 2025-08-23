@@ -3,12 +3,12 @@ import LogoRibbon from "../components/LogoRibbon";
 import Story from "../components/about/Story";
 import Footer from "../components/utils/Footer";
 import CTAReuse from "../components/utils/CTAReuse";
-import CursorTrail from "../components/utils/CursorTrail";
+import NeonCursor from "../components/utils/NeonCursor";
 
 const About = () => {
   return (
     <>
-      <CursorTrail />
+      <NeonCursor />
       <main className="w-full overflow-x-hidden">
         <ReuseHero
           heading="More than a brand. A movement in the making"
