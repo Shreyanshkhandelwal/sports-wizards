@@ -101,9 +101,12 @@ const EventsMid = () => {
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              <span className="text-accent">WHAT WE</span> OFFER
-            </h2>
+            <h1
+              style={{ fontSize: "24px" }}
+              className="bg-gradient-to-r from-teal-300 to-green-500 bg-clip-text text-transparent text-center text-base font-bold uppercase tracking-widest mb-6 underline underline-offset-8 decoration-green-500"
+            >
+              What we offer
+            </h1>
           </div>
 
           {/* Activities List */}
@@ -167,47 +170,59 @@ const EventsMid = () => {
                 formats, infra, referees, emcees, branding, and
                 experiences—end-to-end.
               </h1>
-              <button className="bg-accent text-black px-6 py-2 rounded-full font-semibold hover:bg-opacity-90 transition-all duration-300 mt-20 ">
+              <button className="bg-gradient-to-r from-[#26FEB2]  to-[#46FD3E] text-black px-6 py-2 rounded-full font-bold mt-20 ">
                 Plan my event
               </button>
+              {/* <button className="bg-gradient-to-r from-[#26FEB2]  to-[#46FD3E] font-bold text-sm md:text-base py-2 px-6 md:py-3 md:px-8 rounded-full transition-transform hover:scale-105 text-bg">
+                {primaryButtonText}
+              </button> */}
             </div>
 
-            {/* Right Side - Image */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {[
-                {
-                  icon: (
-                    <PiCourtBasketballFill className="text-accent w-14 h-14" />
-                  ),
-                  title: "Infra setup (courts, nets, lights).",
-                },
-                {
-                  icon: <IoMdMic className="text-accent w-14 h-14" />,
-                  title: "Event Curation & Hosting.",
-                },
-                {
-                  icon: <GiWhistle className="text-accent w-14 h-14" />,
-                  title: "Certified Referees & Coaches.",
-                },
-                {
-                  icon: <IoMdMegaphone className="text-accent w-14 h-14" />,
-                  title: "Branding, Trophies & Media.",
-                },
-                {
-                  icon: <HiDocument className="text-accent w-14 h-14" />,
-                  title: "Registration & Scoring System.",
-                },
-              ].map((service, index) => (
-                <div
-                  key={index}
-                  className="rounded-2xl p-6 flex flex-col items-center text-center bg-gradient-to-br from-[rgba(75,75,75,0.25)] to-[rgba(75,75,75,0.15)] shadow-md hover:shadow-lg hover:scale-105 transition-transform duration-300"
-                >
-                  <div className="mb-4">{service.icon}</div>
-                  <h3 className="text-white font-semibold text-base md:text-lg leading-snug">
-                    {service.title}
-                  </h3>
-                </div>
-              ))}
+            <div className="flex flex-col">
+              <h1
+                style={{ fontSize: "24px" }}
+                className="text-accent text-base font-bold uppercase tracking-widest mb-6  underline-offset-8 decoration-green-500"
+              >
+                Services Included:
+              </h1>
+
+              {/* Right Side - Image */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                {[
+                  {
+                    icon: (
+                      <PiCourtBasketballFill className="text-accent w-14 h-14" />
+                    ),
+                    title: "Infra setup (courts, nets, lights).",
+                  },
+                  {
+                    icon: <IoMdMic className="text-accent w-14 h-14" />,
+                    title: "Event Curation & Hosting.",
+                  },
+                  {
+                    icon: <GiWhistle className="text-accent w-14 h-14" />,
+                    title: "Certified Referees & Coaches.",
+                  },
+                  {
+                    icon: <IoMdMegaphone className="text-accent w-14 h-14" />,
+                    title: "Branding, Trophies & Media.",
+                  },
+                  {
+                    icon: <HiDocument className="text-accent w-14 h-14" />,
+                    title: "Registration & Scoring System.",
+                  },
+                ].map((service, index) => (
+                  <div
+                    key={index}
+                    className="rounded-2xl p-6 flex flex-col items-center text-center bg-gradient-to-br from-[rgba(75,75,75,0.25)] to-[rgba(75,75,75,0.15)] shadow-md hover:shadow-lg hover:scale-105 transition-transform duration-300"
+                  >
+                    <div className="mb-4">{service.icon}</div>
+                    <h3 className="text-white font-semibold text-base md:text-lg leading-snug">
+                      {service.title}
+                    </h3>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -254,7 +269,7 @@ const EventsMid = () => {
 
               {/* CTA Buttons */}
               <div className="flex flex-col lg:flex-row gap-6">
-                <button className="bg-gradient-to-r from-green-400 to-green-600 hover:from-green-500 hover:to-green-700 text-black font-bold py-3 px-6 rounded-full text-sm shadow-lg hover:shadow-green-500/25 hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-2 max-w-[250px]">
+                <button className="bg-gradient-to-r from-[#26FEB2]  to-[#46FD3E] text-black font-bold py-3 px-6 rounded-full text-sm shadow-lg hover:shadow-green-500/25 hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-2 max-w-[250px]">
                   <FaDownload /> Download Program Deck
                 </button>
                 <button className="bg-white text-black font-bold py-3 px-6 rounded-full text-sm shadow-lg hover:shadow-green-500/25 hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-2 max-w-[150px]">
@@ -277,23 +292,22 @@ const EventsMid = () => {
 
           {/* Track Record Section */}
           <div className="text-center mb-12">
-            <h3 className="text-2xl font-bold mb-4 text-accent">
+            <h1
+              style={{ fontSize: "24px" }}
+              className="bg-gradient-to-r from-teal-300 to-green-500 bg-clip-text text-transparent text-center text-base font-bold uppercase tracking-widest mb-6 underline underline-offset-8 decoration-green-500"
+            >
               OUR TRACK RECORD
-            </h3>
+            </h1>
           </div>
 
           {/* Testimonials Slider */}
-          <div className="relative">
+          <div className="">
             <Swiper
               modules={[Navigation, Pagination, Autoplay]}
               spaceBetween={30}
               slidesPerView={1}
               navigation
               pagination={{ clickable: true }}
-              autoplay={{
-                delay: 5000,
-                disableOnInteraction: false,
-              }}
               breakpoints={{
                 640: {
                   slidesPerView: 2,
@@ -302,7 +316,6 @@ const EventsMid = () => {
                   slidesPerView: 3,
                 },
               }}
-              className="pb-12"
             >
               {testimonials.map((testimonial) => (
                 <SwiperSlide key={testimonial.id}>
@@ -335,7 +348,7 @@ const EventsMid = () => {
           </div>
 
           <div className="text-center mt-8">
-            <button className="bg-accent text-black px-8 py-3 rounded-full font-semibold hover:bg-opacity-90 transition-all duration-300">
+            <button className="bg-gradient-to-r from-[#26FEB2]  to-[#46FD3E] text-black px-8 py-3 rounded-full font-semibold ">
               See Our Work
             </button>
           </div>

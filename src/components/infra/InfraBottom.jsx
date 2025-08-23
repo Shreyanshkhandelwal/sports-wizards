@@ -33,14 +33,17 @@ export default function InfraBottom() {
   return (
     <section
       className="py-16 px-4 sm:px-6 lg:px-8 bg-bg text-bg-foreground"
-      style={{ background: "rgba(255, 255, 255, 0.09)" }}
+      // style={{ background: "rgba(255, 255, 255, 0.09)" }}
     >
       <div className="max-w-7xl mx-auto">
         {/* HOW WE WORK */}
         <div className="text-center mb-16">
-          <h2 className="text-2xl font-bold text-accent uppercase tracking-wide">
+          <h1
+            style={{ fontSize: "24px" }}
+            className="bg-gradient-to-r from-teal-300 to-green-500 bg-clip-text text-transparent text-center text-base font-bold uppercase tracking-widest mb-6 underline underline-offset-8 decoration-green-500"
+          >
             How We Work
-          </h2>
+          </h1>
 
           {/* Desktop layout */}
           <div className="hidden lg:flex items-center justify-between mt-12">
@@ -48,7 +51,7 @@ export default function InfraBottom() {
               <div key={idx} className="flex items-center">
                 {/* Card */}
                 <div className="flex flex-col items-center text-center p-6 rounded-2xl">
-                  <div className="mb-4 bg-accent p-2 rounded-lg">
+                  <div className="mb-4 bg-gradient-to-b from-teal-300 via-green-400 to-green-500 p-2 rounded-lg">
                     {item.icon}
                   </div>
                   <h3 className="text-lg font-semibold">{item.title}</h3>
@@ -75,7 +78,7 @@ export default function InfraBottom() {
               <div key={idx} className="flex flex-col items-center">
                 {/* Card */}
                 <div className="flex flex-col items-center text-center p-6 rounded-2xl">
-                  <div className="mb-4 bg-accent p-2 rounded-lg">
+                  <div className="bg-gradient-to-r from-teal-300 via-green-400 to-green-500 p-2 rounded-lg mb-4">
                     {item.icon}
                   </div>
                   <h3 className="text-lg font-semibold">{item.title}</h3>
@@ -99,9 +102,12 @@ export default function InfraBottom() {
 
         {/* WHY CHOOSE SPORTS WIZARDS */}
         <div className="text-center">
-          <h2 className="text-2xl font-bold text-accent uppercase tracking-wide mb-12">
+          <h1
+            style={{ fontSize: "24px" }}
+            className="bg-gradient-to-r from-teal-300 to-green-500 bg-clip-text text-transparent text-center text-base font-bold uppercase tracking-widest mb-6 underline underline-offset-8 decoration-green-500"
+          >
             Why Choose Sports Wizards
-          </h2>
+          </h1>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               "Proven experience across formats & locations.",
@@ -112,7 +118,7 @@ export default function InfraBottom() {
             ].map((point, idx) => (
               <div
                 key={idx}
-                className="p-6 rounded-2xl bg-bg-secondary  text-sm text-bg-foreground-secondary"
+                className="p-6 rounded-2xl bg-bg  text-sm text-bg-foreground-secondary"
                 style={{
                   boxShadow: "1px 1px 8.7px 0px rgba(70, 253, 62, 0.17)",
                 }}
