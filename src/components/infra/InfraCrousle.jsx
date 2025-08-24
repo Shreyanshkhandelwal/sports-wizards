@@ -755,314 +755,386 @@ const ImprovedCarousel = () => {
   };
 
   return (
-    <section className="py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1
-          style={{ fontSize: "24px" }}
-          className="bg-gradient-to-r from-teal-300 to-green-500 bg-clip-text text-transparent text-center text-base font-bold uppercase tracking-widest mb-6 underline underline-offset-8 decoration-green-500"
-        >
-          Who We Are
-        </h1>
-        <div className="relative w-full min-h-[600px]  overflow-hidden py-12">
-          <style jsx>{`
-            .carousel-container {
-              perspective: 1200px;
-              perspective-origin: center center;
-            }
-
-            .slide-card {
-              transform-style: preserve-3d;
-              cursor: pointer;
-              transition: transform 0.6s ease;
-            }
-
-            .slide-card:hover .card-inner {
-              transform: rotateY(180deg);
-            }
-
-            .card-inner {
-              position: relative;
-              width: 100%;
-              height: 100%;
-              transform-style: preserve-3d;
-              transition: transform 0.6s ease;
-            }
-
-            .slide-front,
-            .slide-back {
-              position: absolute;
-              width: 100%;
-              height: 100%;
-              backface-visibility: hidden;
-              border-radius: 16px;
-              -webkit-backface-visibility: hidden;
-            }
-
-            .slide-back {
-              transform: rotateY(180deg);
-              background: rgba(0, 0, 0, 0.95);
-              display: flex;
-              flex-direction: column;
-              padding: 20px;
-              text-align: left;
-              border: 4px solid #10b981;
-              overflow-y: auto;
-              scrollbar-width: none;
-              -ms-overflow-style: none;
-            }
-
-            .slide-back::-webkit-scrollbar {
-              display: none;
-            }
-
-            .slide-back h2 {
-              color: white;
-              font-size: ${windowSize.width < 480 ? "16px" : "20px"};
-              font-weight: bold;
-              margin-bottom: 20px;
-              text-align: center;
-              padding-bottom: 10px;
-              border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-            }
-
-            .section-item {
-              margin-bottom: 8px;
-              border: 1px solid rgba(255, 255, 255, 0.1);
-              border-radius: 8px;
-              overflow: hidden;
-              background: rgba(255, 255, 255, 0.05);
-            }
-
-            .section-header {
-              padding: 12px 16px;
-              background: rgba(255, 255, 255, 0.1);
-              cursor: pointer;
-              display: flex;
-              justify-content: space-between;
-              align-items: center;
-              transition: background 0.2s ease;
-            }
-
-            .section-header:hover {
-              background: rgba(255, 255, 255, 0.15);
-            }
-
-            .section-title {
-              color: white;
-              font-size: ${windowSize.width < 480 ? "13px" : "14px"};
-              font-weight: 500;
-              margin: 0;
-            }
-
-            .section-content {
-              padding: 0 16px;
-              color: white;
-              font-size: ${windowSize.width < 480 ? "11px" : "12px"};
-              line-height: 1.5;
-              max-height: 0;
-              overflow: hidden;
-              transition: all 0.3s ease;
-              opacity: 0;
-            }
-
-            .section-content.expanded {
-              max-height: 200px;
-              padding: 12px 16px;
-              opacity: 1;
-            }
-
-            .chevron {
-              width: 16px;
-              height: 16px;
-              stroke: white;
-              transition: transform 0.3s ease;
-            }
-
-            .chevron.rotated {
-              transform: rotate(180deg);
-            }
-
-            .hover-indicator {
-              position: absolute;
-              top: 10px;
-              right: 10px;
-              background: rgba(255, 255, 255, 0.2);
-              backdrop-filter: blur(10px);
-              border-radius: 50%;
-              width: 30px;
-              height: 30px;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              opacity: 0;
-              transform: scale(0.8);
-              transition: all 0.3s ease;
-              z-index: 5;
-            }
-
-            .slide-card:hover .hover-indicator {
-              opacity: 1;
-              transform: scale(1);
-            }
-          `}</style>
-
-          <div
-            className="carousel-container relative flex justify-center items-center"
-            style={{ height: `${slideSize.height + 120}px` }}
+    <>
+      <section className="py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h1
+            style={{ fontSize: "24px" }}
+            className="bg-gradient-to-r from-teal-300 to-green-500 bg-clip-text text-transparent text-center text-base font-bold uppercase tracking-widest mb-6 underline underline-offset-8 decoration-green-500"
           >
-            {slides.map((slide, index) => {
-              const position = getSlidePosition(index);
-              const isVisible = Math.abs(position) <= 2;
+            Who We Are
+          </h1>
+          <div className="relative w-full min-h-[600px]  overflow-hidden py-12">
+            <style jsx>{`
+              .carousel-container {
+                perspective: 1200px;
+                perspective-origin: center center;
+              }
 
-              if (!isVisible) return null;
+              .slide-card {
+                transform-style: preserve-3d;
+                cursor: pointer;
+                transition: transform 0.6s ease;
+              }
 
-              return (
-                <div
-                  key={index}
-                  className="slide-card absolute"
-                  style={{
-                    ...getSlideStyle(index),
-                    width: `${slideSize.width}px`,
-                    height: `${slideSize.height}px`,
-                  }}
-                  onClick={() => setCurrentSlide(index)}
-                >
-                  <div className="card-inner">
-                    <div className="slide-front">
-                      <img
-                        src={slide.image}
-                        alt={slide.title}
-                        className="w-full h-full object-cover rounded-2xl shadow-2xl"
-                        style={{
-                          boxShadow:
-                            position === 0
-                              ? "0 25px 50px rgba(0, 0, 0, 0.6)"
-                              : "0 15px 30px rgba(0, 0, 0, 0.4)",
-                        }}
-                      />
-                      <div className="hover-indicator">
-                        <svg
-                          width="12"
-                          height="12"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="white"
-                          strokeWidth="2"
-                        >
-                          <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
-                        </svg>
+              .slide-card:hover .card-inner {
+                transform: rotateY(180deg);
+              }
+
+              .card-inner {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                transform-style: preserve-3d;
+                transition: transform 0.6s ease;
+              }
+
+              .slide-front,
+              .slide-back {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                backface-visibility: hidden;
+                border-radius: 16px;
+                -webkit-backface-visibility: hidden;
+              }
+
+              .slide-back {
+                transform: rotateY(180deg);
+                background: rgba(0, 0, 0, 0.95);
+                display: flex;
+                flex-direction: column;
+                padding: 20px;
+                text-align: left;
+                border: 4px solid #10b981;
+                overflow-y: auto;
+                scrollbar-width: none;
+                -ms-overflow-style: none;
+              }
+
+              .slide-back::-webkit-scrollbar {
+                display: none;
+              }
+
+              .slide-back h2 {
+                color: white;
+                font-size: ${windowSize.width < 480 ? "16px" : "20px"};
+                font-weight: bold;
+                margin-bottom: 20px;
+                text-align: center;
+                padding-bottom: 10px;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+              }
+
+              .section-item {
+                margin-bottom: 8px;
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                border-radius: 8px;
+                overflow: hidden;
+                background: rgba(255, 255, 255, 0.05);
+              }
+
+              .section-header {
+                padding: 12px 16px;
+                background: rgba(255, 255, 255, 0.1);
+                cursor: pointer;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                transition: background 0.2s ease;
+              }
+
+              .section-header:hover {
+                background: rgba(255, 255, 255, 0.15);
+              }
+
+              .section-title {
+                color: white;
+                font-size: ${windowSize.width < 480 ? "13px" : "14px"};
+                font-weight: 500;
+                margin: 0;
+              }
+
+              .section-content {
+                padding: 0 16px;
+                color: white;
+                font-size: ${windowSize.width < 480 ? "11px" : "12px"};
+                line-height: 1.5;
+                max-height: 0;
+                overflow: hidden;
+                transition: all 0.3s ease;
+                opacity: 0;
+              }
+
+              .section-content.expanded {
+                max-height: 200px;
+                padding: 12px 16px;
+                opacity: 1;
+              }
+
+              .chevron {
+                width: 16px;
+                height: 16px;
+                stroke: white;
+                transition: transform 0.3s ease;
+              }
+
+              .chevron.rotated {
+                transform: rotate(180deg);
+              }
+
+              .hover-indicator {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                background: rgba(255, 255, 255, 0.2);
+                backdrop-filter: blur(10px);
+                border-radius: 50%;
+                width: 30px;
+                height: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                opacity: 0;
+                transform: scale(0.8);
+                transition: all 0.3s ease;
+                z-index: 5;
+              }
+
+              .slide-card:hover .hover-indicator {
+                opacity: 1;
+                transform: scale(1);
+              }
+            `}</style>
+
+            <div
+              className="carousel-container relative flex justify-center items-center"
+              style={{ height: `${slideSize.height + 120}px` }}
+            >
+              {slides.map((slide, index) => {
+                const position = getSlidePosition(index);
+                const isVisible = Math.abs(position) <= 2;
+
+                if (!isVisible) return null;
+
+                return (
+                  <div
+                    key={index}
+                    className="slide-card absolute"
+                    style={{
+                      ...getSlideStyle(index),
+                      width: `${slideSize.width}px`,
+                      height: `${slideSize.height}px`,
+                    }}
+                    onClick={() => setCurrentSlide(index)}
+                  >
+                    <div className="card-inner">
+                      <div className="slide-front">
+                        <img
+                          src={slide.image}
+                          alt={slide.title}
+                          className="w-full h-full object-cover rounded-2xl shadow-2xl"
+                          style={{
+                            boxShadow:
+                              position === 0
+                                ? "0 25px 50px rgba(0, 0, 0, 0.6)"
+                                : "0 15px 30px rgba(0, 0, 0, 0.4)",
+                          }}
+                        />
+                        <div className="hover-indicator">
+                          <svg
+                            width="12"
+                            height="12"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="white"
+                            strokeWidth="2"
+                          >
+                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                          </svg>
+                        </div>
+                        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 rounded-b-2xl">
+                          <h3 className="text-white font-bold text-lg tracking-wider text-center">
+                            {slide.title}
+                          </h3>
+                        </div>
                       </div>
-                      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 rounded-b-2xl">
-                        <h3 className="text-white font-bold text-lg tracking-wider text-center">
-                          {slide.title}
-                        </h3>
-                      </div>
-                    </div>
 
-                    <div className="slide-back relative">
-                      <h2>{slide.heading}</h2>
-                      <div className="sections-container">
-                        {slide.sections.map((section, sectionIndex) => {
-                          const key = `${index}-${sectionIndex}`;
-                          const isExpanded = expandedSections[key];
+                      <div className="slide-back relative">
+                        <h2>{slide.heading}</h2>
+                        <div className="sections-container">
+                          {slide.sections.map((section, sectionIndex) => {
+                            const key = `${index}-${sectionIndex}`;
+                            const isExpanded = expandedSections[key];
 
-                          return (
-                            <div key={sectionIndex} className="section-item">
-                              <div
-                                className="section-header"
-                                onClick={(e) => {
-                                  e.stopPropagation();
-                                  toggleSection(index, sectionIndex);
-                                }}
-                              >
-                                <h3 className="section-title">
-                                  {section.title}
-                                </h3>
-                                <svg
-                                  className={`chevron ${
-                                    isExpanded ? "rotated" : ""
-                                  }`}
-                                  fill="none"
-                                  viewBox="0 0 24 24"
-                                  stroke="currentColor"
+                            return (
+                              <div key={sectionIndex} className="section-item">
+                                <div
+                                  className="section-header"
+                                  onClick={(e) => {
+                                    e.stopPropagation();
+                                    toggleSection(index, sectionIndex);
+                                  }}
                                 >
-                                  <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    strokeWidth={2}
-                                    d="M19 9l-7 7-7-7"
-                                  />
-                                </svg>
+                                  <h3 className="section-title">
+                                    {section.title}
+                                  </h3>
+                                  <svg
+                                    className={`chevron ${
+                                      isExpanded ? "rotated" : ""
+                                    }`}
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                  >
+                                    <path
+                                      strokeLinecap="round"
+                                      strokeLinejoin="round"
+                                      strokeWidth={2}
+                                      d="M19 9l-7 7-7-7"
+                                    />
+                                  </svg>
+                                </div>
+                                <div
+                                  className={`section-content ${
+                                    isExpanded ? "expanded" : ""
+                                  }`}
+                                >
+                                  {section.content}
+                                </div>
                               </div>
-                              <div
-                                className={`section-content ${
-                                  isExpanded ? "expanded" : ""
-                                }`}
-                              >
-                                {section.content}
-                              </div>
-                            </div>
-                          );
-                        })}
+                            );
+                          })}
+                        </div>
+                        <a
+                          href="#"
+                          className=" text-center lg:absolute  lg:bottom-5 bg-gradient-to-r from-teal-300 via-green-400 to-green-500 font-bold text-sm md:text-base py-2 px-5 md:py-3 md:px-6 rounded-full transition-transform hover:scale-105 text-black w-[88%]"
+                        >
+                          Build My Court Now
+                        </a>
                       </div>
-                      <a
-                        href="#"
-                        className=" text-center lg:absolute  lg:bottom-5 bg-gradient-to-r from-teal-300 via-green-400 to-green-500 font-bold text-sm md:text-base py-2 px-5 md:py-3 md:px-6 rounded-full transition-transform hover:scale-105 text-black w-[88%]"
-                      >
-                        Build My Court Now
-                      </a>
                     </div>
                   </div>
-                </div>
-              );
-            })}
-          </div>
+                );
+              })}
+            </div>
 
-          {/* Navigation */}
-          <div className="flex items-center justify-center gap-6 mt-8">
-            <button
-              onClick={prevSlide}
-              className="group cursor-pointer p-3 rounded-full border-2 border-white/50 bg-white/10 backdrop-blur-sm transition-all duration-300 hover:scale-110 hover:bg-white/20 active:scale-95"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={2.5}
-                stroke="currentColor"
-                className="w-5 h-5 text-white group-hover:text-white/90"
+            {/* Navigation */}
+            <div className="flex items-center justify-center gap-6 mt-8">
+              <button
+                onClick={prevSlide}
+                className="group cursor-pointer p-3 rounded-full border-2 border-white/50 bg-white/10 backdrop-blur-sm transition-all duration-300 hover:scale-110 hover:bg-white/20 active:scale-95"
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M15.75 19.5L8.25 12l7.5-7.5"
-                />
-              </svg>
-            </button>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={2.5}
+                  stroke="currentColor"
+                  className="w-5 h-5 text-white group-hover:text-white/90"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M15.75 19.5L8.25 12l7.5-7.5"
+                  />
+                </svg>
+              </button>
 
-            <button
-              onClick={nextSlide}
-              className="group cursor-pointer p-3 rounded-full border-2 border-white/50 bg-white/10 backdrop-blur-sm transition-all duration-300 hover:scale-110 hover:bg-white/20 active:scale-95"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={2.5}
-                stroke="currentColor"
-                className="w-5 h-5 text-white group-hover:text-white/90"
+              <button
+                onClick={nextSlide}
+                className="group cursor-pointer p-3 rounded-full border-2 border-white/50 bg-white/10 backdrop-blur-sm transition-all duration-300 hover:scale-110 hover:bg-white/20 active:scale-95"
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M8.25 4.5l7.5 7.5-7.5 7.5"
-                />
-              </svg>
-            </button>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={2.5}
+                  stroke="currentColor"
+                  className="w-5 h-5 text-white group-hover:text-white/90"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M8.25 4.5l7.5 7.5-7.5 7.5"
+                  />
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+      <section className="py-5">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Container */}
+          <div
+            className="bg-black/40 rounded-2xl p-6 sm:p-10"
+            style={{
+              border: "1.74px solid rgba(255, 255, 255, 0.12)",
+              backdropFilter: " blur(38.59733963012695px)",
+            }}
+          >
+            {/* Heading */}
+            <h2 className="text-accent text-lg font-semibold mb-8">
+              Add-on services
+            </h2>
+
+            {/* Services Grid */}
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 sm:gap-8 text-center">
+              {/* Item 1 */}
+              <div className="flex gap-2 items-center">
+                <img
+                  src="/infraServices/1.png"
+                  alt="Lighting"
+                  className="h-[30px] w-[30px]"
+                />
+                <p className="text-white text-xl ">Lighting</p>
+              </div>
+
+              {/* Item 2 */}
+              <div className="flex gap-2 items-center">
+                <img
+                  src="/infraServices/2.png"
+                  alt="Netting"
+                  className="h-[30px] w-[30px]"
+                />
+                <p className="text-white text-xl ">Netting</p>
+              </div>
+
+              {/* Item 3 */}
+              <div className="flex gap-2 items-center">
+                <img
+                  src="/infraServices/3.png"
+                  alt="Fencing"
+                  className="h-[30px] w-[30px]"
+                />
+                <p className="text-white text-xl ">Fencing</p>
+              </div>
+
+              {/* Item 4 */}
+              <div className="flex gap-2 items-center">
+                <img
+                  src="/infraServices/4.png"
+                  alt="Roofing"
+                  className="h-[30px] w-[30px]"
+                />
+                <p className="text-white text-xl ">Roofing</p>
+              </div>
+
+              {/* Item 5 */}
+              <div className="flex gap-2 items-center">
+                <img
+                  src="/infraServices/5.png"
+                  alt="Branding Zones"
+                  className="h-[30px] w-[30px]"
+                />
+                <p className="text-white text-xl l">Branding Zones</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
   );
 };
 
