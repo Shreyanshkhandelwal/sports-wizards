@@ -46,25 +46,24 @@ const CoachingMid = () => {
             <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
               {[
                 {
-                  icon: <CgGym className="text-accent w-10 h-10 mb-3" />,
+                  // icon: <CgGym className="text-accent w-10 h-10 mb-3" />,
+                  icon: <img src="/coaching/1.png" className="mb-3" />,
                   title: "Clubs & Gymkhanas",
                 },
                 {
-                  icon: <FaBuilding className="text-accent w-10 h-10 mb-3" />,
+                  icon: <img src="/coaching/2.png" className="mb-3" />,
                   title: "Residential Societies",
                 },
                 {
-                  icon: <FaGlobe className="text-accent w-10 h-10 mb-3" />,
+                  icon: <img src="/coaching/3.png" className="mb-3" />,
                   title: "Sports Associations",
                 },
                 {
-                  icon: <FaGlobe className="text-accent w-10 h-10 mb-3" />,
+                  icon: <img src="/coaching/4.png" className="mb-3" />,
                   title: "Court & Turf Owners",
                 },
                 {
-                  icon: (
-                    <IoMdMegaphone className="text-accent w-10 h-10 mb-3" />
-                  ),
+                  icon: <img src="/coaching/5.png" className="mb-3" />,
                   title: "Brand-Led Campaigns",
                 },
               ].map((service, index) => (

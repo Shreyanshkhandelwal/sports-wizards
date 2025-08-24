@@ -36,7 +36,8 @@ const EventsMid = () => {
       description:
         "Our flagship Corporate Wellness Programs are designed to boost employee well-being and productivity through sports wellness, team building, and sports-centered experiences.",
       image: "/offer1.jpg",
-      icon: <PiBuildingApartmentFill className="text-accent text-3xl" />,
+      // icon: <PiBuildingApartmentFill className="text-accent text-3xl" />,
+      icon: <img src="/eventsOffer/1.png" className="" />,
     },
     {
       id: 2,
@@ -44,7 +45,7 @@ const EventsMid = () => {
       description:
         "Custom tournaments for Schools, Corporates & Associations to promote fitness, networking & team work, competitiveness, and healthy living.",
       image: "/offer2.png",
-      icon: <FaGraduationCap className="text-accent text-3xl" />,
+      icon: <img src="/eventsOffer/2.png" className="" />,
     },
     {
       id: 3,
@@ -52,7 +53,7 @@ const EventsMid = () => {
       description:
         "Tailored skill challenges and large-scale sports fests from bring together companies, schools, clubs, and communities giving.",
       image: "/offer3.png",
-      icon: <FaTrophy className="text-accent text-3xl" />,
+      icon: <img src="/eventsOffer/3.png" className="" />,
     },
     {
       id: 4,
@@ -60,7 +61,7 @@ const EventsMid = () => {
       description:
         "Custom-designed intellectual properties that enhance brand engagement through innovative sports formats and marketing.",
       image: "/offer4.jpg",
-      icon: <IoMdMegaphone className="text-accent text-3xl" />,
+      icon: <img src="/eventsOffer/4.png" className="" />,
     },
     {
       id: 5,
@@ -68,7 +69,7 @@ const EventsMid = () => {
       description:
         "Sports + Culture combined to create memorable family sports events with games, activities, and entertainment for all ages.",
       image: "/offer5.jpg",
-      icon: <FaHeart className="text-accent text-3xl" />,
+      icon: <img src="/eventsOffer/5.png" className="" />,
     },
   ];
 
@@ -191,24 +192,25 @@ const EventsMid = () => {
                 {[
                   {
                     icon: (
-                      <PiCourtBasketballFill className="text-accent w-14 h-14" />
+                      // <PiCourtBasketballFill className="text-accent w-14 h-14" />
+                      <img src="/events/1.png" className="" />
                     ),
                     title: "Infra setup (courts, nets, lights).",
                   },
                   {
-                    icon: <IoMdMic className="text-accent w-14 h-14" />,
+                    icon: <img src="/events/2.png" className="" />,
                     title: "Event Curation & Hosting.",
                   },
                   {
-                    icon: <GiWhistle className="text-accent w-14 h-14" />,
+                    icon: <img src="/events/3.png" className="" />,
                     title: "Certified Referees & Coaches.",
                   },
                   {
-                    icon: <IoMdMegaphone className="text-accent w-14 h-14" />,
+                    icon: <img src="/events/4.png" className="" />,
                     title: "Branding, Trophies & Media.",
                   },
                   {
-                    icon: <HiDocument className="text-accent w-14 h-14" />,
+                    icon: <img src="/events/5.png" className="" />,
                     title: "Registration & Scoring System.",
                   },
                 ].map((service, index) => (
