@@ -5,7 +5,9 @@ const CTAReuse = ({
   accentWord = "Powering",
   paragraph = "",
   primaryButtonText = "Explore What We Do",
-  secondaryButtonText = "", // 👈 new prop
+  secondaryButtonText = "",
+  primaryBtnClick = "/",
+  secondaryBtnClick = "/",
 }) => {
   const processedHeading = heading.replace(accentWord, `|||${accentWord}|||`);
   const headingParts = processedHeading.split("|||");
@@ -50,20 +52,20 @@ const CTAReuse = ({
           <div
             className={`flex gap-3 ${hasTwoButtons ? "mt-4" : "mt-0 lg:mt-0"}`}
           >
-            <a
-              href="#"
+            <button
+              onClick={primaryBtnClick}
               className="bg-gradient-to-r from-teal-300 via-green-400 to-green-500 font-bold text-sm md:text-base py-2 px-5 md:py-3 md:px-6 rounded-full transition-transform hover:scale-105 text-black w-fit"
             >
               {primaryButtonText}
-            </a>
+            </button>
 
             {hasTwoButtons && (
-              <a
-                href="#"
+              <button
+                onClick={secondaryBtnClick}
                 className="bg-white font-bold text-sm md:text-base py-2 px-5 md:py-3 md:px-6 rounded-full transition-transform hover:scale-105 text-black w-fit shadow"
               >
                 {secondaryButtonText}
-              </a>
+              </button>
             )}
           </div>
         </div>

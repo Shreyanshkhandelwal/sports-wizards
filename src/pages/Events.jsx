@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import ReuseHero from "../components/utils/ReuseHero";
 import LogoRibbon from "../components/LogoRibbon";
@@ -8,9 +8,25 @@ import NeonCursor from "../components/utils/NeonCursor";
 import EventsMid from "../components/events/EventsMid";
 
 const Events = () => {
+  const [isLargeScreen, setIsLargeScreen] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(min-width: 1024px)");
+    const handleMediaQueryChange = (e) => {
+      setIsLargeScreen(e.matches);
+    };
+
+    setIsLargeScreen(mediaQuery.matches);
+
+    mediaQuery.addEventListener("change", handleMediaQueryChange);
+
+    return () => {
+      mediaQuery.removeEventListener("change", handleMediaQueryChange);
+    };
+  }, []);
   return (
     <>
-      <NeonCursor />
+      {isLargeScreen && <NeonCursor />}
       <main className="w-full overflow-x-hidden">
         <ReuseHero
           heading="From Sports Days to Stadium Shows—we bring the game."

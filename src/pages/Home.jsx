@@ -10,11 +10,28 @@ import HeroCarousel from "../components/HeroCarousel";
 import CursorTrail from "../components/utils/CursorTrail";
 import RibbonTrail from "../components/utils/NeonCursor";
 import NeonCursor from "../components/utils/NeonCursor";
+import { useEffect, useState } from "react";
 
 const Home = () => {
+  const [isLargeScreen, setIsLargeScreen] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(min-width: 1024px)");
+    const handleMediaQueryChange = (e) => {
+      setIsLargeScreen(e.matches);
+    };
+
+    setIsLargeScreen(mediaQuery.matches);
+
+    mediaQuery.addEventListener("change", handleMediaQueryChange);
+
+    return () => {
+      mediaQuery.removeEventListener("change", handleMediaQueryChange);
+    };
+  }, []);
   return (
     <>
-      <NeonCursor />
+      {isLargeScreen && <NeonCursor />}
       <main className="w-full overflow-x-hidden">
         <HeroCarousel />
         <div className="relative z-50 -mt-5 sm:mt-2">

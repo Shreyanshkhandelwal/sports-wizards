@@ -4,11 +4,28 @@ import Story from "../components/about/Story";
 import Footer from "../components/utils/Footer";
 import CTAReuse from "../components/utils/CTAReuse";
 import NeonCursor from "../components/utils/NeonCursor";
+import { useEffect, useState } from "react";
 
 const About = () => {
+  const [isLargeScreen, setIsLargeScreen] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(min-width: 1024px)");
+    const handleMediaQueryChange = (e) => {
+      setIsLargeScreen(e.matches);
+    };
+
+    setIsLargeScreen(mediaQuery.matches);
+
+    mediaQuery.addEventListener("change", handleMediaQueryChange);
+
+    return () => {
+      mediaQuery.removeEventListener("change", handleMediaQueryChange);
+    };
+  }, []);
   return (
     <>
-      <NeonCursor />
+      {isLargeScreen && <NeonCursor />}
       <main className="w-full overflow-x-hidden">
         <ReuseHero
           heading="More than a brand. A movement in the making"

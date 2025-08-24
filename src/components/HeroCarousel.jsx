@@ -12,8 +12,8 @@ const HeroCarousel = () => {
   const data = [
     {
       place: "Switzerland Alps",
-      title: "SAINT",
-      title2: "ANTONIEN",
+      title: "Powering India’s",
+      title2: "Playgrounds",
       description:
         "Tucked away in the Switzerland Alps, Saint Antönien offers an idyllic retreat for those seeking tranquility and adventure alike. It's a hidden gem for backcountry skiing in winter and boasts lush trails for hiking and mountain biking during the warmer months.",
       // image: "https://assets.codepen.io/3685267/timed-cards-1.jpg",
@@ -21,8 +21,8 @@ const HeroCarousel = () => {
     },
     {
       place: "Japan Alps",
-      title: "NANGANO",
-      title2: "PREFECTURE",
+      title: "Powering India’s",
+      title2: "Playgrounds",
       description:
         "Nagano Prefecture, set within the majestic Japan Alps, is a cultural treasure trove with its historic shrines and temples, particularly the famous Zenkō-ji. The region is also a hotspot for skiing and snowboarding, offering some of the country's best powder.",
       // image: "https://assets.codepen.io/3685267/timed-cards-2.jpg",
@@ -30,8 +30,8 @@ const HeroCarousel = () => {
     },
     {
       place: "Sahara Desert - Morocco",
-      title: "MARRAKECH",
-      title2: "MEROUGA",
+      title: "Powering India’s",
+      title2: "Playgrounds",
       description:
         "The journey from the vibrant souks and palaces of Marrakech to the tranquil, starlit sands of Merzouga showcases the diverse splendor of Morocco. Camel treks and desert camps offer an unforgettable immersion into the nomadic way of life.",
       // image: "https://assets.codepen.io/3685267/timed-cards-3.jpg",
@@ -321,7 +321,7 @@ const HeroCarousel = () => {
           font-size: ${isMobile ? "14px" : "20px"};
           position: relative;
         }
-
+        /*
         .place-box .text:before {
           top: 0;
           left: 0;
@@ -332,7 +332,7 @@ const HeroCarousel = () => {
           border-radius: 99px;
           background-color: white;
         }
-
+*/
         .title-1,
         .title-2 {
           font-weight: 600;
@@ -553,8 +553,8 @@ const HeroCarousel = () => {
               style={{ backgroundImage: `url(${item.image})` }}
             />
             <div className={`card-content card-content-${index}`}>
-              <div className="content-start"></div>
-              <div className="content-place">{item.place}</div>
+              {/* <div className="content-start"></div> */}
+              {/* <div className="content-place">{item.place}</div> */}
               <div className="content-title-1">{item.title}</div>
               <div className="content-title-2">{item.title2}</div>
             </div>
@@ -564,29 +564,45 @@ const HeroCarousel = () => {
 
       {/* Details sections */}
       <div className="details details-even">
-        <div className="place-box">
+        {/* <div className="place-box">
           <div className="text">{data[order.current[0]]?.place}</div>
-        </div>
+        </div> */}
         <div className="title-box-1">
           <div className="title-1">{data[order.current[0]]?.title}</div>
         </div>
         <div className="title-box-2">
           <div className="title-2">{data[order.current[0]]?.title2}</div>
         </div>
-        <div className="desc">{data[order.current[0]]?.description}</div>
+        <div className="btns flex-col lg:flex gap-5">
+          <button className="bg-gradient-to-r from-[#26FEB2]  to-[#46FD3E] font-bold text-sm md:text-base py-2 px-6 md:py-3 md:px-8 rounded-full transition-transform hover:scale-105 text-bg max-w-[250px]">
+            Explore What We Do
+          </button>
+          <button className="bg-white font-bold text-sm md:text-base py-2 px-6 md:py-3 md:px-8 rounded-full transition-transform hover:scale-105 text-bg max-w-[180px]">
+            EnquireNow
+          </button>
+        </div>
+        {/* <div className="desc">{data[order.current[0]]?.description}</div> */}
       </div>
 
       <div className="details details-odd">
-        <div className="place-box">
+        {/* <div className="place-box">
           <div className="text">{data[order.current[0]]?.place}</div>
-        </div>
+        </div> */}
         <div className="title-box-1">
           <div className="title-1">{data[order.current[0]]?.title}</div>
         </div>
         <div className="title-box-2">
           <div className="title-2">{data[order.current[0]]?.title2}</div>
         </div>
-        <div className="desc">{data[order.current[0]]?.description}</div>
+        <div className="btns flex-col lg:flex gap-5">
+          <button className="bg-gradient-to-r from-[#26FEB2]  to-[#46FD3E] font-bold text-sm md:text-base py-2 px-6 md:py-3 md:px-8 rounded-full transition-transform hover:scale-105 text-bg max-w-[250px]">
+            Explore What We Do
+          </button>
+          <button className="bg-white font-bold text-sm md:text-base py-2 px-6 md:py-3 md:px-8 rounded-full transition-transform hover:scale-105 text-bg max-w-[180px]">
+            EnquireNow
+          </button>
+        </div>
+        {/* <div className="desc">{data[order.current[0]]?.description}</div> */}
       </div>
 
       {/* Pagination */}

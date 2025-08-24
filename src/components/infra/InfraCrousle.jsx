@@ -543,9 +543,8 @@ import React, { useEffect, useRef, useState } from "react";
 // Mock images for demonstration
 const slides = [
   {
-    image:
-      "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=400&h=500&fit=crop",
-    title: "Events",
+    image: "/coaching.jpg",
+    title: "Basketball",
     heading: "Event Management",
     sections: [
       {
@@ -566,9 +565,8 @@ const slides = [
     ],
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=500&fit=crop",
-    title: "Coaching",
+    image: "/cricket-court.png",
+    title: "Pickleball",
     heading: "Professional Coaching",
     sections: [
       {
@@ -589,9 +587,8 @@ const slides = [
     ],
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=500&fit=crop",
-    title: "Training",
+    image: "/gym.jpg",
+    title: "Gym",
     heading: "Skills Development",
     sections: [
       {
@@ -612,9 +609,8 @@ const slides = [
     ],
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=400&h=500&fit=crop",
-    title: "Merchandise",
+    image: "/badminton-court.png",
+    title: "Badminton",
     heading: "Premium Products",
     sections: [
       {
@@ -635,9 +631,8 @@ const slides = [
     ],
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=500&fit=crop",
-    title: "Consulting",
+    image: "/soccer-field.png",
+    title: "Soccer",
     heading: "Expert Consultation",
     sections: [
       {

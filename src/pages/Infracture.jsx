@@ -9,11 +9,28 @@ import MadeAMark from "../components/infra/MadeAMark";
 import Finance from "../components/infra/Finance";
 import InfraBottom from "../components/infra/InfraBottom";
 import InfraCrousle from "../components/infra/InfraCrousle";
+import { useEffect, useState } from "react";
 
 const Infracture = () => {
+  const [isLargeScreen, setIsLargeScreen] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(min-width: 1024px)");
+    const handleMediaQueryChange = (e) => {
+      setIsLargeScreen(e.matches);
+    };
+
+    setIsLargeScreen(mediaQuery.matches);
+
+    mediaQuery.addEventListener("change", handleMediaQueryChange);
+
+    return () => {
+      mediaQuery.removeEventListener("change", handleMediaQueryChange);
+    };
+  }, []);
   return (
     <>
-      <NeonCursor />
+      {isLargeScreen && <NeonCursor />}
       <main className="w-full overflow-x-hidden">
         <ReuseHero
           heading="Surfaces That Inspire Play. Infra That Endures."
