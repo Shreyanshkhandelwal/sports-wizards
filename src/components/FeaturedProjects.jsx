@@ -135,7 +135,7 @@ export default function FeaturedProjects() {
                       background:
                         "linear-gradient(91.1deg, #26FEB2 -0.39%, #46FD3E 81.76%)",
                     }}
-                    className="font-bold text-sm md:text-base py-2 px-5 md:py-3 md:px-6 rounded-full transition-transform hover:scale-105 text-black"
+                    className="font-bold text-sm md:text-base  px-5 md:py-3 md:px-6 rounded-full transition-transform hover:scale-105 text-black"
                   >
                     Build my Court
                   </button>

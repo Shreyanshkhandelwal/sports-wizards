@@ -545,20 +545,25 @@ const slides = [
   {
     image: "/cricket-court.png",
     title: "Pickleball Courts",
-    heading: "Professional Coaching",
+    heading: "Pickleball Courts",
     sections: [
       {
-        title: "Life Coaching",
+        title: "Acrylic Surface",
         content:
           "Personal development and goal achievement through structured coaching sessions and mentoring programs.",
       },
       {
-        title: "Business Coaching",
+        title: "PU Flooring",
         content:
           "Strategic business guidance, leadership development, and performance optimization for entrepreneurs.",
       },
       {
-        title: "Career Coaching",
+        title: "PP Tiles",
+        content:
+          "Career transition support, interview preparation, and professional growth strategies for success.",
+      },
+      {
+        title: "Wooden Flooring",
         content:
           "Career transition support, interview preparation, and professional growth strategies for success.",
       },
@@ -567,22 +572,27 @@ const slides = [
   {
     image: "/coaching.jpg",
     title: "Basketball Courts",
-    heading: "Event Management",
+    heading: "Basketball Courts",
     sections: [
       {
-        title: "Corporate Events",
+        title: "Acrylic Surface",
         content:
-          "Professional corporate gatherings, conferences, and team building activities. Complete event planning and execution services.",
+          "Personal development and goal achievement through structured coaching sessions and mentoring programs.",
       },
       {
-        title: "Social Gatherings",
+        title: "PU Flooring",
         content:
-          "Memorable social events including parties, celebrations, and community gatherings with full-service coordination.",
+          "Strategic business guidance, leadership development, and performance optimization for entrepreneurs.",
       },
       {
-        title: "Virtual Events",
+        title: "PP Tiles",
         content:
-          "Modern virtual and hybrid event solutions with cutting-edge technology and seamless user experience.",
+          "Career transition support, interview preparation, and professional growth strategies for success.",
+      },
+      {
+        title: "Wooden Flooring",
+        content:
+          "Career transition support, interview preparation, and professional growth strategies for success.",
       },
     ],
   },
@@ -590,42 +600,37 @@ const slides = [
   {
     image: "/e3.png",
     title: "Cricket Nets",
-    heading: "Skills Development",
+    heading: "Cricket Nets",
     sections: [
       {
-        title: "Technical Training",
+        title: "Artificial Glass",
         content:
           "Comprehensive technical skill development programs with hands-on learning and certification paths.",
       },
       {
-        title: "Soft Skills",
+        title: "Turf",
         content:
           "Communication, leadership, and interpersonal skills training for professional and personal growth.",
-      },
-      {
-        title: "Online Courses",
-        content:
-          "Flexible online learning platforms with interactive content and progress tracking systems.",
       },
     ],
   },
   {
     image: "/badminton-court.png",
     title: "Badminton Courts",
-    heading: "Premium Products",
+    heading: "Badminton Courts",
     sections: [
       {
-        title: "Branded Apparel",
+        title: "PVC Vinyl Flooring",
         content:
           "High-quality branded clothing and accessories with custom designs and premium materials.",
       },
       {
-        title: "Tech Accessories",
+        title: "Wooden Flooring",
         content:
           "Modern technology accessories and gadgets with innovative features and sleek designs.",
       },
       {
-        title: "Custom Items",
+        title: "PP Tiles",
         content:
           "Personalized merchandise and promotional items tailored to your brand and requirements.",
       },
@@ -634,22 +639,17 @@ const slides = [
   {
     image: "/soccer-field.png",
     title: "Foorball Courts",
-    heading: "Expert Consultation",
+    heading: "Foorball Courts",
     sections: [
       {
-        title: "Strategy Consulting",
+        title: "Artificial Grass",
         content:
           "Strategic business planning, market analysis, and growth strategies for sustainable success.",
       },
       {
-        title: "Digital Transformation",
+        title: "Turf",
         content:
           "Technology integration, digital workflow optimization, and modern business process solutions.",
-      },
-      {
-        title: "Performance Optimization",
-        content:
-          "Operational efficiency improvements, cost reduction strategies, and performance metrics analysis.",
       },
     ],
   },
@@ -676,13 +676,13 @@ const ImprovedCarousel = () => {
   }, []);
 
   // Auto-loop functionality
-  //   useEffect(() => {
-  //     const interval = setInterval(() => {
-  //       setCurrentSlide((prev) => (prev + 1) % slides.length);
-  //     }, 4000);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 3000);
 
-  //     return () => clearInterval(interval);
-  //   }, []);
+    return () => clearInterval(interval);
+  }, []);
 
   const getSlideSize = () => {
     const screenWidth = windowSize.width;

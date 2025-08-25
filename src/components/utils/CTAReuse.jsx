@@ -26,7 +26,7 @@ const CTAReuse = ({
             }`}
         >
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold uppercase">
+            <h1 className="text-3xl md:text-4xl font-bold uppercase">
               {headingParts.map((part, i) =>
                 part === accentWord ? (
                   <span
@@ -44,7 +44,7 @@ const CTAReuse = ({
                   part
                 )
               )}
-            </h2>
+            </h1>
             {paragraph && (
               <p
                 className={`mt-4 text-bg-foreground-secondary ${

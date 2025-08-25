@@ -1407,6 +1407,28 @@ const HeroCarousel = () => {
   const [isAnimating, setIsAnimating] = useState(false);
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
   const containerRef = useRef(null);
+  const intervalRef = useRef(null);
+
+  const startAutoPlay = () => {
+    stopAutoPlay(); // clear if already running
+    intervalRef.current = setInterval(() => {
+      if (!isAnimating) {
+        nextSlide();
+      }
+    }, 3000);
+  };
+
+  const stopAutoPlay = () => {
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+      intervalRef.current = null;
+    }
+  };
+
+  useEffect(() => {
+    startAutoPlay();
+    return () => stopAutoPlay(); // cleanup on unmount
+  }, []); // re-run whenever slide changes
 
   const data = [
     {
@@ -1737,6 +1759,8 @@ const HeroCarousel = () => {
     <div
       ref={containerRef}
       className="w-full h-screen bg-gray-900 text-white overflow-hidden relative font-sans"
+      onMouseEnter={stopAutoPlay} // pause when hovering
+      onMouseLeave={startAutoPlay} // resume when leaving
     >
       <Header />
       <style jsx>{`
