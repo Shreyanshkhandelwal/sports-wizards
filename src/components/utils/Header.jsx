@@ -67,7 +67,7 @@ const Header = () => {
       </Link>
 
       {/* Desktop Nav */}
-      <ul className="hidden md:flex items-center justify-center gap-8 text-base">
+      <ul className=" flex items-center justify-center gap-8 text-base">
         {navItems.map((item) => (
           <li key={item.path}>
             <Link

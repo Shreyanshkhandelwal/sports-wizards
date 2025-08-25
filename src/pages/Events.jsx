@@ -26,7 +26,7 @@ const Events = () => {
   }, []);
   return (
     <>
-      {isLargeScreen && <NeonCursor />}
+      {/* {isLargeScreen && <NeonCursor />} */}
       <main className="w-full overflow-x-hidden">
         <ReuseHero
           heading="From Sports Days to Stadium Shows—we bring the game."

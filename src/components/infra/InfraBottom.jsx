@@ -126,17 +126,35 @@ export default function InfraBottom() {
           >
             Why Choose Sports Wizards
           </h1>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+          {/* FIRST ROW: 3 items */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
             {[
               "Proven experience across formats & locations.",
               "Material tie-ups with reputed brands.",
               "Fast turnaround with quality guarantees.",
+            ].map((point, idx) => (
+              <div
+                key={idx}
+                className="p-6 rounded-2xl bg-bg text-sm text-bg-foreground-secondary"
+                style={{
+                  boxShadow: "1px 1px 8.7px 0px rgba(70, 253, 62, 0.17)",
+                }}
+              >
+                {point}
+              </div>
+            ))}
+          </div>
+
+          {/* SECOND ROW: 2 items centered */}
+          <div className="flex justify-center flex-wrap gap-6">
+            {[
               "Execution involvement of leadership team.",
               "Seamless branding integration (great for clubs & campuses).",
             ].map((point, idx) => (
               <div
                 key={idx}
-                className="p-6 rounded-2xl bg-bg  text-sm text-bg-foreground-secondary"
+                className="p-6 rounded-2xl bg-bg text-sm text-bg-foreground-secondary w-full sm:w-[calc(50%-12px)] lg:w-[calc(33%-16px)]"
                 style={{
                   boxShadow: "1px 1px 8.7px 0px rgba(70, 253, 62, 0.17)",
                 }}

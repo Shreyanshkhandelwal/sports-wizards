@@ -31,7 +31,7 @@ const Home = () => {
   }, []);
   return (
     <>
-      {isLargeScreen && <NeonCursor />}
+      {/* {isLargeScreen && <NeonCursor />} */}
       <main className="w-full overflow-x-hidden">
         <HeroCarousel />
         <div className="relative z-50 -mt-5 sm:mt-2">
