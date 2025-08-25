@@ -2053,7 +2053,19 @@ const HeroCarousel = () => {
           <div className="text">{data[order.current[0]]?.place}</div>
         </div> */}
         <div className="title-box-1">
-          <h1 className="title-1">{data[order.current[0]]?.title}</h1>
+          <h1 className="title-1">
+            <span
+              style={{
+                background:
+                  "linear-gradient(91.1deg, #26FEB2 -0.39%, #46FD3E 81.76%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+              }}
+            >
+              {data[order.current[0]]?.title.split(" ")[0]}
+            </span>{" "}
+            {data[order.current[0]]?.title.split(" ").slice(1).join(" ")}
+          </h1>
         </div>
         <div className="title-box-2">
           <h1 className="title-2">{data[order.current[0]]?.title2}</h1>
@@ -2080,7 +2092,19 @@ const HeroCarousel = () => {
           <div className="text">{data[order.current[0]]?.place}</div>
         </div> */}
         <div className="title-box-1">
-          <h1 className="title-1 ">{data[order.current[0]]?.title}</h1>
+          <h1 className="title-1">
+            <span
+              style={{
+                background:
+                  "linear-gradient(91.1deg, #26FEB2 -0.39%, #46FD3E 81.76%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+              }}
+            >
+              {data[order.current[0]]?.title.split(" ")[0]}
+            </span>{" "}
+            {data[order.current[0]]?.title.split(" ").slice(1).join(" ")}
+          </h1>
         </div>
         <div className="title-box-2">
           <h1 className="title-2">{data[order.current[0]]?.title2}</h1>
