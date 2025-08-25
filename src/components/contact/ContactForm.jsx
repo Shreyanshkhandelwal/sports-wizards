@@ -5,7 +5,7 @@ import { FaPhone } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
 import { CiCircleCheck } from "react-icons/ci";
 
-const ContactForm = () => {
+const ContactForm = ({ onSuccess }) => {
   const [formData, setFormData] = useState({
     fullName: "",
     organizationName: "",
@@ -63,7 +63,9 @@ const ContactForm = () => {
 
   const handleSubmit = () => {
     console.log("Form submitted:", formData);
-    setShowModal(true);
+    if (onSuccess) {
+      onSuccess(); // Trigger the parent’s success modal
+    }
   };
 
   const handleModalSubmit = () => {

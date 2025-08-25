@@ -50,7 +50,11 @@ const Contact = () => {
             </h1>
           </div>
         </section>
-        <ContactForm />
+        <ContactForm
+          onSuccess={() => {
+            setShowSuccess(true);
+          }}
+        />
         <CTAReuse
           heading="Get Your Free Guide Instantly"
           accentWord="Guide"
