@@ -100,8 +100,8 @@ const ContactForm = () => {
             <div className="mb-8">
               <h1 className="text-3xl font-bold mb-2">
                 LET'S <span className="text-accent">BUILD</span> SOMETHING
+                SPORTY TOGETHER.
               </h1>
-              <h2 className="text-3xl font-bold ">SPORTY TOGETHER.</h2>
             </div>
 
             <div className="space-y-6">

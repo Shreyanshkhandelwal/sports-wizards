@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
@@ -94,6 +95,12 @@ const EventsMid = () => {
       description:
         "Created legacy events that shaped India’s grassroots sports culture.",
     },
+  ];
+
+  const spotlights = [
+    { src: "/spotlight1.jpg", alt: "Students playing sport 1" },
+    { src: "/contact.png", alt: "Students playing sport 2" },
+    { src: "/coaching1.png", alt: "Students playing sport 3" }, // your uploaded image
   ];
 
   return (
@@ -381,15 +388,52 @@ const EventsMid = () => {
               </div>
             </div>
 
-            <div className="relative">
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                <img
-                  src="/coaching3.png"
-                  alt="Students playing various sports"
-                  className="w-full h-96 object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-              </div>
+            <div className="relative w-full max-w-4xl mx-auto">
+              <Swiper
+                modules={[Pagination, Autoplay]}
+                pagination={{
+                  clickable: true,
+                  el: ".custom-pagination",
+                }}
+                autoplay={{
+                  delay: 3000,
+                  disableOnInteraction: false,
+                }}
+                spaceBetween={20}
+                slidesPerView={1}
+                className="rounded-2xl shadow-2xl overflow-hidden"
+              >
+                {spotlights.map((slide, idx) => (
+                  <SwiperSlide key={idx}>
+                    <div className="relative">
+                      <img
+                        src={slide.src}
+                        alt={slide.alt}
+                        className="w-full h-96 object-cover"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                    </div>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+
+              {/* Custom bullet bar pagination */}
+              {/* Custom bullet bar pagination */}
+              <div className="custom-pagination flex justify-center gap-2 mt-3"></div>
+
+              <style jsx global>{`
+                .custom-pagination .swiper-pagination-bullet {
+                  width: 30px; /* shorter pill width */
+                  height: 6px;
+                  background: #00ff01; /* gray-300 */
+                  border-radius: 9999px;
+                  transition: all 0.3s ease;
+                }
+                .custom-pagination .swiper-pagination-bullet-active {
+                  background: #00ff01; /* green-500 */
+                  width: 40px; /* slightly bigger when active */
+                }
+              `}</style>
             </div>
           </div>
 

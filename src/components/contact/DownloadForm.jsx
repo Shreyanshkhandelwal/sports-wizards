@@ -167,20 +167,22 @@ const DownloadForm = ({ onClose, onSuccess }) => {
               Interested In:
             </label>
             <div className="flex flex-wrap gap-2">
-              {["Coaching", "Events", "Infra"].map((interest) => (
-                <button
-                  key={interest}
-                  type="button"
-                  onClick={() => handleModalInterestChange(interest)}
-                  className={`px-4 py-2 rounded-lg border transition-all duration-200 ${
-                    modalData.interestedIn.includes(interest)
-                      ? "bg-[#00FF01] text-[#0B0B0B] border-[#00FF01] font-semibold"
-                      : "bg-[#2C2C2C] text-[#F2F2F2] border-[#2C2C2C] hover:border-[#00FF01]"
-                  }`}
-                >
-                  {interest}
-                </button>
-              ))}
+              {["Coaching", "Infra", "Events", "Merchandise", "Other"].map(
+                (interest) => (
+                  <button
+                    key={interest}
+                    type="button"
+                    onClick={() => handleModalInterestChange(interest)}
+                    className={`px-4 py-2 rounded-lg border transition-all duration-200 ${
+                      modalData.interestedIn.includes(interest)
+                        ? "bg-[#00FF01] text-[#0B0B0B] border-[#00FF01] font-semibold"
+                        : "bg-[#2C2C2C] text-[#F2F2F2] border-[#2C2C2C] hover:border-[#00FF01]"
+                    }`}
+                  >
+                    {interest}
+                  </button>
+                )
+              )}
             </div>
           </div>
 
