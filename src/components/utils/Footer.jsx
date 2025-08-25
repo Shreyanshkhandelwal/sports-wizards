@@ -126,19 +126,19 @@ const Footer = () => {
             <p className="text-sm">
               Email:{" "}
               <a
-                href="mailto:hello@yourdomain.com"
+                href="mailto:connect@sportswizards.in"
                 className="hover:text-white transition-colors duration-300"
               >
-                hello@yourdomain.com
+                connect@sportswizards.in
               </a>
             </p>
             <p className="text-sm mt-1 md:mt-2">
               Phone:{" "}
               <a
-                href="tel:1234567890"
+                href="#"
                 className="hover:text-white transition-colors duration-300"
               >
-                1234567890
+                +91 8655819716 / +91 8779706509
               </a>
             </p>
           </div>
