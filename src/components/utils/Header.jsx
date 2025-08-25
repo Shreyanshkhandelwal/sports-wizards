@@ -67,7 +67,7 @@ const Header = () => {
       </Link>
 
       {/* Desktop Nav */}
-      <ul className=" flex items-center justify-center gap-8 text-base">
+      <ul className="hidden md:flex items-center justify-center gap-8 text-base">
         {navItems.map((item) => (
           <li key={item.path}>
             <Link
@@ -85,7 +85,7 @@ const Header = () => {
       </ul>
 
       {/* Mobile Hamburger (only for non-homepage) */}
-      {pathname !== "/" && (
+      {pathname && (
         <button
           className="md:hidden text-white"
           onClick={() => setIsOpen(!isOpen)}
@@ -95,8 +95,8 @@ const Header = () => {
       )}
 
       {/* Mobile Dropdown Menu */}
-      {isOpen && pathname !== "/" && (
-        <div className="absolute top-[70px] right-5 bg-black rounded-lg shadow-lg w-48 p-4 md:hidden">
+      {isOpen && pathname && (
+        <div className="absolute top-[30px] right-5 bg-black rounded-lg shadow-lg w-48 p-4 md:hidden">
           <ul className="flex flex-col gap-4">
             {navItems.map((item) => (
               <li key={item.path}>
