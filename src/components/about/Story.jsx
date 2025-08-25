@@ -6,42 +6,59 @@ const Story = () => {
       {/* story */}
       <section className="flex flex-col items-center justify-center py-12 px-4 sm:px-6 lg:px-8 mt-10">
         <div className="max-w-7xl mx-auto">
-          <h1
-            style={{ fontSize: "24px" }}
-            className="bg-gradient-to-r from-teal-300 to-green-500 bg-clip-text text-transparent text-center text-base font-bold uppercase tracking-widest mb-6 underline underline-offset-8 decoration-green-500"
-          >
-            Our Story
-          </h1>
+          <div className="text-center">
+            <h1
+              style={{
+                fontSize: "24px",
+                background:
+                  "linear-gradient(91.1deg, #26FEB2 -0.39%, #46FD3E 81.76%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+              }}
+              className="inline-block text-center text-base font-bold uppercase tracking-widest mb-6 underline underline-offset-8 decoration-green-500"
+            >
+              Our Story
+            </h1>
+          </div>
 
-          <div className="flex flex-col items-center justify-center gap-8 lg:gap-12 text-center">
-            <p
-              className="w-full text-bg-foreground-secondary text-base md:text-lg leading-relaxed text-center order-1 lg:order-2 mb-8 lg:mb-0 lg:mt-6"
-              style={{ fontSize: "22px" }}
-            >
-              Founded by professionals with{" "}
-              <span className="text-accent"> 25+ years </span> in sports, Sports
-              Wizards began with a vision to make India a sport-playing nation.
-              From early fitness programs at JVPG Club and Jai Hind College to
-              large-scale Pickleball tournaments, our journey has spanned
-              grassroots and game changers alike.
-            </p>
-            <p
-              className="w-full text-bg-foreground-secondary text-base md:text-lg leading-relaxed text-center order-1 lg:order-2 mb-8 lg:mb-0 lg:mt-6"
-              style={{ fontSize: "22px", fontWeight: 400 }}
-            >
-              Our breakthrough came in 2017 when we conceptualized and executed
-              the{" "}
-              <span className="text-accent">
-                {" "}
-                Indian Open Pickleball Championship{" "}
-              </span>{" "}
-              in partnership with the All India Pickleball Association — one of
-              the earliest, large-scale activations of the sport in India.With
-              150+ international and national players, Inox Cinemas as Cinema
-              partner, Red Bull as a Energy Drink partner, and Doordarshan
-              live-streaming the finals — the event laid the foundation for our
-              belief that India is ready for a play-first revolution.
-            </p>
+          <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16 px-4 md:px-12 py-10">
+            <div className="w-full lg:w-1/2">
+              <img
+                src="/aboutStory.png"
+                alt="About Sports Wizards"
+                className="w-full h-auto object-cover rounded-lg shadow-md"
+              />
+            </div>
+
+            <div className="w-full lg:w-1/2 flex flex-col justify-center  gap-8">
+              <p className="text-bg-foreground-secondary text-lg md:text-xl leading-relaxed">
+                Founded by professionals with
+                <span className="text-accent font-semibold">
+                  {" "}
+                  25+ years{" "}
+                </span>{" "}
+                in sports, Sports Wizards began with a vision to make India a
+                sport-playing nation. From early fitness programs at JVPG Club
+                and Jai Hind College to large-scale Pickleball tournaments, our
+                journey has spanned grassroots and game changers alike.
+              </p>
+
+              <p className="text-bg-foreground-secondary text-lg md:text-xl leading-relaxed">
+                Our breakthrough came in 2017 when we conceptualized and
+                executed the
+                <span className="text-accent font-semibold">
+                  {" "}
+                  Indian Open Pickleball Championship{" "}
+                </span>
+                in partnership with the All India Pickleball Association — one
+                of the earliest, large-scale activations of the sport in India.
+                With 150+ international and national players, Inox Cinemas as
+                Cinema partner, Red Bull as Energy Drink partner, and
+                Doordarshan live-streaming the finals — the event laid the
+                foundation for our belief that India is ready for a play-first
+                revolution.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -49,21 +66,35 @@ const Story = () => {
       {/* vision */}
       <section className="flex flex-col items-center justify-center py-12 px-4 sm:px-6 lg:px-8 mt-10">
         <div className="max-w-7xl mx-auto">
-          <h1
-            style={{ fontSize: "24px" }}
-            className="bg-gradient-to-r from-teal-300 to-green-500 bg-clip-text text-transparent text-center text-base font-bold uppercase tracking-widest mb-6 underline underline-offset-8 decoration-green-500"
-          >
-            Our Vision & Mission
-          </h1>
+          <div className="text-center">
+            <h1
+              style={{
+                fontSize: "24px",
+                background:
+                  "linear-gradient(91.1deg, #26FEB2 -0.39%, #46FD3E 81.76%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+              }}
+              className="inline-block text-center text-base font-bold uppercase tracking-widest mb-6 underline underline-offset-8 decoration-green-500"
+            >
+              Our Vision & Mission
+            </h1>
+          </div>
 
           <div className="flex flex-col md:flex-row items-center justify-center gap-8 lg:gap-10 text-center mt-16">
             <div
-              className="mission w-2/5 rounded-[14px] p-6  "
+              className="mission w-full md:w-2/5 rounded-[14px] p-6  "
               style={{ background: " rgba(71, 71, 71, 0.17)" }}
             >
               <h2
-                className="bg-gradient-to-r from-teal-300 to-green-500 bg-clip-text text-transparent text-2xl font-bold mb-3 "
-                style={{ fontSize: "24px" }}
+                className=" text-2xl font-bold mb-3 "
+                style={{
+                  fontSize: "24px",
+                  background:
+                    "linear-gradient(91.1deg, #26FEB2 -0.39%, #46FD3E 81.76%)",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                }}
               >
                 MISSION:
               </h2>
@@ -73,12 +104,18 @@ const Story = () => {
               </p>
             </div>
             <div
-              className="vision w-2/5 rounded-[14px] p-6 "
+              className="vision w-full md:w-2/5 rounded-[14px] p-6 "
               style={{ background: " rgba(71, 71, 71, 0.17)" }}
             >
               <h2
-                className="bg-gradient-to-r from-teal-300 to-green-500 bg-clip-text text-transparent text-2xl font-bold mb-3"
-                style={{ fontSize: "24px" }}
+                className=" bg-clip-text text-transparent text-2xl font-bold mb-3"
+                style={{
+                  fontSize: "24px",
+                  background:
+                    "linear-gradient(91.1deg, #26FEB2 -0.39%, #46FD3E 81.76%)",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                }}
               >
                 VISION:
               </h2>
@@ -92,14 +129,21 @@ const Story = () => {
       {/* sets apart */}
       <section className="flex flex-col items-center justify-center py-12 px-4 sm:px-6 lg:px-8 mt-10">
         <div className="max-w-7xl mx-auto">
-          <h1
-            style={{ fontSize: "24px" }}
-            className="bg-gradient-to-r from-teal-300 to-green-500 bg-clip-text text-transparent text-center text-base font-bold uppercase tracking-widest mb-6 underline underline-offset-8 decoration-green-500"
-          >
-            What Sets Us Apart
-          </h1>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-16 px-4">
+          <div className="text-center">
+            <h1
+              style={{
+                fontSize: "24px",
+                background:
+                  "linear-gradient(91.1deg, #26FEB2 -0.39%, #46FD3E 81.76%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+              }}
+              className="inline-block text-center text-base font-bold uppercase tracking-widest mb-6 underline underline-offset-8 decoration-green-500"
+            >
+              What Sets Us Apart
+            </h1>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 mt-16 px-4">
             {[
               {
                 img: "/ab-1.png",
@@ -125,7 +169,10 @@ const Story = () => {
               <div
                 key={index}
                 className="flex flex-col items-center text-center  p-6 rounded-[14px] h-full"
-                style={{ background: " rgba(71, 71, 71, 0.17)" }}
+                style={{
+                  background: " rgba(71, 71, 71, 0.17)",
+                  border: "1.2px solid rgba(255, 255, 255, 0.12)",
+                }}
               >
                 <div className="mb-4">
                   <img
@@ -144,13 +191,20 @@ const Story = () => {
       {/* leadership snippet*/}
       <section className="flex flex-col items-center justify-center py-12 px-4 sm:px-6 lg:px-8 mt-10">
         <div className="max-w-7xl w-full">
-          <h1
-            style={{ fontSize: "24px" }}
-            className="bg-gradient-to-r from-teal-300 to-green-500 bg-clip-text text-transparent text-center text-base font-bold uppercase tracking-widest mb-6 underline underline-offset-8 decoration-green-500"
-          >
-            Leadership Snippet
-          </h1>
-
+          <div className="text-center">
+            <h1
+              style={{
+                fontSize: "24px",
+                background:
+                  "linear-gradient(91.1deg, #26FEB2 -0.39%, #46FD3E 81.76%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+              }}
+              className="inline-block text-center text-base font-bold uppercase tracking-widest mb-6 underline underline-offset-8 decoration-green-500"
+            >
+              Leadership Snippet
+            </h1>
+          </div>
           <div className="w-full  px-4 sm:px-6 lg:px-8">
             <div
               className="flex flex-col items-start text-center  p-6 rounded-[14px] h-full w-full gap-5"

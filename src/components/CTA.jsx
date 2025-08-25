@@ -18,7 +18,11 @@ const CTA = () => {
 
           <a
             href="#"
-            className="bg-gradient-to-r from-teal-300 via-green-400 to-green-500 font-bold text-sm md:text-base py-2 px-5 md:py-3 md:px-6 rounded-full transition-transform hover:scale-105 text-black w-fit"
+            className=" font-bold text-sm md:text-base py-2 px-5 md:py-3 md:px-6 rounded-full transition-transform hover:scale-105 text-black w-fit"
+            style={{
+              background:
+                "linear-gradient(91.1deg, #26FEB2 -0.39%, #46FD3E 81.76%)",
+            }}
           >
             Get in Touch
           </a>

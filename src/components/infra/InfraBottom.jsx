@@ -39,8 +39,14 @@ export default function InfraBottom() {
         {/* HOW WE WORK */}
         <div className="text-center mb-16">
           <h1
-            style={{ fontSize: "24px" }}
-            className="bg-gradient-to-r from-teal-300 to-green-500 bg-clip-text text-transparent text-center text-base font-bold uppercase tracking-widest mb-6 underline underline-offset-8 decoration-green-500"
+            style={{
+              fontSize: "24px",
+              background:
+                "linear-gradient(91.1deg, #26FEB2 -0.39%, #46FD3E 81.76%)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+            }}
+            className="inline-block text-center text-base font-bold uppercase tracking-widest mb-6 underline underline-offset-8 decoration-green-500"
           >
             How We Work
           </h1>
@@ -51,7 +57,13 @@ export default function InfraBottom() {
               <div key={idx} className="flex items-center">
                 {/* Card */}
                 <div className="flex flex-col items-center text-center p-6 rounded-2xl">
-                  <div className="mb-4 bg-gradient-to-b from-teal-300 via-green-400 to-green-500 p-2 rounded-lg">
+                  <div
+                    style={{
+                      background:
+                        "linear-gradient(180deg, #26FEB2 0%, #46FD3E 100%)",
+                    }}
+                    className="mb-4  p-2 rounded-lg"
+                  >
                     {item.icon}
                   </div>
                   <h3 className="text-lg font-semibold">{item.title}</h3>
@@ -103,8 +115,14 @@ export default function InfraBottom() {
         {/* WHY CHOOSE SPORTS WIZARDS */}
         <div className="text-center">
           <h1
-            style={{ fontSize: "24px" }}
-            className="bg-gradient-to-r from-teal-300 to-green-500 bg-clip-text text-transparent text-center text-base font-bold uppercase tracking-widest mb-6 underline underline-offset-8 decoration-green-500"
+            style={{
+              fontSize: "24px",
+              background:
+                "linear-gradient(91.1deg, #26FEB2 -0.39%, #46FD3E 81.76%)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+            }}
+            className="inline-block text-center text-base font-bold uppercase tracking-widest mb-6 underline underline-offset-8 decoration-green-500"
           >
             Why Choose Sports Wizards
           </h1>

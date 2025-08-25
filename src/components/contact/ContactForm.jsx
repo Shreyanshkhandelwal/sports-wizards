@@ -99,11 +99,9 @@ const ContactForm = () => {
           <div>
             <div className="mb-8">
               <h1 className="text-3xl font-bold mb-2">
-                LET'S <span className="text-[#00FF01]">BUILD</span> SOMETHING
+                LET'S <span className="text-accent">BUILD</span> SOMETHING
               </h1>
-              <h2 className="text-3xl font-bold text-[#00FF01]">
-                SPORTY TOGETHER.
-              </h2>
+              <h2 className="text-3xl font-bold ">SPORTY TOGETHER.</h2>
             </div>
 
             <div className="space-y-6">
@@ -140,15 +138,24 @@ const ContactForm = () => {
               {/* City and Phone */}
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-sm font-medium mb-2">City</label>
-                  <input
-                    type="text"
+                  <label className="block text-sm font-medium mb-2 text-[#F2F2F2]">
+                    City
+                  </label>
+                  <select
                     name="city"
-                    value={formData.city}
-                    onChange={handleInputChange}
-                    placeholder="Enter City"
-                    className="w-full bg-[#2C2C2C] border border-[#2C2C2C] rounded-lg px-4 py-3 text-[#F2F2F2] placeholder-[#B0B0B0] focus:outline-none focus:ring-2 focus:ring-[#00FF01] focus:border-transparent"
-                  />
+                    value={modalData.city}
+                    onChange={handleModalInputChange}
+                    className="w-full bg-[#2C2C2C] border border-[#2C2C2C] rounded-lg px-4 py-3 text-[#F2F2F2] focus:outline-none focus:ring-2 focus:ring-[#00FF01] focus:border-transparent"
+                  >
+                    <option value="">Select City</option>
+                    <option value="Mumbai">Mumbai</option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="Bangalore">Bangalore</option>
+                    <option value="Chennai">Chennai</option>
+                    <option value="Kolkata">Kolkata</option>
+                    <option value="Pune">Pune</option>
+                    <option value="Other">Other</option>
+                  </select>
                 </div>
                 <div>
                   <label className="block text-sm font-medium mb-2">
@@ -226,7 +233,10 @@ const ContactForm = () => {
           <button
             type="button"
             onClick={handleSubmit}
-            className="w-full bg-gradient-to-b from-teal-300 via-green-400 to-green-500 hover:opacity-90 text-[#0B0B0B] font-bold py-4 px-6 rounded-lg transition-all duration-200 transform hover:scale-[1.02] mt-6"
+            style={{
+              background: "linear-gradient(180deg, #26FEB2 0%, #46FD3E 100%)",
+            }}
+            className="w-full  hover:opacity-90 text-[#0B0B0B] font-bold py-4 px-6 rounded-lg transition-all duration-200 transform hover:scale-[1.02] mt-6"
           >
             Submit
           </button>
@@ -240,7 +250,12 @@ const ContactForm = () => {
           </div>
 
           {/* Contact Info */}
-          <div className="bg-gradient-to-b from-teal-300 via-green-400 to-green-500 rounded-2xl p-6 text-[#0B0B0B]">
+          <div
+            className="rounded-2xl p-6 text-[#0B0B0B]"
+            style={{
+              background: "linear-gradient(180deg, #26FEB2 0%, #46FD3E 100%)",
+            }}
+          >
             <h3 className="text-2xl font-bold mb-6">Contact Info</h3>
 
             <div className="space-y-4">

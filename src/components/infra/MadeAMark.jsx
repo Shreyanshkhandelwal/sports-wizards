@@ -102,8 +102,14 @@ export default function MadeAMark() {
               <div className="flex-1">
                 <div className="mb-4 flex items-center justify-center">
                   <h1
-                    style={{ fontSize: "24px" }}
-                    className="bg-gradient-to-r from-teal-300 to-green-500 bg-clip-text text-transparent text-center text-base font-bold uppercase tracking-widest mb-6 underline underline-offset-8 decoration-green-500"
+                    style={{
+                      fontSize: "24px",
+                      background:
+                        "linear-gradient(91.1deg, #26FEB2 -0.39%, #46FD3E 81.76%)",
+                      WebkitBackgroundClip: "text",
+                      WebkitTextFillColor: "transparent",
+                    }}
+                    className="inline-block text-center text-base font-bold uppercase tracking-widest mb-6 underline underline-offset-8 decoration-green-500"
                   >
                     Where We’ve Made a Mark
                   </h1>

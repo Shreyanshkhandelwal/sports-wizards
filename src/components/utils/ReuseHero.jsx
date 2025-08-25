@@ -30,7 +30,15 @@ const ReuseHero = ({
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white uppercase tracking-wide">
           {headingParts.map((part, i) =>
             part === accentWord ? (
-              <span key={i} className="text-accent">
+              <span
+                key={i}
+                style={{
+                  background:
+                    " linear-gradient(180deg, #26FEB2 0%, #46FD3E 100%)",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                }}
+              >
                 {part}
               </span>
             ) : (
@@ -47,7 +55,13 @@ const ReuseHero = ({
 
         <div className="mt-8">
           {primaryButtonText && (
-            <button className="bg-gradient-to-r from-[#26FEB2]  to-[#46FD3E] font-bold text-sm md:text-base py-2 px-6 md:py-3 md:px-8 rounded-full transition-transform hover:scale-105 text-bg">
+            <button
+              style={{
+                background:
+                  "linear-gradient(91.1deg, #26FEB2 -0.39%, #46FD3E 81.76%)",
+              }}
+              className=" font-bold text-sm md:text-base py-2 px-6 md:py-3 md:px-8 rounded-full transition-transform hover:scale-105 text-bg"
+            >
               {primaryButtonText}
             </button>
           )}

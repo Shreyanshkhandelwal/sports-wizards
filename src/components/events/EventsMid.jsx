@@ -103,8 +103,14 @@ const EventsMid = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h1
-              style={{ fontSize: "24px" }}
-              className="bg-gradient-to-r from-teal-300 to-green-500 bg-clip-text text-transparent text-center text-base font-bold uppercase tracking-widest mb-6 underline underline-offset-8 decoration-green-500"
+              style={{
+                fontSize: "24px",
+                background:
+                  "linear-gradient(91.1deg, #26FEB2 -0.39%, #46FD3E 81.76%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+              }}
+              className="inline-block text-center text-base font-bold uppercase tracking-widest mb-6 underline underline-offset-8 decoration-green-500"
             >
               What we offer
             </h1>
@@ -165,13 +171,54 @@ const EventsMid = () => {
             {/* Left Side - Text */}
             <div className="space-y-6 flex flex-col items-start content-between h-full">
               <h1 className="text-white font-bold text-4xl leading-relaxed uppercase">
-                Be it<span className="text-accent"> 50</span> participants or
-                <span className="text-accent"> 50,000</span> - we{" "}
-                <span className="text-accent">customize </span>
+                Be it
+                <span
+                  className=""
+                  style={{
+                    background:
+                      "linear-gradient(180deg, #26FEB2 0%, #46FD3E 100%)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                  }}
+                >
+                  {" "}
+                  50
+                </span>{" "}
+                participants or
+                <span
+                  className=""
+                  style={{
+                    background:
+                      "linear-gradient(180deg, #26FEB2 0%, #46FD3E 100%)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                  }}
+                >
+                  {" "}
+                  50,000
+                </span>{" "}
+                - we{" "}
+                <span
+                  className=""
+                  style={{
+                    background:
+                      "linear-gradient(180deg, #26FEB2 0%, #46FD3E 100%)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                  }}
+                >
+                  customize{" "}
+                </span>
                 formats, infra, referees, emcees, branding, and
                 experiences—end-to-end.
               </h1>
-              <button className="bg-gradient-to-r from-[#26FEB2]  to-[#46FD3E] text-black px-6 py-2 rounded-full font-bold mt-20 ">
+              <button
+                style={{
+                  background:
+                    " linear-gradient(91.1deg, #26FEB2 -0.39%, #46FD3E 81.76%)",
+                }}
+                className="] text-black px-6 py-2 rounded-full font-bold mt-20 "
+              >
                 Plan my event
               </button>
               {/* <button className="bg-gradient-to-r from-[#26FEB2]  to-[#46FD3E] font-bold text-sm md:text-base py-2 px-6 md:py-3 md:px-8 rounded-full transition-transform hover:scale-105 text-bg">
@@ -235,10 +282,16 @@ const EventsMid = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-4">
             <h1
-              style={{ fontSize: "24px" }}
-              className="bg-gradient-to-r from-teal-300 to-green-500 bg-clip-text text-transparent text-center text-base font-bold uppercase tracking-widest mb-6 underline underline-offset-8 decoration-green-500"
+              style={{
+                fontSize: "24px",
+                background:
+                  "linear-gradient(91.1deg, #26FEB2 -0.39%, #46FD3E 81.76%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+              }}
+              className="inline-block text-center text-base font-bold uppercase tracking-widest mb-6 underline underline-offset-8 decoration-green-500"
             >
-              Flagship Program
+              Spotlight
             </h1>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-10">
@@ -251,7 +304,18 @@ const EventsMid = () => {
                   className="object-cover h-20"
                 />
                 <h1 className="text-2xl md:text-3xl font-bold leading-tight text-white drop-shadow-lg">
-                  Sports as Your <span className="text-green-400">Next</span>{" "}
+                  Sports as Your{" "}
+                  <span
+                    className=""
+                    style={{
+                      background:
+                        "linear-gradient(180deg, #26FEB2 0%, #46FD3E 100%)",
+                      WebkitBackgroundClip: "text",
+                      WebkitTextFillColor: "transparent",
+                    }}
+                  >
+                    Next
+                  </span>{" "}
                   Offsite
                 </h1>
               </div>
@@ -259,19 +323,56 @@ const EventsMid = () => {
               {/* Text Section */}
               <div className="space-y-4 text-gray-300">
                 <p className="text-base">
-                  <span className="text-green-400">Courtside@Work </span>
+                  <span
+                    style={{
+                      background:
+                        "linear-gradient(180deg, #26FEB2 0%, #46FD3E 100%)",
+                      WebkitBackgroundClip: "text",
+                      WebkitTextFillColor: "transparent",
+                    }}
+                  >
+                    Courtside@Work{" "}
+                  </span>
                   is our corporate sports engagement format designed to boost
-                  team morale, <span className="text-green-400">health </span>,
-                  and
-                  <span className="text-green-400">culture</span>. We bring a
-                  pop-up Pickleball arena to your office or event space with
-                  coaches, referees, gameplay formats, music, and more.
+                  team morale,{" "}
+                  <span
+                    className=""
+                    style={{
+                      background:
+                        "linear-gradient(180deg, #26FEB2 0%, #46FD3E 100%)",
+                      WebkitBackgroundClip: "text",
+                      WebkitTextFillColor: "transparent",
+                    }}
+                  >
+                    health{" "}
+                  </span>
+                  , and{" "}
+                  <span
+                    className=""
+                    style={{
+                      background:
+                        "linear-gradient(180deg, #26FEB2 0%, #46FD3E 100%)",
+                      WebkitBackgroundClip: "text",
+                      WebkitTextFillColor: "transparent",
+                    }}
+                  >
+                    culture
+                  </span>
+                  . We bring a pop-up Pickleball arena to your office or event
+                  space with coaches, referees, gameplay formats, music, and
+                  more.
                 </p>
               </div>
 
               {/* CTA Buttons */}
               <div className="flex flex-col lg:flex-row gap-6">
-                <button className="bg-gradient-to-r from-[#26FEB2]  to-[#46FD3E] text-black font-bold py-3 px-6 rounded-full text-sm shadow-lg hover:shadow-green-500/25 hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-2 max-w-[250px]">
+                <button
+                  style={{
+                    background:
+                      "linear-gradient(90deg, #26FEB2 3%, #46FD3E 85%)",
+                  }}
+                  className=" text-black font-bold py-3 px-6 rounded-full text-sm shadow-lg hover:shadow-green-500/25 hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-2 max-w-[250px]"
+                >
                   <FaDownload /> Download Program Deck
                 </button>
                 <button className="bg-white text-black font-bold py-3 px-6 rounded-full text-sm shadow-lg hover:shadow-green-500/25 hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-2 max-w-[150px]">
@@ -295,8 +396,14 @@ const EventsMid = () => {
           {/* Track Record Section */}
           <div className="text-center mb-12">
             <h1
-              style={{ fontSize: "24px" }}
-              className="bg-gradient-to-r from-teal-300 to-green-500 bg-clip-text text-transparent text-center text-base font-bold uppercase tracking-widest mb-6 underline underline-offset-8 decoration-green-500"
+              style={{
+                fontSize: "24px",
+                background:
+                  "linear-gradient(91.1deg, #26FEB2 -0.39%, #46FD3E 81.76%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+              }}
+              className="inline-block text-center text-base font-bold uppercase tracking-widest mb-6 underline underline-offset-8 decoration-green-500"
             >
               OUR TRACK RECORD
             </h1>
@@ -336,7 +443,15 @@ const EventsMid = () => {
                       />
                     </div>
                     <div className="p-6">
-                      <h4 className="text-lg font-bold text-accent mb-2">
+                      <h4
+                        style={{
+                          background:
+                            "linear-gradient(180deg, #26FEB2 0%, #46FD3E 100%)",
+                          WebkitBackgroundClip: "text",
+                          WebkitTextFillColor: "transparent",
+                        }}
+                        className="text-lg font-bold  mb-2"
+                      >
                         {testimonial.title}
                       </h4>
                       <p className="text-gray-300 text-sm">
@@ -350,8 +465,13 @@ const EventsMid = () => {
           </div>
 
           <div className="text-center mt-8">
-            <button className="bg-gradient-to-r from-[#26FEB2]  to-[#46FD3E] text-black px-8 py-3 rounded-full font-semibold ">
-              See Our Work
+            <button
+              style={{
+                background: " linear-gradient(90deg, #26FEB2 3%, #46FD3E 85%)",
+              }}
+              className=" text-black px-8 py-3 rounded-full font-semibold "
+            >
+              See Hilights
             </button>
           </div>
         </div>

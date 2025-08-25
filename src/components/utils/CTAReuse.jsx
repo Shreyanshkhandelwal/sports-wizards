@@ -29,7 +29,15 @@ const CTAReuse = ({
             <h2 className="text-3xl md:text-4xl font-bold uppercase">
               {headingParts.map((part, i) =>
                 part === accentWord ? (
-                  <span key={i} className="text-accent">
+                  <span
+                    key={i}
+                    style={{
+                      background:
+                        " linear-gradient(180deg, #26FEB2 0%, #46FD3E 100%)",
+                      WebkitBackgroundClip: "text",
+                      WebkitTextFillColor: "transparent",
+                    }}
+                  >
                     {part}
                   </span>
                 ) : (
@@ -54,7 +62,11 @@ const CTAReuse = ({
           >
             <button
               onClick={primaryBtnClick}
-              className="bg-gradient-to-r from-teal-300 via-green-400 to-green-500 font-bold text-sm md:text-base py-2 px-5 md:py-3 md:px-6 rounded-full transition-transform hover:scale-105 text-black w-fit"
+              className=" font-bold text-sm md:text-base py-2 px-5 md:py-3 md:px-6 rounded-full transition-transform hover:scale-105 text-black w-fit"
+              style={{
+                background:
+                  "linear-gradient(91.1deg, #26FEB2 -0.39%, #46FD3E 81.76%)",
+              }}
             >
               {primaryButtonText}
             </button>

@@ -19,12 +19,20 @@ const CoachingMid = () => {
       {/* Main Section - Not Just for Schools */}
       <section className="flex flex-col items-center justify-center py-12 px-4 sm:px-6 lg:px-8 mt-10">
         <div className="max-w-7xl mx-auto">
-          <h1
-            style={{ fontSize: "24px" }}
-            className="bg-gradient-to-r from-teal-300 to-green-500 bg-clip-text text-transparent text-center text-base font-bold uppercase tracking-widest mb-6 underline underline-offset-8 decoration-green-500"
-          >
-            Not Just for Schools
-          </h1>
+          <div className="text-center">
+            <h1
+              style={{
+                fontSize: "24px",
+                background:
+                  "linear-gradient(91.1deg, #26FEB2 -0.39%, #46FD3E 81.76%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+              }}
+              className="inline-block text-center text-base font-bold uppercase tracking-widest mb-6 underline underline-offset-8 decoration-green-500"
+            >
+              Not Just for Schools
+            </h1>
+          </div>
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
@@ -35,7 +43,16 @@ const CoachingMid = () => {
             <div className="space-y-6">
               <h1 className="text-white font-bold text-3xl leading-relaxed uppercase">
                 While our flagship program—
-                <span className="text-accent">SportsWizards@School</span>
+                <span
+                  style={{
+                    background:
+                      "linear-gradient(180deg, #26FEB2 0%, #46FD3E 100%)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                  }}
+                >
+                  SportsWizards@School
+                </span>
                 — <br />
                 is tailored for educational institutions, our coaching vertical
                 serves:
@@ -95,21 +112,55 @@ const CoachingMid = () => {
             </div>
 
             {/* Right Side - Text */}
-            <div className="h-full flex flex-col items-start content-between relative">
+            <div className="h-full flex flex-col items-start justify-between relative">
               <p className="text-gray-300 text-lg leading-relaxed">
                 Whether you need a seasonal coaching plan, tournament-ready
                 prep, or trainer{" "}
-                <span className="text-accent">certification programs</span>—we
-                bring structure, accountability, and expert coaching. Aligned
-                with <span className="text-accent">NEP 2020</span> and{" "}
-                <span className="text-accent">NSP 2025</span>, our coaching
-                philosophy promotes structured physical literacy, talent
-                identification, and holistic student well-being. From daily
-                sessions to parent engagement camps—our approach is
+                <span
+                  style={{
+                    background:
+                      "linear-gradient(180deg, #26FEB2 0%, #46FD3E 100%)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                  }}
+                >
+                  certification programs
+                </span>
+                —we bring structure, accountability, and expert coaching.
+                Aligned with{" "}
+                <span
+                  style={{
+                    background:
+                      "linear-gradient(180deg, #26FEB2 0%, #46FD3E 100%)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                  }}
+                >
+                  NEP 2020
+                </span>{" "}
+                and{" "}
+                <span
+                  style={{
+                    background:
+                      "linear-gradient(180deg, #26FEB2 0%, #46FD3E 100%)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                  }}
+                >
+                  NSP 2025
+                </span>
+                , our coaching philosophy promotes structured physical literacy,
+                talent identification, and holistic student well-being. From
+                daily sessions to parent engagement camps—our approach is
                 academic-friendly and outcome-driven.
               </p>
 
-              <button className=" absolute bottom-8 bg-gradient-to-r from-green-400 to-green-600 hover:from-green-500 hover:to-green-700 text-black font-bold py-3 px-8 rounded-full text-lg shadow-lg hover:shadow-green-500/25 hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300">
+              <button
+                style={{
+                  background: "linear-gradient(90deg, #26FEB2 3%, #46FD3E 85%)",
+                }}
+                className="  text-black font-bold py-3 px-8 rounded-full text-lg shadow-lg hover:shadow-green-500/25 hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300"
+              >
                 Partner with Us
               </button>
             </div>
@@ -125,8 +176,14 @@ const CoachingMid = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-4">
             <h1
-              style={{ fontSize: "24px" }}
-              className="bg-gradient-to-r from-teal-300 to-green-500 bg-clip-text text-transparent text-center text-base font-bold uppercase tracking-widest mb-6 underline underline-offset-8 decoration-green-500"
+              style={{
+                fontSize: "24px",
+                background:
+                  "linear-gradient(91.1deg, #26FEB2 -0.39%, #46FD3E 81.76%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+              }}
+              className="inline-block text-center text-base font-bold uppercase tracking-widest mb-6 underline underline-offset-8 decoration-green-500"
             >
               Flagship Program
             </h1>
@@ -136,12 +193,30 @@ const CoachingMid = () => {
             {/* Left Side - Content */}
             <div className="space-y-6">
               <div className="space-y-4">
-                <h3 className="bg-gradient-to-r from-teal-300 to-green-500 bg-clip-text text-transparent text-4xl font-semibold">
+                <h3
+                  className=" text-4xl font-semibold"
+                  style={{
+                    background:
+                      "linear-gradient(180deg, #26FEB2 0%, #46FD3E 100%)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                  }}
+                >
                   SportsWizards@School
                 </h3>
                 <h1 className=" text-3xl font-bold leading-tight">
                   One Program. Five Sports.{" "}
-                  <span className="text-green-400">Unlimited </span>
+                  <span
+                    className=""
+                    style={{
+                      background:
+                        "linear-gradient(180deg, #26FEB2 0%, #46FD3E 100%)",
+                      WebkitBackgroundClip: "text",
+                      WebkitTextFillColor: "transparent",
+                    }}
+                  >
+                    Unlimited{" "}
+                  </span>
                   Possibilities.
                 </h1>
               </div>
@@ -150,7 +225,15 @@ const CoachingMid = () => {
                 <p className="text-base">
                   Our full-service model enables schools to offer 5 daily sports
                   -{" "}
-                  <span className="text-green-400">
+                  <span
+                    className=""
+                    style={{
+                      background:
+                        "linear-gradient(180deg, #26FEB2 0%, #46FD3E 100%)",
+                      WebkitBackgroundClip: "text",
+                      WebkitTextFillColor: "transparent",
+                    }}
+                  >
                     Football, Basketball, Cricket, Volleyball/Badminton, and
                     Martial Arts/skating
                   </span>{" "}
@@ -193,7 +276,12 @@ const CoachingMid = () => {
                 </div>
               </div>
 
-              <button className="bg-gradient-to-r from-green-400 to-green-600 hover:from-green-500 hover:to-green-700 text-black font-bold py-3 px-6 rounded-full text-sm shadow-lg hover:shadow-green-500/25 hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300 flex items-center content-center gap-2">
+              <button
+                style={{
+                  background: "linear-gradient(90deg, #26FEB2 3%, #46FD3E 85%)",
+                }}
+                className=" text-black font-bold py-3 px-6 rounded-full text-sm shadow-lg hover:shadow-green-500/25 hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300 flex items-center content-center gap-2"
+              >
                 <FaDownload /> Download Program Deck
               </button>
             </div>

@@ -3,6 +3,7 @@ import { Pagination, Autoplay } from "swiper/modules";
 import { useRef, useCallback } from "react";
 import "swiper/css";
 import "swiper/css/pagination";
+import { useLocation } from "react-router-dom";
 
 const CustomSwiperStyles = () => (
   <style>{`
@@ -93,6 +94,13 @@ const TestimonialCard = ({ quote, name, title }) => (
 );
 
 const TestimonialsSection = () => {
+  const location = useLocation();
+
+  const headingText =
+    location.pathname === "/coaching"
+      ? "Let’s Transform Your School’s Sporting Culture"
+      : "What Our Partners Say";
+
   const swiperRef = useRef(null);
 
   const updateBorders = useCallback((swiper) => {
@@ -131,14 +139,20 @@ const TestimonialsSection = () => {
         <div className="text-center mb-12">
           <div className="inline-block relative">
             <h1
-              style={{ fontSize: "24px" }}
-              className="bg-gradient-to-r from-teal-300 to-green-500 bg-clip-text text-transparent text-center text-base font-bold uppercase tracking-widest mb-6 underline underline-offset-8 decoration-green-500"
+              style={{
+                fontSize: "24px",
+                background:
+                  "linear-gradient(91.1deg, #26FEB2 -0.39%, #46FD3E 81.76%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+              }}
+              className="inline-block text-center text-base font-bold uppercase tracking-widest mb-6 underline underline-offset-8 decoration-green-500"
             >
               Testimonials
             </h1>
           </div>
           <h2 className="font-bold text-3xl md:text-4xl mt-4 tracking-wider uppercase">
-            What Our Partners Say
+            {headingText}
           </h2>
         </div>
 

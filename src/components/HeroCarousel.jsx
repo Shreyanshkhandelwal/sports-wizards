@@ -574,7 +574,13 @@ const HeroCarousel = () => {
           <div className="title-2">{data[order.current[0]]?.title2}</div>
         </div>
         <div className="btns flex-col lg:flex gap-5">
-          <button className="bg-gradient-to-r from-[#26FEB2]  to-[#46FD3E] font-bold text-sm md:text-base py-2 px-6 md:py-3 md:px-8 rounded-full transition-transform hover:scale-105 text-bg max-w-[250px]">
+          <button
+            style={{
+              background:
+                "linear-gradient(91.1deg, #26FEB2 -0.39%, #46FD3E 81.76%)",
+            }}
+            className="font-bold text-sm md:text-base py-2 px-6 md:py-3 md:px-8 rounded-full transition-transform hover:scale-105 text-bg max-w-[250px]"
+          >
             Explore What We Do
           </button>
           <button className="bg-white font-bold text-sm md:text-base py-2 px-6 md:py-3 md:px-8 rounded-full transition-transform hover:scale-105 text-bg max-w-[180px]">
@@ -595,7 +601,13 @@ const HeroCarousel = () => {
           <div className="title-2">{data[order.current[0]]?.title2}</div>
         </div>
         <div className="btns flex-col lg:flex gap-5">
-          <button className="bg-gradient-to-r from-[#26FEB2]  to-[#46FD3E] font-bold text-sm md:text-base py-2 px-6 md:py-3 md:px-8 rounded-full transition-transform hover:scale-105 text-bg max-w-[250px]">
+          <button
+            style={{
+              background:
+                "linear-gradient(91.1deg, #26FEB2 -0.39%, #46FD3E 81.76%)",
+            }}
+            className=" font-bold text-sm md:text-base py-2 px-6 md:py-3 md:px-8 rounded-full transition-transform hover:scale-105 text-bg max-w-[250px]"
+          >
             Explore What We Do
           </button>
           <button className="bg-white font-bold text-sm md:text-base py-2 px-6 md:py-3 md:px-8 rounded-full transition-transform hover:scale-105 text-bg max-w-[180px]">

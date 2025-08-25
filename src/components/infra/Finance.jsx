@@ -10,8 +10,14 @@ const Finance = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-4">
           <h1
-            style={{ fontSize: "24px" }}
-            className="bg-gradient-to-r from-teal-300 to-green-500 bg-clip-text text-transparent text-center text-base font-bold uppercase tracking-widest mb-6 underline underline-offset-8 decoration-green-500"
+            style={{
+              fontSize: "24px",
+              background:
+                "linear-gradient(91.1deg, #26FEB2 -0.39%, #46FD3E 81.76%)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+            }}
+            className="inline-block text-center text-base font-bold uppercase tracking-widest mb-6 underline underline-offset-8 decoration-green-500"
           >
             Embedded Finance
           </h1>
@@ -23,18 +29,49 @@ const Finance = () => {
             <div className="space-y-4">
               <h1 className=" text-3xl font-bold leading-tight">
                 Now Build with Confidence –{" "}
-                <span className="text-green-400">Financing Available </span>
+                <span
+                  className=""
+                  style={{
+                    background:
+                      "linear-gradient(180deg, #26FEB2 0%, #46FD3E 100%)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                  }}
+                >
+                  Financing Available{" "}
+                </span>
               </h1>
             </div>
 
             <div className="space-y-4 text-gray-300">
               <p className="text-base">
                 Building quality sports infrastructure can be{" "}
-                <span className="text-green-400">capital-intensive</span> —but
-                we’ve got you covered. Sports Wizards now partners with leading
-                <span className="text-green-400">finance</span> providers to
-                help institutions, clubs, and individuals access easy, scalable
-                financing.
+                <span
+                  className=""
+                  style={{
+                    background:
+                      "linear-gradient(180deg, #26FEB2 0%, #46FD3E 100%)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                  }}
+                >
+                  capital-intensive
+                </span>{" "}
+                —but we’ve got you covered. Sports Wizards now partners with
+                leading
+                <span
+                  className=""
+                  style={{
+                    background:
+                      "linear-gradient(180deg, #26FEB2 0%, #46FD3E 100%)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                  }}
+                >
+                  finance
+                </span>{" "}
+                providers to help institutions, clubs, and individuals access
+                easy, scalable financing.
               </p>
 
               <div className="space-y-3">

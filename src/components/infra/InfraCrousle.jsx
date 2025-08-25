@@ -543,30 +543,8 @@ import React, { useEffect, useRef, useState } from "react";
 // Mock images for demonstration
 const slides = [
   {
-    image: "/coaching.jpg",
-    title: "Basketball",
-    heading: "Event Management",
-    sections: [
-      {
-        title: "Corporate Events",
-        content:
-          "Professional corporate gatherings, conferences, and team building activities. Complete event planning and execution services.",
-      },
-      {
-        title: "Social Gatherings",
-        content:
-          "Memorable social events including parties, celebrations, and community gatherings with full-service coordination.",
-      },
-      {
-        title: "Virtual Events",
-        content:
-          "Modern virtual and hybrid event solutions with cutting-edge technology and seamless user experience.",
-      },
-    ],
-  },
-  {
     image: "/cricket-court.png",
-    title: "Pickleball",
+    title: "Pickleball Courts",
     heading: "Professional Coaching",
     sections: [
       {
@@ -587,8 +565,31 @@ const slides = [
     ],
   },
   {
-    image: "/gym.jpg",
-    title: "Gym",
+    image: "/coaching.jpg",
+    title: "Basketball Courts",
+    heading: "Event Management",
+    sections: [
+      {
+        title: "Corporate Events",
+        content:
+          "Professional corporate gatherings, conferences, and team building activities. Complete event planning and execution services.",
+      },
+      {
+        title: "Social Gatherings",
+        content:
+          "Memorable social events including parties, celebrations, and community gatherings with full-service coordination.",
+      },
+      {
+        title: "Virtual Events",
+        content:
+          "Modern virtual and hybrid event solutions with cutting-edge technology and seamless user experience.",
+      },
+    ],
+  },
+
+  {
+    image: "/e3.png",
+    title: "Cricket Nets",
     heading: "Skills Development",
     sections: [
       {
@@ -610,7 +611,7 @@ const slides = [
   },
   {
     image: "/badminton-court.png",
-    title: "Badminton",
+    title: "Badminton Courts",
     heading: "Premium Products",
     sections: [
       {
@@ -632,7 +633,7 @@ const slides = [
   },
   {
     image: "/soccer-field.png",
-    title: "Soccer",
+    title: "Foorball Courts",
     heading: "Expert Consultation",
     sections: [
       {
@@ -758,12 +759,20 @@ const ImprovedCarousel = () => {
     <>
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1
-            style={{ fontSize: "24px" }}
-            className="bg-gradient-to-r from-teal-300 to-green-500 bg-clip-text text-transparent text-center text-base font-bold uppercase tracking-widest mb-6 underline underline-offset-8 decoration-green-500"
-          >
-            Who We Are
-          </h1>
+          <div className="text-center">
+            <h1
+              style={{
+                fontSize: "24px",
+                background:
+                  "linear-gradient(91.1deg, #26FEB2 -0.39%, #46FD3E 81.76%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+              }}
+              className="inline-block text-center text-base font-bold uppercase tracking-widest mb-6 underline underline-offset-8 decoration-green-500"
+            >
+              What WE Build
+            </h1>
+          </div>
           <div className="relative w-full min-h-[600px]  overflow-hidden py-12">
             <style jsx>{`
               .carousel-container {
@@ -807,6 +816,7 @@ const ImprovedCarousel = () => {
                 padding: 20px;
                 text-align: left;
                 border: 4px solid #10b981;
+
                 overflow-y: auto;
                 scrollbar-width: none;
                 -ms-overflow-style: none;
@@ -1008,7 +1018,11 @@ const ImprovedCarousel = () => {
                         </div>
                         <a
                           href="#"
-                          className=" text-center lg:absolute  lg:bottom-5 bg-gradient-to-r from-teal-300 via-green-400 to-green-500 font-bold text-sm md:text-base py-2 px-5 md:py-3 md:px-6 rounded-full transition-transform hover:scale-105 text-black w-[88%]"
+                          style={{
+                            background:
+                              "linear-gradient(91.1deg, #26FEB2 -0.39%, #46FD3E 81.76%)",
+                          }}
+                          className=" text-center lg:absolute  lg:bottom-5  font-bold text-sm md:text-base py-2 px-5 md:py-3 md:px-6 rounded-full transition-transform hover:scale-105 text-black w-[88%]"
                         >
                           Build My Court Now
                         </a>
@@ -1075,7 +1089,15 @@ const ImprovedCarousel = () => {
             }}
           >
             {/* Heading */}
-            <h2 className="text-accent text-lg font-semibold mb-8">
+            <h2
+              className="text-lg font-semibold mb-8 inline-block"
+              style={{
+                fontSize: "24px",
+                background: "linear-gradient(180deg, #26FEB2 0%, #46FD3E 100%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+              }}
+            >
               Add-on services
             </h2>
 

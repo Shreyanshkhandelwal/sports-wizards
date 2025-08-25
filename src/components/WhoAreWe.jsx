@@ -3,19 +3,35 @@ const WhoAreWe = () => {
     <>
       <section className="flex flex-col items-center justify-center py-12 px-4 sm:px-6 lg:px-8 mt-10">
         <div className="max-w-7xl mx-auto">
-          <h1
-            style={{ fontSize: "24px" }}
-            className="bg-gradient-to-r from-teal-300 to-green-500 bg-clip-text text-transparent text-center text-base font-bold uppercase tracking-widest mb-6 underline underline-offset-8 decoration-green-500"
-          >
-            Who We Are
-          </h1>
+          <div className="text-center">
+            <h1
+              style={{
+                fontSize: "24px",
+                background:
+                  "linear-gradient(91.1deg, #26FEB2 -0.39%, #46FD3E 81.76%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+              }}
+              className="inline-block text-center text-base font-bold uppercase tracking-widest mb-6 underline underline-offset-8 decoration-green-500"
+            >
+              Who We Are
+            </h1>
+          </div>
 
           <div className="flex flex-col lg:flex-row items-start justify-center gap-8 lg:gap-12">
             <div className="w-full lg:w-1/2 flex flex-col">
               <div className="mb-6">
                 <h2 className="text-4xl md:text-5xl font-black uppercase tracking-wide leading-tight">
                   More Than A Vendor, <br /> Your{" "}
-                  <span className="bg-gradient-to-b from-teal-300 to-green-500 bg-clip-text text-transparent">
+                  <span
+                    className=" bg-clip-text text-transparent"
+                    style={{
+                      background:
+                        " linear-gradient(90deg, #45FD3D 23.08%, #26FDAC 99.52%)",
+                      WebkitBackgroundClip: "text",
+                      WebkitTextFillColor: "transparent",
+                    }}
+                  >
                     Sports
                   </span>{" "}
                   Partner.

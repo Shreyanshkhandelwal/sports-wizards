@@ -102,8 +102,14 @@ export default function FeaturedProjects() {
               <div className="flex-1">
                 <div className="mb-4 flex items-center justify-center">
                   <h1
-                    style={{ fontSize: "24px" }}
-                    className="bg-gradient-to-r from-teal-300 to-green-500 bg-clip-text text-transparent text-center text-base font-bold uppercase tracking-widest mb-6 underline underline-offset-8 decoration-green-500"
+                    style={{
+                      fontSize: "24px",
+                      background:
+                        "linear-gradient(91.1deg, #26FEB2 -0.39%, #46FD3E 81.76%)",
+                      WebkitBackgroundClip: "text",
+                      WebkitTextFillColor: "transparent",
+                    }}
+                    className="inline-block text-center text-base font-bold uppercase tracking-widest mb-6 underline underline-offset-8 decoration-green-500"
                   >
                     Featured Projects
                   </h1>
@@ -112,12 +118,25 @@ export default function FeaturedProjects() {
                   <h1 className="text-4xl xl:text-5xl font-bold text-white leading-tight">
                     SHOWCASING OUR SIGNATURE
                     <br />
-                    <span className="bg-gradient-to-b from-teal-300 to-green-500 bg-clip-text text-transparent">
+                    <span
+                      style={{
+                        background:
+                          " linear-gradient(90deg, #45FD3D 0%, #26FDAC 27.4%)",
+                        WebkitBackgroundClip: "text",
+                        WebkitTextFillColor: "transparent",
+                      }}
+                    >
                       CREATIONS
                     </span>{" "}
                     ACROSS COMMUNITIES.
                   </h1>
-                  <button className="bg-gradient-to-r from-teal-300 via-green-400 to-green-500 font-bold text-sm md:text-base py-2 px-5 md:py-3 md:px-6 rounded-full transition-transform hover:scale-105 text-black">
+                  <button
+                    style={{
+                      background:
+                        "linear-gradient(91.1deg, #26FEB2 -0.39%, #46FD3E 81.76%)",
+                    }}
+                    className="font-bold text-sm md:text-base py-2 px-5 md:py-3 md:px-6 rounded-full transition-transform hover:scale-105 text-black"
+                  >
                     Build my Court
                   </button>
                 </div>
@@ -164,19 +183,41 @@ export default function FeaturedProjects() {
           <div className="px-4">
             <div className="text-center mb-8">
               <div className="inline-block mb-4">
-                <h1 className="bg-gradient-to-r from-teal-300 to-green-500 bg-clip-text text-transparent text-center text-base font-bold uppercase tracking-widest mb-6 underline underline-offset-8 decoration-green-500">
+                <h1
+                  style={{
+                    fontSize: "24px",
+                    background:
+                      "linear-gradient(91.1deg, #26FEB2 -0.39%, #46FD3E 81.76%)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                  }}
+                  className="inline-block text-center text-base font-bold uppercase tracking-widest mb-6 underline underline-offset-8 decoration-green-500"
+                >
                   Featured Projects
                 </h1>
               </div>
               <h1 className="text-2xl sm:text-3xl font-bold text-white leading-tight mb-6">
                 SHOWCASING OUR SIGNATURE
                 <br />
-                <span className="bg-gradient-to-b from-teal-300 to-green-500 bg-clip-text text-transparent">
+                <span
+                  style={{
+                    background:
+                      " linear-gradient(90deg, #45FD3D 0%, #26FDAC 27.4%)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                  }}
+                >
                   CREATIONS
                 </span>{" "}
                 ACROSS COMMUNITIES.
               </h1>
-              <button className="bg-gradient-to-r from-teal-300 via-green-400 to-green-500 font-bold text-sm md:text-base py-2 px-5 md:py-3 md:px-6 rounded-full transition-transform hover:scale-105 text-black">
+              <button
+                style={{
+                  background:
+                    "linear-gradient(91.1deg, #26FEB2 -0.39%, #46FD3E 81.76%)",
+                }}
+                className="font-bold text-sm md:text-base py-2 px-5 md:py-3 md:px-6 rounded-full transition-transform hover:scale-105 text-black"
+              >
                 Build my Court
               </button>
             </div>

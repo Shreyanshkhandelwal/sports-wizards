@@ -6,13 +6,20 @@ const Categories = () => {
       {/* sets apart */}
       <section className="flex flex-col items-center justify-center py-12 px-4 sm:px-6 lg:px-8 mt-10">
         <div className="max-w-7xl mx-auto">
-          <h1
-            style={{ fontSize: "24px" }}
-            className="bg-gradient-to-r from-teal-300 to-green-500 bg-clip-text text-transparent text-center text-base font-bold uppercase tracking-widest mb-6 underline underline-offset-8 decoration-green-500"
-          >
-            Product Categories
-          </h1>
-
+          <div className="text-center">
+            <h1
+              style={{
+                fontSize: "24px",
+                background:
+                  "linear-gradient(91.1deg, #26FEB2 -0.39%, #46FD3E 81.76%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+              }}
+              className="inline-block text-center text-base font-bold uppercase tracking-widest mb-6 underline underline-offset-8 decoration-green-500"
+            >
+              Product Categories
+            </h1>
+          </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-16 px-4">
             {[
               {
@@ -62,7 +69,11 @@ const Categories = () => {
                 </h2>
                 <a
                   href="#"
-                  className="bg-gradient-to-b from-teal-300 via-green-400 to-green-500 font-bold text-sm md:text-base py-2 px-5 md:py-3 md:px-6 rounded-full  text-black w-full"
+                  style={{
+                    background:
+                      " linear-gradient(180deg, #26FEB2 0%, #46FD3E 100%)",
+                  }}
+                  className=" font-bold text-sm md:text-base py-2 px-5 md:py-3 md:px-6 rounded-full  text-black w-full"
                 >
                   Get Quote
                 </a>
@@ -75,12 +86,20 @@ const Categories = () => {
       {/* orders */}
       <section className="flex flex-col items-center justify-center py-12 px-4 sm:px-6 lg:px-8 mt-10">
         <div className="max-w-7xl mx-auto">
-          <h1
-            style={{ fontSize: "24px" }}
-            className="bg-gradient-to-r from-teal-300 to-green-500 bg-clip-text text-transparent text-center text-base font-bold uppercase tracking-widest mb-6 underline underline-offset-8 decoration-green-500"
-          >
-            Available for Bulk Orders
-          </h1>
+          <div className="text-center">
+            <h1
+              style={{
+                fontSize: "24px",
+                background:
+                  "linear-gradient(91.1deg, #26FEB2 -0.39%, #46FD3E 81.76%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+              }}
+              className="inline-block text-center text-base font-bold uppercase tracking-widest mb-6 underline underline-offset-8 decoration-green-500"
+            >
+              Available for Bulk Orders
+            </h1>
+          </div>
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 text-white space-y-20">
@@ -123,7 +142,12 @@ const Categories = () => {
                   )
                 )}
               </ul>
-              <button className="bg-gradient-to-r from-teal-300 via-green-400 to-green-500 hover:from-green-500 hover:to-green-700 text-black font-bold py-3 px-8 rounded-full text-lg shadow-lg hover:shadow-green-500/25 hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300">
+              <button
+                style={{
+                  background: "linear-gradient(90deg, #26FEB2 3%, #46FD3E 85%)",
+                }}
+                className=" text-black font-bold py-3 px-8 rounded-full text-lg shadow-lg hover:shadow-green-500/25 hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300"
+              >
                 Get Quote
               </button>
             </div>
@@ -154,7 +178,12 @@ const Categories = () => {
                   </li>
                 ))}
               </ul>
-              <button className="bg-gradient-to-r from-teal-300 via-green-400 to-green-500 hover:from-green-500 hover:to-green-700 text-black font-bold py-3 px-8 rounded-full text-lg shadow-lg hover:shadow-green-500/25 hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300">
+              <button
+                style={{
+                  background: "linear-gradient(90deg, #26FEB2 3%, #46FD3E 85%)",
+                }}
+                className=" text-black font-bold py-3 px-8 rounded-full text-lg shadow-lg hover:shadow-green-500/25 hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300"
+              >
                 Get Quote
               </button>
             </div>
@@ -178,13 +207,20 @@ const Categories = () => {
       {/* model apart */}
       <section className="flex flex-col items-center justify-center py-12 px-4 sm:px-6 lg:px-8 mt-10">
         <div className="max-w-7xl mx-auto">
-          <h1
-            style={{ fontSize: "24px" }}
-            className="bg-gradient-to-r from-teal-300 to-green-500 bg-clip-text text-transparent text-center text-base font-bold uppercase tracking-widest mb-6 underline underline-offset-8 decoration-green-500"
-          >
-            Fulfilment model
-          </h1>
-
+          <div className="text-center">
+            <h1
+              style={{
+                fontSize: "24px",
+                background:
+                  "linear-gradient(91.1deg, #26FEB2 -0.39%, #46FD3E 81.76%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+              }}
+              className="inline-block text-center text-base font-bold uppercase tracking-widest mb-6 underline underline-offset-8 decoration-green-500"
+            >
+              Fulfilment model
+            </h1>
+          </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6 mt-16 px-4">
             {[
               {
@@ -213,7 +249,11 @@ const Categories = () => {
               >
                 <a
                   href="#"
-                  className="bg-gradient-to-b from-teal-300 via-green-400 to-green-500 rounded-[14px] p-2 text-black w-[40px] h-[40px]"
+                  style={{
+                    background:
+                      "linear-gradient(180deg, #26FEB2 0%, #46FD3E 100%)",
+                  }}
+                  className=" rounded-[14px] p-2 text-black w-[40px] h-[40px]"
                 >
                   {item.img}
                 </a>
