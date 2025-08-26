@@ -88,3 +88,26 @@ h1 {
     transparent 100%
   );
 }
+/* custom-scrollbar utility */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: var(--color-bg-secondary); /* #161616 */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--color-misc); /* #2C2C2C */
+  border-radius: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #3a3a3a; /* slightly lighter on hover */
+}
+
+/* Firefox */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-misc) var(--color-bg-secondary);
+}

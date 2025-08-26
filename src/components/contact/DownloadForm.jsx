@@ -51,7 +51,7 @@ const DownloadForm = ({ onClose, onSuccess }) => {
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center p-4 z-50">
-      <div className="bg-[#161616] rounded-2xl p-6 max-w-md w-full max-h-[90vh] overflow-y-auto border border-[#2C2C2C]">
+      <div className="bg-bg-secondary rounded-2xl p-6 max-w-2xl w-full max-h-[90vh] overflow-y-auto border border-misc custom-scrollbar">
         <div className="flex justify-between items-center mb-6">
           <div>
             <h3 className="text-xl font-bold text-[#F2F2F2] mb-2">
