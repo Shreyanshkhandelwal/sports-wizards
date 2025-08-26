@@ -194,7 +194,7 @@ const CoachingMid = () => {
             <div className="space-y-6">
               <div className="space-y-4">
                 <h3
-                  className=" text-2xl lg:text-4xl font-semibold"
+                  className=" text-3xl lg:text-4xl font-semibold"
                   style={{
                     background:
                       "linear-gradient(180deg, #26FEB2 0%, #46FD3E 100%)",
