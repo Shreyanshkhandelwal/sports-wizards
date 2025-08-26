@@ -42,7 +42,7 @@ const ImpactSection = () => {
           >
             OUR IMPACT
           </h1>
-          <p className="mt-8 text-2xl md:text-4xl font-extrabold text-white italic">
+          <p className="mt-8 text-2xl md:text-4xl font-extrabold text-white italic font-Race">
             WE'RE NOT JUST BUILDING COURTS—
             <br />
             WE'RE BUILDING CULTURE

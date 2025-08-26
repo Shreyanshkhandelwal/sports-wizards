@@ -66,7 +66,9 @@ export default function InfraBottom() {
                   >
                     {item.icon}
                   </div>
-                  <h3 className="text-lg font-semibold">{item.title}</h3>
+                  <h3 className="text-lg font-semibold text-accent">
+                    {item.title}
+                  </h3>
                   <p className="text-sm text-bg-foreground-secondary mt-2">
                     {item.desc}
                   </p>

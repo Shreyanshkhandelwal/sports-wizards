@@ -11,6 +11,7 @@ import CursorTrail from "../components/utils/CursorTrail";
 import RibbonTrail from "../components/utils/NeonCursor";
 import NeonCursor from "../components/utils/NeonCursor";
 import { useEffect, useState } from "react";
+import Hero from "../components/Hero";
 
 const Home = () => {
   const [isLargeScreen, setIsLargeScreen] = useState(false);
@@ -33,7 +34,7 @@ const Home = () => {
     <>
       {/* {isLargeScreen && <NeonCursor />} */}
       <main className="w-full overflow-x-hidden">
-        <HeroCarousel />
+        <Hero />
         <div className="relative z-50 -mt-5 sm:mt-2">
           <LogoRibbon />
         </div>

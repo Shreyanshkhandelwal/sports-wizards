@@ -177,7 +177,7 @@ const EventsMid = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mt-16 min-h-[500px]">
             {/* Left Side - Text */}
             <div className="space-y-6 flex flex-col items-start content-between h-full">
-              <h1 className="text-white font-bold text-4xl leading-relaxed uppercase">
+              <h1 className="text-white font-bold text-xl lg:text-4xl leading-relaxed uppercase">
                 Be it
                 <span
                   className=""
@@ -308,7 +308,7 @@ const EventsMid = () => {
                 <img
                   src="/spotlight2.png"
                   alt="Spotlight"
-                  className="object-cover h-20"
+                  className="object-fill h-20"
                 />
                 <h1 className="text-2xl md:text-3xl font-bold leading-tight text-white drop-shadow-lg">
                   Sports as Your{" "}
@@ -494,7 +494,7 @@ const EventsMid = () => {
                           WebkitBackgroundClip: "text",
                           WebkitTextFillColor: "transparent",
                         }}
-                        className="text-lg font-bold  mb-2"
+                        className="text-lg font-bold  mb-2 font-Race"
                       >
                         {testimonial.title}
                       </h4>
@@ -515,7 +515,7 @@ const EventsMid = () => {
               }}
               className=" text-black px-8 py-3 rounded-full font-semibold "
             >
-              See Hilights
+              See Highlights
             </button>
           </div>
         </div>

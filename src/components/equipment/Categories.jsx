@@ -20,7 +20,7 @@ const Categories = () => {
               Product Categories
             </h1>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-16 px-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 mt-16 ">
             {[
               {
                 img: "/e1.png",
@@ -48,14 +48,14 @@ const Categories = () => {
                 className="flex flex-col items-center text-center p-4 rounded-[14px]"
                 style={{ background: " rgba(71, 71, 71, 0.17)" }}
               >
-                <div className="mb-4 h-[350px] w-full rounded-[14px] overflow-hidden relative">
+                <div className="mb-4 h-[280px] w-full rounded-[14px] overflow-hidden relative">
                   <img
                     src={item.img}
                     alt={`icon-${index}`}
                     className="mx-auto w-[100%] h-[100%] object-cover"
                   />
                   <button
-                    className="bg-white px-10 py-1 rounded-xl absolute bottom-2 right-2 text-black"
+                    className="bg-white px-4 py-1 rounded-xl absolute bottom-2 right-2 text-black"
                     style={{
                       boxShadow: "0px 4px 11px 0px rgba(0, 0, 0, 0.54)",
                       fontWeight: "600",
@@ -64,7 +64,7 @@ const Categories = () => {
                     with setup
                   </button>
                 </div>
-                <h2 className="text-2xl text-start md:text-3xl font-bold uppercase mb-2">
+                <h2 className="text-xl text-start md:text-2xl font-bold uppercase mb-2">
                   {item.text}
                 </h2>
                 <a
@@ -155,8 +155,21 @@ const Categories = () => {
 
           {/* Row 2 - Text left, Image right */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Left Text */}
-            <div className="space-y-6">
+            {/* Right Image — move this up on mobile with order-1 */}
+            <div className="relative bg-black rounded-2xl overflow-hidden order-1 lg:order-2">
+              <div className="p-8 flex items-center justify-center min-h-96">
+                <div className="relative w-full max-w-sm">
+                  <img
+                    src="/order2.png"
+                    alt="Training equipment kit with cones, hurdles, and agility tools"
+                    className="w-full h-auto object-cover rounded-lg shadow-xl"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Left Text — move this below on mobile with order-2 */}
+            <div className="space-y-6 order-2 lg:order-1">
               <h2 className="text-xl font-bold uppercase">
                 Recreational Equipment
               </h2>
@@ -186,19 +199,6 @@ const Categories = () => {
               >
                 Get Quote
               </button>
-            </div>
-
-            {/* Right Image */}
-            <div className="relative bg-black rounded-2xl overflow-hidden">
-              <div className="p-8 flex items-center justify-center min-h-96">
-                <div className="relative w-full max-w-sm">
-                  <img
-                    src="/order2.png"
-                    alt="Training equipment kit with cones, hurdles, and agility tools"
-                    className="w-full h-auto object-cover rounded-lg shadow-xl"
-                  />
-                </div>
-              </div>
             </div>
           </div>
         </div>

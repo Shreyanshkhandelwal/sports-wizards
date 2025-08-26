@@ -58,7 +58,9 @@ const CTAReuse = ({
 
           {/* CTA Buttons */}
           <div
-            className={`flex gap-3 ${hasTwoButtons ? "mt-4" : "mt-0 lg:mt-0"}`}
+            className={`flex ${
+              hasTwoButtons ? "flex-col sm:flex-row" : ""
+            } gap-3 ${hasTwoButtons ? "mt-4" : "mt-0 lg:mt-0"}`}
           >
             <button
               onClick={primaryBtnClick}

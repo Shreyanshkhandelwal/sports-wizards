@@ -60,7 +60,8 @@ const Header = () => {
   const navItems = pathname === "/" ? baseNav : extendedNav;
 
   return (
-    <header className="absolute top-5 left-0 w-full z-[999] flex justify-between items-center px-[5%]">
+    // <header className="absolute top-5 left-0 w-full z-[999] flex justify-between items-center px-[5%]">
+    <header className="fixed top-5 left-0 w-full z-[999] flex justify-between items-center px-[5%]">
       {/* Logo */}
       <Link to="/">
         <img src="/logo.png" alt="Logo" className="sm:w-[150px] w-[100px]" />

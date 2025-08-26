@@ -115,7 +115,7 @@ export default function FeaturedProjects() {
                   </h1>
                 </div>
                 <div className="flex items-center justify-between">
-                  <h1 className="text-4xl xl:text-5xl font-bold text-white leading-tight">
+                  <h1 className="text-3xl xl:text-4xl font-bold text-white leading-tight text-xl">
                     SHOWCASING OUR SIGNATURE
                     <br />
                     <span

@@ -8,16 +8,16 @@ import { useLocation } from "react-router-dom";
 const CustomSwiperStyles = () => (
   <style>{`
     .swiper {
-      padding-bottom: 40px !important;
+      /*padding-bottom: 40px !important;*/
       width: 100% !important;
     }
     .swiper-wrapper {
       align-items: stretch !important;
-    }
+    }/*
     .swiper-slide {
       height: auto !important;
       display: flex !important;
-    }
+    }*/
     .swiper-pagination-bullet {
       width: 8px;
       height: 8px;

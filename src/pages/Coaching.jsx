@@ -41,8 +41,8 @@ const Coaching = () => {
         <CoachingMid />
         <TestimonialsSection />
         <CTAReuse
-          heading="Sport isn’t extra. It’s essential"
-          accentWord="essential"
+          heading="Sport isn’t extra. It’s essentials"
+          accentWord="essentials"
           paragraph="“Partner with Sports Wizards to build a culture of play on campus.”"
           primaryButtonText="Talk To A Program Advisor"
           secondaryButtonText="Schedule Campus Walkthrough"

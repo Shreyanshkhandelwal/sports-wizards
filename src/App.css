@@ -1,6 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Race Sport";
+  src: url("../public/font/RaceSport.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
 @theme {
   --color-accent: #00ff01;
   --color-bg: #0b0b0b;
@@ -8,18 +15,12 @@
   --color-bg-foreground: #f2f2f2;
   --color-bg-foreground-secondary: #b0b0b0;
   --color-misc: #2c2c2c;
+  --font-Race: "Race Sport";
 }
 
 body {
   @apply bg-bg text-bg-foreground;
   font-family: "Poppins", sans-serif;
-}
-
-@font-face {
-  font-family: "Race Sport";
-  src: url("../public/font/RaceSport.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
 }
 
 h1 {
@@ -52,7 +53,7 @@ h1 {
 .hero-carousel .swiper-slide img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: fill;
 }
 
 /* Gradient Border */

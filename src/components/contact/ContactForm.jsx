@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 // import { MapPin, Phone, Mail, X } from "react-icons";
 import { MdLocationOn, MdEmail } from "react-icons/md";
 import { FaPhone } from "react-icons/fa";
@@ -15,6 +15,8 @@ const ContactForm = ({ onSuccess }) => {
     interests: [],
     message: "",
   });
+
+  const formRef = useRef(null);
 
   const [showModal, setShowModal] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
@@ -98,105 +100,133 @@ const ContactForm = ({ onSuccess }) => {
       <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-8 items-stretch">
         {/* Form Section */}
         <div className="bg-[#161616] rounded-2xl p-8 border border-[#2C2C2C] flex flex-col justify-between">
-          <div>
-            <div className="mb-8">
-              <h1 className="text-3xl font-bold mb-2">
-                LET'S <span className="text-accent">BUILD</span> SOMETHING
-                SPORTY TOGETHER.
-              </h1>
-            </div>
+          <form
+            ref={formRef}
+            onSubmit={(e) => {
+              e.preventDefault();
 
-            <div className="space-y-6">
-              {/* Full Name */}
-              <div>
-                <label className="block text-sm font-medium mb-2">
-                  Full Name
-                </label>
-                <input
-                  type="text"
-                  name="fullName"
-                  value={formData.fullName}
-                  onChange={handleInputChange}
-                  placeholder="Enter Full Name"
-                  className="w-full bg-[#2C2C2C] border border-[#2C2C2C] rounded-lg px-4 py-3 text-[#F2F2F2] placeholder-[#B0B0B0] focus:outline-none focus:ring-2 focus:ring-[#00FF01] focus:border-transparent"
-                />
+              if (!formData.interests[0]) {
+                alert("Please select at least one interest.");
+                return;
+              }
+
+              if (!formRef.current.checkValidity()) {
+                formRef.current.reportValidity();
+                return;
+              }
+
+              handleSubmit();
+            }}
+          >
+            <div>
+              <div className="mb-8">
+                <h1 className="text-3xl font-bold mb-2">
+                  LET'S <span className="text-accent">BUILD</span> SOMETHING
+                  SPORTY TOGETHER.
+                </h1>
               </div>
 
-              {/* Organization Name */}
-              <div>
-                <label className="block text-sm font-medium mb-2">
-                  Organization Name
-                </label>
-                <input
-                  type="text"
-                  name="organizationName"
-                  value={formData.organizationName}
-                  onChange={handleInputChange}
-                  placeholder="Enter Organization Name"
-                  className="w-full bg-[#2C2C2C] border border-[#2C2C2C] rounded-lg px-4 py-3 text-[#F2F2F2] placeholder-[#B0B0B0] focus:outline-none focus:ring-2 focus:ring-[#00FF01] focus:border-transparent"
-                />
-              </div>
-
-              {/* City and Phone */}
-              <div className="grid md:grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-sm font-medium mb-2 text-[#F2F2F2]">
-                    City
-                  </label>
-                  <select
-                    name="city"
-                    value={modalData.city}
-                    onChange={handleModalInputChange}
-                    className="w-full bg-[#2C2C2C] border border-[#2C2C2C] rounded-lg px-4 py-3 text-[#F2F2F2] focus:outline-none focus:ring-2 focus:ring-[#00FF01] focus:border-transparent"
-                  >
-                    <option value="">Select City</option>
-                    <option value="Mumbai">Mumbai</option>
-                    <option value="Delhi">Delhi</option>
-                    <option value="Bangalore">Bangalore</option>
-                    <option value="Chennai">Chennai</option>
-                    <option value="Kolkata">Kolkata</option>
-                    <option value="Pune">Pune</option>
-                    <option value="Other">Other</option>
-                  </select>
-                </div>
+              <div className="space-y-6">
+                {/* Full Name */}
                 <div>
                   <label className="block text-sm font-medium mb-2">
-                    Phone
+                    Full Name
                   </label>
                   <input
-                    type="tel"
-                    name="phone"
-                    value={formData.phone}
+                    type="text"
+                    name="fullName"
+                    required={true}
+                    value={formData.fullName}
                     onChange={handleInputChange}
-                    placeholder="Enter Phone Number"
+                    placeholder="Enter Full Name"
                     className="w-full bg-[#2C2C2C] border border-[#2C2C2C] rounded-lg px-4 py-3 text-[#F2F2F2] placeholder-[#B0B0B0] focus:outline-none focus:ring-2 focus:ring-[#00FF01] focus:border-transparent"
                   />
                 </div>
-              </div>
 
-              {/* Email */}
-              <div>
-                <label className="block text-sm font-medium mb-2">
-                  Email ID
-                </label>
-                <input
-                  type="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleInputChange}
-                  placeholder="Enter Email ID"
-                  className="w-full bg-[#2C2C2C] border border-[#2C2C2C] rounded-lg px-4 py-3 text-[#F2F2F2] placeholder-[#B0B0B0] focus:outline-none focus:ring-2 focus:ring-[#00FF01] focus:border-transparent"
-                />
-              </div>
+                {/* Organization Name */}
+                <div>
+                  <label className="block text-sm font-medium mb-2">
+                    Organization Name
+                  </label>
+                  <input
+                    type="text"
+                    required={true}
+                    name="organizationName"
+                    value={formData.organizationName}
+                    onChange={handleInputChange}
+                    placeholder="Enter Organization Name"
+                    className="w-full bg-[#2C2C2C] border border-[#2C2C2C] rounded-lg px-4 py-3 text-[#F2F2F2] placeholder-[#B0B0B0] focus:outline-none focus:ring-2 focus:ring-[#00FF01] focus:border-transparent"
+                  />
+                </div>
 
-              {/* Interests */}
-              <div>
-                <label className="block text-sm font-medium mb-3">
-                  Interested In:
-                </label>
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-                  {["Coaching", "Infra", "Events", "Merchandise", "Other"].map(
-                    (interest) => (
+                {/* City and Phone */}
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-sm font-medium mb-2 text-[#F2F2F2]">
+                      City
+                    </label>
+                    <select
+                      required={true}
+                      name="city"
+                      value={modalData.city}
+                      onChange={handleModalInputChange}
+                      className="w-full bg-[#2C2C2C] border border-[#2C2C2C] rounded-lg px-4 py-3 text-[#F2F2F2] focus:outline-none focus:ring-2 focus:ring-[#00FF01] focus:border-transparent"
+                    >
+                      <option value="">Select City</option>
+                      <option value="Mumbai">Mumbai</option>
+                      <option value="Delhi">Delhi</option>
+                      <option value="Bangalore">Bangalore</option>
+                      <option value="Chennai">Chennai</option>
+                      <option value="Kolkata">Kolkata</option>
+                      <option value="Pune">Pune</option>
+                      <option value="Other">Other</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium mb-2">
+                      Phone
+                    </label>
+                    <input
+                      required={true}
+                      type="tel"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleInputChange}
+                      placeholder="Enter Phone Number"
+                      className="w-full bg-[#2C2C2C] border border-[#2C2C2C] rounded-lg px-4 py-3 text-[#F2F2F2] placeholder-[#B0B0B0] focus:outline-none focus:ring-2 focus:ring-[#00FF01] focus:border-transparent"
+                    />
+                  </div>
+                </div>
+
+                {/* Email */}
+                <div>
+                  <label className="block text-sm font-medium mb-2">
+                    Email ID
+                  </label>
+                  <input
+                    required={true}
+                    type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    placeholder="Enter Email ID"
+                    className="w-full bg-[#2C2C2C] border border-[#2C2C2C] rounded-lg px-4 py-3 text-[#F2F2F2] placeholder-[#B0B0B0] focus:outline-none focus:ring-2 focus:ring-[#00FF01] focus:border-transparent"
+                  />
+                </div>
+
+                {/* Interests */}
+                <div>
+                  <label className="block text-sm font-medium mb-3">
+                    Interested In:
+                  </label>
+                  <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                    {[
+                      "Coaching",
+                      "Infra",
+                      "Events",
+                      "Merchandise",
+                      "Other",
+                    ].map((interest) => (
                       <button
                         key={interest}
                         type="button"
@@ -209,39 +239,47 @@ const ContactForm = ({ onSuccess }) => {
                       >
                         {interest}
                       </button>
-                    )
-                  )}
+                    ))}
+                    <input
+                      type="text"
+                      name="interest"
+                      value={formData.interests[0] || ""}
+                      required
+                      hidden
+                      readOnly
+                    />
+                  </div>
+                </div>
+
+                {/* Message */}
+                <div>
+                  <label className="block text-sm font-medium mb-2">
+                    Message
+                  </label>
+                  <textarea
+                    name="message"
+                    value={formData.message}
+                    onChange={handleInputChange}
+                    placeholder="Tell us about your project"
+                    rows={4}
+                    className="w-full bg-[#2C2C2C] border border-[#2C2C2C] rounded-lg px-4 py-3 text-[#F2F2F2] placeholder-[#B0B0B0] focus:outline-none focus:ring-2 focus:ring-[#00FF01] focus:border-transparent resize-none"
+                  />
                 </div>
               </div>
-
-              {/* Message */}
-              <div>
-                <label className="block text-sm font-medium mb-2">
-                  Message
-                </label>
-                <textarea
-                  name="message"
-                  value={formData.message}
-                  onChange={handleInputChange}
-                  placeholder="Tell us about your project"
-                  rows={4}
-                  className="w-full bg-[#2C2C2C] border border-[#2C2C2C] rounded-lg px-4 py-3 text-[#F2F2F2] placeholder-[#B0B0B0] focus:outline-none focus:ring-2 focus:ring-[#00FF01] focus:border-transparent resize-none"
-                />
-              </div>
             </div>
-          </div>
 
-          {/* Submit Button */}
-          <button
-            type="button"
-            onClick={handleSubmit}
-            style={{
-              background: "linear-gradient(180deg, #26FEB2 0%, #46FD3E 100%)",
-            }}
-            className="w-full  hover:opacity-90 text-[#0B0B0B] font-bold py-4 px-6 rounded-lg transition-all duration-200 transform hover:scale-[1.02] mt-6"
-          >
-            Submit
-          </button>
+            {/* Submit Button */}
+            <button
+              type="submit"
+              // onClick={handleSubmit}
+              style={{
+                background: "linear-gradient(180deg, #26FEB2 0%, #46FD3E 100%)",
+              }}
+              className="w-full  hover:opacity-90 text-[#0B0B0B] font-bold py-4 px-6 rounded-lg transition-all duration-200 transform hover:scale-[1.02] mt-6"
+            >
+              Submit
+            </button>
+          </form>
         </div>
 
         {/* Right Side Content */}
