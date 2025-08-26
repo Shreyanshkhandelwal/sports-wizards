@@ -57,8 +57,8 @@ const Header = () => {
     { path: "/infra", label: "Infrastructure" },
   ];
 
-  const navItems = pathname === "/" || pathname === "/contact" ? baseNav : extendedNav;
-
+  // const navItems = pathname === "/" || pathname === "/contact" ? baseNav : extendedNav;
+  const navItems = pathname === "/" ? baseNav : extendedNav;
 
   return (
     // <header className="absolute top-5 left-0 w-full z-[999] flex justify-between items-center px-[5%]">
@@ -98,7 +98,7 @@ const Header = () => {
 
       {/* Mobile Dropdown Menu */}
       {isOpen && pathname && (
-        <div className="absolute top-[30px] right-5 bg-black rounded-lg shadow-lg w-48 p-4 md:hidden">
+        <div className="fixed top-[50px] right-5 bg-black rounded-lg shadow-lg w-48 p-4 md:hidden">
           <ul className="flex flex-col gap-4">
             {navItems.map((item) => (
               <li key={item.path}>
