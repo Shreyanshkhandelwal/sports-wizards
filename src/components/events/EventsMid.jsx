@@ -382,7 +382,7 @@ const EventsMid = () => {
                 >
                   <FaDownload /> Download Program Deck
                 </button>
-                <button className="bg-white text-black font-bold py-3 px-6 rounded-full text-sm shadow-lg hover:shadow-green-500/25 hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-2 max-w-[150px]">
+                <button className="bg-white text-black font-bold py-3 px-6 rounded-full text-sm shadow-lg hover:shadow-green-500/25 hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-2 max-w-[180px]">
                   <BiPhone /> Book A Call
                 </button>
               </div>
