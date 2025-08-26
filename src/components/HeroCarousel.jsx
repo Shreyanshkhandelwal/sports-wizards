@@ -2493,7 +2493,10 @@ const HeroCarousel = () => {
                   alt={slide.title}
                   className="transition-transform duration-300 w-full h-full object-cover rounded-xl"
                 />
-                <div className="absolute bottom-3 left-3 text-white text-sm sm:text-base md:text-lg font-bold drop-shadow-lg">
+                <div
+                  className="absolute bottom-3 left-3 text-white text-sm sm:text-base md:text-lg font-bold drop-shadow-lg font-Race"
+                  style={{ fontWeight: "200" }}
+                >
                   {slide.title}
                 </div>
               </Link>
