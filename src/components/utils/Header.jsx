@@ -69,7 +69,7 @@ const Header = () => {
       </Link>
 
       {/* Desktop Nav */}
-      <ul className="hidden lg:flex items-center justify-center gap-8 text-base">
+      <ul className="hidden md:flex items-center justify-center gap-8 text-base">
         {navItems.map((item) => (
           <li key={item.path}>
             <Link
@@ -89,7 +89,7 @@ const Header = () => {
       {/* Mobile Hamburger (only for non-homepage) */}
       {pathname && (
         <button
-          className="lg:hidden text-white"
+          className="md:hidden text-white"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <IoCloseSharp size={28} /> : <IoMdMenu size={28} />}
