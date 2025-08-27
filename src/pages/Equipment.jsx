@@ -7,6 +7,8 @@ import NeonCursor from "../components/utils/NeonCursor";
 
 const Equipment = () => {
   const [isLargeScreen, setIsLargeScreen] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  const [showSuccess, setShowSuccess] = useState(false);
 
   useEffect(() => {
     const mediaQuery = window.matchMedia("(min-width: 1024px)");
