@@ -2215,10 +2215,10 @@ import { useEffect, useRef, useState } from "react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Link } from "react-router-dom";
-import CarouselImg1 from "/bb-court.jpg";
-import CarouselImg2 from "/equipment.jpg";
-import CarouselImg3 from "/spotlight1.jpg";
-import CarouselImg4 from "/infra.jpg";
+import CarouselImg1 from "/carousel/carousel-1.png";
+import CarouselImg2 from "/carousel/carousel-2.png";
+import CarouselImg3 from "/carousel/carousel-3.png";
+import CarouselImg4 from "/carousel/carousel-4.png";
 
 const slides = [
   { image: CarouselImg1, title: "Events", link: "/events" },
@@ -2347,7 +2347,7 @@ const HeroCarousel = () => {
             height: 100%;
             object-fit: cover;
             border-radius: 20px;
-            border: 2px solid rgba(76, 175, 80, 0.8);
+           /* border: 2px solid rgba(76, 175, 80, 0.8);*/
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3),
               0 4px 16px rgba(0, 0, 0, 0.2), 0 0 0 3px rgba(76, 175, 80, 0.3);
             transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -2356,7 +2356,7 @@ const HeroCarousel = () => {
           }
 
           .hero-carousel .swiper-slide-active img {
-            border: 6px solid rgba(76, 175, 80, 1); /* ✅ thicker border */
+           /* border: 6px solid rgba(76, 175, 80, 1);*/ /* ✅ thicker border */
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4),
               0 8px 24px rgba(0, 0, 0, 0.3), 0 0 0 4px rgba(76, 175, 80, 0.4),
               0 0 0 6px rgba(255, 255, 255, 0.2);
@@ -2365,7 +2365,7 @@ const HeroCarousel = () => {
 
           .hero-carousel .swiper-slide-prev img,
           .hero-carousel .swiper-slide-next img {
-            border: 3px solid rgba(76, 175, 80, 0.6);
+           /* border: 3px solid rgba(76, 175, 80, 0.6);*/
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3),
               0 4px 16px rgba(0, 0, 0, 0.2), 0 0 0 2px rgba(76, 175, 80, 0.2);
           }
@@ -2468,14 +2468,14 @@ const HeroCarousel = () => {
                     loading="lazy"
                   />
                   <div className="slide-content">
-                    <h3
+                    {/* <h3
                       className="slide-title font-Race "
                       style={{
                         fontSize: "16px",
                       }}
                     >
                       {slide.title}
-                    </h3>
+                    </h3> */}
                   </div>
                   {/* Hover overlay */}
                   <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
