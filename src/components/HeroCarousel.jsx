@@ -2210,10 +2210,9 @@
 // export default HeroCarousel;
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCoverflow, Navigation, Autoplay } from "swiper/modules";
+import { Navigation, Autoplay } from "swiper/modules";
 import { useEffect, useRef, useState } from "react";
 import "swiper/css";
-import "swiper/css/effect-coverflow";
 import "swiper/css/navigation";
 import { Link } from "react-router-dom";
 import CarouselImg1 from "/bb-court.jpg";
@@ -2225,7 +2224,7 @@ const slides = [
   { image: CarouselImg1, title: "Events", link: "/events" },
   { image: CarouselImg3, title: "Coaching", link: "/coaching" },
   { image: CarouselImg2, title: "Merchandise", link: "/equipment" },
-  { image: CarouselImg4, title: "Infracture", link: "/infra" },
+  { image: CarouselImg4, title: "Infrastructure", link: "/infra" },
 ];
 
 const HeroCarousel = () => {
@@ -2235,7 +2234,7 @@ const HeroCarousel = () => {
     height: typeof window !== "undefined" ? window.innerHeight : 800,
   });
 
-  const [activeIndex, setActiveIndex] = useState(1);
+  const [activeIndex, setActiveIndex] = useState(2);
 
   useEffect(() => {
     const handleResize = () => {
@@ -2267,50 +2266,38 @@ const HeroCarousel = () => {
   const getSlideSize = () => {
     const screenWidth = windowSize.width;
 
-    if (screenWidth < 320) {
-      return { width: Math.min(120, screenWidth * 0.4), height: 180 }; // was 180
-    }
-    if (screenWidth < 400) {
-      return { width: Math.min(140, screenWidth * 0.45), height: 200 }; // was 200
-    }
-    if (screenWidth < 520) {
-      return { width: Math.min(160, screenWidth * 0.4), height: 215 }; // was 225
+    if (screenWidth < 480) {
+      return { width: Math.min(200, screenWidth * 0.7), height: 280 };
     }
     if (screenWidth < 640) {
-      return { width: Math.min(160, screenWidth * 0.42), height: 230 }; // was 250
+      return { width: Math.min(220, screenWidth * 0.65), height: 300 };
     }
     if (screenWidth < 768) {
-      return { width: 220, height: 280 }; // was 300
+      return { width: 240, height: 320 };
     }
-    return { width: 230, height: 300 }; // was 350
+    if (screenWidth < 1024) {
+      return { width: 260, height: 340 };
+    }
+    return { width: 230, height: 300 };
   };
 
   const slideSize = getSlideSize();
 
-  const getContainerMaxWidth = () => {
-    const screenWidth = windowSize.width;
-
-    if (screenWidth < 520) {
-      return Math.min(screenWidth - 30, screenWidth * 0.9);
-    }
-    if (screenWidth < 640) {
-      return Math.min(screenWidth - 40, screenWidth * 0.92);
-    }
-    return "100%";
-  };
-
   return (
     <div className="flex justify-center w-full px-4">
-      <div
-        className="relative w-full p-4"
-        style={{ maxWidth: getContainerMaxWidth() }}
-      >
+      <div className="relative w-full p-4 max-w-6xl">
         <style jsx>{`
           .hero-carousel {
             width: 100%;
             padding: 20px 0;
-            max-width: 100%;
-            overflow: hidden;
+            overflow: visible;
+          }
+
+          .hero-carousel .swiper-wrapper {
+            align-items: center;
+            display: flex;
+            /*justify-content: center;*/ /* ✅ keeps slides centered on mobile */
+            transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
           }
 
           .hero-carousel .swiper-slide {
@@ -2318,9 +2305,40 @@ const HeroCarousel = () => {
             background-size: cover;
             width: ${slideSize.width}px;
             height: ${slideSize.height}px;
-            max-width: ${windowSize.width < 520
-              ? "calc(100vw - 60px)"
-              : "calc(100vw - 80px)"}; /* Tighter control for problem area */
+            flex-shrink: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            opacity: 0.6;
+            transform: scale(0.85);
+            margin: 0 0 0 -35px !important;
+          }
+
+          /* Center slide (active) */
+          .hero-carousel .swiper-slide-active {
+            opacity: 1;
+            transform: scale(1);
+            z-index: 3;
+          }
+
+          /* Adjacent slides */
+          .hero-carousel .swiper-slide-prev,
+          .hero-carousel .swiper-slide-next {
+            opacity: 0.8;
+            transform: scale(0.9);
+            z-index: 2;
+          }
+
+          /* Hide slides that are too far */
+          .hero-carousel
+            .swiper-slide:not(.swiper-slide-prev):not(.swiper-slide-active):not(
+              .swiper-slide-next
+            ) {
+            opacity: 0;
+            transform: scale(0.8);
           }
 
           .hero-carousel .swiper-slide img {
@@ -2328,16 +2346,28 @@ const HeroCarousel = () => {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            border-radius: ${windowSize.width < 480 ? "12px" : "16px"};
-            box-shadow: 0 ${windowSize.width < 480 ? "15px 30px" : "20px 40px"}
-              rgba(0, 0, 0, 0.4);
-            transition: all 0.3s ease;
+            border-radius: 20px;
+            border: 2px solid rgba(76, 175, 80, 0.8);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3),
+              0 4px 16px rgba(0, 0, 0, 0.2), 0 0 0 3px rgba(76, 175, 80, 0.3);
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            position: relative;
+            z-index: 1;
           }
 
           .hero-carousel .swiper-slide-active img {
-            box-shadow: 0 ${windowSize.width < 480 ? "20px 40px" : "25px 50px"}
-              rgba(0, 0, 0, 0.6);
-            transform: scale(${windowSize.width < 480 ? "1.02" : "1.05"});
+            border: 6px solid rgba(76, 175, 80, 1); /* ✅ thicker border */
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4),
+              0 8px 24px rgba(0, 0, 0, 0.3), 0 0 0 4px rgba(76, 175, 80, 0.4),
+              0 0 0 6px rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+          }
+
+          .hero-carousel .swiper-slide-prev img,
+          .hero-carousel .swiper-slide-next img {
+            border: 3px solid rgba(76, 175, 80, 0.6);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3),
+              0 4px 16px rgba(0, 0, 0, 0.2), 0 0 0 2px rgba(76, 175, 80, 0.2);
           }
 
           .slide-content {
@@ -2347,201 +2377,160 @@ const HeroCarousel = () => {
             right: 0;
             background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
             color: white;
-            padding: ${windowSize.width < 480
-              ? "20px 10px 10px"
-              : windowSize.width < 640
-              ? "30px 15px 15px"
-              : "40px 20px 20px"};
-            border-radius: 0 0
-              ${windowSize.width < 480 ? "12px 12px" : "16px 16px"};
-            text-align: center;
+            padding: ${
+              windowSize.width < 480 ? "30px 5px 15px" : "40px 10px 20px"
+            };
+            border-radius: 0 0 16px 16px;
+            /* text-align: center;*/
+            z-index: 2;
+            opacity: 1;
+            transition: all 0.4s ease;
           }
 
           .slide-title {
-            font-size: ${windowSize.width < 480
-              ? "14px"
-              : windowSize.width < 640
-              ? "16px"
-              : "24px"};
+            font-size: ${
+              windowSize.width < 480
+                ? "16px"
+                : windowSize.width < 640
+                ? "18px"
+                : "22px"
+            };
             font-weight: bold;
             text-transform: uppercase;
             letter-spacing: ${windowSize.width < 480 ? "1px" : "2px"};
             margin: 0;
-          }
-
-          .swiper-slide {
-            transition: all 0.3s ease !important;
-          }
-
-          .hero-carousel .swiper-wrapper {
-            align-items: center;
-          }
-
-          .hero-carousel .swiper-container {
-            overflow: visible;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+            }
+            @media (max-width: 1008px) {
+              .hero-carousel .swiper-slide {
+                margin: 0 0 0 -65px !important;
+              }
+            }
           }
         `}</style>
-
-        <Swiper
-          ref={swiperRef}
-          effect={"coverflow"}
-          grabCursor={true}
-          centeredSlides={true}
-          slidesPerView={"auto"}
-          loop={true}
-          watchOverflow={true}
-          watchSlidesProgress={true}
-          watchSlidesVisibility={true}
-          resizeObserver={true}
-          navigation={{
-            nextEl: ".swiper-button-next-custom",
-            prevEl: ".swiper-button-prev-custom",
-          }}
-          autoplay={{
-            delay: 3000, // 3 seconds per slide
-            disableOnInteraction: false, // keep autoplay even after user swipes
-          }}
-          coverflowEffect={{
-            rotate: 0,
-            stretch:
-              windowSize.width < 400
-                ? 10
-                : windowSize.width < 520
-                ? 15
-                : windowSize.width < 640
-                ? 25
-                : 50,
-            depth:
-              windowSize.width < 400
-                ? 80
-                : windowSize.width < 520
-                ? 100
-                : windowSize.width < 640
-                ? 150
-                : 200,
-            modifier: windowSize.width < 520 ? 0.8 : 1,
-            slideShadows: true,
-          }}
-          modules={[EffectCoverflow, Navigation, Autoplay]} // ✅ include autoplay
-          className="hero-carousel"
-          onSwiper={(swiper) => {
-            if (swiperRef.current) {
-              swiperRef.current.swiper = swiper;
-              swiper.slideToLoop(activeIndex, 0);
-            }
-          }}
-          onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
-          onMouseEnter={() => swiperRef.current?.swiper.autoplay.stop()} // ✅ pause on hover
-          onMouseLeave={() => swiperRef.current?.swiper.autoplay.start()} // ✅ resume on leave
-          breakpoints={{
-            240: {
-              coverflowEffect: {
-                stretch: 8,
-                depth: 60,
-                modifier: 0.7,
+        <div className="relative w-full p-4 max-w-6xl">
+          <Swiper
+            ref={swiperRef}
+            grabCursor={true}
+            // centeredSlides={true}
+            slidesPerView="auto"
+            // centeredSlidesBounds={true}
+            spaceBetween={0} // ✅ reduced base spacing
+            loop={true}
+            speed={600}
+            initialSlide={1}
+            navigation={{
+              nextEl: ".swiper-button-next-custom",
+              prevEl: ".swiper-button-prev-custom",
+            }}
+            autoplay={{
+              delay: 4000,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: true,
+            }}
+            modules={[Navigation, Autoplay]}
+            className="hero-carousel"
+            onSwiper={(swiper) => {
+              if (swiperRef.current) {
+                swiperRef.current.swiper = swiper;
+                swiper.slideToLoop(activeIndex, 0);
+              }
+            }}
+            onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
+            breakpoints={{
+              320: {
+                spaceBetween: -48, // ✅ closer on very small screens
               },
-            },
-            320: {
-              coverflowEffect: {
-                stretch: 10,
-                depth: 80,
-                modifier: 0.75,
+              480: {
+                spaceBetween: 10,
               },
-            },
-            400: {
-              coverflowEffect: {
-                stretch: 12,
-                depth: 90,
-                modifier: 0.8,
+              640: {
+                spaceBetween: 12,
               },
-            },
-            520: {
-              coverflowEffect: {
-                stretch: 18,
-                depth: 110,
-                modifier: 0.85,
+              768: {
+                spaceBetween: 15,
               },
-            },
-            640: {
-              coverflowEffect: {
-                stretch: 25,
-                depth: 140,
-                modifier: 0.9,
+              1024: {
+                spaceBetween: -20, // ✅ reasonable on large screens
               },
-            },
-            768: {
-              coverflowEffect: {
-                stretch: 35,
-                depth: 170,
-                modifier: 1,
-              },
-            },
-            1024: {
-              coverflowEffect: {
-                stretch: 50,
-                depth: 200,
-                modifier: 1,
-              },
-            },
-          }}
-        >
-          {slides.map((slide, index) => (
-            <SwiperSlide key={`${index}-${windowSize.width}`}>
-              <Link to={slide.link} className="relative w-full h-full block">
-                <img
-                  src={slide.image}
-                  alt={slide.title}
-                  className="transition-transform duration-300 w-full h-full object-cover rounded-xl"
-                />
-                <div
-                  className="absolute bottom-3 left-3 text-white text-sm sm:text-base md:text-lg font-bold drop-shadow-lg font-Race"
-                  style={{ fontWeight: "200" }}
+            }}
+          >
+            {slides.map((slide, index) => (
+              <SwiperSlide key={`${index}-${windowSize.width}`}>
+                <Link
+                  to={slide.link}
+                  className="relative w-full h-full block group overflow-hidden rounded-2xl"
                 >
-                  {slide.title}
-                </div>
-              </Link>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+                  <img
+                    src={slide.image}
+                    alt={slide.title}
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                  <div className="slide-content">
+                    <h3
+                      className="slide-title font-Race "
+                      style={{
+                        fontSize: "16px",
+                      }}
+                    >
+                      {slide.title}
+                    </h3>
+                  </div>
+                  {/* Hover overlay */}
+                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
+                </Link>
+              </SwiperSlide>
+            ))}
+          </Swiper>
 
-        <div className="flex items-center justify-center gap-2 sm:gap-4   px-2 sm:px-6 py-2 sm:py-3 mx-auto w-fit">
-          <button className="swiper-button-prev-custom group cursor-pointer p-1.5 sm:p-2 md:p-3 rounded-full border border-white transition-all duration-300 hover:scale-110 active:scale-95">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={2.5}
-              stroke="currentColor"
-              className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 text-white group-hover:text-white/90"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M15.75 19.5L8.25 12l7.5-7.5"
-              />
-            </svg>
-          </button>
+          {/* ✅ navigation section centered under carousel */}
+          <div
+            className="relative flex justify-center lg:justify-baseline "
+            style={{
+              paddingBottom: "8px",
+            }}
+          >
+            <div className="flex items-center justify-center gap-2 sm:gap-4 px-4 py-2 rounded-xl ">
+              <button className="swiper-button-prev-custom group cursor-pointer p-2 sm:p-3 rounded-full  border border-white border-opacity-30 transition-all duration-300 hover:scale-110 hover:bg-opacity-30 active:scale-95 flex items-center justify-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={3}
+                  stroke="currentColor"
+                  className="w-4 h-4 sm:w-5 sm:h-5 text-white"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M15.75 19.5L8.25 12l7.5-7.5"
+                  />
+                </svg>
+              </button>
 
-          <span className="text-white font-bold text-xs sm:text-sm md:text-base lg:text-lg tracking-wider px-1 sm:px-2 whitespace-nowrap">
-            Unlock the Services
-          </span>
+              <span className="text-white font-bold text-xs sm:text-sm md:text-base tracking-wider px-2 whitespace-nowrap">
+                Unlock the Services
+              </span>
 
-          <button className="swiper-button-next-custom group cursor-pointer p-1.5 sm:p-2 md:p-3 rounded-full border border-white transition-all duration-300 hover:scale-110 active:scale-95">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={2.5}
-              stroke="currentColor"
-              className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 text-white group-hover:text-white/90"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M8.25 4.5l7.5 7.5-7.5 7.5"
-              />
-            </svg>
-          </button>
+              <button className="swiper-button-next-custom group cursor-pointer p-2 sm:p-3 rounded-full  border border-white border-opacity-30 transition-all duration-300 hover:scale-110 hover:bg-opacity-30 active:scale-95 flex items-center justify-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={3}
+                  stroke="currentColor"
+                  className="w-4 h-4 sm:w-5 sm:h-5 text-white"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M8.25 4.5l7.5 7.5-7.5 7.5"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>

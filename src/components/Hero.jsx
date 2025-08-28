@@ -112,8 +112,8 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="absolute inset-y-0 top-[25%] right-0 z-40 flex items-center justify-center w-1/2 mt-6">
-          <div className="w-full max-w-[350px] xl:max-w-[490px] ">
+        <div className="absolute  top-[25%] right-0 z-40 flex items-center justify-center w-1/2 mt-6">
+          <div className="w-full max-w-[350px] xl:max-w-[340px] ">
             <HeroCarousel />
           </div>
         </div>
