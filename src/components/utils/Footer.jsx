@@ -10,11 +10,11 @@ const Footer = () => {
                 className="md:w-1/2 md:min-w-[150px] w-[150px]"
               />
             </div>
-            <p className="text-sm leading-relaxed mb-6 md:mb-0">
+            <span className="text-sm leading-relaxed mb-6 md:mb-0">
               Wizards is building India's sporting future through turnkey sports
               infra, structured school coaching, and high-impact events like
               Courtside@Work. Explore our programs.
-            </p>
+            </span>
             <div className="flex md:justify-start mt-6 space-x-4 mb-8 md:mb-0">
               <a href="#">
                 <img src="/instagram.svg" className="size-8" />
@@ -32,9 +32,9 @@ const Footer = () => {
           </div>
 
           <div className="w-full md:w-1/4 mb-6 md:mb-0 text-left">
-            <h3 className="text-white font-bold text-lg mb-2 md:mb-4">
+            <h5 className="text-white font-bold text-lg mb-2 md:mb-4">
               Quick Links
-            </h3>
+            </h5>
             <ul className="space-y-1 md:space-y-2 text-sm">
               <li>
                 <a
@@ -88,9 +88,9 @@ const Footer = () => {
           </div>
 
           <div className="w-full md:w-1/4 mb-6 md:mb-0 text-left">
-            <h3 className="text-white font-bold text-lg mb-2 md:mb-4">
+            <h5 className="text-white font-bold text-lg mb-2 md:mb-4">
               Legal & Info
-            </h3>
+            </h5>
             <ul className="space-y-1 md:space-y-2 text-sm">
               <li>
                 <a
@@ -120,9 +120,9 @@ const Footer = () => {
           </div>
 
           <div className="w-full md:w-1/4 text-left">
-            <h3 className="text-white font-bold text-lg mb-2 md:mb-4">
+            <h5 className="text-white font-bold text-lg mb-2 md:mb-4">
               Contact
-            </h3>
+            </h5>
             <p className="text-sm">
               Email:{" "}
               <a
@@ -145,7 +145,7 @@ const Footer = () => {
         </div>
 
         <div className="mt-8 pt-4 text-center text-sm">
-          <p>&copy; 2025 Sports Wizards. All rights reserved.</p>
+          <span>&copy; 2025 Sports Wizards. All rights reserved.</span>
         </div>
       </div>
     </footer>

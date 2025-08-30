@@ -87,8 +87,8 @@ const TestimonialCard = ({ quote, name, title }) => (
       "{quote}"
     </p>
     <div>
-      <h4 className="font-bold text-lg">{name}</h4>
-      <p className="text-bg-foreground-secondary text-sm">{title}</p>
+      <h5 className="font-bold text-lg">{name}</h5>
+      <span className="text-bg-foreground-secondary text-sm">{title}</span>
     </div>
   </div>
 );
@@ -138,7 +138,7 @@ const TestimonialsSection = () => {
       <div className="container mx-auto px-4 max-w-7xl">
         <div className="text-center mb-12">
           <div className="inline-block relative">
-            <h1
+            <h5
               style={{
                 fontSize: "24px",
                 background:
@@ -149,11 +149,11 @@ const TestimonialsSection = () => {
               className="inline-block text-center text-base font-bold uppercase tracking-widest mb-6 underline underline-offset-8 decoration-green-500"
             >
               Testimonials
-            </h1>
+            </h5>
           </div>
-          <h2 className="font-bold text-3xl md:text-4xl mt-4 tracking-wider uppercase">
+          <span className="font-bold text-3xl md:text-4xl mt-4 tracking-wider uppercase block">
             {headingText}
-          </h2>
+          </span>
         </div>
 
         <div className="w-full">

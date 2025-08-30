@@ -451,10 +451,10 @@ const ContactForm = ({ onSuccess }) => {
           >
             <div>
               <div className="mb-8">
-                <h1 className="text-3xl font-bold mb-2">
+                <h5 className="text-3xl font-bold mb-2">
                   LET'S <span className="text-accent">BUILD</span> SOMETHING
                   SPORTY TOGETHER.
-                </h1>
+                </h5>
               </div>
 
               <div className="space-y-6">
@@ -647,7 +647,7 @@ const ContactForm = ({ onSuccess }) => {
               background: "linear-gradient(180deg, #26FEB2 0%, #46FD3E 100%)",
             }}
           >
-            <h3 className="text-2xl font-bold mb-6">Contact Info</h3>
+            <h5 className="text-2xl font-bold mb-6">Contact Info</h5>
 
             <div className="space-y-4">
               <div className="flex items-start space-x-4">

@@ -20,7 +20,7 @@ const CoachingMid = () => {
       <section className="flex flex-col items-center justify-center py-12 px-4 sm:px-6 lg:px-8 mt-10">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
-            <h1
+            <h5
               style={{
                 fontSize: "24px",
                 background:
@@ -31,7 +31,7 @@ const CoachingMid = () => {
               className="inline-block text-center text-base font-bold uppercase tracking-widest mb-6 underline underline-offset-8 decoration-green-500"
             >
               Not Just for Schools
-            </h1>
+            </h5>
           </div>
         </div>
 
@@ -41,7 +41,7 @@ const CoachingMid = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left Side - Text */}
             <div className="space-y-6">
-              <h1 className="text-white font-bold text-[14px] lg:text-3xl leading-relaxed uppercase">
+              <span className="text-white font-bold text-[14px] lg:text-3xl leading-relaxed uppercase">
                 While our flagship program—
                 <span
                   style={{
@@ -56,7 +56,7 @@ const CoachingMid = () => {
                 — <br />
                 is tailored for educational institutions, our coaching vertical
                 serves:
-              </h1>
+              </span>
             </div>
 
             {/* Right Side - Image */}
@@ -90,7 +90,9 @@ const CoachingMid = () => {
                   style={{ background: "rgba(75, 75, 75, 0.2)" }}
                 >
                   {service.icon}
-                  <h3 className="text-white font-semibold">{service.title}</h3>
+                  <span className="text-white font-semibold font-Race">
+                    {service.title}
+                  </span>
                 </div>
               ))}
             </div>
@@ -175,7 +177,7 @@ const CoachingMid = () => {
       >
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-4">
-            <h1
+            <h5
               style={{
                 fontSize: "24px",
                 background:
@@ -186,14 +188,14 @@ const CoachingMid = () => {
               className="inline-block text-center text-base font-bold uppercase tracking-widest mb-6 underline underline-offset-8 decoration-green-500"
             >
               Flagship Program
-            </h1>
+            </h5>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left Side - Content */}
             <div className="space-y-6">
               <div className="space-y-4">
-                <h3
+                <span
                   className=" text-3xl lg:text-4xl font-semibold"
                   style={{
                     background:
@@ -203,8 +205,8 @@ const CoachingMid = () => {
                   }}
                 >
                   SportsWizards@School
-                </h3>
-                <h1 className=" text-3xl font-bold leading-tight">
+                </span>
+                <span className=" text-3xl font-bold leading-tight">
                   One Program. Five Sports.{" "}
                   <span
                     className=""
@@ -218,7 +220,7 @@ const CoachingMid = () => {
                     Unlimited{" "}
                   </span>
                   Possibilities.
-                </h1>
+                </span>
               </div>
 
               <div className="space-y-4 text-gray-300">

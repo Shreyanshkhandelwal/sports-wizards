@@ -40,7 +40,7 @@ const Hero = () => {
             </span>{" "}
             <span style={{ fontSize: "25px" }}> India&apos;s</span>
             <br />
-            <span style={{ fontSize: "35px" }}>Playgrounds</span>
+            <h1 style={{ fontSize: "35px" }}>Playgrounds</h1>
           </h1>
           <div className="flex flex-row items-center justify-center gap-3 md:gap-4 mt-8">
             <button
@@ -48,7 +48,7 @@ const Hero = () => {
                 background:
                   "linear-gradient(91.1deg, #26FEB2 -0.39%, #46FD3E 81.76%)",
               }}
-              className=" font-bold text-sm md:text-base py-2 px-5 md:py-3 md:px-6 rounded-full transition-transform hover:scale-105"
+              className=" font-bold text-sm md:text-base py-2 px-5 md:py-3 md:px-6 rounded-full transition-transform hover:scale-105 text-black"
             >
               Explore What We Do
             </button>
@@ -60,17 +60,20 @@ const Hero = () => {
 
         <div className="relative w-full h-96 mt-4">
           <img
-            src="/p1.png"
+            // src="/p1.png"
+            src="https://res.cloudinary.com/dnivrv6ar/image/upload/v1756561431/p1_l0wsdf.png"
             alt="player 1"
             className="absolute bottom-0 left-[20%] sm:left-[35%] -translate-x-1/2 w-[65%] max-w-[240px] h-auto z-10 transform -scale-x-100"
           />
           <img
-            src="/p2.png"
+            // src="/p2.png"
+            src="https://res.cloudinary.com/dnivrv6ar/image/upload/v1756561459/p2_d5ywdv.png"
             alt="player 2"
             className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[75%] max-w-[320px] h-auto z-20"
           />
           <img
-            src="/p3.png"
+            // src="/p3.png"
+            src="https://res.cloudinary.com/dnivrv6ar/image/upload/v1756561447/p3_l69o4n.png"
             alt="player 3"
             className="absolute bottom-0 left-[80%] sm:left-[65%] -translate-x-1/2 w-[65%] max-w-[260px] h-auto z-10"
           />
@@ -100,7 +103,7 @@ const Hero = () => {
             </span>{" "}
             <span style={{ fontSize: "32px" }}> India&apos;s</span>
             <br />
-            <span>Playgrounds</span>
+            <h1>Playgrounds</h1>
           </h1>
           <div className="flex flex-row items-center justify-start gap-4 mt-36">
             <button
@@ -108,7 +111,7 @@ const Hero = () => {
                 background:
                   "linear-gradient(91.1deg, #26FEB2 -0.39%, #46FD3E 81.76%)",
               }}
-              className="font-bold text-base py-3 px-6 rounded-full transition-transform hover:scale-105 z-[999]"
+              className="font-bold text-base py-3 px-6 rounded-full transition-transform hover:scale-105 z-[999] text-black"
             >
               Explore What We Do
             </button>

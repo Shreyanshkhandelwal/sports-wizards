@@ -9,7 +9,7 @@ const Finance = () => {
     >
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-4">
-          <h1
+          <h5
             style={{
               fontSize: "24px",
               background:
@@ -20,14 +20,14 @@ const Finance = () => {
             className="inline-block text-center text-base font-bold uppercase tracking-widest mb-6 underline underline-offset-8 decoration-green-500"
           >
             Embedded Finance
-          </h1>
+          </h5>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Side - Content */}
           <div className="space-y-6">
             <div className="space-y-4">
-              <h1 className=" text-3xl font-bold leading-tight">
+              <h5 className=" text-3xl font-bold leading-tight">
                 Now Build with Confidence –{" "}
                 <span
                   className=""
@@ -40,7 +40,7 @@ const Finance = () => {
                 >
                   Financing Available{" "}
                 </span>
-              </h1>
+              </h5>
             </div>
 
             <div className="space-y-4 text-gray-300">

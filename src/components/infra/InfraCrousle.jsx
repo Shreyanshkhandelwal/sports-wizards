@@ -1903,7 +1903,7 @@ const ImprovedCarousel = () => {
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1
+            <h5
               style={{
                 fontSize: "24px",
                 background:
@@ -1914,7 +1914,7 @@ const ImprovedCarousel = () => {
               className="inline-block text-center text-base font-bold uppercase tracking-widest mb-6 underline underline-offset-8 decoration-green-500"
             >
               What WE Build
-            </h1>
+            </h5>
           </div>
           <div className="relative w-full min-h-[600px] overflow-hidden py-12">
             <style jsx>{`
@@ -2129,14 +2129,14 @@ const ImprovedCarousel = () => {
                           </svg>
                         </div>
                         <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 rounded-b-2xl">
-                          <h3 className="text-white font-bold text-lg tracking-wider text-center">
+                          <p className="text-white font-bold text-lg tracking-wider text-center">
                             {slide.title}
-                          </h3>
+                          </p>
                         </div>
                       </div>
 
                       <div className="slide-back relative">
-                        <h2>{slide.heading}</h2>
+                        <p>{slide.heading}</p>
                         <div className="sections-container">
                           {slide.sections.map((section, sectionIndex) => {
                             const key = `${index}-${sectionIndex}`;
@@ -2151,9 +2151,9 @@ const ImprovedCarousel = () => {
                                     toggleSection(index, sectionIndex);
                                   }}
                                 >
-                                  <h3 className="section-title">
+                                  <span className="section-title">
                                     {section.title}
-                                  </h3>
+                                  </span>
                                   <svg
                                     className={`chevron ${
                                       isExpanded ? "rotated" : ""
@@ -2252,7 +2252,7 @@ const ImprovedCarousel = () => {
               backdropFilter: "blur(38.59733963012695px)",
             }}
           >
-            <h2
+            <h5
               className="text-lg font-semibold mb-8 inline-block"
               style={{
                 fontSize: "24px",
@@ -2262,7 +2262,7 @@ const ImprovedCarousel = () => {
               }}
             >
               Add-on services
-            </h2>
+            </h5>
 
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 sm:gap-8 text-center">
               <div className="flex gap-2 items-center">

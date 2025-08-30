@@ -26,10 +26,11 @@ const CTAReuse = ({
             }`}
         >
           <div>
-            <h1 className="text-3xl md:text-4xl font-bold uppercase">
+            <h3 className="text-3xl md:text-4xl font-bold uppercase">
               {headingParts.map((part, i) =>
                 part === accentWord ? (
-                  <span
+                  <h3
+                    className="inline"
                     key={i}
                     style={{
                       background:
@@ -39,12 +40,12 @@ const CTAReuse = ({
                     }}
                   >
                     {part}
-                  </span>
+                  </h3>
                 ) : (
                   part
                 )
               )}
-            </h1>
+            </h3>
             {paragraph && (
               <p
                 className={`mt-4 text-bg-foreground-secondary ${

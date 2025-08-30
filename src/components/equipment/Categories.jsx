@@ -7,7 +7,7 @@ const Categories = () => {
       <section className="flex flex-col items-center justify-center py-12 px-4 sm:px-6 lg:px-8 mt-10">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
-            <h1
+            <h5
               style={{
                 fontSize: "24px",
                 background:
@@ -18,7 +18,7 @@ const Categories = () => {
               className="inline-block text-center text-base font-bold uppercase tracking-widest mb-6 underline underline-offset-8 decoration-green-500"
             >
               Product Categories
-            </h1>
+            </h5>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 mt-16 ">
             {[
@@ -64,9 +64,9 @@ const Categories = () => {
                     with setup
                   </button>
                 </div>
-                <h2 className="text-xl text-start md:text-2xl font-bold uppercase mb-2">
+                <h5 className="text-xl text-start md:text-2xl font-bold uppercase mb-2">
                   {item.text}
-                </h2>
+                </h5>
                 <a
                   href="#"
                   style={{
@@ -87,7 +87,7 @@ const Categories = () => {
       <section className="flex flex-col items-center justify-center py-12 px-4 sm:px-6 lg:px-8 mt-10">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
-            <h1
+            <h5
               style={{
                 fontSize: "24px",
                 background:
@@ -98,7 +98,7 @@ const Categories = () => {
               className="inline-block text-center text-base font-bold uppercase tracking-widest mb-6 underline underline-offset-8 decoration-green-500"
             >
               Available for Bulk Orders
-            </h1>
+            </h5>
           </div>
         </div>
 
@@ -125,9 +125,9 @@ const Categories = () => {
 
             {/* Right Text */}
             <div className="space-y-6">
-              <h2 className="text-xl font-bold uppercase">
+              <h5 className="text-xl font-bold uppercase">
                 Team Jerseys & Bibs
-              </h2>
+              </h5>
               <p className="text-white text-lg leading-relaxed">
                 Custom team apparel & training bibs available in multiple
                 colors, sizes, and branding options.
@@ -170,9 +170,9 @@ const Categories = () => {
 
             {/* Left Text — move this below on mobile with order-2 */}
             <div className="space-y-6 order-2 lg:order-1">
-              <h2 className="text-xl font-bold uppercase">
+              <h5 className="text-xl font-bold uppercase">
                 Recreational Equipment
-              </h2>
+              </h5>
               <p className="text-white text-lg leading-relaxed">
                 Essential training aids — from cones & hurdles to timers &
                 agility ladders — for any sport.
@@ -208,7 +208,7 @@ const Categories = () => {
       <section className="flex flex-col items-center justify-center py-12 px-4 sm:px-6 lg:px-8 mt-10">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
-            <h1
+            <h5
               style={{
                 fontSize: "24px",
                 background:
@@ -219,7 +219,7 @@ const Categories = () => {
               className="inline-block text-center text-base font-bold uppercase tracking-widest mb-6 underline underline-offset-8 decoration-green-500"
             >
               Fulfilment model
-            </h1>
+            </h5>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6 mt-16 px-4">
             {[
@@ -257,10 +257,10 @@ const Categories = () => {
                 >
                   {item.img}
                 </a>
-                <h2 className="text-xl text-start md:text-xl font-bold uppercase mb-2">
+                <h5 className="text-xl text-start md:text-xl font-bold uppercase mb-2">
                   {item.head}
-                </h2>
-                <p className="text-base text-start  mb-2">{item.text}</p>
+                </h5>
+                <span className="text-base text-start  mb-2">{item.text}</span>
               </div>
             ))}
             <div className="col-span-full flex justify-center items-center w-full gap-4 mt-4">
@@ -269,9 +269,9 @@ const Categories = () => {
                 alt="Pan-India"
                 className="object-contain"
               />
-              <h2 className="text-xl md:text-xl font-bold uppercase mb-0">
+              <h5 className="text-xl md:text-xl font-bold uppercase mb-0">
                 Pan-India Setup & Delivery
-              </h2>
+              </h5>
             </div>
           </div>
         </div>

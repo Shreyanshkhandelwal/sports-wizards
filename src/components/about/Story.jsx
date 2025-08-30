@@ -7,7 +7,7 @@ const Story = () => {
       <section className="flex flex-col items-center justify-center py-12 px-4 sm:px-6 lg:px-8 mt-10">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
-            <h1
+            <h5
               style={{
                 fontSize: "24px",
                 background:
@@ -18,7 +18,7 @@ const Story = () => {
               className="inline-block text-center text-base font-bold uppercase tracking-widest mb-6 underline underline-offset-8 decoration-green-500"
             >
               Our Story
-            </h1>
+            </h5>
           </div>
 
           <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16 px-4 md:px-12 py-10">
@@ -67,7 +67,7 @@ const Story = () => {
       <section className="flex flex-col items-center justify-center py-12 px-4 sm:px-6 lg:px-8 mt-10">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
-            <h1
+            <h5
               style={{
                 fontSize: "24px",
                 background:
@@ -78,7 +78,7 @@ const Story = () => {
               className="inline-block text-center text-base font-bold uppercase tracking-widest mb-6 underline underline-offset-8 decoration-green-500"
             >
               Our Vision & Mission
-            </h1>
+            </h5>
           </div>
 
           <div className="flex flex-col md:flex-row items-center justify-center gap-8 lg:gap-10 text-center mt-16">
@@ -86,7 +86,7 @@ const Story = () => {
               className="mission w-full md:w-2/5 rounded-[14px] p-6  "
               style={{ background: " rgba(71, 71, 71, 0.17)" }}
             >
-              <h2
+              <h5
                 className=" text-2xl font-bold mb-3 "
                 style={{
                   fontSize: "24px",
@@ -97,7 +97,7 @@ const Story = () => {
                 }}
               >
                 MISSION:
-              </h2>
+              </h5>
               <p style={{ fontSize: "22px" }}>
                 Integrate structured play into everyday life through scalable
                 and sustainable models.
@@ -107,7 +107,7 @@ const Story = () => {
               className="vision w-full md:w-2/5 rounded-[14px] p-6 "
               style={{ background: " rgba(71, 71, 71, 0.17)" }}
             >
-              <h2
+              <h5
                 className=" bg-clip-text text-transparent text-2xl font-bold mb-3"
                 style={{
                   fontSize: "24px",
@@ -118,7 +118,7 @@ const Story = () => {
                 }}
               >
                 VISION:
-              </h2>
+              </h5>
               <p style={{ fontSize: "22px" }}>
                 Make India a sport-playing nation across all age groups.
               </p>
@@ -130,7 +130,7 @@ const Story = () => {
       <section className="flex flex-col items-center justify-center py-12 px-4 sm:px-6 lg:px-8 mt-10">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
-            <h1
+            <h5
               style={{
                 fontSize: "24px",
                 background:
@@ -141,7 +141,7 @@ const Story = () => {
               className="inline-block text-center text-base font-bold uppercase tracking-widest mb-6 underline underline-offset-8 decoration-green-500"
             >
               What Sets Us Apart
-            </h1>
+            </h5>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 mt-16 px-4">
             {[
@@ -181,7 +181,7 @@ const Story = () => {
                     className="mx-auto w-18 h-18 object-contain"
                   />
                 </div>
-                <p className="text-base">{item.text}</p>
+                <span className="text-base">{item.text}</span>
               </div>
             ))}
           </div>
@@ -192,7 +192,7 @@ const Story = () => {
       <section className="flex flex-col items-center justify-center py-12 px-4 sm:px-6 lg:px-8 mt-10">
         <div className="max-w-7xl w-full">
           <div className="text-center">
-            <h1
+            <h5
               style={{
                 fontSize: "24px",
                 background:
@@ -203,7 +203,7 @@ const Story = () => {
               className="inline-block text-center text-base font-bold uppercase tracking-widest mb-6 underline underline-offset-8 decoration-green-500"
             >
               Leadership Snippet
-            </h1>
+            </h5>
           </div>
           <div className="w-full  px-4 sm:px-6 lg:px-8">
             <div

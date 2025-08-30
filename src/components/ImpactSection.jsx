@@ -30,7 +30,7 @@ const ImpactSection = () => {
     <div>
       <div className="container mx-auto px-6 py-16 md:py-24">
         <div className="text-center">
-          <h1
+          <h5
             style={{
               fontSize: "24px",
               background:
@@ -41,7 +41,7 @@ const ImpactSection = () => {
             className="inline-block text-center text-base font-bold uppercase tracking-widest mb-6 underline underline-offset-8 decoration-green-500"
           >
             OUR IMPACT
-          </h1>
+          </h5>
           <p className="mt-8 text-2xl md:text-4xl font-extrabold text-white italic font-Race">
             WE'RE NOT JUST BUILDING COURTS—
             <br />

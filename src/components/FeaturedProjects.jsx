@@ -106,7 +106,7 @@ export default function FeaturedProjects() {
             <div className="flex justify-between items-center mb-16">
               <div className="flex-1">
                 <div className="mb-4 flex items-center justify-center">
-                  <h1
+                  <h5
                     style={{
                       fontSize: "24px",
                       background:
@@ -117,7 +117,7 @@ export default function FeaturedProjects() {
                     className="inline-block text-center text-base font-bold uppercase tracking-widest mb-6 underline underline-offset-8 decoration-green-500"
                   >
                     Featured Projects
-                  </h1>
+                  </h5>
                 </div>
                 <div className="flex items-center justify-between">
                   <h1 className="text-3xl xl:text-4xl font-bold text-white leading-tight text-xl">

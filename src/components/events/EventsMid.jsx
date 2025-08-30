@@ -109,7 +109,7 @@ const EventsMid = () => {
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h1
+            <h5
               style={{
                 fontSize: "24px",
                 background:
@@ -120,7 +120,7 @@ const EventsMid = () => {
               className="inline-block text-center text-base font-bold uppercase tracking-widest mb-6 underline underline-offset-8 decoration-green-500"
             >
               What we offer
-            </h1>
+            </h5>
           </div>
 
           {/* Activities List */}
@@ -147,13 +147,13 @@ const EventsMid = () => {
                       <div className="icon bg-black p-2 rounded-lg">
                         {activity.icon}
                       </div>
-                      <h3 className="text-xl md:text-2xl font-bold text-white">
+                      <h5 className="text-xl md:text-2xl font-bold text-white">
                         {activity.title}
-                      </h3>
+                      </h5>
                     </div>
-                    <p className="text-gray-300 text-sm md:text-base leading-relaxed max-w-md">
+                    <span className="text-gray-300 text-sm md:text-base leading-relaxed max-w-md">
                       {activity.description}
-                    </p>
+                    </span>
                   </div>
 
                   {/* Image Section */}
@@ -177,7 +177,7 @@ const EventsMid = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mt-16 min-h-[500px]">
             {/* Left Side - Text */}
             <div className="space-y-6 flex flex-col items-start content-between h-full">
-              <h1 className="text-white font-bold text-xl lg:text-4xl leading-relaxed uppercase">
+              <h5 className="text-white font-bold text-xl lg:text-4xl leading-relaxed uppercase">
                 Be it
                 <span
                   className=""
@@ -218,7 +218,7 @@ const EventsMid = () => {
                 </span>
                 formats, infra, referees, emcees, branding, and
                 experiences—end-to-end.
-              </h1>
+              </h5>
               <button
                 style={{
                   background:
@@ -234,12 +234,12 @@ const EventsMid = () => {
             </div>
 
             <div className="flex flex-col">
-              <h1
+              <h5
                 style={{ fontSize: "24px" }}
                 className="text-accent text-base font-bold uppercase tracking-widest mb-6  underline-offset-8 decoration-green-500"
               >
                 Services Included:
-              </h1>
+              </h5>
 
               {/* Right Side - Image */}
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -270,12 +270,12 @@ const EventsMid = () => {
                 ].map((service, index) => (
                   <div
                     key={index}
-                    className="rounded-2xl p-6 flex flex-col items-center text-center bg-gradient-to-br from-[rgba(75,75,75,0.25)] to-[rgba(75,75,75,0.15)] shadow-md hover:shadow-lg hover:scale-105 transition-transform duration-300"
+                    className="rounded-2xl p-6 flex flex-col items-center  bg-gradient-to-br from-[rgba(75,75,75,0.25)] to-[rgba(75,75,75,0.15)] shadow-md hover:shadow-lg hover:scale-105 transition-transform duration-300"
                   >
                     <div className="mb-4">{service.icon}</div>
-                    <h3 className="text-white font-semibold text-base md:text-lg leading-snug">
+                    <span className="text-white text-sm md:text-sm leading-snug">
                       {service.title}
-                    </h3>
+                    </span>
                   </div>
                 ))}
               </div>
@@ -288,7 +288,7 @@ const EventsMid = () => {
       <section className="py-8 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-4">
-            <h1
+            <h5
               style={{
                 fontSize: "24px",
                 background:
@@ -299,7 +299,7 @@ const EventsMid = () => {
               className="inline-block text-center text-base font-bold uppercase tracking-widest mb-6 underline underline-offset-8 decoration-green-500"
             >
               Spotlight
-            </h1>
+            </h5>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-10">
             <div className="space-y-6">
@@ -310,7 +310,7 @@ const EventsMid = () => {
                   alt="Spotlight"
                   className="object-fill h-20"
                 />
-                <h1 className="text-2xl md:text-3xl font-bold leading-tight text-white drop-shadow-lg">
+                <span className="text-2xl md:text-3xl font-bold leading-tight text-white drop-shadow-lg">
                   Sports as Your{" "}
                   <span
                     className=""
@@ -324,13 +324,14 @@ const EventsMid = () => {
                     Next
                   </span>{" "}
                   Offsite
-                </h1>
+                </span>
               </div>
 
               {/* Text Section */}
               <div className="space-y-4 text-gray-300">
-                <p className="text-base">
-                  <span
+                <p className="text-base inline-block">
+                  <p
+                    className="inline"
                     style={{
                       background:
                         "linear-gradient(180deg, #26FEB2 0%, #46FD3E 100%)",
@@ -339,11 +340,11 @@ const EventsMid = () => {
                     }}
                   >
                     Courtside@Work{" "}
-                  </span>
+                  </p>
                   is our corporate sports engagement format designed to boost
                   team morale,{" "}
-                  <span
-                    className=""
+                  <p
+                    className="inline"
                     style={{
                       background:
                         "linear-gradient(180deg, #26FEB2 0%, #46FD3E 100%)",
@@ -352,10 +353,10 @@ const EventsMid = () => {
                     }}
                   >
                     health{" "}
-                  </span>
+                  </p>
                   , and{" "}
-                  <span
-                    className=""
+                  <p
+                    className="inline"
                     style={{
                       background:
                         "linear-gradient(180deg, #26FEB2 0%, #46FD3E 100%)",
@@ -364,7 +365,7 @@ const EventsMid = () => {
                     }}
                   >
                     culture
-                  </span>
+                  </p>
                   . We bring a pop-up Pickleball arena to your office or event
                   space with coaches, referees, gameplay formats, music, and
                   more.
@@ -378,7 +379,7 @@ const EventsMid = () => {
                     background:
                       "linear-gradient(90deg, #26FEB2 3%, #46FD3E 85%)",
                   }}
-                  className=" text-black font-bold py-3 px-6 rounded-full text-sm shadow-lg hover:shadow-green-500/25 hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-2 max-w-[250px]"
+                  className=" text-black font-bold py-3 px-6 rounded-full text-sm shadow-lg hover:shadow-green-500/25 hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-2 max-w-[280px]"
                 >
                   <FaDownload /> Download Program Deck
                 </button>
@@ -439,7 +440,7 @@ const EventsMid = () => {
 
           {/* Track Record Section */}
           <div className="text-center mb-12">
-            <h1
+            <h5
               style={{
                 fontSize: "24px",
                 background:
@@ -450,7 +451,7 @@ const EventsMid = () => {
               className="inline-block text-center text-base font-bold uppercase tracking-widest mb-6 underline underline-offset-8 decoration-green-500"
             >
               OUR PROVEN RESULTS
-            </h1>
+            </h5>
           </div>
 
           {/* Testimonials Slider */}
@@ -487,20 +488,20 @@ const EventsMid = () => {
                       />
                     </div>
                     <div className="p-6">
-                      <h4
+                      <span
                         style={{
                           background:
                             "linear-gradient(180deg, #26FEB2 0%, #46FD3E 100%)",
                           WebkitBackgroundClip: "text",
                           WebkitTextFillColor: "transparent",
                         }}
-                        className="text-lg font-bold  mb-2 font-Race"
+                        className="text-lg font-bold  mb-2 font-Race block"
                       >
                         {testimonial.title}
-                      </h4>
-                      <p className="text-gray-300 text-sm">
+                      </span>
+                      <span className="text-gray-300 text-sm text-center">
                         {testimonial.description}
-                      </p>
+                      </span>
                     </div>
                   </div>
                 </SwiperSlide>

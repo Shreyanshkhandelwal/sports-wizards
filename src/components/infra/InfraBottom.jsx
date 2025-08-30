@@ -38,7 +38,7 @@ export default function InfraBottom() {
       <div className="max-w-7xl mx-auto">
         {/* HOW WE WORK */}
         <div className="text-center mb-16">
-          <h1
+          <h5
             style={{
               fontSize: "24px",
               background:
@@ -49,7 +49,7 @@ export default function InfraBottom() {
             className="inline-block text-center text-base font-bold uppercase tracking-widest mb-6 underline underline-offset-8 decoration-green-500"
           >
             How We Work
-          </h1>
+          </h5>
 
           {/* Desktop layout */}
           <div className="hidden lg:flex items-center justify-between mt-12">
@@ -66,9 +66,9 @@ export default function InfraBottom() {
                   >
                     {item.icon}
                   </div>
-                  <h3 className="text-lg font-semibold text-accent">
+                  <span className="text-lg font-semibold text-accent">
                     {item.title}
-                  </h3>
+                  </span>
                   <p className="text-sm text-bg-foreground-secondary mt-2">
                     {item.desc}
                   </p>
@@ -116,7 +116,7 @@ export default function InfraBottom() {
 
         {/* WHY CHOOSE SPORTS WIZARDS */}
         <div className="text-center">
-          <h1
+          <h5
             style={{
               fontSize: "24px",
               background:
@@ -127,7 +127,7 @@ export default function InfraBottom() {
             className="inline-block text-center text-base font-bold uppercase tracking-widest mb-6 underline underline-offset-8 decoration-green-500"
           >
             Why Choose Sports Wizards
-          </h1>
+          </h5>
 
           {/* FIRST ROW: 3 items */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
@@ -136,7 +136,7 @@ export default function InfraBottom() {
               "Material tie-ups with reputed brands.",
               "Fast turnaround with quality guarantees.",
             ].map((point, idx) => (
-              <div
+              <p
                 key={idx}
                 className="p-6 rounded-2xl bg-bg text-sm text-bg-foreground-secondary"
                 style={{
@@ -144,7 +144,7 @@ export default function InfraBottom() {
                 }}
               >
                 {point}
-              </div>
+              </p>
             ))}
           </div>
 

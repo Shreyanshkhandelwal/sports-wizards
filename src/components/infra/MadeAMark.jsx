@@ -106,7 +106,7 @@ export default function MadeAMark() {
             <div className="flex justify-between items-center mb-16">
               <div className="flex-1">
                 <div className="mb-4 flex items-center justify-center">
-                  <h1
+                  <h5
                     style={{
                       fontSize: "24px",
                       background:
@@ -117,7 +117,7 @@ export default function MadeAMark() {
                     className="inline-block text-center text-base font-bold uppercase tracking-widest mb-6 underline underline-offset-8 decoration-green-500"
                   >
                     Where We’ve Made a Mark
-                  </h1>
+                  </h5>
                 </div>
               </div>
             </div>

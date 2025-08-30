@@ -4,7 +4,7 @@ const WhoAreWe = () => {
       <section className="flex flex-col items-center justify-center py-12 px-4 sm:px-6 lg:px-8 mt-10">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
-            <h1
+            <h5
               style={{
                 fontSize: "24px",
                 background:
@@ -15,7 +15,7 @@ const WhoAreWe = () => {
               className="inline-block text-center text-base font-bold uppercase tracking-widest mb-6 underline underline-offset-8 decoration-green-500"
             >
               Who We Are
-            </h1>
+            </h5>
           </div>
 
           <div className="flex flex-col lg:flex-row items-start justify-center gap-8 lg:gap-12">
