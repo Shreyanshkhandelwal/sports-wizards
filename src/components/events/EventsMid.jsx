@@ -77,30 +77,58 @@ const EventsMid = () => {
   const testimonials = [
     {
       id: 1,
-      image: "/track1.jpg",
-      title: "Indian Open championship",
+      image: "/events_results/1.jpg",
+      title: "First Indian Open Pickleball Championship 2017_1",
       description:
         "Hosted 2017 Indian Open Pickleball Championship (AIPA, Redbull, Doordarshan)",
     },
     {
       id: 2,
-      image: "/track2.jpg",
-      title: "Corporate activations",
+      image: "/events_results/2.jpg",
+      title: "First Indian Open Pickleball Championship 2017_2",
       description: "Built employee sports activations across corporate Sector.",
     },
     {
       id: 3,
-      image: "/track3.png",
-      title: "Legacy Events",
+      image: "/events_results/3.jpg",
+      title: "First Indian Open Pickleball Championship 2017_3",
+      description:
+        "Created legacy events that shaped India’s grassroots sports culture.",
+    },
+    {
+      id: 4,
+      image: "/events_results/4.jpg",
+      title: "Fitness Carnival at Jaihind College, Mumbai",
+      description:
+        "Created legacy events that shaped India’s grassroots sports culture.",
+    },
+    {
+      id: 5,
+      image: "/events_results/5.jpg",
+      title: "Mumbai Kabaddi League_Season 1",
+      description:
+        "Created legacy events that shaped India’s grassroots sports culture.",
+    },
+    {
+      id: 6,
+      image: "/events_results/6.jpg",
+      title: "Press Conference",
+      description:
+        "Created legacy events that shaped India’s grassroots sports culture.",
+    },
+    {
+      id: 7,
+      image: "/events_results/7.jpg",
+      title: "Zumba Workshop for Women's Day at KKCL,Mumbai",
       description:
         "Created legacy events that shaped India’s grassroots sports culture.",
     },
   ];
 
   const spotlights = [
-    { src: "/spotlight1.jpg", alt: "Students playing sport 1" },
-    { src: "/contact.png", alt: "Students playing sport 2" },
-    { src: "/coaching1.png", alt: "Students playing sport 3" }, // your uploaded image
+    { src: "/events_spotlight/1.png", alt: "Students playing sport 1" },
+    { src: "/events_spotlight/2.png", alt: "Students playing sport 2" },
+    { src: "/events_spotlight/3.png", alt: "Students playing sport 3" }, // your uploaded image
   ];
 
   return (
@@ -499,9 +527,9 @@ const EventsMid = () => {
                       >
                         {testimonial.title}
                       </span>
-                      <span className="text-gray-300 text-sm text-center">
+                      {/* <span className="text-gray-300 text-sm text-center">
                         {testimonial.description}
-                      </span>
+                      </span> */}
                     </div>
                   </div>
                 </SwiperSlide>

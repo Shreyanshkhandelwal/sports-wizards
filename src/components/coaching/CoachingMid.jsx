@@ -12,8 +12,23 @@ import {
 } from "react-icons/fa";
 import { IoMdMegaphone } from "react-icons/io";
 import { CgGym } from "react-icons/cg";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
 
 const CoachingMid = () => {
+  const spotlights = [
+    { src: "/coaching_flagship/1.jpg", alt: "Students playing sport 1" },
+    { src: "/coaching_flagship/2.jpg", alt: "Students playing sport 2" },
+    { src: "/coaching_flagship/3.jpg", alt: "Students playing sport 3" }, // your uploaded image
+    { src: "/coaching_flagship/4.jpg", alt: "Students playing sport 3" }, // your uploaded image
+    { src: "/coaching_flagship/5.jpg", alt: "Students playing sport 3" }, // your uploaded image
+    { src: "/coaching_flagship/6.jpg", alt: "Students playing sport 3" }, // your uploaded image
+    { src: "/coaching_flagship/7.jpg", alt: "Students playing sport 3" }, // your uploaded image
+    { src: "/coaching_flagship/8.jpg", alt: "Students playing sport 3" }, // your uploaded image
+  ];
   return (
     <div className="bg-black text-white min-h-screen">
       {/* Main Section - Not Just for Schools */}
@@ -289,19 +304,52 @@ const CoachingMid = () => {
             </div>
 
             {/* Right Side - Image */}
-            <div className="relative">
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                <img
-                  src="/coaching3.png"
-                  alt="Students playing various sports"
-                  className="w-full h-96 object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-              </div>
+            <div className="relative w-full max-w-4xl mx-auto">
+              <Swiper
+                modules={[Pagination, Autoplay]}
+                pagination={{
+                  clickable: true,
+                  el: ".custom-pagination",
+                }}
+                autoplay={{
+                  delay: 3000,
+                  disableOnInteraction: false,
+                }}
+                spaceBetween={20}
+                slidesPerView={1}
+                className="rounded-2xl shadow-2xl overflow-hidden"
+              >
+                {spotlights.map((slide, idx) => (
+                  <SwiperSlide key={idx}>
+                    <div className="relative">
+                      <img
+                        src={slide.src}
+                        alt={slide.alt}
+                        className="w-full h-96 object-cover"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                    </div>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
 
-              {/* Decorative elements */}
-              {/* <div className="absolute -bottom-4 -left-4 w-20 h-20 bg-gradient-to-br from-teal-400 to-green-500 rounded-full opacity-20 blur-xl"></div> */}
-              {/* <div className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-br from-green-400 to-teal-500 rounded-full opacity-20 blur-xl"></div> */}
+              {/* Custom bullet bar pagination */}
+              {/* Custom bullet bar pagination */}
+              <div className="custom-pagination flex justify-center gap-2 mt-3"></div>
+
+              <style jsx global>{`
+                .custom-pagination .swiper-pagination-bullet {
+                  width: 30px; /* shorter pill width */
+                  height: 6px;
+                  background: #00ff01; /* gray-300 */
+                  border-radius: 9999px;
+                  transition: all 0.3s ease;
+                }
+                .custom-pagination .swiper-pagination-bullet-active {
+                  background: #00ff01; /* green-500 */
+                  width: 40px; /* slightly bigger when active */
+                }
+              `}</style>
             </div>
           </div>
         </div>
