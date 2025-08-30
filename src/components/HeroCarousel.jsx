@@ -2314,7 +2314,7 @@ const HeroCarousel = () => {
             transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
             opacity: 0.6;
             transform: scale(0.85);
-            margin: 0 0 0 -35px !important;
+           /* margin: 0 0 0 -10px !important;*/
           }
 
           /* Center slide (active) */
@@ -2327,7 +2327,7 @@ const HeroCarousel = () => {
           /* Adjacent slides */
           .hero-carousel .swiper-slide-prev,
           .hero-carousel .swiper-slide-next {
-            opacity: 0.8;
+            opacity: 1;
             transform: scale(0.9);
             z-index: 2;
           }
@@ -2418,7 +2418,7 @@ const HeroCarousel = () => {
             spaceBetween={0} // ✅ reduced base spacing
             loop={true}
             speed={600}
-            initialSlide={1}
+            initialSlide={2}
             navigation={{
               nextEl: ".swiper-button-next-custom",
               prevEl: ".swiper-button-prev-custom",
@@ -2451,7 +2451,7 @@ const HeroCarousel = () => {
                 spaceBetween: 15,
               },
               1024: {
-                spaceBetween: -20, // ✅ reasonable on large screens
+                spaceBetween: -70, // ✅ reasonable on large screens
               },
             }}
           >
@@ -2486,7 +2486,7 @@ const HeroCarousel = () => {
 
           {/* ✅ navigation section centered under carousel */}
           <div
-            className="relative flex justify-center lg:justify-baseline "
+            className="relative flex justify-center lg:justify-around "
             style={{
               paddingBottom: "8px",
             }}

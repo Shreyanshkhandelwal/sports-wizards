@@ -84,7 +84,7 @@ const Hero = () => {
       </div>
 
       <div className="hidden lg:block relative w-full h-full z-10">
-        <div className="absolute inset-y-0 left-0 w-1/2 flex flex-col justify-center text-left px-6 xl:px-24 z-40">
+        <div className="absolute inset-y-0 -left-5 w-1/2 flex flex-col justify-center text-left px-6 xl:px-24 z-40">
           <h1 className="text-6xl font-black text-white uppercase tracking-wide">
             <span
               className=""
@@ -112,8 +112,8 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="absolute  top-[25%] right-0 z-40 flex items-center justify-center w-1/2 mt-6">
-          <div className="w-full max-w-[350px] xl:max-w-[340px] ">
+        <div className="absolute  top-[25%] right-0 z-40 flex items-center justify-center w-1/2 ">
+          <div className="w-full max-w-[350px] xl:max-w-[280px] ">
             <HeroCarousel />
           </div>
         </div>

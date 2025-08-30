@@ -1240,41 +1240,51 @@ const slides = [
     heading: "Basketball Courts",
     sections: [
       {
-        title: "Acrylic Surface",
+        title: "Synthetic Acrylic Surface",
         content:
-          "Acrylic surfaces offer excellent traction and consistent ball bounce, making them ideal for competitive basketball games.",
+          "Available in hard coat, cushion coat, and SBR base options. Durable, low-maintenance, and professional play surfaces for outdoor basketball.",
       },
       {
         title: "PU Flooring",
         content:
-          "PU flooring provides superior shock absorption and durability, reducing the risk of injury during high-intensity play.",
+          "Seamless poured surface, 5–7mm thick. Highly elastic, shock-absorbent, anti-slip, and UV resistant. Suitable for indoor & outdoor basketball courts.",
       },
       {
-        title: "PP Tiles",
+        title: "PP Interlocking Tiles",
         content:
-          "Modular PP tiles are easy to install and maintain, offering weather-resistant performance for both indoor and outdoor courts.",
+          "UV-resistant modular tiles, 12–15mm thick, with drainage. Easy DIY installation and relocation for indoor & outdoor basketball setups.",
       },
       {
         title: "Wooden Flooring",
         content:
-          "Traditional wooden courts offer optimal grip and professional-grade performance for indoor basketball arenas.",
+          "Maple or beechwood planks with shock pads. Offers excellent ball bounce and a professional indoor basketball experience.",
+      },
+      {
+        title: "PVC Vinyl Flooring",
+        content:
+          "Multi-layer cushioned rolls with excellent grip and shock absorption. Economical and reliable for indoor basketball courts.",
+      },
+      {
+        title: "EPDM Rubber Flooring",
+        content:
+          "Safe, shock-absorbent, anti-slip surface suitable for outdoor basketball and multi-sport use.",
       },
     ],
   },
   {
     image: "/soccer-field.png",
-    title: "Football Courts",
-    heading: "Football Courts",
+    title: "Football Fields",
+    heading: "Football Fields",
     sections: [
       {
-        title: "Artificial Grass",
+        title: "Artificial Turf / Grass",
         content:
-          "Artificial grass mimics natural turf while offering low maintenance and year-round playability for football enthusiasts.",
+          "Synthetic grass with sand & rubber infill. Thickness 30–60mm, all-weather playable, low maintenance. Perfect for football pitches.",
       },
       {
-        title: "Turf",
+        title: "Artificial Multisport Turf",
         content:
-          "High-quality turf provides enhanced traction and comfort, making it suitable for both training and competitive matches.",
+          "Synthetic grass (10–15mm) suitable for multi-sports, including football, basketball, and cricket.",
       },
     ],
   },
@@ -1284,24 +1294,29 @@ const slides = [
     heading: "Pickleball Courts",
     sections: [
       {
-        title: "Acrylic Surface",
+        title: "Synthetic Acrylic Surface",
         content:
-          "Acrylic surfaces ensure consistent ball bounce and smooth player movement, ideal for competitive pickleball games.",
+          "Fast and consistent bounce courts available in hard coat, cushioned, or SBR base options.",
       },
       {
         title: "PU Flooring",
         content:
-          "PU flooring offers excellent impact absorption and seamless finishes, making it perfect for indoor pickleball courts.",
+          "Shock-absorbent, anti-slip flooring with excellent durability and comfort for indoor pickleball.",
       },
       {
         title: "PP Tiles",
         content:
-          "Durable and slip-resistant, PP tiles provide a modular solution for both recreational and professional pickleball facilities.",
+          "Weather-resistant, interlocking tiles for easy installation. Great for outdoor pickleball courts.",
       },
       {
         title: "Wooden Flooring",
         content:
-          "Wooden floors give a classic look and feel, providing comfort and control for indoor pickleball matches.",
+          "Professional-grade maple/beechwood planks ideal for indoor pickleball.",
+      },
+      {
+        title: "PVC Vinyl Flooring",
+        content:
+          "Multi-layer cushioned rolls with high grip. Great for indoor pickleball.",
       },
     ],
   },
@@ -1311,31 +1326,31 @@ const slides = [
     heading: "Padel",
     sections: [
       {
-        title: "Artificial Turf",
+        title: "Padel Setup (Flooring + Glass)",
         content:
-          "Artificial turf in padel courts enhances cushioning and player comfort, ensuring high durability and consistent performance.",
+          "Artificial turf with silica sand infill surrounded by tempered glass walls (10–12mm) and steel mesh fencing. Standard size 20m x 10m.",
       },
     ],
   },
   {
     image: "/badminton-court.png",
-    title: "Tennis",
-    heading: "Tennis",
+    title: "Tennis Courts",
+    heading: "Tennis Courts",
     sections: [
       {
-        title: "Acrylic Surface",
+        title: "Synthetic Acrylic Surface",
         content:
-          "Acrylic tennis courts are preferred for their consistent ball speed, weather resistance, and vibrant color finishes.",
+          "Professional tennis courts with fast, consistent ball speed. Available in cushioned and non-cushioned systems.",
       },
       {
         title: "PU Flooring",
         content:
-          "PU flooring provides a cushioned surface that reduces joint stress, making it ideal for indoor tennis training centers.",
+          "Seamless cushioned surface, reducing joint stress. Excellent for indoor tennis training centers.",
       },
       {
-        title: "PP Tiles",
+        title: "PP Interlocking Tiles",
         content:
-          "PP tiles offer quick installation and high durability, making them suitable for multi-purpose tennis surfaces.",
+          "Modular tiles with weather tolerance and easy maintenance. Suitable for multi-purpose outdoor tennis courts.",
       },
     ],
   },
@@ -1345,14 +1360,9 @@ const slides = [
     heading: "Cricket Nets",
     sections: [
       {
-        title: "Artificial Glass",
+        title: "Artificial Multisport Turf",
         content:
-          "Artificial turf in cricket nets offers a consistent surface for batting and bowling practice while minimizing wear and tear.",
-      },
-      {
-        title: "Turf",
-        content:
-          "Quality synthetic turf provides realistic bounce and pace, allowing players to practice in match-like conditions.",
+          "Synthetic grass, 10–15mm thick, offering realistic pace and bounce. Ideal for cricket practice pitches.",
       },
     ],
   },
@@ -1364,34 +1374,44 @@ const slides = [
       {
         title: "PVC Vinyl Flooring",
         content:
-          "PVC vinyl flooring offers excellent grip and cushioning, making it ideal for safe and fast-paced badminton gameplay.",
+          "Cushioned multi-layer flooring (4.5–7mm thick). Excellent grip, shock absorption, and economical for indoor badminton.",
       },
       {
         title: "Wooden Flooring",
         content:
-          "Wooden courts are the gold standard for professional badminton, offering shock absorption and superior foot control.",
+          "Maple/beechwood planks with shock pads. Professional spring and bounce, used for competitive indoor badminton.",
+      },
+      {
+        title: "PU Flooring",
+        content:
+          "Durable, shock-absorbent surface with UV resistance. Suitable for both indoor & outdoor badminton.",
       },
       {
         title: "PP Tiles",
         content:
-          "Interlocking PP tiles allow for portable and weatherproof badminton setups, suitable for both indoor and outdoor use.",
+          "Portable interlocking tiles, ideal for indoor & outdoor badminton setups.",
+      },
+      {
+        title: "Artificial Multisport Turf",
+        content:
+          "Synthetic grass surfaces suitable for indoor & outdoor recreational badminton.",
       },
     ],
   },
   {
     image: "/offer5.jpg",
-    title: "Athletic Running track",
-    heading: "Athletic Running track",
+    title: "Athletic Running Tracks",
+    heading: "Athletic Running Tracks",
     sections: [
       {
-        title: "Sandwich System ",
+        title: "Sandwich System",
         content:
-          "The sandwich system combines durability with shock absorption, offering high performance for competitive running tracks.",
+          "PU binder + SBR base layer + EPDM granules. 13–15mm thickness. High durability and certified for international-level running tracks.",
       },
       {
         title: "Spray-Coat System",
         content:
-          "Spray-coat systems offer a cost-effective and UV-resistant solution for all-weather running tracks and athletic lanes.",
+          "10–13mm thickness with spray-coated EPDM granules. More economical but slightly shorter lifespan than Sandwich System.",
       },
     ],
   },
@@ -1401,19 +1421,24 @@ const slides = [
     heading: "Outdoor Multisports",
     sections: [
       {
-        title: "Acrylic Surface",
+        title: "Synthetic Acrylic Surface",
         content:
-          "Acrylic coatings provide multi-sport versatility with excellent durability, ball response, and vibrant aesthetics.",
+          "Fast and durable acrylic coatings, available in cushioned or hard coat systems, suitable for multiple sports.",
       },
       {
         title: "PU Flooring",
         content:
-          "PU flooring supports various sports by offering comfort, resilience, and safety for all types of athletic activities.",
+          "Shock-absorbent, anti-slip, and UV-resistant seamless surfaces for versatile outdoor multi-sport courts.",
       },
       {
         title: "PP Tiles",
         content:
-          "Modular PP tiles are ideal for outdoor multisport areas due to their slip resistance, weather tolerance, and easy maintenance.",
+          "Weather-resistant, easy to install interlocking tiles ideal for outdoor multi-sports.",
+      },
+      {
+        title: "EPDM Rubber Flooring",
+        content:
+          "Safe, cushioned surface perfect for multi-sports and outdoor recreation areas.",
       },
     ],
   },
@@ -1423,14 +1448,19 @@ const slides = [
     heading: "Indoor Multisports",
     sections: [
       {
-        title: "PVC Vinyl Flooring ",
+        title: "PVC Vinyl Flooring",
         content:
-          "PVC vinyl floors offer multi-use capabilities with anti-slip properties and excellent resilience for indoor games.",
+          "Economical, cushioned, and slip-resistant indoor flooring suitable for multiple sports.",
       },
       {
         title: "Wooden Flooring",
         content:
-          "Wooden surfaces enhance gameplay with natural bounce and comfort, supporting a wide range of indoor sports.",
+          "Professional-grade maple/beechwood flooring offering excellent bounce and grip for indoor multi-sport arenas.",
+      },
+      {
+        title: "PU Flooring",
+        content:
+          "Durable, shock-absorbent seamless flooring for indoor multi-sport setups.",
       },
     ],
   },
@@ -1440,9 +1470,19 @@ const slides = [
     heading: "Kids Play Area",
     sections: [
       {
-        title: "EPDM Flooring",
+        title: "Artificial Turf",
         content:
-          "EPDM rubber flooring ensures safety for children with its cushioned surface, skid resistance, and vibrant color options.",
+          "Soft synthetic grass with infill options, providing safe and low-maintenance play areas.",
+      },
+      {
+        title: "EPDM Rubber Flooring",
+        content:
+          "Cushioned, anti-slip, and weatherproof flooring designed for children’s safety.",
+      },
+      {
+        title: "Rubber Interlocking Tiles",
+        content:
+          "High shock absorption, non-slip tiles ideal for kids' play areas, ensuring safety and comfort.",
       },
     ],
   },
@@ -1454,7 +1494,7 @@ const slides = [
       {
         title: "Rubber Interlocking Tiles",
         content:
-          "Rubber tiles offer heavy-duty impact resistance, sound insulation, and easy installation, ideal for gym and fitness areas.",
+          "Pre-molded, heavy-duty rubber tiles offering impact resistance, non-slip safety, and easy maintenance. Perfect for gyms and fitness areas.",
       },
     ],
   },
@@ -1622,17 +1662,29 @@ const ImprovedCarousel = () => {
                 cursor: pointer;
                 transition: transform 0.6s ease;
               }
-
+              /*
               .slide-card:hover .card-inner {
                 transform: rotateY(180deg);
-              }
-
+              }*/
+              /*
               .card-inner {
                 position: relative;
                 width: 100%;
                 height: 100%;
                 transform-style: preserve-3d;
                 transition: transform 0.6s ease;
+              }
+*/
+              .card-inner {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                transform-style: preserve-3d;
+                transition: transform 0.6s ease;
+              }
+
+              .card-inner.flipped {
+                transform: rotateY(180deg);
               }
 
               .slide-front,
@@ -1751,6 +1803,11 @@ const ImprovedCarousel = () => {
                 opacity: 1;
                 transform: scale(1);
               }
+              .build-button {
+                position: sticky;
+                bottom: 0;
+                margin-top: auto;
+              }
             `}</style>
 
             <div
@@ -1776,7 +1833,11 @@ const ImprovedCarousel = () => {
                     }}
                     onClick={() => setCurrentSlide(index)}
                   >
-                    <div className="card-inner">
+                    <div
+                      className={`card-inner ${
+                        index === currentSlide ? "flipped" : ""
+                      }`}
+                    >
                       <div className="slide-front">
                         <img
                           src={slide.image}
@@ -1860,7 +1921,7 @@ const ImprovedCarousel = () => {
                             background:
                               "linear-gradient(91.1deg, #26FEB2 -0.39%, #46FD3E 81.76%)",
                           }}
-                          className="text-center lg:absolute lg:bottom-5 font-bold text-sm md:text-base py-2 px-5 md:py-3 md:px-6 rounded-full transition-transform hover:scale-105 text-black w-[88%]"
+                          className="text-center build-button font-bold text-sm md:text-base py-2 px-5 md:py-3 md:px-6 rounded-full transition-transform hover:scale-105 text-black w-[88%]"
                         >
                           Build My Court Now
                         </a>

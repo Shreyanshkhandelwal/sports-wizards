@@ -28,7 +28,7 @@ const Coaching = () => {
   }, []);
   return (
     <>
-      {/* {isLargeScreen && <NeonCursor />} */}
+      {isLargeScreen && <NeonCursor />}
       <main className="w-full overflow-x-hidden">
         <ReuseHero
           heading="Playground to Podium: Coaching That Builds Character"
