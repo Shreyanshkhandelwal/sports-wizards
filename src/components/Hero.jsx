@@ -58,22 +58,22 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="relative w-full h-96 mt-4">
+       <div className="relative w-full h-96 mt-4">
           <img
             // src="/p1.png"
-            src="https://res.cloudinary.com/dnivrv6ar/image/upload/v1756561431/p1_l0wsdf.png"
+            src="https://res.cloudinary.com/dnivrv6ar/image/upload/f_auto,q_auto/v1756561431/p1_l0wsdf.png"
             alt="player 1"
             className="absolute bottom-0 left-[20%] sm:left-[35%] -translate-x-1/2 w-[65%] max-w-[240px] h-auto z-10 transform -scale-x-100"
           />
           <img
             // src="/p2.png"
-            src="https://res.cloudinary.com/dnivrv6ar/image/upload/v1756561459/p2_d5ywdv.png"
+            src="https://res.cloudinary.com/dnivrv6ar/image/upload/f_auto,q_auto/v1756561459/p2_d5ywdv.png"
             alt="player 2"
             className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[75%] max-w-[320px] h-auto z-20"
           />
           <img
             // src="/p3.png"
-            src="https://res.cloudinary.com/dnivrv6ar/image/upload/v1756561447/p3_l69o4n.png"
+            src="https://res.cloudinary.com/dnivrv6ar/image/upload/f_auto,q_auto/v1756561447/p3_l69o4n.png"
             alt="player 3"
             className="absolute bottom-0 left-[80%] sm:left-[65%] -translate-x-1/2 w-[65%] max-w-[260px] h-auto z-10"
           />
