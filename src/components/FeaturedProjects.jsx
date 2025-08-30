@@ -7,42 +7,47 @@ import "swiper/css/effect-coverflow";
 const projects = [
   {
     id: 1,
-    title: "BASKET BALL COURTVILLA",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
-    imageUrl: "/bb-court.jpg",
+    title: "Multisport Court - Surat Gymkhana",
+    imageUrl: "/featured_projects/1.png",
   },
   {
     id: 2,
-    title: "THE CRICKET PITCH",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
-    imageUrl: "/cricket-court.png",
+    title: "Pickleball Court - Kalani College, Ulhasnagar",
+    imageUrl: "/featured_projects/2.png",
   },
   {
     id: 3,
-    title: "COMMUNITY SOCCER FIELD",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
-    imageUrl: "/soccer-field.png",
+    title: "Pickleball Court - SportsVilla, Akola",
+    imageUrl: "/featured_projects/3.png",
   },
   {
     id: 4,
-    title: "INDOOR BADMINTON HALL",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
-    imageUrl: "/badminton-court.png",
+    title: "Tennis Court - Aurangabad",
+    imageUrl: "/featured_projects/4.png",
   },
   {
     id: 5,
-    title: "THE CRICKET PITCH",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
-    imageUrl: "/cricket-court.png",
+    title: "Badminton Court - DPIS School, Pune",
+    imageUrl: "/featured_projects/5.png",
+  },
+  {
+    id: 5,
+    title: "Basketball Court - The Cricket Club Of India (CCI), Churchgate",
+    imageUrl: "/featured_projects/6.png",
+  },
+  {
+    id: 5,
+    title: "Football Turf - Mira Road",
+    imageUrl: "/featured_projects/7.png",
+  },
+  {
+    id: 5,
+    title: "Kids Play Area - Paradise Society, Powai",
+    imageUrl: "/featured_projects/8.png",
   },
 ];
 
-const ProjectCard = ({ imageUrl, title, description }) => (
+const ProjectCard = ({ imageUrl, title }) => (
   <div className="relative w-full h-full overflow-hidden group">
     <img
       src={imageUrl}
@@ -51,12 +56,12 @@ const ProjectCard = ({ imageUrl, title, description }) => (
     />
     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
     <div className="absolute bottom-0 left-0 p-4 md:p-6 text-white">
-      <h3 className="text-lg md:text-xl font-bold uppercase tracking-wide">
+      <h3 className="text-lg md:text-xl font-bold uppercase tracking-wide font-Race">
         {title}
       </h3>
-      <p className="mt-2 text-xs md:text-sm text-gray-300 max-w-md leading-relaxed">
+      {/* <p className="mt-2 text-xs md:text-sm text-gray-300 max-w-md leading-relaxed">
         {description}
-      </p>
+      </p> */}
     </div>
   </div>
 );
