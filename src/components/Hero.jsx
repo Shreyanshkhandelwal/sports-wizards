@@ -102,8 +102,14 @@ const Hero = () => {
             <br />
             <span>Playgrounds</span>
           </h1>
-          <div className="flex flex-row items-center justify-start gap-4 mt-8">
-            <button className="bg-gradient-to-r from-teal-300 via-green-400 to-green-500 font-bold text-base py-3 px-6 rounded-full transition-transform hover:scale-105 z-[999]">
+          <div className="flex flex-row items-center justify-start gap-4 mt-36">
+            <button
+              style={{
+                background:
+                  "linear-gradient(91.1deg, #26FEB2 -0.39%, #46FD3E 81.76%)",
+              }}
+              className="font-bold text-base py-3 px-6 rounded-full transition-transform hover:scale-105 z-[999]"
+            >
               Explore What We Do
             </button>
             <button className="bg-white text-black font-bold text-base py-3 px-6 rounded-full transition-transform hover:scale-105 z-[999]">
