@@ -17,19 +17,6 @@
   --color-misc: #2c2c2c;
   --font-Race: "Race Sport";
 }
-* {
-  cursor: none !important;
-}
-
-html,
-body,
-button,
-a,
-input,
-textarea,
-select {
-  cursor: none !important;
-}
 
 body {
   @apply bg-bg text-bg-foreground;

@@ -1233,6 +1233,273 @@
 import React, { useEffect, useRef, useState } from "react";
 
 // Mock images for demonstration
+// const slides = [
+//   {
+//     image: "/coaching.jpg",
+//     title: "Basketball Courts",
+//     heading: "Basketball Courts",
+//     sections: [
+//       {
+//         title: "Synthetic Acrylic Surface",
+//         content:
+//           "Available in hard coat, cushion coat, and SBR base options. Durable, low-maintenance, and professional play surfaces for outdoor basketball.",
+//       },
+//       {
+//         title: "PU Flooring",
+//         content:
+//           "Seamless poured surface, 5–7mm thick. Highly elastic, shock-absorbent, anti-slip, and UV resistant. Suitable for indoor & outdoor basketball courts.",
+//       },
+//       {
+//         title: "PP Interlocking Tiles",
+//         content:
+//           "UV-resistant modular tiles, 12–15mm thick, with drainage. Easy DIY installation and relocation for indoor & outdoor basketball setups.",
+//       },
+//       {
+//         title: "Wooden Flooring",
+//         content:
+//           "Maple or beechwood planks with shock pads. Offers excellent ball bounce and a professional indoor basketball experience.",
+//       },
+//       {
+//         title: "PVC Vinyl Flooring",
+//         content:
+//           "Multi-layer cushioned rolls with excellent grip and shock absorption. Economical and reliable for indoor basketball courts.",
+//       },
+//       {
+//         title: "EPDM Rubber Flooring",
+//         content:
+//           "Safe, shock-absorbent, anti-slip surface suitable for outdoor basketball and multi-sport use.",
+//       },
+//     ],
+//   },
+//   {
+//     image: "/soccer-field.png",
+//     title: "Football Fields",
+//     heading: "Football Fields",
+//     sections: [
+//       {
+//         title: "Artificial Turf / Grass",
+//         content:
+//           "Synthetic grass with sand & rubber infill. Thickness 30–60mm, all-weather playable, low maintenance. Perfect for football pitches.",
+//       },
+//       {
+//         title: "Artificial Multisport Turf",
+//         content:
+//           "Synthetic grass (10–15mm) suitable for multi-sports, including football, basketball, and cricket.",
+//       },
+//     ],
+//   },
+//   {
+//     image: "/cricket-court.png",
+//     title: "Pickleball Courts",
+//     heading: "Pickleball Courts",
+//     sections: [
+//       {
+//         title: "Synthetic Acrylic Surface",
+//         content:
+//           "Fast and consistent bounce courts available in hard coat, cushioned, or SBR base options.",
+//       },
+//       {
+//         title: "PU Flooring",
+//         content:
+//           "Shock-absorbent, anti-slip flooring with excellent durability and comfort for indoor pickleball.",
+//       },
+//       {
+//         title: "PP Tiles",
+//         content:
+//           "Weather-resistant, interlocking tiles for easy installation. Great for outdoor pickleball courts.",
+//       },
+//       {
+//         title: "Wooden Flooring",
+//         content:
+//           "Professional-grade maple/beechwood planks ideal for indoor pickleball.",
+//       },
+//       {
+//         title: "PVC Vinyl Flooring",
+//         content:
+//           "Multi-layer cushioned rolls with high grip. Great for indoor pickleball.",
+//       },
+//     ],
+//   },
+//   {
+//     image: "/offer4.jpg",
+//     title: "Padel",
+//     heading: "Padel",
+//     sections: [
+//       {
+//         title: "Padel Setup (Flooring + Glass)",
+//         content:
+//           "Artificial turf (monofilament/fibrillated) + silica sand infill for consistent ball bounce. Surrounded by tempered glass walls (10–12mm) + steel mesh fencing. Standard size ~20m x 10m.",
+//       },
+//     ],
+//   },
+//   {
+//     image: "/badminton-court.png",
+//     title: "Tennis Courts",
+//     heading: "Tennis Courts",
+//     sections: [
+//       {
+//         title: "Synthetic Acrylic Surface",
+//         content:
+//           "Professional tennis courts with fast, consistent ball speed. Available in cushioned and non-cushioned systems.",
+//       },
+//       {
+//         title: "PU Flooring",
+//         content:
+//           "Seamless cushioned surface, reducing joint stress. Excellent for indoor tennis training centers.",
+//       },
+//       {
+//         title: "PP Interlocking Tiles",
+//         content:
+//           "Modular tiles with weather tolerance and easy maintenance. Suitable for multi-purpose outdoor tennis courts.",
+//       },
+//     ],
+//   },
+//   {
+//     image: "/e3.png",
+//     title: "Cricket Nets",
+//     heading: "Cricket Nets",
+//     sections: [
+//       {
+//         title: "Artificial Multisport Turf",
+//         content:
+//           "Synthetic grass, 10–15mm thick, offering realistic pace and bounce. Ideal for cricket practice pitches.",
+//       },
+//     ],
+//   },
+//   {
+//     image: "/badminton.jpg",
+//     title: "Badminton Courts",
+//     heading: "Badminton Courts",
+//     sections: [
+//       {
+//         title: "PVC Vinyl Flooring",
+//         content:
+//           "Cushioned multi-layer flooring (4.5–7mm thick). Excellent grip, shock absorption, and economical for indoor badminton.",
+//       },
+//       {
+//         title: "Wooden Flooring",
+//         content:
+//           "Maple/beechwood planks with shock pads. Professional spring and bounce, used for competitive indoor badminton.",
+//       },
+//       {
+//         title: "PU Flooring",
+//         content:
+//           "Durable, shock-absorbent surface with UV resistance. Suitable for both indoor & outdoor badminton.",
+//       },
+//       {
+//         title: "PP Tiles",
+//         content:
+//           "Portable interlocking tiles, ideal for indoor & outdoor badminton setups.",
+//       },
+//       {
+//         title: "Artificial Multisport Turf",
+//         content:
+//           "Synthetic grass surfaces suitable for indoor & outdoor recreational badminton.",
+//       },
+//     ],
+//   },
+//   {
+//     image: "/offer5.jpg",
+//     title: "Athletic Running Tracks",
+//     heading: "Athletic Running Tracks",
+//     sections: [
+//       {
+//         title: "Sandwich System",
+//         content:
+//           "PU binder + SBR base layer + EPDM granules. 13–15mm thickness. High durability and certified for international-level running tracks.",
+//       },
+//       {
+//         title: "Spray-Coat System",
+//         content:
+//           "10–13mm thickness with spray-coated EPDM granules. More economical but slightly shorter lifespan than Sandwich System.",
+//       },
+//     ],
+//   },
+//   {
+//     image: "/offer2.png",
+//     title: "Outdoor Multisports",
+//     heading: "Outdoor Multisports",
+//     sections: [
+//       {
+//         title: "Synthetic Acrylic Surface",
+//         content:
+//           "Fast and durable acrylic coatings, available in cushioned or hard coat systems, suitable for multiple sports.",
+//       },
+//       {
+//         title: "PU Flooring",
+//         content:
+//           "Shock-absorbent, anti-slip, and UV-resistant seamless surfaces for versatile outdoor multi-sport courts.",
+//       },
+//       {
+//         title: "PP Tiles",
+//         content:
+//           "Weather-resistant, easy to install interlocking tiles ideal for outdoor multi-sports.",
+//       },
+//       {
+//         title: "EPDM Rubber Flooring",
+//         content:
+//           "Safe, cushioned surface perfect for multi-sports and outdoor recreation areas.",
+//       },
+//     ],
+//   },
+//   {
+//     image: "/offer3.png",
+//     title: "Indoor Multisports",
+//     heading: "Indoor Multisports",
+//     sections: [
+//       {
+//         title: "PVC Vinyl Flooring",
+//         content:
+//           "Economical, cushioned, and slip-resistant indoor flooring suitable for multiple sports.",
+//       },
+//       {
+//         title: "Wooden Flooring",
+//         content:
+//           "Professional-grade maple/beechwood flooring offering excellent bounce and grip for indoor multi-sport arenas.",
+//       },
+//       {
+//         title: "PU Flooring",
+//         content:
+//           "Durable, shock-absorbent seamless flooring for indoor multi-sport setups.",
+//       },
+//     ],
+//   },
+//   {
+//     image: "/track3.png",
+//     title: "Kids Play Area",
+//     heading: "Kids Play Area",
+//     sections: [
+//       {
+//         title: "Artificial Turf",
+//         content:
+//           "Soft synthetic grass with infill options, providing safe and low-maintenance play areas.",
+//       },
+//       {
+//         title: "EPDM Rubber Flooring",
+//         content:
+//           "Cushioned, anti-slip, and weatherproof flooring designed for children’s safety.",
+//       },
+//       {
+//         title: "Rubber Interlocking Tiles",
+//         content:
+//           "High shock absorption, non-slip tiles ideal for kids' play areas, ensuring safety and comfort.",
+//       },
+//     ],
+//   },
+//   {
+//     image: "/gym.jpg",
+//     title: "Gym Flooring",
+//     heading: "Gym Flooring",
+//     sections: [
+//       {
+//         title: "Rubber Interlocking Tiles",
+//         content:
+//           "Pre-molded, heavy-duty rubber tiles offering impact resistance, non-slip safety, and easy maintenance. Perfect for gyms and fitness areas.",
+//       },
+//     ],
+//   },
+// ];
+
 const slides = [
   {
     image: "/coaching.jpg",
@@ -1240,34 +1507,34 @@ const slides = [
     heading: "Basketball Courts",
     sections: [
       {
-        title: "Synthetic Acrylic Surface",
+        title: "Synthetic Acrylic Surface (5 layer hard coat)",
         content:
-          "Available in hard coat, cushion coat, and SBR base options. Durable, low-maintenance, and professional play surfaces for outdoor basketball.",
+          "Basic acrylic coating over asphalt/concrete. 1 primer + 2 resurfacer + 2 acrylic color coats. Non-cushioned, durable, low-maintenance, fast surface.",
       },
       {
-        title: "PU Flooring",
+        title: "Synthetic Acrylic Cushion Surface (8 layer coat)",
         content:
-          "Seamless poured surface, 5–7mm thick. Highly elastic, shock-absorbent, anti-slip, and UV resistant. Suitable for indoor & outdoor basketball courts.",
+          "Premium cushioned system. 1 primer + 3 cushion coats + 2 resurfacer coats + 2 acrylic color coats. Softer feel, reduces joint stress, more professional play experience.",
       },
       {
-        title: "PP Interlocking Tiles",
+        title: "SBR + 5 layer Acrylic Flooring",
         content:
-          "UV-resistant modular tiles, 12–15mm thick, with drainage. Easy DIY installation and relocation for indoor & outdoor basketball setups.",
+          "Shock pad base (SBR granules + PU binder) topped with acrylic layers. Combines cushioning + professional finish.",
+      },
+      {
+        title: "Polyurethane (PU) Flooring",
+        content:
+          "Seamless poured surface (5–7mm thick). Highly elastic, shock-absorbent, anti-slip, UV resistant. Long life, great indoor/outdoor durability. Customizable colors & markings.",
+      },
+      {
+        title: "Polypropylene Interlocking Tiles (PP Tiles)",
+        content:
+          "Interlocking modular tiles (12–15mm thick). UV-resistant, perforated for drainage. Easy DIY installation & relocation. Requires even base.",
       },
       {
         title: "Wooden Flooring",
         content:
-          "Maple or beechwood planks with shock pads. Offers excellent ball bounce and a professional indoor basketball experience.",
-      },
-      {
-        title: "PVC Vinyl Flooring",
-        content:
-          "Multi-layer cushioned rolls with excellent grip and shock absorption. Economical and reliable for indoor basketball courts.",
-      },
-      {
-        title: "EPDM Rubber Flooring",
-        content:
-          "Safe, shock-absorbent, anti-slip surface suitable for outdoor basketball and multi-sport use.",
+          "Maple or beechwood planks on shock pads. Professional spring, anti-glare finish, excellent ball bounce. Needs periodic polishing/recoating.",
       },
     ],
   },
@@ -1279,12 +1546,11 @@ const slides = [
       {
         title: "Artificial Turf / Grass",
         content:
-          "Synthetic grass with sand & rubber infill. Thickness 30–60mm, all-weather playable, low maintenance. Perfect for football pitches.",
+          "Synthetic grass + infill (sand + rubber). Thickness 30–60mm depending on sport. Shock pad optional. Low maintenance, all-weather playable.",
       },
       {
-        title: "Artificial Multisport Turf",
-        content:
-          "Synthetic grass (10–15mm) suitable for multi-sports, including football, basketball, and cricket.",
+        title: "Artificial Multisport Turf / Grass",
+        content: "Synthetic grass Thickness 10–15 mm for multisports gaming.",
       },
     ],
   },
@@ -1294,29 +1560,34 @@ const slides = [
     heading: "Pickleball Courts",
     sections: [
       {
-        title: "Synthetic Acrylic Surface",
+        title: "Synthetic Acrylic Surface (5 layer hard coat)",
         content:
-          "Fast and consistent bounce courts available in hard coat, cushioned, or SBR base options.",
+          "Basic acrylic coating over asphalt/concrete. 1 primer + 2 resurfacer + 2 acrylic color coats. Non-cushioned, durable, low-maintenance, fast surface.",
       },
       {
-        title: "PU Flooring",
+        title: "Synthetic Acrylic Cushion Surface (8 layer coat)",
         content:
-          "Shock-absorbent, anti-slip flooring with excellent durability and comfort for indoor pickleball.",
+          "Premium cushioned system. 1 primer + 3 cushion coats + 2 resurfacer coats + 2 acrylic color coats. Softer feel, reduces joint stress, more professional play experience.",
       },
       {
-        title: "PP Tiles",
+        title: "SBR + 5 layer Acrylic Flooring",
         content:
-          "Weather-resistant, interlocking tiles for easy installation. Great for outdoor pickleball courts.",
+          "Shock pad base (SBR granules + PU binder) topped with acrylic layers. Combines cushioning + professional finish.",
+      },
+      {
+        title: "Polyurethane (PU) Flooring",
+        content:
+          "Seamless poured surface (5–7mm thick). Highly elastic, shock-absorbent, anti-slip, UV resistant. Long life, great indoor/outdoor durability. Customizable colors & markings.",
+      },
+      {
+        title: "Polypropylene Interlocking Tiles (PP Tiles)",
+        content:
+          "Interlocking modular tiles (12–15mm thick). UV-resistant, perforated for drainage. Easy DIY installation & relocation. Requires even base.",
       },
       {
         title: "Wooden Flooring",
         content:
-          "Professional-grade maple/beechwood planks ideal for indoor pickleball.",
-      },
-      {
-        title: "PVC Vinyl Flooring",
-        content:
-          "Multi-layer cushioned rolls with high grip. Great for indoor pickleball.",
+          "Maple or beechwood planks on shock pads. Professional spring, anti-glare finish, excellent ball bounce. Needs periodic polishing/recoating.",
       },
     ],
   },
@@ -1328,7 +1599,7 @@ const slides = [
       {
         title: "Padel Setup (Flooring + Glass)",
         content:
-          "Artificial turf with silica sand infill surrounded by tempered glass walls (10–12mm) and steel mesh fencing. Standard size 20m x 10m.",
+          "Artificial turf (monofilament/fibrillated) + silica sand infill for consistent ball bounce. Surrounded by tempered glass walls (10–12mm) + steel mesh fencing. Standard size ~20m x 10m.",
       },
     ],
   },
@@ -1338,19 +1609,29 @@ const slides = [
     heading: "Tennis Courts",
     sections: [
       {
-        title: "Synthetic Acrylic Surface",
+        title: "Synthetic Acrylic Surface (5 layer hard coat)",
         content:
-          "Professional tennis courts with fast, consistent ball speed. Available in cushioned and non-cushioned systems.",
+          "Basic acrylic coating over asphalt/concrete. 1 primer + 2 resurfacer + 2 acrylic color coats. Non-cushioned, durable, low-maintenance, fast surface.",
       },
       {
-        title: "PU Flooring",
+        title: "Synthetic Acrylic Cushion Surface (8 layer coat)",
         content:
-          "Seamless cushioned surface, reducing joint stress. Excellent for indoor tennis training centers.",
+          "Premium cushioned system. 1 primer + 3 cushion coats + 2 resurfacer coats + 2 acrylic color coats. Softer feel, reduces joint stress, more professional play experience.",
       },
       {
-        title: "PP Interlocking Tiles",
+        title: "SBR + 5 layer Acrylic Flooring",
         content:
-          "Modular tiles with weather tolerance and easy maintenance. Suitable for multi-purpose outdoor tennis courts.",
+          "Shock pad base (SBR granules + PU binder) topped with acrylic layers. Combines cushioning + professional finish.",
+      },
+      {
+        title: "Polyurethane (PU) Flooring",
+        content:
+          "Seamless poured surface (5–7mm thick). Highly elastic, shock-absorbent, anti-slip, UV resistant. Long life, great indoor/outdoor durability. Customizable colors & markings.",
+      },
+      {
+        title: "Polypropylene Interlocking Tiles (PP Tiles)",
+        content:
+          "Interlocking modular tiles (12–15mm thick). UV-resistant, perforated for drainage. Easy DIY installation & relocation. Requires even base.",
       },
     ],
   },
@@ -1360,9 +1641,13 @@ const slides = [
     heading: "Cricket Nets",
     sections: [
       {
-        title: "Artificial Multisport Turf",
+        title: "Artificial Turf / Grass",
         content:
-          "Synthetic grass, 10–15mm thick, offering realistic pace and bounce. Ideal for cricket practice pitches.",
+          "Synthetic grass + infill (sand + rubber). Thickness 30–60mm depending on sport. Shock pad optional. Low maintenance, all-weather playable.",
+      },
+      {
+        title: "Artificial Multisport Turf / Grass",
+        content: "Synthetic grass Thickness 10–15 mm for multisports gaming.",
       },
     ],
   },
@@ -1374,27 +1659,18 @@ const slides = [
       {
         title: "PVC Vinyl Flooring",
         content:
-          "Cushioned multi-layer flooring (4.5–7mm thick). Excellent grip, shock absorption, and economical for indoor badminton.",
+          "Multi-layer cushioned rolls (4.5–7mm thick). Top wear-layer + fiber-reinforced layer + foam cushion base. Excellent shock absorption, good grip, economical indoor solution.",
       },
       {
         title: "Wooden Flooring",
         content:
-          "Maple/beechwood planks with shock pads. Professional spring and bounce, used for competitive indoor badminton.",
+          "Maple or beechwood planks on shock pads. Professional spring, anti-glare finish, excellent ball bounce. Needs periodic polishing/recoating.",
       },
+
       {
-        title: "PU Flooring",
+        title: "Polypropylene Interlocking Tiles (PP Tiles)",
         content:
-          "Durable, shock-absorbent surface with UV resistance. Suitable for both indoor & outdoor badminton.",
-      },
-      {
-        title: "PP Tiles",
-        content:
-          "Portable interlocking tiles, ideal for indoor & outdoor badminton setups.",
-      },
-      {
-        title: "Artificial Multisport Turf",
-        content:
-          "Synthetic grass surfaces suitable for indoor & outdoor recreational badminton.",
+          "Interlocking modular tiles (12–15mm thick). UV-resistant, perforated for drainage. Easy DIY installation & relocation. Requires even base.",
       },
     ],
   },
@@ -1404,14 +1680,14 @@ const slides = [
     heading: "Athletic Running Tracks",
     sections: [
       {
-        title: "Sandwich System",
+        title: "Sandwich System 15 mm (SBR + PU + EPDM)",
         content:
-          "PU binder + SBR base layer + EPDM granules. 13–15mm thickness. High durability and certified for international-level running tracks.",
+          "PU binder + SBR layer + PU seal + EPDM granule top layer. 13–15mm thickness. High durability, certified performance. Preferred for international-level tracks.",
       },
       {
-        title: "Spray-Coat System",
+        title: "Spray-Coat System 13 mm (SBR + PU & EPDM)",
         content:
-          "10–13mm thickness with spray-coated EPDM granules. More economical but slightly shorter lifespan than Sandwich System.",
+          "U + SBR base layer + spray-coated EPDM granules. 10–13mm thickness. More economical than Sandwich system but slightly less lifespan.",
       },
     ],
   },
@@ -1421,24 +1697,29 @@ const slides = [
     heading: "Outdoor Multisports",
     sections: [
       {
-        title: "Synthetic Acrylic Surface",
+        title: "Synthetic Acrylic Surface (5 layer hard coat)",
         content:
-          "Fast and durable acrylic coatings, available in cushioned or hard coat systems, suitable for multiple sports.",
+          "Basic acrylic coating over asphalt/concrete. 1 primer + 2 resurfacer + 2 acrylic color coats. Non-cushioned, durable, low-maintenance, fast surface.",
       },
       {
-        title: "PU Flooring",
+        title: "Synthetic Acrylic Cushion Surface (8 layer coat)",
         content:
-          "Shock-absorbent, anti-slip, and UV-resistant seamless surfaces for versatile outdoor multi-sport courts.",
+          "Premium cushioned system. 1 primer + 3 cushion coats + 2 resurfacer coats + 2 acrylic color coats. Softer feel, reduces joint stress, more professional play experience.",
       },
       {
-        title: "PP Tiles",
+        title: "SBR + 5 layer Acrylic Flooring",
         content:
-          "Weather-resistant, easy to install interlocking tiles ideal for outdoor multi-sports.",
+          "Shock pad base (SBR granules + PU binder) topped with acrylic layers. Combines cushioning + professional finish.",
       },
       {
-        title: "EPDM Rubber Flooring",
+        title: "Polyurethane (PU) Flooring",
         content:
-          "Safe, cushioned surface perfect for multi-sports and outdoor recreation areas.",
+          "Seamless poured surface (5–7mm thick). Highly elastic, shock-absorbent, anti-slip, UV resistant. Long life, great indoor/outdoor durability. Customizable colors & markings.",
+      },
+      {
+        title: "Polypropylene Interlocking Tiles (PP Tiles)",
+        content:
+          "Interlocking modular tiles (12–15mm thick). UV-resistant, perforated for drainage. Easy DIY installation & relocation. Requires even base.",
       },
     ],
   },
@@ -1450,17 +1731,12 @@ const slides = [
       {
         title: "PVC Vinyl Flooring",
         content:
-          "Economical, cushioned, and slip-resistant indoor flooring suitable for multiple sports.",
+          "Multi-layer cushioned rolls (4.5–7mm thick). Top wear-layer + fiber-reinforced layer + foam cushion base. Excellent shock absorption, good grip, economical indoor solution.",
       },
       {
         title: "Wooden Flooring",
         content:
-          "Professional-grade maple/beechwood flooring offering excellent bounce and grip for indoor multi-sport arenas.",
-      },
-      {
-        title: "PU Flooring",
-        content:
-          "Durable, shock-absorbent seamless flooring for indoor multi-sport setups.",
+          "Maple or beechwood planks on shock pads. Professional spring, anti-glare finish, excellent ball bounce. Needs periodic polishing/recoating.",
       },
     ],
   },
@@ -1470,19 +1746,9 @@ const slides = [
     heading: "Kids Play Area",
     sections: [
       {
-        title: "Artificial Turf",
+        title: "EPDM Rubber Flooring (15mm)",
         content:
-          "Soft synthetic grass with infill options, providing safe and low-maintenance play areas.",
-      },
-      {
-        title: "EPDM Rubber Flooring",
-        content:
-          "Cushioned, anti-slip, and weatherproof flooring designed for children’s safety.",
-      },
-      {
-        title: "Rubber Interlocking Tiles",
-        content:
-          "High shock absorption, non-slip tiles ideal for kids' play areas, ensuring safety and comfort.",
+          "EPDM granules bonded over asphalt/concrete. Thickness 10–25mm. Very safe, anti-slip, weatherproof, shock-absorbent.",
       },
     ],
   },
@@ -1494,7 +1760,7 @@ const slides = [
       {
         title: "Rubber Interlocking Tiles",
         content:
-          "Pre-molded, heavy-duty rubber tiles offering impact resistance, non-slip safety, and easy maintenance. Perfect for gyms and fitness areas.",
+          "Pre-molded interlocking rubber tiles (thickness 10–50mm). Easy to install/remove, high shock absorption, non-slip, water-resistant. Great for both indoor/outdoor use and heavy traffic zones.",
       },
     ],
   },

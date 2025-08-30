@@ -29,7 +29,7 @@ const Contact = () => {
   }, []);
   return (
     <>
-      {isLargeScreen && <NeonCursor />}
+      {/* {isLargeScreen && <NeonCursor />} */}
       <main className="w-full overflow-x-hidden">
         <section className="relative w-full min-h-[200px] md:min-h-[300px] lg:max-h-[500px] mx-auto overflow-hidden flex items-center justify-center">
           <Header />
