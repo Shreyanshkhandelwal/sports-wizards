@@ -188,7 +188,7 @@ export default function FeaturedProjects() {
           <div className="px-4">
             <div className="text-center mb-8">
               <div className="inline-block mb-4">
-                <h1
+                <h5
                   style={{
                     fontSize: "24px",
                     background:
@@ -199,9 +199,9 @@ export default function FeaturedProjects() {
                   className="inline-block text-center text-base font-bold uppercase tracking-widest mb-6 underline underline-offset-8 decoration-green-500"
                 >
                   Featured Projects
-                </h1>
+                </h5>
               </div>
-              <h1 className="text-2xl sm:text-3xl font-bold text-white leading-tight mb-6">
+              <h5 className="text-2xl sm:text-3xl font-bold text-white leading-tight mb-6">
                 SHOWCASING OUR SIGNATURE
                 <br />
                 <span
@@ -215,7 +215,7 @@ export default function FeaturedProjects() {
                   CREATIONS
                 </span>{" "}
                 ACROSS COMMUNITIES.
-              </h1>
+              </h5>
               <button
                 style={{
                   background:

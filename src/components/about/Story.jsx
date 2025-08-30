@@ -128,7 +128,7 @@ const Story = () => {
       </section>
       {/* sets apart */}
       <section className="flex flex-col items-center justify-center py-12 px-4 sm:px-6 lg:px-8 mt-10">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto w-full">
           <div className="text-center">
             <h5
               style={{
@@ -143,7 +143,55 @@ const Story = () => {
               What Sets Us Apart
             </h5>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 mt-16 px-4">
+
+          {/* Mobile (horizontal scroll) */}
+          <div className="mt-16 lg:hidden">
+            <div className="flex gap-6 overflow-x-auto no-scrollbar">
+              {[
+                {
+                  img: "/ab-1.png",
+                  text: "Full-Stack Sports Enablement: Coaching | Infra | Events | Gear",
+                },
+                {
+                  img: "/ab-2.png",
+                  text: "Embedded Finance Option for Infra Projects from ₹50L to ₹5Cr",
+                },
+                {
+                  img: "/ab-3.png",
+                  text: "Get Personalised Attention with Ops-Active Founders",
+                },
+                {
+                  img: "/ab-4.png",
+                  text: "Pan-India Execution with Speed & Expertise",
+                },
+                {
+                  img: "/ab-5.png",
+                  text: "Aligned with NEP & National Sports Policy",
+                },
+              ].map((item, index) => (
+                <div
+                  key={index}
+                  className="flex flex-col items-center text-center p-6 rounded-[14px] flex-shrink-0 min-w-[250px] max-w-[280px]"
+                  style={{
+                    background: "rgba(71, 71, 71, 0.17)",
+                    border: "1.2px solid rgba(255, 255, 255, 0.12)",
+                  }}
+                >
+                  <div className="mb-4">
+                    <img
+                      src={item.img}
+                      alt={`icon-${index}`}
+                      className="mx-auto w-18 h-18 object-contain"
+                    />
+                  </div>
+                  <span className="text-base">{item.text}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Desktop Grid */}
+          <div className="hidden lg:grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 mt-16">
             {[
               {
                 img: "/ab-1.png",
@@ -168,9 +216,9 @@ const Story = () => {
             ].map((item, index) => (
               <div
                 key={index}
-                className="flex flex-col items-center text-center  p-6 rounded-[14px] h-full"
+                className="flex flex-col items-center text-center p-6 rounded-[14px] h-full"
                 style={{
-                  background: " rgba(71, 71, 71, 0.17)",
+                  background: "rgba(71, 71, 71, 0.17)",
                   border: "1.2px solid rgba(255, 255, 255, 0.12)",
                 }}
               >

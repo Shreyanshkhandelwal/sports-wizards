@@ -47,6 +47,38 @@ h1 {
   font-family: "Race Sport", sans-serif;
 }
 
+@media screen and (max-width: 800px) {
+  h1,
+  h2 {
+    font-size: 38px !important;
+  }
+  h3,
+  h4 {
+    font-size: 25px;
+    font-family: "Race Sport";
+  }
+  h5,
+  h6 {
+    font-size: 15px;
+    font-family: "Race Sport";
+  }
+  p {
+    font-size: 12px !important;
+  }
+  button,
+  a {
+    font-size: 10px !important;
+  }
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 /* CAROUSEL STYLES */
 .mySwiper {
   overflow: hidden !important;

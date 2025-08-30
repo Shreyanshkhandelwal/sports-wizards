@@ -53,12 +53,12 @@ const WhoAreWe = () => {
 
               <div className="flex flex-row gap-4 w-full px-4">
                 <img
-                  src="/gym.jpg"
+                  src="/home_who1.jpg"
                   alt="Modern gym interior"
                   className="w-1/2 h-80 object-cover rounded-lg shadow-lg"
                 />
                 <img
-                  src="/coach.png"
+                  src="/home_who2.jpg"
                   alt="Coach with young athletes"
                   className="w-1/2 h-80 object-cover rounded-lg shadow-lg"
                 />

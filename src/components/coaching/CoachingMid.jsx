@@ -210,17 +210,12 @@ const CoachingMid = () => {
             {/* Left Side - Content */}
             <div className="space-y-6">
               <div className="space-y-4">
-                <span
-                  className=" text-3xl lg:text-4xl font-semibold"
-                  style={{
-                    background:
-                      "linear-gradient(180deg, #26FEB2 0%, #46FD3E 100%)",
-                    WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent",
-                  }}
-                >
-                  SportsWizards@School
-                </span>
+                <img
+                  src="/school.png"
+                  alt="Spotlight"
+                  className="object-fill h-20"
+                />
+
                 <span className=" text-3xl font-bold leading-tight">
                   One Program. Five Sports.{" "}
                   <span

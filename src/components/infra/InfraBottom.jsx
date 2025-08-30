@@ -85,13 +85,15 @@ export default function InfraBottom() {
               </div>
             ))}
           </div>
-
-          {/* Mobile layout */}
-          <div className="grid grid-cols-1 gap-8 mt-12 lg:hidden">
+          {/* Mobile layout (Horizontal Scroll) */}
+          <div className="flex gap-6 mt-12 lg:hidden overflow-x-auto no-scrollbar">
             {steps.map((item, idx) => (
-              <div key={idx} className="flex flex-col items-center">
+              <div
+                key={idx}
+                className="flex  items-center flex-shrink-0 min-w-[250px]"
+              >
                 {/* Card */}
-                <div className="flex flex-col items-center text-center p-6 rounded-2xl">
+                <div className="flex flex-col items-center text-center p-6 rounded-2xl shadow-md">
                   <div className="bg-gradient-to-r from-teal-300 via-green-400 to-green-500 p-2 rounded-lg mb-4">
                     {item.icon}
                   </div>
@@ -101,14 +103,14 @@ export default function InfraBottom() {
                   </p>
                 </div>
 
-                {/* Vertical Connector (skip after last card) */}
-                {idx < steps.length - 1 && (
+                {/* Horizontal connector (skip after last card) */}
+                {/* {idx < steps.length - 1 && (
                   <img
                     src="/work-dir.png"
-                    className="object-none w-20 rotate-90 mt-6"
+                    className="object-none w-20 mt-4"
                     alt="connector"
                   />
-                )}
+                )} */}
               </div>
             ))}
           </div>

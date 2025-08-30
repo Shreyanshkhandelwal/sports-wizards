@@ -39,7 +39,7 @@ const Infracture = () => {
           accentWord="Inspire"
           paragraph="We execute all types of sports events for corporates, schools, associations, clubs & communities."
           primaryButtonText="Build My Court Now"
-          backgroundImage="/infra.jpg"
+          backgroundImage="/infra.png"
         />
         <div className="relative z-50 mt-4">
           <LogoRibbon />

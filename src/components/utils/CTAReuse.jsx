@@ -21,7 +21,7 @@ const CTAReuse = ({
           className={`p-8 rounded-3xl border border-accent/30 bg-accent/5 shadow-lg 
             ${
               hasTwoButtons
-                ? "flex flex-col items-center gap-4"
+                ? "flex flex-col lg:items-center gap-4"
                 : "flex flex-col gap-4 lg:gap-0 lg:flex-row lg:items-center lg:justify-between"
             }`}
         >
@@ -60,7 +60,7 @@ const CTAReuse = ({
           {/* CTA Buttons */}
           <div
             className={`flex ${
-              hasTwoButtons ? "flex-col sm:flex-row" : ""
+              hasTwoButtons ? "flex-col sm:flex-row " : ""
             } gap-3 ${hasTwoButtons ? "mt-4" : "mt-0 lg:mt-0"}`}
           >
             <button
