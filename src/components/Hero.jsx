@@ -84,7 +84,7 @@ const Hero = () => {
       </div>
 
       <div className="hidden lg:block relative w-full h-full z-10">
-        <div className="absolute inset-y-0 -left-5 w-1/2 flex flex-col justify-center text-left px-6 xl:px-24 z-40">
+        <div className="absolute top-52 -left-5 w-1/2 flex flex-col justify-center text-left px-6 xl:px-24 z-40">
           <h1 className="text-6xl font-black text-white uppercase tracking-wide">
             <span
               className=""
