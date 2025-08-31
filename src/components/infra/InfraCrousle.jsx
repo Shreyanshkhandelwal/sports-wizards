@@ -1540,8 +1540,8 @@ const slides = [
   },
   {
     image: "/soccer-field.jpeg",
-    title: "Football Fields",
-    heading: "Football Fields",
+    title: "Football Turfs",
+    heading: "Football Tufs",
     sections: [
       {
         title: "Artificial Turf / Grass",
@@ -1593,8 +1593,8 @@ const slides = [
   },
   {
     image: "/offer4.jpg",
-    title: "Padel",
-    heading: "Padel",
+    title: "Padel Courts",
+    heading: "Padel Courts",
     sections: [
       {
         title: "Padel Setup (Flooring + Glass)",
@@ -1637,8 +1637,8 @@ const slides = [
   },
   {
     image: "/e3.png",
-    title: "Cricket Nets",
-    heading: "Cricket Nets",
+    title: "Cricket Turfs",
+    heading: "Cricket Turfs",
     sections: [
       {
         title: "Artificial Turf / Grass",
@@ -1653,8 +1653,8 @@ const slides = [
   },
   {
     image: "/badminton.jpg",
-    title: "Badminton Courts",
-    heading: "Badminton Courts",
+    title: "Badminton Court",
+    heading: "Badminton Court",
     sections: [
       {
         title: "PVC Vinyl Flooring",
@@ -1676,8 +1676,8 @@ const slides = [
   },
   {
     image: "/offer5.jpg",
-    title: "Athletic Running Tracks",
-    heading: "Athletic Running Tracks",
+    title: "Athletic Running Track",
+    heading: "Athletic Running Track",
     sections: [
       {
         title: "Sandwich System 15 mm (SBR + PU + EPDM)",
@@ -1831,7 +1831,7 @@ const ImprovedCarousel = () => {
     if (hasStarted) {
       const timer = setTimeout(() => {
         setInitialFlipDone(true);
-      }, 1000);
+      }, 2000);
       return () => clearTimeout(timer);
     }
   }, [hasStarted]);
@@ -2050,7 +2050,7 @@ const ImprovedCarousel = () => {
 
               .section-title {
                 color: white;
-                font-size: ${windowSize.width < 480 ? "13px" : "14px"};
+                font-size: ${windowSize.width < 480 ? "9px" : "12px"};
                 font-weight: 500;
                 margin: 0;
               }
@@ -2058,7 +2058,7 @@ const ImprovedCarousel = () => {
               .section-content {
                 padding: 0 16px;
                 color: white;
-                font-size: ${windowSize.width < 480 ? "11px" : "12px"};
+                font-size: ${windowSize.width < 480 ? "7px" : "10px"};
                 line-height: 1.5;
                 max-height: 0;
                 overflow: hidden;
@@ -2106,7 +2106,7 @@ const ImprovedCarousel = () => {
                 transform: scale(1);
               }
               .build-button {
-                position: sticky;
+                /*position: sticky;*/
                 bottom: 0;
                 margin-top: auto;
               }
@@ -2168,7 +2168,7 @@ const ImprovedCarousel = () => {
                           </svg>
                         </div>
                         <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 rounded-b-2xl">
-                          <p className="text-white font-bold text-lg tracking-wider text-center">
+                          <p className="text-white font-bold text-lg tracking-wider text-center font-Race">
                             {slide.title}
                           </p>
                         </div>
@@ -2226,9 +2226,11 @@ const ImprovedCarousel = () => {
                             background:
                               "linear-gradient(91.1deg, #26FEB2 -0.39%, #46FD3E 81.76%)",
                           }}
-                          className="text-center build-button font-bold text-sm md:text-base py-2 px-5 md:py-3 md:px-6 rounded-full transition-transform hover:scale-105 text-black w-[88%]"
+                          className="text-center build-button font-bold text-sm md:text-base py-2 px-5 md:py-3 md:px-6 rounded-full transition-transform hover:scale-105 text-black w-[95] lg:w-[88%]"
                         >
-                          Build My Court Now
+                          <span className="text-center text-[8px]">
+                            Build My Court Now
+                          </span>
                         </a>
                       </div>
                     </div>
