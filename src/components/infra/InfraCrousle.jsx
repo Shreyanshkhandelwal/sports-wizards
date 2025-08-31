@@ -1773,8 +1773,11 @@ const ImprovedCarousel = () => {
     width: typeof window !== "undefined" ? window.innerWidth : 1200,
     height: typeof window !== "undefined" ? window.innerHeight : 800,
   });
+  const [initialFlipDone, setInitialFlipDone] = useState(false); // NEW
+  const [hasStarted, setHasStarted] = useState(false); // NEW flag
 
   const intervalRef = useRef(null);
+  const sectionRef = useRef(null);
 
   useEffect(() => {
     const handleResize = () => {
@@ -1787,6 +1790,26 @@ const ImprovedCarousel = () => {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  // ✅ Observe section visibility
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !hasStarted) {
+            setHasStarted(true); // section is visible
+          }
+        });
+      },
+      { threshold: 0.4 } // 40% visible
+    );
+
+    if (sectionRef.current) observer.observe(sectionRef.current);
+
+    return () => {
+      if (sectionRef.current) observer.unobserve(sectionRef.current);
+    };
+  }, [hasStarted]);
 
   const startAutoLoop = () => {
     if (!intervalRef.current) {
@@ -1803,10 +1826,23 @@ const ImprovedCarousel = () => {
     }
   };
 
+  // ✅ Start 1s timer only after entering
   useEffect(() => {
-    startAutoLoop();
-    return () => stopAutoLoop();
-  }, []);
+    if (hasStarted) {
+      const timer = setTimeout(() => {
+        setInitialFlipDone(true);
+      }, 1000);
+      return () => clearTimeout(timer);
+    }
+  }, [hasStarted]);
+
+  // ✅ Start autoplay only after flip
+  useEffect(() => {
+    if (initialFlipDone) {
+      startAutoLoop();
+      return () => stopAutoLoop();
+    }
+  }, [initialFlipDone]);
 
   const getSlideSize = () => {
     const screenWidth = windowSize.width;
@@ -1900,7 +1936,7 @@ const ImprovedCarousel = () => {
 
   return (
     <>
-      <section className="py-16">
+      <section className="py-16" ref={sectionRef}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h5
@@ -2088,6 +2124,11 @@ const ImprovedCarousel = () => {
 
                 if (!isVisible) return null;
 
+                // ✅ Flip logic:
+                // If initialFlip not done → no flips
+                // If done → flip only current center slide
+                const shouldFlip = initialFlipDone && index === currentSlide;
+
                 return (
                   <div
                     key={index}
@@ -2100,9 +2141,7 @@ const ImprovedCarousel = () => {
                     onClick={() => setCurrentSlide(index)}
                   >
                     <div
-                      className={`card-inner ${
-                        index === currentSlide ? "flipped" : ""
-                      }`}
+                      className={`card-inner ${shouldFlip ? "flipped" : ""}`}
                     >
                       <div className="slide-front">
                         <img
