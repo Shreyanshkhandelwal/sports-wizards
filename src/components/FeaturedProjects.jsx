@@ -56,9 +56,9 @@ const ProjectCard = ({ imageUrl, title }) => (
     />
     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
     <div className="absolute bottom-0 left-0 p-4 md:p-6 text-white">
-      <h3 className="text-lg md:text-xl font-bold uppercase tracking-wide font-Race">
+      <h5 className="text-lg md:text-xl font-bold uppercase tracking-wide font-Race">
         {title}
-      </h3>
+      </h5>
       {/* <p className="mt-2 text-xs md:text-sm text-gray-300 max-w-md leading-relaxed">
         {description}
       </p> */}
