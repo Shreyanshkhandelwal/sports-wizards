@@ -90,14 +90,14 @@ export default function InfraBottom() {
             {steps.map((item, idx) => (
               <div
                 key={idx}
-                className="flex  items-center flex-shrink-0 min-w-[250px]"
+                className="flex  items-center flex-shrink-0 min-w-[180px]"
               >
                 {/* Card */}
-                <div className="flex flex-col items-center text-center p-6 rounded-2xl shadow-md">
+                <div className="flex flex-col items-center text-center p-2 rounded-2xl shadow-md">
                   <div className="bg-gradient-to-r from-teal-300 via-green-400 to-green-500 p-2 rounded-lg mb-4">
                     {item.icon}
                   </div>
-                  <h3 className="text-lg font-semibold">{item.title}</h3>
+                  <h5 className="text-lg font-semibold">{item.title}</h5>
                   <p className="text-sm text-bg-foreground-secondary mt-2">
                     {item.desc}
                   </p>

@@ -242,7 +242,8 @@ const CoachingMid = () => {
                 <img
                   src="/school.png"
                   alt="Spotlight"
-                  className="object-fill h-20"
+                  className="object-fill h-14 lg:h-16 "
+                  style={{ marginLeft: "-15px" }}
                 />
 
                 <span className=" text-3xl font-bold leading-tight">

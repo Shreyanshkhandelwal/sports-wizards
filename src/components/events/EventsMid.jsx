@@ -261,7 +261,8 @@ const EventsMid = () => {
               </button> */}
             </div>
 
-            <div className="flex flex-col">
+            {/* desktop layout */}
+            <div className="hidden lg:flex flex-col">
               <h5
                 style={{ fontSize: "24px" }}
                 className="text-accent text-base font-bold uppercase tracking-widest mb-6  underline-offset-8 decoration-green-500"
@@ -299,6 +300,54 @@ const EventsMid = () => {
                   <div
                     key={index}
                     className="rounded-2xl p-6 flex flex-col items-center  bg-gradient-to-br from-[rgba(75,75,75,0.25)] to-[rgba(75,75,75,0.15)] shadow-md hover:shadow-lg hover:scale-105 transition-transform duration-300"
+                  >
+                    <div className="mb-4">{service.icon}</div>
+                    <span className="text-white text-sm md:text-sm leading-snug">
+                      {service.title}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+            {/* mobile layout */}
+            <div className="flex lg:hidden flex-col">
+              <h5
+                style={{ fontSize: "24px" }}
+                className="text-accent text-base font-bold uppercase tracking-widest mb-6  underline-offset-8 decoration-green-500"
+              >
+                Services Included:
+              </h5>
+
+              {/* Right Side - Image */}
+              <div className="flex gap-6 mt-12 lg:hidden overflow-x-auto no-scrollbar">
+                {[
+                  {
+                    icon: (
+                      // <PiCourtBasketballFill className="text-accent w-14 h-14" />
+                      <img src="/events/1.png" className="" />
+                    ),
+                    title: "Infra setup (courts, nets, lights).",
+                  },
+                  {
+                    icon: <img src="/events/2.png" className="" />,
+                    title: "Event Curation & Hosting.",
+                  },
+                  {
+                    icon: <img src="/events/3.png" className="" />,
+                    title: "Certified Referees & Coaches.",
+                  },
+                  {
+                    icon: <img src="/events/4.png" className="" />,
+                    title: "Branding, Trophies & Media.",
+                  },
+                  {
+                    icon: <img src="/events/5.png" className="" />,
+                    title: "Registration & Scoring System.",
+                  },
+                ].map((service, index) => (
+                  <div
+                    key={index}
+                    className="rounded-2xl p-6 flex flex-col items-center  bg-gradient-to-br from-[rgba(75,75,75,0.25)] to-[rgba(75,75,75,0.15)] shadow-md hover:shadow-lg hover:scale-105 transition-transform duration-300 min-w-[220px]"
                   >
                     <div className="mb-4">{service.icon}</div>
                     <span className="text-white text-sm md:text-sm leading-snug">

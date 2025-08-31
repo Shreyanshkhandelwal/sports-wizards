@@ -40,7 +40,7 @@ const Hero = () => {
             </span>{" "}
             <span style={{ fontSize: "25px" }}> India&apos;s</span>
             <br />
-            <h1 style={{ fontSize: "35px" }}>Playgrounds</h1>
+            <h1 style={{ fontSize: "28px" }}>Playgrounds</h1>
           </h1>
           <div className="flex flex-row items-center justify-center gap-3 md:gap-4 mt-8">
             <button
@@ -87,12 +87,12 @@ const Hero = () => {
       </div>
 
       <div className="hidden lg:block relative w-full h-full z-10">
-        <div className="absolute top-52 -left-5 w-1/2 flex flex-col justify-center text-left px-6 xl:px-24 z-40">
+        <div className="absolute top-60 -left-5 w-1/2 flex flex-col justify-center text-left px-6 xl:px-24 z-40">
           <h1 className="text-6xl font-black text-white uppercase tracking-wide">
             <span
               className=""
               style={{
-                fontSize: "32px",
+                fontSize: "38px",
                 background:
                   "linear-gradient(91.1deg, #26FEB2 -0.39%, #46FD3E 81.76%)",
                 WebkitBackgroundClip: "text",
@@ -101,11 +101,11 @@ const Hero = () => {
             >
               Powering
             </span>{" "}
-            <span style={{ fontSize: "32px" }}> India&apos;s</span>
+            <span style={{ fontSize: "38px" }}> India&apos;s</span>
             <br />
-            <h1>Playgrounds</h1>
+            <span style={{ fontSize: "58px" }}>Playgrounds</span>
           </h1>
-          <div className="flex flex-row items-center justify-start gap-4 mt-36">
+          <div className="flex flex-row items-center justify-start gap-10 mt-36">
             <button
               style={{
                 background:
@@ -132,17 +132,17 @@ const Hero = () => {
             <img
               src="/p1.png"
               alt="player 1"
-              className="absolute bottom-0 left-[35%] -translate-x-1/2 w-[55%] h-[100%] max-w-none z-10 transform -scale-x-100"
+              className="absolute -bottom-9 left-[25%] -translate-x-1/2 w-[60%] h-[100%] max-w-none z-10 transform -scale-x-100"
             />
             <img
               src="/p2.png"
               alt="player 2"
-              className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[50%] h-[100%] max-w-none z-20"
+              className="absolute -bottom-8 left-[46%] -translate-x-1/2 w-[50%] h-[100%] max-w-none z-20"
             />
             <img
               src="/p3.png"
               alt="player 3"
-              className="absolute bottom-0 left-[70%] -translate-x-1/2 w-[60%] h-[100%] max-w-none z-10"
+              className="absolute -bottom-7 left-[68%] -translate-x-1/2 w-[60%] h-[105%] max-w-none z-10"
             />
           </div>
         </div>
