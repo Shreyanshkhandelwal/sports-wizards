@@ -35,7 +35,7 @@ const About = () => {
           accentWord="movement"
           paragraph="We’re creating structured, inclusive and accessible sports experiences—through coaching, infrastructure, events, and innovation."
           primaryButtonText="Scroll to Discover"
-          backgroundImage="/about.png"
+          backgroundImage="/about_com.jpeg"
         />
         <div className="relative z-50 mt-4">
           <LogoRibbon />

@@ -19,15 +19,44 @@ import "swiper/css/pagination";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 
 const CoachingMid = () => {
+  const testimonials = [
+    {
+      id: 1,
+      image: "/coaching_flagship/1.jpg",
+      title: "Kickboxing Training at JVPG Club,Juhu",
+      description:
+        "Hosted 2017 Indian Open Pickleball Championship (AIPA, Redbull, Doordarshan)",
+    },
+    {
+      id: 2,
+      image: "/coaching_flagship/2.jpg",
+      title: "Pickleball Workshop at Bombay YMCA",
+      description: "Built employee sports activations across corporate Sector.",
+    },
+    {
+      id: 3,
+      image: "/coaching_flagship/6.jpg",
+      title: "Pickleball Coaching at St.Anne's School",
+      description:
+        "Created legacy events that shaped India’s grassroots sports culture.",
+    },
+    {
+      id: 5,
+      image: "/coaching_flagship/8.jpg",
+      title: "Pickleball Coaching at Edubridge International School",
+      description:
+        "Created legacy events that shaped India’s grassroots sports culture.",
+    },
+  ];
   const spotlights = [
-    { src: "/coaching_flagship/1.jpg", alt: "Students playing sport 1" },
-    { src: "/coaching_flagship/2.jpg", alt: "Students playing sport 2" },
+    // { src: "/coaching_flagship/1.jpg", alt: "Students playing sport 1" },
+    // { src: "/coaching_flagship/2.jpg", alt: "Students playing sport 2" },
     { src: "/coaching_flagship/3.jpg", alt: "Students playing sport 3" }, // your uploaded image
     { src: "/coaching_flagship/4.jpg", alt: "Students playing sport 3" }, // your uploaded image
     { src: "/coaching_flagship/5.jpg", alt: "Students playing sport 3" }, // your uploaded image
-    { src: "/coaching_flagship/6.jpg", alt: "Students playing sport 3" }, // your uploaded image
-    { src: "/coaching_flagship/7.jpg", alt: "Students playing sport 3" }, // your uploaded image
-    { src: "/coaching_flagship/8.jpg", alt: "Students playing sport 3" }, // your uploaded image
+    // { src: "/coaching_flagship/6.jpg", alt: "Students playing sport 3" }, // your uploaded image
+    // { src: "/coaching_flagship/7.jpg", alt: "Students playing sport 3" }, // your uploaded image
+    // { src: "/coaching_flagship/8.jpg", alt: "Students playing sport 3" }, // your uploaded image
   ];
   return (
     <div className="bg-black text-white min-h-screen">
@@ -349,6 +378,82 @@ const CoachingMid = () => {
           </div>
         </div>
       </section>
+
+      {/* Track Record Section */}
+      <div className="text-center mb-12">
+        <h5
+          style={{
+            fontSize: "24px",
+            background:
+              "linear-gradient(91.1deg, #26FEB2 -0.39%, #46FD3E 81.76%)",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+          }}
+          className="inline-block text-center text-base font-bold uppercase tracking-widest mb-6 underline underline-offset-8 decoration-green-500"
+        >
+          OUR PROVEN RESULTS
+        </h5>
+      </div>
+
+      {/* Testimonials Slider */}
+      <div className="">
+        <Swiper
+          modules={[Navigation, Pagination, Autoplay]}
+          spaceBetween={30}
+          slidesPerView={1}
+          navigation
+          pagination={{ clickable: true }}
+          breakpoints={{
+            640: {
+              slidesPerView: 2,
+            },
+            1024: {
+              slidesPerView: 3,
+            },
+          }}
+        >
+          {testimonials.map((testimonial) => (
+            <SwiperSlide key={testimonial.id}>
+              <div
+                className="rounded-lg overflow-hidden h-80"
+                style={{
+                  background: "rgba(255, 255, 255, 0.09)",
+                  backdropFilter: "blur(33.5px)",
+                }}
+              >
+                <div className="h-48 overflow-hidden">
+                  <img
+                    src={testimonial.image}
+                    alt={testimonial.title}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="p-6">
+                  <span
+                    style={{
+                      background:
+                        "linear-gradient(180deg, #26FEB2 0%, #46FD3E 100%)",
+                      WebkitBackgroundClip: "text",
+                      WebkitTextFillColor: "transparent",
+                    }}
+                    className="text-lg font-bold  mb-2 font-Race block"
+                  >
+                    {testimonial.title}
+                  </span>
+                  {/* <span className="text-gray-300 text-sm text-center">
+                              {testimonial.description}
+                            </span> */}
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+        <style>{`
+                  .swiper {
+        position: relative !important;
+      }
+                  .swiper-pagination{bottom:-40px;}`}</style>
+      </div>
     </div>
   );
 };

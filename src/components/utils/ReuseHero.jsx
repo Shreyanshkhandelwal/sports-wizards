@@ -18,7 +18,7 @@ const ReuseHero = ({
 
       {/* Backgrounds */}
       <img
-        src={backgroundImage || "/bg-1.png"}
+        src={backgroundImage || "/bg-1.jpeg"}
         alt="Background 1"
         className="absolute inset-0 w-full h-full object-cover z-0"
       />

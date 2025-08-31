@@ -23,11 +23,11 @@ const Categories = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 mt-16 ">
             {[
               {
-                img: "/e1.png",
+                img: "/e1.jpeg",
                 text: "Basketball Hoops & Poles ",
               },
               {
-                img: "/e2.png",
+                img: "/e2.jpeg",
                 text: "Pickleball Nets & Paddles",
               },
               {

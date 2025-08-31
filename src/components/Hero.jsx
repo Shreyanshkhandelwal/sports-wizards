@@ -7,7 +7,7 @@ const Hero = () => {
       <Header />
 
       <img
-        src="/bg-1.png"
+        src="/bg-1.jpeg"
         alt="Background 1"
         className="absolute inset-0 w-full h-full object-cover z-0"
       />
@@ -58,7 +58,7 @@ const Hero = () => {
           </div>
         </div>
 
-       <div className="relative w-full h-96 mt-4">
+        <div className="relative w-full h-96 mt-4">
           <img
             // src="/p1.png"
             src="https://res.cloudinary.com/dnivrv6ar/image/upload/f_auto,q_auto/v1756561431/p1_l0wsdf.png"

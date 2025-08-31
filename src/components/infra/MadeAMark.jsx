@@ -8,42 +8,42 @@ const projects = [
   {
     id: 1,
     title: "Multisport Court - Surat Gymkhana",
-    imageUrl: "/featured_projects/1.png",
+    imageUrl: "/featured_projects/1.jpeg",
   },
   {
     id: 2,
     title: "Pickleball Court - Kalani College, Ulhasnagar",
-    imageUrl: "/featured_projects/2.png",
+    imageUrl: "/featured_projects/2.jpeg",
   },
   {
     id: 3,
     title: "Pickleball Court - SportsVilla, Akola",
-    imageUrl: "/featured_projects/3.png",
+    imageUrl: "/featured_projects/3.jpeg",
   },
   {
     id: 4,
     title: "Tennis Court - Aurangabad",
-    imageUrl: "/featured_projects/4.png",
+    imageUrl: "/featured_projects/4.jpeg",
   },
   {
     id: 5,
     title: "Badminton Court - DPIS School, Pune",
-    imageUrl: "/featured_projects/5.png",
+    imageUrl: "/featured_projects/5.jpeg",
   },
   {
     id: 5,
     title: "Basketball Court - The Cricket Club Of India (CCI), Churchgate",
-    imageUrl: "/featured_projects/6.png",
+    imageUrl: "/featured_projects/6.jpeg",
   },
   {
     id: 5,
     title: "Football Turf - Mira Road",
-    imageUrl: "/featured_projects/7.png",
+    imageUrl: "/featured_projects/7.jpeg",
   },
   {
     id: 5,
     title: "Kids Play Area - Paradise Society, Powai",
-    imageUrl: "/featured_projects/8.png",
+    imageUrl: "/featured_projects/8.jpeg",
   },
 ];
 

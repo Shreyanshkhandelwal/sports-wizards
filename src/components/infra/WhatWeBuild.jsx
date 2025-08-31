@@ -17,14 +17,14 @@ const projects = [
     title: "THE CRICKET PITCH",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
-    imageUrl: "/cricket-court.png",
+    imageUrl: "/cricket-court.jpeg",
   },
   {
     id: 3,
     title: "COMMUNITY SOCCER FIELD",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
-    imageUrl: "/soccer-field.png",
+    imageUrl: "/soccer-field.jpeg",
   },
   {
     id: 4,
@@ -38,7 +38,7 @@ const projects = [
     title: "THE CRICKET PITCH",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
-    imageUrl: "/cricket-court.png",
+    imageUrl: "/cricket-court.jpeg",
   },
 ];
 

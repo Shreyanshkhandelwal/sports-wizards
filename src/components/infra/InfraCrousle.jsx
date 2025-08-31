@@ -1539,7 +1539,7 @@ const slides = [
     ],
   },
   {
-    image: "/soccer-field.png",
+    image: "/soccer-field.jpeg",
     title: "Football Fields",
     heading: "Football Fields",
     sections: [
@@ -1555,7 +1555,7 @@ const slides = [
     ],
   },
   {
-    image: "/cricket-court.png",
+    image: "/cricket-court.jpeg",
     title: "Pickleball Courts",
     heading: "Pickleball Courts",
     sections: [
@@ -1692,7 +1692,7 @@ const slides = [
     ],
   },
   {
-    image: "/offer2.png",
+    image: "/offer2.jpeg",
     title: "Outdoor Multisports",
     heading: "Outdoor Multisports",
     sections: [
@@ -1724,7 +1724,7 @@ const slides = [
     ],
   },
   {
-    image: "/offer3.png",
+    image: "/offer3.jpeg",
     title: "Indoor Multisports",
     heading: "Indoor Multisports",
     sections: [
@@ -1741,7 +1741,7 @@ const slides = [
     ],
   },
   {
-    image: "/track3.png",
+    image: "/track3.jpeg",
     title: "Kids Play Area",
     heading: "Kids Play Area",
     sections: [

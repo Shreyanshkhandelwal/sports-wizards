@@ -45,7 +45,7 @@ const EventsMid = () => {
       title: "SPORTS TOURNAMENTS",
       description:
         "Custom tournaments for Schools, Corporates & Associations to promote fitness, networking & team work, competitiveness, and healthy living.",
-      image: "/offer2.png",
+      image: "/offer2.jpeg",
       icon: <img src="/eventsOffer/2.png" className="" />,
     },
     {
@@ -53,7 +53,7 @@ const EventsMid = () => {
       title: "CUSTOM CHALLENGES & SPORTS EVENTS",
       description:
         "Tailored skill challenges and large-scale sports fests from bring together companies, schools, clubs, and communities giving.",
-      image: "/offer3.png",
+      image: "/offer3.jpeg",
       icon: <img src="/eventsOffer/3.png" className="" />,
     },
     {
@@ -535,6 +535,11 @@ const EventsMid = () => {
                 </SwiperSlide>
               ))}
             </Swiper>
+            <style>{`
+            .swiper {
+  position: relative !important;
+}
+            .swiper-pagination{bottom:-40px;}`}</style>
           </div>
 
           <div className="text-center mt-8">

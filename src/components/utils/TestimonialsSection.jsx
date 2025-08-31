@@ -18,6 +18,9 @@ const CustomSwiperStyles = () => (
       height: auto !important;
       display: flex !important;
     }*/
+   .swiper-pagination{
+   bottom: -5px !important;
+   }
     .swiper-pagination-bullet {
       width: 8px;
       height: 8px;
