@@ -391,7 +391,7 @@ const CoachingMid = () => {
           }}
           className="inline-block text-center text-base font-bold uppercase tracking-widest mb-6 underline underline-offset-8 decoration-green-500"
         >
-          OUR PROVEN RESULTS
+          OUR TRACK RECORD
         </h5>
       </div>
 
