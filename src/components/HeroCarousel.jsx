@@ -2267,7 +2267,7 @@ const HeroCarousel = () => {
     const screenWidth = windowSize.width;
 
     if (screenWidth < 480) {
-      return { width: Math.min(200, screenWidth * 0.7), height: 280 };
+      return { width: Math.min(150, screenWidth * 0.7), height: 200 };
     }
     if (screenWidth < 640) {
       return { width: Math.min(220, screenWidth * 0.65), height: 300 };
@@ -2331,6 +2331,7 @@ const HeroCarousel = () => {
             transform: scale(0.9);
             z-index: 2;
           }
+           
 
           /* Hide slides that are too far */
           .hero-carousel
@@ -2403,7 +2404,7 @@ const HeroCarousel = () => {
             }
             @media (max-width: 1008px) {
               .hero-carousel .swiper-slide {
-                margin: 0 0 0 -65px !important;
+                margin: 0 0 0 -30px !important;
               }
             }
           }
@@ -2439,7 +2440,7 @@ const HeroCarousel = () => {
             onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
             breakpoints={{
               320: {
-                spaceBetween: -48, // ✅ closer on very small screens
+                spaceBetween: -45, // ✅ closer on very small screens
               },
               480: {
                 spaceBetween: 10,

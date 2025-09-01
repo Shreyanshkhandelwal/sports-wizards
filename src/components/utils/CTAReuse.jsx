@@ -26,23 +26,17 @@ const CTAReuse = ({
             }`}
         >
           <div>
-            <h3
-              className="text-3xl md:text-4xl font-bold uppercase"
-              style={{
-                fontSize: "16px",
-              }}
-            >
+            <h3 className="text-3xl md:text-4xl font-bold uppercase max-[800px]:text-[16px]">
               {headingParts.map((part, i) =>
                 part === accentWord ? (
                   <h3
-                    className="inline"
+                    className="inline max-[800px]:text-[16px"
                     key={i}
                     style={{
                       background:
                         " linear-gradient(180deg, #26FEB2 0%, #46FD3E 100%)",
                       WebkitBackgroundClip: "text",
                       WebkitTextFillColor: "transparent",
-                      fontSize: "16px",
                     }}
                   >
                     {part}

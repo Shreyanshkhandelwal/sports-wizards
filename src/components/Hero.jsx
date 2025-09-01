@@ -80,7 +80,7 @@ const Hero = () => {
         </div>
 
         <div className="mt-[-4rem] flex justify-center">
-          <div className="w-full max-w-[280px] sm:max-w-sm z-50">
+          <div className="w-full max-w-[280px] sm:max-w-sm z-50 ">
             <HeroCarousel />
           </div>
         </div>

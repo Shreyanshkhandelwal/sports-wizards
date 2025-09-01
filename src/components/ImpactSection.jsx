@@ -7,18 +7,29 @@ const impactData = [
 ];
 
 const StatItem = ({ number, unit, description }) => (
-  <div className="text-center p-4 ">
-    <h2 className="text-5xl font-extrabold italic font-Race ">
+  <div className="text-center p-4">
+    <h2 className="text-5xl font-extrabold italic font-Race">
       {number}
       {unit && (
-        <span className="text-3xl md:text-4xl font-semibold not-italic ml-2">
+        <span
+          className={` md:text-4xl  not-italic ml-2 ${
+            unit === "sqft"
+              ? "font-poppins text-xl font-light"
+              : "text-3xl font-semibold"
+          }`}
+        >
           {unit}
         </span>
       )}
     </h2>
-    <p className="mt-2 text-sm text-bg-foreground-secondary font-medium tracking-wider uppercase">
+    <span
+      className="mt-2 text-sm text-bg-foreground-secondary font-medium tracking-wider"
+      style={{
+        fontSize: "20px",
+      }}
+    >
       {description}
-    </p>
+    </span>
   </div>
 );
 
