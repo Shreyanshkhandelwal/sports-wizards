@@ -15,7 +15,15 @@ const Categories = () => {
   return (
     <>
       {/* sets apart */}
-      <section className="flex flex-col items-center justify-center py-12 px-4 sm:px-6 lg:px-8 mt-10">
+      <section
+        className="flex flex-col items-center justify-center py-12 px-4 sm:px-6 lg:px-8 mt-10"
+        style={{
+          borderBottom: "1px solid",
+          borderImageSource:
+            "linear-gradient(90deg, #000000 0%, #00FF01 49.05%, #000000 100%)",
+          borderImageSlice: 1,
+        }}
+      >
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
             <h5
@@ -145,7 +153,15 @@ const Categories = () => {
       </section>
 
       {/* orders */}
-      <section className="flex flex-col items-center justify-center py-12 px-4 sm:px-6 lg:px-8 mt-10">
+      <section
+        className="flex flex-col items-center justify-center py-12 px-4 sm:px-6 lg:px-8 mt-10"
+        style={{
+          borderBottom: "1px solid",
+          borderImageSource:
+            "linear-gradient(90deg, #000000 0%, #00FF01 49.05%, #000000 100%)",
+          borderImageSlice: 1,
+        }}
+      >
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
             <h5
@@ -298,7 +314,15 @@ const Categories = () => {
       </section>
 
       {/* model apart */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-bg text-bg-foreground">
+      <section
+        className="py-16 px-4 sm:px-6 lg:px-8 bg-bg text-bg-foreground"
+        style={{
+          borderBottom: "1px solid",
+          borderImageSource:
+            "linear-gradient(90deg, #000000 0%, #00FF01 49.05%, #000000 100%)",
+          borderImageSlice: 1,
+        }}
+      >
         <div className="max-w-7xl mx-auto">
           {/* FULFILMENT MODEL HEADING */}
           <div className="text-center mb-16">
@@ -397,9 +421,9 @@ const Categories = () => {
                 alt="Pan-India"
                 className="object-contain w-8 h-8"
               />
-              <h5 className="text-xl font-bold uppercase mb-0">
+              <span className="text-[100%] font-bold uppercase mb-0">
                 Pan-India Setup & Delivery
-              </h5>
+              </span>
             </div>
           </div>
         </div>

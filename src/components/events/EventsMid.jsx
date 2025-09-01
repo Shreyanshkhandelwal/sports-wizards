@@ -201,7 +201,16 @@ const EventsMid = () => {
           </div>
 
           {/* CTA Section */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mt-16 min-h-[500px]">
+          <div
+            className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mt-16 min-h-[500px] "
+            style={{
+              borderBottom: "1px solid",
+              borderImageSource:
+                "linear-gradient(90deg, #000000 0%, #00FF01 49.05%, #000000 100%)",
+              borderImageSlice: 1,
+              paddingBottom: "25px",
+            }}
+          >
             {/* Left Side - Text */}
             <div className="space-y-6 flex flex-col items-start content-between h-full">
               <h5 className="text-white font-bold text-xl lg:text-4xl leading-relaxed uppercase">
@@ -531,7 +540,16 @@ const EventsMid = () => {
           </div>
 
           {/* Testimonials Slider */}
-          <div className="">
+          <div
+            className=""
+            style={{
+              borderTop: "1px solid",
+              borderImageSource:
+                "linear-gradient(90deg, #000000 0%, #00FF01 49.05%, #000000 100%)",
+              borderImageSlice: 1,
+              paddingTop: "25px",
+            }}
+          >
             <Swiper
               modules={[Navigation, Pagination, Autoplay]}
               spaceBetween={30}
@@ -587,10 +605,19 @@ const EventsMid = () => {
             .swiper {
   position: relative !important;
 }
-            .swiper-pagination{bottom:-40px;}`}</style>
+            .swiper-pagination{bottom:-10px;}`}</style>
           </div>
 
-          <div className="text-center mt-8">
+          <div
+            className="text-center mt-8"
+            style={{
+              borderBottom: "1px solid",
+              borderImageSource:
+                "linear-gradient(90deg, #000000 0%, #00FF01 49.05%, #000000 100%)",
+              borderImageSlice: 1,
+              paddingBottom: "35px",
+            }}
+          >
             <button
               style={{
                 background: " linear-gradient(90deg, #26FEB2 3%, #46FD3E 85%)",

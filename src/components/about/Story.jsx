@@ -89,7 +89,15 @@ const Story = () => {
       </section>
 
       {/* vision */}
-      <section className="flex flex-col items-center justify-center py-12 px-4 sm:px-6 lg:px-8 mt-10">
+      <section
+        className="flex flex-col items-center justify-center py-12 px-4 sm:px-6 lg:px-8 mt-10"
+        style={{
+          border: "1px solid",
+          borderImageSource:
+            "linear-gradient(90deg, #000000 0%, #00FF01 49.05%, #000000 100%)",
+          borderImageSlice: 1,
+        }}
+      >
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
             <h5
@@ -107,43 +115,106 @@ const Story = () => {
 
           <div className="flex flex-col md:flex-row items-center justify-center gap-8 lg:gap-10 text-center mt-16">
             <div
-              className="mission w-full md:w-2/5 rounded-[14px] p-6  "
-              style={{ background: " rgba(71, 71, 71, 0.17)" }}
+              className="mission w-full md:w-2/5 rounded-[14px] p-6"
+              style={{
+                background: "rgba(71, 71, 71, 0.17)",
+                position: "relative",
+                border: "1px solid transparent",
+                backgroundClip: "padding-box",
+              }}
             >
-              <h5
-                className=" text-2xl font-bold mb-3 "
+              {/* Border effect */}
+              <div
                 style={{
+                  content: "",
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  right: 0,
+                  bottom: 0,
+                  borderRadius: "14px",
+                  padding: "1px",
                   background:
-                    "linear-gradient(91.1deg, #26FEB2 -0.39%, #46FD3E 81.76%)",
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
+                    "linear-gradient(135deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.1) 25%, rgba(255, 255, 255, 0.05) 50%, rgba(255, 255, 255, 0.1) 75%, rgba(255, 255, 255, 0.25) 100%)",
+                  mask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                  maskComposite: "xor",
+                  WebkitMask:
+                    "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                  WebkitMaskComposite: "xor",
+                  zIndex: 0,
+                  pointerEvents: "none",
                 }}
-              >
-                MISSION:
-              </h5>
-              <p style={{ fontSize: "22px" }}>
-                Integrate structured play into everyday life through scalable
-                and sustainable models.
-              </p>
+              ></div>
+
+              {/* Content */}
+              <div style={{ position: "relative", zIndex: 1 }}>
+                <h5
+                  className="text-2xl font-bold mb-3"
+                  style={{
+                    background:
+                      "linear-gradient(91.1deg, #26FEB2 -0.39%, #46FD3E 81.76%)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                  }}
+                >
+                  MISSION:
+                </h5>
+                <p style={{ fontSize: "22px" }}>
+                  Integrate structured play into everyday life through scalable
+                  and sustainable models.
+                </p>
+              </div>
             </div>
+
             <div
-              className="vision w-full md:w-2/5 rounded-[14px] p-6 "
-              style={{ background: " rgba(71, 71, 71, 0.17)" }}
+              className="vision w-full md:w-2/5 rounded-[14px] p-6"
+              style={{
+                background: "rgba(71, 71, 71, 0.17)",
+                position: "relative",
+                border: "1px solid transparent",
+                backgroundClip: "padding-box",
+              }}
             >
-              <h5
-                className=" bg-clip-text text-transparent text-2xl font-bold mb-3"
+              {/* Border effect */}
+              <div
                 style={{
+                  content: "",
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  right: 0,
+                  bottom: 0,
+                  borderRadius: "14px",
+                  padding: "1px",
                   background:
-                    "linear-gradient(91.1deg, #26FEB2 -0.39%, #46FD3E 81.76%)",
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
+                    "linear-gradient(135deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.1) 25%, rgba(255, 255, 255, 0.05) 50%, rgba(255, 255, 255, 0.1) 75%, rgba(255, 255, 255, 0.25) 100%)",
+                  mask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                  maskComposite: "xor",
+                  WebkitMask:
+                    "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                  WebkitMaskComposite: "xor",
+                  zIndex: 0,
+                  pointerEvents: "none",
                 }}
-              >
-                VISION:
-              </h5>
-              <p style={{ fontSize: "22px" }}>
-                Make India a sport-playing nation across all age groups.
-              </p>
+              ></div>
+
+              {/* Content */}
+              <div style={{ position: "relative", zIndex: 1 }}>
+                <h5
+                  className="bg-clip-text text-transparent text-2xl font-bold mb-3"
+                  style={{
+                    background:
+                      "linear-gradient(91.1deg, #26FEB2 -0.39%, #46FD3E 81.76%)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                  }}
+                >
+                  VISION:
+                </h5>
+                <p style={{ fontSize: "22px" }}>
+                  Make India a sport-playing nation across all age groups.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -260,7 +331,15 @@ const Story = () => {
       </section>
 
       {/* leadership snippet*/}
-      <section className="flex flex-col items-center justify-center py-12 px-4 sm:px-6 lg:px-8 mt-10">
+      <section
+        className="flex flex-col items-center justify-center py-12 px-4 sm:px-6 lg:px-8 mt-10"
+        style={{
+          border: "1px solid",
+          borderImageSource:
+            "linear-gradient(90deg, #000000 0%, #00FF01 49.05%, #000000 100%)",
+          borderImageSlice: 1,
+        }}
+      >
         <div className="max-w-7xl w-full">
           <div className="text-center">
             <h5

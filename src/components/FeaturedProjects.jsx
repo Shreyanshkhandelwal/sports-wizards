@@ -105,7 +105,15 @@ export default function FeaturedProjects() {
         }
       `}</style>
 
-      <div className="overflow-hidden">
+      <div
+        className="overflow-hidden"
+        style={{
+          border: "1px solid",
+          borderImageSource:
+            "linear-gradient(90deg, #000000 0%, #00FF01 49.05%, #000000 100%)",
+          borderImageSlice: 1,
+        }}
+      >
         <div className="hidden lg:block py-16">
           <div className="max-w-7xl mx-auto px-6">
             <div className="flex justify-between items-center mb-16">

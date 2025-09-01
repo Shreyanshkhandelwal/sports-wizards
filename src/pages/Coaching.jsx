@@ -41,7 +41,7 @@ const Coaching = () => {
           <LogoRibbon />
         </div>
         <CoachingMid />
-        <TestimonialsSection />
+        <TestimonialsSection className />
         <CTAReuse
           heading="Sport isn’t extra. It’s essential"
           accentWord="essential"

@@ -76,7 +76,9 @@ const CTAReuse = ({
           >
             <button
               onClick={primaryBtnClick}
-              className=" font-bold lg:min-w-[220px] text-[12px] md:text-base py-2 px-5 md:py-3 md:px-6 rounded-full transition-transform hover:scale-105 text-black w-fit"
+              className={`${
+                isEventsPage ? "small-btn " : " text-[12px]"
+              }  font-bold lg:min-w-[220px]  md:text-base py-2 px-5 md:py-3 md:px-6 rounded-full transition-transform hover:scale-105 text-black w-fit`}
               style={{
                 background:
                   "linear-gradient(91.1deg, #26FEB2 -0.39%, #46FD3E 81.76%)",
@@ -88,7 +90,9 @@ const CTAReuse = ({
             {hasTwoButtons && (
               <button
                 onClick={secondaryBtnClick}
-                className="bg-white font-bold text-sm md:text-base py-2 px-5 md:py-3 md:px-6 rounded-full transition-transform hover:scale-105 text-black w-fit shadow"
+                className={`${
+                  isEventsPage ? "small-btn bg-white" : "text-sm bg-white"
+                } font-bold md:text-base py-2 px-5 md:py-3 md:px-6 rounded-full transition-transform hover:scale-105 text-black w-fit shadow`}
               >
                 {secondaryButtonText}
               </button>

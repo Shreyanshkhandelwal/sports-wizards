@@ -2032,6 +2032,7 @@ const ImprovedCarousel = () => {
                 backface-visibility: hidden;
                 border-radius: 16px;
                 -webkit-backface-visibility: hidden;
+                border: 4px solid #10b981;
               }
 
               .slide-back {
@@ -2326,7 +2327,15 @@ const ImprovedCarousel = () => {
         </div>
       </section>
 
-      <section className="py-5">
+      <section
+        className="py-5"
+        style={{
+          borderBottom: "1px solid",
+          borderImageSource:
+            "linear-gradient(90deg, #000000 0%, #00FF01 49.05%, #000000 100%)",
+          borderImageSlice: 1,
+        }}
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div
             className="bg-black/40 rounded-2xl p-6 sm:p-10"

@@ -59,9 +59,18 @@ const CoachingMid = () => {
     // { src: "/coaching_flagship/8.jpg", alt: "Students playing sport 3" }, // your uploaded image
   ];
   return (
-    <div className="bg-black text-white min-h-screen">
+    <div className="bg-black text-white min-h-screen mb-20">
       {/* Main Section - Not Just for Schools */}
-      <section className="flex flex-col items-center justify-center py-12 px-4 sm:px-6 lg:px-8 mt-10">
+      <section
+        className="flex flex-col items-center justify-center py-12 px-4 sm:px-6 lg:px-8 mt-10"
+        style={{
+          borderBottom: "1px solid",
+          borderImageSource:
+            "linear-gradient(90deg, #000000 0%, #00FF01 49.05%, #000000 100%)",
+          borderImageSlice: 1,
+          paddingBottom: "25px",
+        }}
+      >
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
             <h5
@@ -230,7 +239,7 @@ const CoachingMid = () => {
       {/* Flagship Program Section */}
       <section
         className="py-16 px-4 sm:px-6 lg:px-8 "
-        style={{ background: "rgba(255, 255, 255, 0.09)" }}
+        style={{ background: "rgba(255, 255, 255, 0.09)", marginTop: "40px" }}
       >
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-4">

@@ -1,7 +1,7 @@
 const WhoAreWe = () => {
   return (
     <>
-      <section className="flex flex-col items-center justify-center py-12 px-4 sm:px-6 lg:px-8 mt-10">
+      <section className="flex flex-col items-center justify-center py-12 px-4 sm:px-6 lg:px-8 mt-10 ">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
             <h5
@@ -50,7 +50,7 @@ const WhoAreWe = () => {
                 </svg>
               </div>
 
-              <div className="flex flex-row gap-4 w-full px-4">
+              <div className="flex flex-row gap-1 lg:gap-4 w-full lg:px-4">
                 <img
                   src="/home_who1.jpg"
                   alt="Modern gym interior"

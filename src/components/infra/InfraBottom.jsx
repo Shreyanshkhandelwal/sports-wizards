@@ -116,7 +116,16 @@ export default function InfraBottom() {
         </div>
 
         {/* WHY CHOOSE SPORTS WIZARDS */}
-        <div className="text-center">
+        <div
+          className="text-center"
+          style={{
+            border: "1px solid",
+            borderImageSource:
+              "linear-gradient(90deg, #000000 0%, #00FF01 49.05%, #000000 100%)",
+            borderImageSlice: 1,
+            padding: "40px",
+          }}
+        >
           <h5
             style={{
               background:

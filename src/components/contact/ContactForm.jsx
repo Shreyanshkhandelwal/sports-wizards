@@ -427,7 +427,15 @@ const ContactForm = ({ onSuccess }) => {
   };
 
   return (
-    <div className="min-h-screen bg-[#0B0B0B] text-[#F2F2F2] p-6">
+    <div
+      className="min-h-screen bg-[#0B0B0B] text-[#F2F2F2] p-6"
+      style={{
+        borderBottom: "1px solid",
+        borderImageSource:
+          "linear-gradient(90deg, #000000 0%, #00FF01 49.05%, #000000 100%)",
+        borderImageSlice: 1,
+      }}
+    >
       <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-8 items-stretch">
         {/* Form Section */}
         <div className="bg-[#161616] rounded-2xl p-8 border border-[#2C2C2C] flex flex-col justify-between">
@@ -667,13 +675,13 @@ const ContactForm = ({ onSuccess }) => {
                 <MdLocationOn
                   className="w-6 h-6 flex-shrink-0 mt-0.5"
                   style={{
-                    fontSize: "16px",
+                    fontSize: "14px",
                   }}
                 />
                 <span
                   className="font-semibold text-lg"
                   style={{
-                    fontSize: "16px",
+                    fontSize: "14px",
                   }}
                 >
                   Mumbai | Pan-India Projects
@@ -684,13 +692,13 @@ const ContactForm = ({ onSuccess }) => {
                 <FaPhone
                   className="w-6 h-6 flex-shrink-0 mt-0.5"
                   style={{
-                    fontSize: "16px",
+                    fontSize: "14px",
                   }}
                 />
                 <span
                   className="font-semibold text-lg"
                   style={{
-                    fontSize: "16px",
+                    fontSize: "14px",
                   }}
                 >
                   +91 8655819716 | +91 8779706509
@@ -701,13 +709,13 @@ const ContactForm = ({ onSuccess }) => {
                 <MdEmail
                   className="w-6 h-6 flex-shrink-0 mt-0.5"
                   style={{
-                    fontSize: "16px",
+                    fontSize: "14px",
                   }}
                 />
                 <span
                   className="font-semibold text-lg"
                   style={{
-                    fontSize: "16px",
+                    fontSize: "14px",
                   }}
                 >
                   connect@sportswizards.in

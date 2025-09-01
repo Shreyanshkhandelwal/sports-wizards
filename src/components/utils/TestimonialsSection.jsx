@@ -91,9 +91,9 @@ const TestimonialCard = ({ quote, name, title }) => (
       fontSize: "15px",
     }}
   >
-    <p className="text-bg-foreground-secondary italic text-lg md:text-xl mb-6">
+    <span className="text-bg-foreground-secondary italic text-sm md:text-xl mb-6">
       "{quote}"
-    </p>
+    </span>
     <div className="">
       <span className="font-bold text-lg">{name}</span>
       <br />
@@ -141,7 +141,15 @@ const TestimonialsSection = () => {
   }, []);
 
   return (
-    <section className="py-12 md:py-20">
+    <section
+      className="py-12 md:py-20"
+      style={{
+        border: "1px solid",
+        borderImageSource:
+          "linear-gradient(90deg, #000000 0%, #00FF01 49.05%, #000000 100%)",
+        borderImageSlice: 1,
+      }}
+    >
       <CustomSwiperStyles />
 
       <div className="container mx-auto px-4 max-w-7xl">

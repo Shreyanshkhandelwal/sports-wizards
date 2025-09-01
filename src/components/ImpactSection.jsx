@@ -38,7 +38,14 @@ const ImpactSection = () => {
   const bottomRowData = impactData.slice(3, 5);
 
   return (
-    <div>
+    <div
+      style={{
+        border: "1px solid",
+        borderImageSource:
+          "linear-gradient(90deg, #000000 0%, #00FF01 49.05%, #000000 100%)",
+        borderImageSlice: 1,
+      }}
+    >
       <div className="container mx-auto px-6 py-16 md:py-24">
         <div className="text-center">
           <h5

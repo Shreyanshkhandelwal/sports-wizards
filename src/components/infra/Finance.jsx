@@ -6,6 +6,12 @@ const Finance = () => {
     <section
       className="py-16 px-4 sm:px-6 lg:px-8 "
       // style={{ background: "rgba(255, 255, 255, 0.09)" }}
+      style={{
+        borderBottom: "1px solid",
+        borderImageSource:
+          "linear-gradient(90deg, #000000 0%, #00FF01 49.05%, #000000 100%)",
+        borderImageSlice: 1,
+      }}
     >
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-4">
