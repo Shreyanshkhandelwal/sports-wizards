@@ -87,7 +87,7 @@ const Hero = () => {
       </div>
 
       <div className="hidden lg:block relative w-full h-full z-10">
-        <div className="absolute top-60 -left-5 w-1/2 flex flex-col justify-center text-left px-6 xl:px-24 z-40">
+        <div className="absolute top-58 -left-5 w-1/2 flex flex-col justify-center text-left px-6 xl:px-24 z-40">
           <h1 className="text-6xl font-black text-white uppercase tracking-wide">
             <span
               className=""
@@ -103,20 +103,32 @@ const Hero = () => {
             </span>{" "}
             <span style={{ fontSize: "38px" }}> India&apos;s</span>
             <br />
-            <span style={{ fontSize: "58px" }}>Playgrounds</span>
+            <span style={{ fontSize: "60px" }}>Playgrounds</span>
           </h1>
-          <div className="flex flex-row items-center justify-start gap-10 mt-36">
+          <div className="flex flex-row items-center justify-start gap-5 mt-36">
             <button
               style={{
                 background:
                   "linear-gradient(91.1deg, #26FEB2 -0.39%, #46FD3E 81.76%)",
               }}
-              className="font-bold text-base py-3 px-6 rounded-full transition-transform hover:scale-105 z-[999] text-black"
+              className="font-semibold text-base py-2 px-6 rounded-full transition-transform hover:scale-105 z-[999] text-black"
             >
-              Explore What We Do
+              <span
+                style={{
+                  fontSize: "20px",
+                }}
+              >
+                Explore What We Do
+              </span>
             </button>
-            <button className="bg-white text-black font-bold text-base py-3 px-6 rounded-full transition-transform hover:scale-105 z-[999]">
-              Enquire Now
+            <button className="bg-white text-black font-semibold text-base py-2 px-6 rounded-full transition-transform hover:scale-105 z-[999]">
+              <span
+                style={{
+                  fontSize: "20px",
+                }}
+              >
+                Enquire Now
+              </span>
             </button>
           </div>
         </div>
@@ -137,7 +149,7 @@ const Hero = () => {
             <img
               src="/p2.png"
               alt="player 2"
-              className="absolute -bottom-8 left-[46%] -translate-x-1/2 w-[50%] h-[100%] max-w-none z-20"
+              className="absolute -bottom-8 left-[42%] -translate-x-1/2 w-[55%] h-[100%] max-w-none z-20"
             />
             <img
               src="/p3.png"

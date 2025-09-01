@@ -2509,7 +2509,7 @@ const HeroCarousel = () => {
                 </svg>
               </button>
 
-              <span className="text-white font-bold text-xs sm:text-sm md:text-base tracking-wider px-2 whitespace-nowrap">
+              <span className="text-white font-bold text-xs sm:text-sm md:text-[22px] tracking-wider px-2 whitespace-nowrap">
                 Unlock the Services
               </span>
 
