@@ -205,9 +205,10 @@ const Categories = () => {
       </section>
 
       {/* model apart */}
-      <section className="flex flex-col items-center justify-center py-12 px-4 sm:px-6 lg:px-8 mt-10">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-bg text-bg-foreground">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center">
+          {/* FULFILMENT MODEL HEADING */}
+          <div className="text-center mb-16">
             <h5
               style={{
                 fontSize: "24px",
@@ -216,60 +217,95 @@ const Categories = () => {
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
               }}
-              className="inline-block text-center text-base font-bold uppercase tracking-widest mb-6 underline underline-offset-8 decoration-green-500"
+              className="inline-block text-base font-bold uppercase tracking-widest mb-6 underline underline-offset-8 decoration-green-500"
             >
-              Fulfilment model
+              Fulfilment Model
             </h5>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6 mt-16 px-4">
-            {[
-              {
-                img: "1",
-                head: "Contact-led",
-                text: "Share your requirements with our team for personalized assistance.",
-              },
-              {
-                img: "2",
-                head: "Quote",
-                text: "Get a tailored quotation based on your needs and specifications.",
-              },
-              {
-                img: "3",
-                head: "Dispatch",
-                text: "We deliver and set up your order across India, hassle-free.",
-              },
-            ].map((item, index) => (
-              <div
-                key={index}
-                className="flex flex-col items-start text-center p-4 rounded-[14px]"
-                style={{
-                  background: " rgba(71, 71, 71, 0.17)",
-                  border: "1.2px solid rgba(255, 255, 255, 0.12)",
-                }}
-              >
-                <a
-                  href="#"
+
+            {/* DESKTOP VIEW */}
+            <div className="hidden lg:grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6 mt-12">
+              {[
+                {
+                  img: "1",
+                  head: "Contact-led",
+                  text: "Share your requirements with our team for personalized assistance.",
+                },
+                {
+                  img: "2",
+                  head: "Quote",
+                  text: "Get a tailored quotation based on your needs and specifications.",
+                },
+                {
+                  img: "3",
+                  head: "Dispatch",
+                  text: "We deliver and set up your order across India, hassle-free.",
+                },
+              ].map((item, index) => (
+                <div
+                  key={index}
+                  className="flex flex-col items-start text-left p-6 rounded-2xl"
                   style={{
-                    background:
-                      "linear-gradient(180deg, #26FEB2 0%, #46FD3E 100%)",
+                    background: "rgba(71, 71, 71, 0.17)",
+                    border: "1.2px solid rgba(255, 255, 255, 0.12)",
                   }}
-                  className=" rounded-[14px] p-2 text-black w-[40px] h-[40px]"
                 >
-                  {item.img}
-                </a>
-                <h5 className="text-xl text-start md:text-xl font-bold uppercase mb-2">
-                  {item.head}
-                </h5>
-                <span className="text-base text-start  mb-2">{item.text}</span>
+                  <h5 className="text-xl font-bold uppercase mb-2 text-accent">
+                    {item.head}
+                  </h5>
+                  <p className="text-base text-bg-foreground-secondary">
+                    {item.text}
+                  </p>
+                </div>
+              ))}
+              {/* Additional Info */}
+            </div>
+
+            {/* MOBILE VIEW - HORIZONTAL SCROLL */}
+            <div className="flex gap-6 mt-12 lg:hidden overflow-x-auto no-scrollbar px-1">
+              <div className="flex gap-6 w-max pr-4">
+                {[
+                  {
+                    img: "1",
+                    head: "Contact-led",
+                    text: "Share your requirements with our team for personalized assistance.",
+                  },
+                  {
+                    img: "2",
+                    head: "Quote",
+                    text: "Get a tailored quotation based on your needs and specifications.",
+                  },
+                  {
+                    img: "3",
+                    head: "Dispatch",
+                    text: "We deliver and set up your order across India, hassle-free.",
+                  },
+                ].map((item, index) => (
+                  <div
+                    key={index}
+                    className="flex-shrink-0 min-w-[250px] flex flex-col items-start text-left p-4 rounded-2xl max-w-[270px]"
+                    style={{
+                      background: "rgba(71, 71, 71, 0.17)",
+                      border: "1.2px solid rgba(255, 255, 255, 0.12)",
+                    }}
+                  >
+                    <h5 className="text-xl font-bold uppercase mb-2 text-accent">
+                      {item.head}
+                    </h5>
+                    <p className="text-base text-bg-foreground-secondary">
+                      {item.text}
+                    </p>
+                  </div>
+                ))}
               </div>
-            ))}
-            <div className="col-span-full flex justify-center items-center w-full gap-4 mt-4">
+            </div>
+            {/* Additional Info (Last Card) */}
+            <div className="w-full flex items-center justify-center mt-16 text-center gap-4">
               <img
                 src="/model.png"
                 alt="Pan-India"
-                className="object-contain"
+                className="object-contain w-8 h-8"
               />
-              <h5 className="text-xl md:text-xl font-bold uppercase mb-0">
+              <h5 className="text-xl font-bold uppercase mb-0">
                 Pan-India Setup & Delivery
               </h5>
             </div>
