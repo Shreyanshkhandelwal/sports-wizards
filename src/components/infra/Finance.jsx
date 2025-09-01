@@ -103,15 +103,27 @@ const Finance = () => {
                   >
                     {/* <Check className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" /> */}
                     <img src="/bullet.png" className="w-3 h-3" />
-                    <span className="text-gray-300 text-sm">{item.text}</span>
+                    <span
+                      className="text-gray-300 text-sm"
+                      style={{
+                        fontSize: "15px",
+                      }}
+                    >
+                      {item.text}
+                    </span>
                   </div>
                 ))}
               </div>
-              <p className="text-base">
+              <span
+                className="text-base"
+                style={{
+                  fontSize: "15px",
+                }}
+              >
                 Whether you’re a school, builder, or a private investor, our
                 embedded financing ensures that your dream project doesn’t stall
                 for cash flow.
-              </p>
+              </span>
             </div>
           </div>
 
