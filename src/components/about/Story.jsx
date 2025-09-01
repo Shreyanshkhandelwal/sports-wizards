@@ -30,9 +30,22 @@ const Story = () => {
             </div>
 
             <div className="w-full lg:w-1/2 flex flex-col justify-center  gap-8">
-              <p className="text-bg-foreground-secondary text-lg md:text-xl leading-relaxed">
+              <span
+                className="text-bg-foreground-secondary text-lg md:text-xl leading-relaxed"
+                style={{
+                  fontSize: "15px",
+                }}
+              >
                 Founded by professionals with
-                <span className="text-accent font-semibold">
+                <span
+                  className="font-semibold"
+                  style={{
+                    background:
+                      "linear-gradient(180deg, #26FEB2 0%, #46FD3E 100%)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                  }}
+                >
                   {" "}
                   25+ years{" "}
                 </span>{" "}
@@ -40,12 +53,25 @@ const Story = () => {
                 sport-playing nation. From early fitness programs at JVPG Club
                 and Jai Hind College to large-scale Pickleball tournaments, our
                 journey has spanned grassroots and game changers alike.
-              </p>
+              </span>
 
-              <p className="text-bg-foreground-secondary text-lg md:text-xl leading-relaxed">
+              <span
+                className="text-bg-foreground-secondary text-lg md:text-xl leading-relaxed"
+                style={{
+                  fontSize: "15px",
+                }}
+              >
                 Our breakthrough came in 2017 when we conceptualized and
                 executed the
-                <span className="text-accent font-semibold">
+                <span
+                  className="text-accent font-semibold"
+                  style={{
+                    background:
+                      "linear-gradient(180deg, #26FEB2 0%, #46FD3E 100%)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                  }}
+                >
                   {" "}
                   Indian Open Pickleball Championship{" "}
                 </span>
@@ -56,7 +82,7 @@ const Story = () => {
                 Doordarshan live-streaming the finals — the event laid the
                 foundation for our belief that India is ready for a play-first
                 revolution.
-              </p>
+              </span>
             </div>
           </div>
         </div>

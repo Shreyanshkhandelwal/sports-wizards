@@ -1,4 +1,5 @@
 import React from "react";
+import { useLocation } from "react-router-dom";
 
 const CTAReuse = ({
   heading = "Powering India's Playgrounds",
@@ -14,23 +15,27 @@ const CTAReuse = ({
 
   const hasTwoButtons = Boolean(secondaryButtonText);
 
+  const location = useLocation();
+  const isEventsPage = location.pathname === "/events";
+
   return (
     <section className="py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div
           className={`p-8 rounded-3xl border border-accent/30 bg-accent/5 shadow-lg 
-            ${
-              hasTwoButtons
-                ? "flex flex-col lg:items-center gap-4"
-                : "flex flex-col gap-4 lg:gap-0 lg:flex-row lg:items-center lg:justify-between"
-            }`}
+    flex flex-col gap-4
+    ${
+      hasTwoButtons
+        ? "items-center text-center lg:items-center lg:text-left"
+        : "lg:flex-row lg:items-center lg:justify-between"
+    }`}
         >
           <div>
-            <h3 className="text-3xl md:text-4xl font-bold uppercase max-[800px]:text-[16px]">
+            <span className="md:text-[35px] font-bold uppercase max-[800px]:text-[16px] font-Race">
               {headingParts.map((part, i) =>
                 part === accentWord ? (
-                  <h3
-                    className="inline max-[800px]:text-[16px"
+                  <span
+                    className="inline text-[35px] max-[800px]:text-[16px]"
                     key={i}
                     style={{
                       background:
@@ -40,12 +45,12 @@ const CTAReuse = ({
                     }}
                   >
                     {part}
-                  </h3>
+                  </span>
                 ) : (
                   part
                 )
               )}
-            </h3>
+            </span>
             {paragraph && (
               <p
                 className={`mt-4 text-bg-foreground-secondary ${
@@ -59,9 +64,13 @@ const CTAReuse = ({
 
           {/* CTA Buttons */}
           <div
-            className={`flex ${
-              hasTwoButtons ? "flex-col sm:flex-row " : ""
-            } gap-3 ${hasTwoButtons ? "mt-4" : "mt-0 lg:mt-0"}`}
+            className={`flex gap-3 ${
+              hasTwoButtons
+                ? isEventsPage
+                  ? "flex-row "
+                  : "flex-col sm:flex-row items-center"
+                : "flex-col"
+            } ${hasTwoButtons ? "mt-4" : "mt-0 lg:mt-0"}`}
           >
             <button
               onClick={primaryBtnClick}

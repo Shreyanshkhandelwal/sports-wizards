@@ -456,9 +456,9 @@ const EventsMid = () => {
                       "linear-gradient(90deg, #26FEB2 3%, #46FD3E 85%)",
                     fontSize: "12px",
                   }}
-                  className=" text-black font-bold py-3 px-2 lg:px-6 rounded-full text-sm shadow-lg hover:shadow-green-500/25 hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-2 max-w-[280px]"
+                  className=" text-black font-bold py-3 px-6 lg:px-6 rounded-full text-sm shadow-lg hover:shadow-green-500/25 hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-6 max-w-[280px]"
                 >
-                  <FaDownload /> Download Program Deck
+                  <FaDownload /> Download Deck
                 </button>
                 <button className="bg-white text-black font-bold py-3 px-6 rounded-full text-sm shadow-lg hover:shadow-green-500/25 hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-2 max-w-[180px]">
                   <BiPhone /> Book A Call

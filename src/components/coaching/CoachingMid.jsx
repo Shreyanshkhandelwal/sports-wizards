@@ -129,11 +129,11 @@ const CoachingMid = () => {
               ].map((service, index) => (
                 <div
                   key={index}
-                  className=" rounded-xl p-6 flex flex-col items-center justify-center lg:text-center "
+                  className=" rounded-xl p-2 lg:p-4 flex flex-col items-start justify-center "
                   style={{ background: "rgba(75, 75, 75, 0.2)" }}
                 >
                   {service.icon}
-                  <span className="text-white font-semibold font-Race">
+                  <span className="text-white font-semibold font-Race text-[14px] lg:text-[16px]">
                     {service.title}
                   </span>
                 </div>
@@ -206,6 +206,7 @@ const CoachingMid = () => {
               <button
                 style={{
                   background: "linear-gradient(90deg, #26FEB2 3%, #46FD3E 85%)",
+                  fontSize: "15px",
                 }}
                 className="mt-5 lg:mt-0 text-black font-bold py-3 px-8 rounded-full text-lg shadow-lg hover:shadow-green-500/25 hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300"
               >
