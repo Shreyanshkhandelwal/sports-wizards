@@ -136,15 +136,17 @@ export default function InfraBottom() {
               "Material tie-ups with reputed brands.",
               "Fast turnaround with quality guarantees.",
             ].map((point, idx) => (
-              <p
+              <span
                 key={idx}
                 className="p-6 rounded-2xl bg-bg text-sm text-bg-foreground-secondary"
                 style={{
+                  fontSize: "15px",
                   boxShadow: "1px 1px 8.7px 0px rgba(70, 253, 62, 0.17)",
+                  color: "rgba(248, 248, 248, 1)",
                 }}
               >
                 {point}
-              </p>
+              </span>
             ))}
           </div>
 
@@ -154,15 +156,17 @@ export default function InfraBottom() {
               "Execution involvement of leadership team.",
               "Seamless branding integration (great for clubs & campuses).",
             ].map((point, idx) => (
-              <div
+              <span
                 key={idx}
                 className="p-6 rounded-2xl bg-bg text-sm text-bg-foreground-secondary w-full sm:w-[calc(50%-12px)] lg:w-[calc(33%-16px)]"
                 style={{
+                  fontSize: "15px",
                   boxShadow: "1px 1px 8.7px 0px rgba(70, 253, 62, 0.17)",
+                  color: "rgba(248, 248, 248, 1)",
                 }}
               >
                 {point}
-              </div>
+              </span>
             ))}
           </div>
         </div>

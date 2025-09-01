@@ -27,7 +27,7 @@ const ReuseHero = ({
 
       {/* Common Content (Centered for all screen sizes) */}
       <div className="relative z-10 flex flex-col items-center justify-center text-center px-4 lg:px-0 max-w-4xl">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white uppercase tracking-wide">
+        <h1 className="text-3xl md:text-5xl lg:text-6xl font-black text-white uppercase tracking-wide">
           {headingParts.map((part, i) =>
             part === accentWord ? (
               <span

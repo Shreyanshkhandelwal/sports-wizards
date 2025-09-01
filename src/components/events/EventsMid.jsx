@@ -310,12 +310,12 @@ const EventsMid = () => {
             </div>
             {/* mobile layout */}
             <div className="flex lg:hidden flex-col">
-              <h5
+              <span
                 // style={{ fontSize: "24px" }}
-                className="text-accent text-base font-bold uppercase tracking-widest mb-6  underline-offset-8 decoration-green-500"
+                className="text-accent text-base font-bold  tracking-widest mb-6  underline-offset-8 decoration-green-500"
               >
                 Services Included:
-              </h5>
+              </span>
 
               {/* Right Side - Image */}
               <div className="flex gap-6 mt-12 lg:hidden overflow-x-auto no-scrollbar">

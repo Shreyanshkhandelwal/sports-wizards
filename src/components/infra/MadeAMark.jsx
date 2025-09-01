@@ -159,26 +159,15 @@ export default function MadeAMark() {
 
         <div className="block lg:hidden py-12">
           <div className="px-4">
-            <div className="text-center mb-8">
-              <div className="inline-block mb-4">
+            <div className="text-center ">
+              <div className="inline-block ">
                 <h5 className="bg-gradient-to-r from-teal-300 to-green-500 bg-clip-text text-transparent text-center text-base font-bold uppercase tracking-widest mb-6 underline underline-offset-8 decoration-green-500">
-                  Featured Projects
+                  Where We’ve Made a Mark
                 </h5>
               </div>
-              <h5 className="text-2xl sm:text-3xl font-bold text-white leading-tight mb-6">
-                SHOWCASING OUR SIGNATURE
-                <br />
-                <span className="bg-gradient-to-b from-teal-300 to-green-500 bg-clip-text text-transparent">
-                  CREATIONS
-                </span>{" "}
-                ACROSS COMMUNITIES.
-              </h5>
-              <button className="bg-gradient-to-r from-teal-300 via-green-400 to-green-500 font-bold text-sm md:text-base py-2 px-5 md:py-3 md:px-6 rounded-full transition-transform hover:scale-105 text-black">
-                Build my Court
-              </button>
             </div>
 
-            <div className="w-full mt-12">
+            <div className="w-full mt-8">
               <Swiper
                 className="featured-projects-swiper"
                 modules={[Pagination, Autoplay]}

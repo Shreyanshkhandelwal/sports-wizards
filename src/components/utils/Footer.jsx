@@ -32,9 +32,9 @@ const Footer = () => {
           </div>
 
           <div className="w-full md:w-1/4 mb-6 md:mb-0 text-left">
-            <h5 className="text-white font-bold text-lg mb-2 md:mb-4">
+            <span className="text-white font-bold text-lg mb-2 md:mb-4">
               Quick Links
-            </h5>
+            </span>
             <ul className="space-y-1 md:space-y-2 text-sm">
               <li>
                 <a
@@ -88,9 +88,9 @@ const Footer = () => {
           </div>
 
           <div className="w-full md:w-1/4 mb-6 md:mb-0 text-left">
-            <h5 className="text-white font-bold text-lg mb-2 md:mb-4">
+            <span className="text-white font-bold text-lg mb-2 md:mb-4">
               Legal & Info
-            </h5>
+            </span>
             <ul className="space-y-1 md:space-y-2 text-sm">
               <li>
                 <a
@@ -120,9 +120,9 @@ const Footer = () => {
           </div>
 
           <div className="w-full md:w-1/4 text-left">
-            <h5 className="text-white font-bold text-lg mb-2 md:mb-4">
+            <span className="text-white font-bold text-lg mb-2 md:mb-4">
               Contact
-            </h5>
+            </span>
             <p className="text-sm">
               Email:{" "}
               <a

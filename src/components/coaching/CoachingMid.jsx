@@ -103,41 +103,51 @@ const CoachingMid = () => {
             </div>
 
             {/* Right Side - Image */}
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
-              {[
-                {
-                  // icon: <CgGym className="text-accent w-10 h-10 mb-3" />,
-                  icon: <img src="/coaching/1.png" className="mb-3" />,
-                  title: "Clubs & Gymkhanas",
-                },
-                {
-                  icon: <img src="/coaching/2.png" className="mb-3" />,
-                  title: "Residential Societies",
-                },
-                {
-                  icon: <img src="/coaching/3.png" className="mb-3" />,
-                  title: "Sports Associations",
-                },
-                {
-                  icon: <img src="/coaching/4.png" className="mb-3" />,
-                  title: "Court & Turf Owners",
-                },
-                {
-                  icon: <img src="/coaching/5.png" className="mb-3" />,
-                  title: "Brand-Led Campaigns",
-                },
-              ].map((service, index) => (
-                <div
-                  key={index}
-                  className=" rounded-xl p-2 lg:p-4 flex flex-col items-start justify-center "
-                  style={{ background: "rgba(75, 75, 75, 0.2)" }}
-                >
-                  {service.icon}
-                  <span className="text-white font-semibold font-Race text-[14px] lg:text-[16px]">
-                    {service.title}
-                  </span>
-                </div>
-              ))}
+            <div className="mb-8">
+              <span
+                className=" font-bold mb-4 text-start text-accent"
+                style={{
+                  fontSize: "15px",
+                }}
+              >
+                Services Included:
+              </span>
+
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+                {[
+                  {
+                    icon: <img src="/coaching/1.png" className="mb-3" />,
+                    title: "Clubs & Gymkhanas",
+                  },
+                  {
+                    icon: <img src="/coaching/2.png" className="mb-3" />,
+                    title: "Residential Societies",
+                  },
+                  {
+                    icon: <img src="/coaching/3.png" className="mb-3" />,
+                    title: "Sports Associations",
+                  },
+                  {
+                    icon: <img src="/coaching/4.png" className="mb-3" />,
+                    title: "Court & Turf Owners",
+                  },
+                  {
+                    icon: <img src="/coaching/5.png" className="mb-3" />,
+                    title: "Brand-Led Campaigns",
+                  },
+                ].map((service, index) => (
+                  <div
+                    key={index}
+                    className="rounded-xl p-2 lg:p-4 flex flex-col items-start justify-center"
+                    style={{ background: "rgba(75, 75, 75, 0.2)" }}
+                  >
+                    {service.icon}
+                    <span className="text-white font-semibold font-Race text-[14px] lg:text-[16px]">
+                      {service.title}
+                    </span>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
 
@@ -208,7 +218,7 @@ const CoachingMid = () => {
                   background: "linear-gradient(90deg, #26FEB2 3%, #46FD3E 85%)",
                   fontSize: "15px",
                 }}
-                className="mt-5 lg:mt-0 text-black font-bold py-3 px-8 rounded-full text-lg shadow-lg hover:shadow-green-500/25 hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300"
+                className="mt-10 lg:mt-0 text-black font-bold py-2 px-8 rounded-full text-lg shadow-lg hover:shadow-green-500/25 hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300"
               >
                 Partner with Us
               </button>
@@ -268,12 +278,12 @@ const CoachingMid = () => {
                 </span>
               </div>
 
-              <div className="space-y-4 text-gray-300">
-                <p className="text-base">
+              <div className="space-y-6 text-gray-300">
+                <span className="text-[15px] ">
                   Our full-service model enables schools to offer 5 daily sports
                   -{" "}
                   <span
-                    className=""
+                    className="text-[15px]"
                     style={{
                       background:
                         "linear-gradient(180deg, #26FEB2 0%, #46FD3E 100%)",
@@ -286,9 +296,9 @@ const CoachingMid = () => {
                   </span>{" "}
                   - daily. Students can opt for any or all, and schedules are
                   optimized to ensure fair playtime.
-                </p>
+                </span>
 
-                <div className="space-y-3">
+                <div className="space-y-3 mt-5">
                   {[
                     {
                       icon: FaUsers,

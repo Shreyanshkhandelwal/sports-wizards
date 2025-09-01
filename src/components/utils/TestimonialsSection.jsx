@@ -145,7 +145,7 @@ const TestimonialsSection = () => {
       <CustomSwiperStyles />
 
       <div className="container mx-auto px-4 max-w-7xl">
-        <div className="text-center mb-12">
+        <div className="text-center mb-8">
           <div className="inline-block relative">
             <h5
               style={{
@@ -159,9 +159,20 @@ const TestimonialsSection = () => {
               Testimonials
             </h5>
           </div>
-          <h5 className="font-bold text-3xl md:text-4xl mt-4 tracking-wider uppercase block">
-            {headingText}
-          </h5>
+          <br />
+          {location.pathname === "/coaching" ? (
+            <span
+              style={{
+                fontSize: "14px",
+              }}
+            >
+              {headingText}
+            </span>
+          ) : (
+            <h5 className="font-bold text-3xl md:text-4xl mt-4 tracking-wider uppercase block">
+              headingText
+            </h5>
+          )}
         </div>
 
         <div className="w-full">

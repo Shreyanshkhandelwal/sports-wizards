@@ -92,7 +92,12 @@ const Header = () => {
           className="md:hidden text-white"
           onClick={() => setIsOpen(!isOpen)}
         >
-          {isOpen ? <IoCloseSharp size={28} /> : <IoMdMenu size={28} />}
+          {/* {isOpen ? <IoCloseSharp size={28} /> : <IoMdMenu size={28} />} */}
+          {isOpen ? (
+            <IoCloseSharp size={25} />
+          ) : (
+            <img src="/menu.png" height={25} />
+          )}
         </button>
       )}
 

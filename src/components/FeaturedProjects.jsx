@@ -189,9 +189,9 @@ export default function FeaturedProjects() {
         </div>
 
         <div className="block lg:hidden py-12">
-          <div className="px-4">
+          <div className="px-4 text-center">
             <div className=" mb-8">
-              <div className="inline-block mb-4">
+              <div className="inline-block mb-4 text-center">
                 <h5
                   style={{
                     background:

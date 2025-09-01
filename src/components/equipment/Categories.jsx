@@ -37,8 +37,9 @@ const Categories = () => {
               modules={[Pagination]}
               spaceBetween={16}
               slidesPerView={1} // exactly 1 slide per view
+              centeredSlides={true}
               pagination={{ clickable: true }}
-              className="w-full max-w-[350px]" // keeps slides constrained
+              className="w-full max-w-[300px]" // keeps slides constrained
             >
               {products.map((item, index) => (
                 <SwiperSlide key={index} className="w-full">
@@ -62,16 +63,16 @@ const Categories = () => {
                         with setup
                       </button>
                     </div>
-                    <h5 className="text-lg md:text-2xl font-bold uppercase mb-2 text-center">
+                    <span className="text-lg md:text-2xl font-bold uppercase mb-2 text-start font-Race">
                       {item.text}
-                    </h5>
+                    </span>
                     <a
                       href="#"
                       style={{
                         background:
                           "linear-gradient(180deg, #26FEB2 0%, #46FD3E 100%)",
                       }}
-                      className="font-bold text-sm md:text-base py-2 px-5 md:py-3 md:px-6 rounded-full text-black w-full"
+                      className="font-bold text-sm md:text-base py-2 px-5 md:py-3 md:px-6 rounded-[10px] text-black w-full"
                     >
                       Get Quote
                     </a>
@@ -187,10 +188,25 @@ const Categories = () => {
               <h5 className="text-xl font-bold uppercase">
                 Team Jerseys & Bibs
               </h5>
-              <p className="text-white text-lg leading-relaxed">
+              <span
+                className="text-white text-lg leading-relaxed block"
+                style={{
+                  fontSize: "15px",
+                }}
+              >
                 Custom team apparel & training bibs available in multiple
                 colors, sizes, and branding options.
-              </p>
+              </span>
+
+              <span
+                style={{
+                  fontSize: "15px",
+                  fontWeight: "600",
+                }}
+              >
+                Available Options:
+              </span>
+              <br />
               <ul className="space-y-3">
                 {["Jerseys", "Bibs", "Tracksuits", "Custom Printing"].map(
                   (item) => (
@@ -204,8 +220,10 @@ const Categories = () => {
               <button
                 style={{
                   background: "linear-gradient(90deg, #26FEB2 3%, #46FD3E 85%)",
+                  border: "0.56px solid rgba(255, 255, 255, 0.52)",
+                  fontSize: "14px",
                 }}
-                className=" text-black font-bold py-3 px-8 rounded-full text-lg shadow-lg hover:shadow-green-500/25 hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300"
+                className=" text-black font-bold py-3 px-12 rounded-[14px] text-lg shadow-lg hover:shadow-green-500/25 hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300"
               >
                 Get Quote
               </button>
@@ -232,10 +250,24 @@ const Categories = () => {
               <h5 className="text-xl font-bold uppercase">
                 Recreational Equipment
               </h5>
-              <p className="text-white text-lg leading-relaxed">
+              <span
+                className="text-white text-lg leading-relaxed block"
+                style={{
+                  fontSize: "15px",
+                }}
+              >
                 Essential training aids — from cones & hurdles to timers &
                 agility ladders — for any sport.
-              </p>
+              </span>
+              <span
+                style={{
+                  fontSize: "15px",
+                  fontWeight: "600",
+                }}
+              >
+                Available Options:
+              </span>
+              <br />
               <ul className="space-y-3">
                 {[
                   "Cones",
@@ -253,8 +285,10 @@ const Categories = () => {
               <button
                 style={{
                   background: "linear-gradient(90deg, #26FEB2 3%, #46FD3E 85%)",
+                  border: "0.56px solid rgba(255, 255, 255, 0.52)",
+                  fontSize: "14px",
                 }}
-                className=" text-black font-bold py-3 px-8 rounded-full text-lg shadow-lg hover:shadow-green-500/25 hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300"
+                className=" text-black font-bold py-3 px-12 rounded-[14px] text-lg shadow-lg hover:shadow-green-500/25 hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300"
               >
                 Get Quote
               </button>

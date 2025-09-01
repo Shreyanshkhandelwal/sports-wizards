@@ -1773,8 +1773,10 @@ const ImprovedCarousel = () => {
     width: typeof window !== "undefined" ? window.innerWidth : 1200,
     height: typeof window !== "undefined" ? window.innerHeight : 800,
   });
-  const [initialFlipDone, setInitialFlipDone] = useState(false); // NEW
-  const [hasStarted, setHasStarted] = useState(false); // NEW flag
+  const [initialFlipDone, setInitialFlipDone] = useState(false);
+  const [initialFlipBack, setInitialFlipBack] = useState(false);
+  const [hasStarted, setHasStarted] = useState(false);
+  const [flippedCards, setFlippedCards] = useState({}); // Track manually flipped cards
 
   const intervalRef = useRef(null);
   const sectionRef = useRef(null);
@@ -1826,23 +1828,55 @@ const ImprovedCarousel = () => {
     }
   };
 
-  // ✅ Start 1s timer only after entering
+  // ✅ Initial flip after 2s of entering view
   useEffect(() => {
-    if (hasStarted) {
+    if (hasStarted && !initialFlipDone) {
       const timer = setTimeout(() => {
         setInitialFlipDone(true);
       }, 2000);
       return () => clearTimeout(timer);
     }
-  }, [hasStarted]);
+  }, [hasStarted, initialFlipDone]);
 
-  // ✅ Start autoplay only after flip
+  // ✅ Flip back after another 2s
   useEffect(() => {
-    if (initialFlipDone) {
+    if (initialFlipDone && !initialFlipBack) {
+      const timer = setTimeout(() => {
+        setInitialFlipBack(true);
+      }, 2000);
+      return () => clearTimeout(timer);
+    }
+  }, [initialFlipDone, initialFlipBack]);
+
+  // ✅ Start autoplay only after initial flip sequence is complete
+  useEffect(() => {
+    if (initialFlipBack) {
       startAutoLoop();
       return () => stopAutoLoop();
     }
-  }, [initialFlipDone]);
+  }, [initialFlipBack]);
+
+  // ✅ Auto flip back cards that are no longer in center
+  useEffect(() => {
+    if (initialFlipBack) {
+      setFlippedCards((prev) => {
+        const updated = { ...prev };
+        let hasChanges = false;
+
+        // Check all flipped cards
+        Object.keys(updated).forEach((cardIndex) => {
+          const index = parseInt(cardIndex);
+          if (updated[index] && index !== currentSlide) {
+            // Card is flipped but not in center anymore, flip it back
+            updated[index] = false;
+            hasChanges = true;
+          }
+        });
+
+        return hasChanges ? updated : prev;
+      });
+    }
+  }, [currentSlide, initialFlipBack]);
 
   const getSlideSize = () => {
     const screenWidth = windowSize.width;
@@ -1871,6 +1905,20 @@ const ImprovedCarousel = () => {
       ...prev,
       [key]: !prev[key],
     }));
+  };
+
+  // Handle card click to flip
+  const handleCardClick = (index) => {
+    if (index === currentSlide) {
+      // If clicking the center card, flip it
+      setFlippedCards((prev) => ({
+        ...prev,
+        [index]: !prev[index],
+      }));
+    } else {
+      // If clicking non-center card, make it center
+      setCurrentSlide(index);
+    }
   };
 
   // FIXED: Better circular distance calculation
@@ -1963,19 +2011,7 @@ const ImprovedCarousel = () => {
                 cursor: pointer;
                 transition: transform 0.6s ease;
               }
-              /*
-              .slide-card:hover .card-inner {
-                transform: rotateY(180deg);
-              }*/
-              /*
-              .card-inner {
-                position: relative;
-                width: 100%;
-                height: 100%;
-                transform-style: preserve-3d;
-                transition: transform 0.6s ease;
-              }
-*/
+
               .card-inner {
                 position: relative;
                 width: 100%;
@@ -2105,7 +2141,6 @@ const ImprovedCarousel = () => {
                 transform: scale(1);
               }
               .build-button {
-                /*position: sticky;*/
                 bottom: 0;
                 margin-top: auto;
               }
@@ -2123,10 +2158,18 @@ const ImprovedCarousel = () => {
 
                 if (!isVisible) return null;
 
-                // ✅ Flip logic:
-                // If initialFlip not done → no flips
-                // If done → flip only current center slide
-                const shouldFlip = initialFlipDone && index === currentSlide;
+                // ✅ New flip logic:
+                // 1. During initial sequence: flip center card if in flip phase and not in flip-back phase
+                // 2. After sequence: only flip manually clicked cards
+                let shouldFlip = false;
+
+                if (!initialFlipBack) {
+                  // During initial flip sequence
+                  shouldFlip = initialFlipDone && index === currentSlide;
+                } else {
+                  // After initial sequence, only flip manually clicked cards
+                  shouldFlip = flippedCards[index] || false;
+                }
 
                 return (
                   <div
@@ -2137,7 +2180,7 @@ const ImprovedCarousel = () => {
                       width: `${slideSize.width}px`,
                       height: `${slideSize.height}px`,
                     }}
-                    onClick={() => setCurrentSlide(index)}
+                    onClick={() => handleCardClick(index)}
                   >
                     <div
                       className={`card-inner ${shouldFlip ? "flipped" : ""}`}
@@ -2227,7 +2270,7 @@ const ImprovedCarousel = () => {
                           }}
                           className="text-center build-button font-bold text-sm md:text-base py-2 px-5 md:py-3 md:px-6 rounded-full transition-transform hover:scale-105 text-black w-full lg:w-[88%]"
                         >
-                          <span className="text-center text-[8px] w-full">
+                          <span className="text-center text-[15px] w-full">
                             Build My Court Now
                           </span>
                         </a>

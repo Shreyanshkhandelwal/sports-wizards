@@ -56,10 +56,10 @@ const Contact = () => {
           }}
         />
         <CTAReuse
-          heading="Get Your Free Guide Instantly"
-          accentWord="Guide"
-          paragraph="Unlock exclusive insights in our downloadable guide. Just fill in your details and start reading in seconds."
-          primaryButtonText="Get My Free Guide"
+          heading="Bring Your Play Vision to Life"
+          accentWord="Vision"
+          paragraph="Curious how we can transform play for your school, turf, or workplace?"
+          primaryButtonText="Contact Our Team"
           primaryBtnClick={() => setShowModal(true)}
         />
         <Footer />
