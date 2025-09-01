@@ -20,7 +20,7 @@ const WhoAreWe = () => {
           <div className="flex flex-col lg:flex-row items-start justify-center gap-8 lg:gap-12">
             <div className="w-full lg:w-1/2 flex flex-col">
               <div className="mb-6">
-                <h5 className="text-4xl md:text-5xl font-black uppercase tracking-wide leading-tight">
+                <h5 className="text-4xl md:text-5xl font-black uppercase tracking-wide leading-tight font-Race">
                   More Than A Vendor, <br /> Your{" "}
                   <span
                     className=" bg-clip-text text-transparent"
