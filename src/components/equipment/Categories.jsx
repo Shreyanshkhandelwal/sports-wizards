@@ -1,6 +1,17 @@
 import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
 
 const Categories = () => {
+  const products = [
+    { img: "/e1.jpeg", text: "Basketball Hoops & Poles " },
+    { img: "/e2.jpeg", text: "Pickleball Nets & Paddles" },
+    { img: "/e3.png", text: "Cricket Nets & Turf Rolls" },
+    { img: "/e4.png", text: "Football Nets & Goalposts" },
+    { img: "/e5.png", text: "Multi-Sport Court Gear " },
+  ];
   return (
     <>
       {/* sets apart */}
@@ -19,33 +30,64 @@ const Categories = () => {
               Product Categories
             </h5>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 mt-16 ">
-            {[
-              {
-                img: "/e1.jpeg",
-                text: "Basketball Hoops & Poles ",
-              },
-              {
-                img: "/e2.jpeg",
-                text: "Pickleball Nets & Paddles",
-              },
-              {
-                img: "/e3.png",
-                text: "Cricket Nets & Turf Rolls",
-              },
-              {
-                img: "/e4.png",
-                text: "Football Nets & Goalposts",
-              },
-              {
-                img: "/e5.png",
-                text: "Multi-Sport Court Gear ",
-              },
-            ].map((item, index) => (
+
+          {/* 🚀 Mobile Swiper */}
+          <div className="block sm:hidden mt-10">
+            <Swiper
+              modules={[Pagination]}
+              spaceBetween={16}
+              slidesPerView={1} // exactly 1 slide per view
+              pagination={{ clickable: true }}
+              className="w-full max-w-[350px]" // keeps slides constrained
+            >
+              {products.map((item, index) => (
+                <SwiperSlide key={index} className="w-full">
+                  <div
+                    className="flex flex-col items-center text-center p-4 rounded-[14px] w-full"
+                    style={{ background: "rgba(71, 71, 71, 0.17)" }}
+                  >
+                    <div className="mb-4 h-[280px] w-full rounded-[14px] overflow-hidden relative">
+                      <img
+                        src={item.img}
+                        alt={`icon-${index}`}
+                        className="mx-auto w-full h-full object-cover"
+                      />
+                      <button
+                        className="bg-white px-4 py-1 rounded-xl absolute bottom-2 right-2 text-black"
+                        style={{
+                          boxShadow: "0px 4px 11px 0px rgba(0, 0, 0, 0.54)",
+                          fontWeight: "600",
+                        }}
+                      >
+                        with setup
+                      </button>
+                    </div>
+                    <h5 className="text-lg md:text-2xl font-bold uppercase mb-2 text-center">
+                      {item.text}
+                    </h5>
+                    <a
+                      href="#"
+                      style={{
+                        background:
+                          "linear-gradient(180deg, #26FEB2 0%, #46FD3E 100%)",
+                      }}
+                      className="font-bold text-sm md:text-base py-2 px-5 md:py-3 md:px-6 rounded-full text-black w-full"
+                    >
+                      Get Quote
+                    </a>
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
+
+          {/* 🖥️ Desktop Grid */}
+          <div className="hidden sm:grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 mt-16">
+            {products.map((item, index) => (
               <div
                 key={index}
                 className="flex flex-col items-center text-center p-4 rounded-[14px]"
-                style={{ background: " rgba(71, 71, 71, 0.17)" }}
+                style={{ background: "rgba(71, 71, 71, 0.17)" }}
               >
                 <div className="mb-4 h-[280px] w-full rounded-[14px] overflow-hidden relative">
                   <img
@@ -63,9 +105,14 @@ const Categories = () => {
                     with setup
                   </button>
                 </div>
-                <h5 className="text-xl text-start md:text-2xl font-bold uppercase mb-2">
+                <span
+                  className="text-xl text-start md:text-2xl font-bold uppercase mb-2 font-Race"
+                  style={{
+                    fontSize: "18px",
+                  }}
+                >
                   {item.text}
-                </h5>
+                </span>
                 <a
                   href="#"
                   style={{
@@ -80,6 +127,20 @@ const Categories = () => {
             ))}
           </div>
         </div>
+        <style jsx>{`
+          .swiper-pagination {
+            bottom: -4px !important; /* move dots lower */
+          }
+          .swiper-pagination-bullet {
+            background: #303030;
+ /* Tailwind gray-400 */
+            opacity: 1;
+          }
+          .swiper-pagination-bullet-active {
+            background-color: #00ff01;
+            ); 
+          }
+        `}</style>
       </section>
 
       {/* orders */}
