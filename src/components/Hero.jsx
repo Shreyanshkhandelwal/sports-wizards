@@ -29,7 +29,7 @@ const Hero = () => {
             <span
               className=""
               style={{
-                fontSize: "25px",
+                fontSize: "22px",
                 background:
                   "linear-gradient(91.1deg, #26FEB2 -0.39%, #46FD3E 81.76%)",
                 WebkitBackgroundClip: "text",
@@ -38,22 +38,22 @@ const Hero = () => {
             >
               Powering
             </span>{" "}
-            <span style={{ fontSize: "25px" }}> India&apos;s</span>
+            <span style={{ fontSize: "22px" }}> India&apos;s</span>
             <br />
-            <h1 style={{ fontSize: "28px" }}>Playgrounds</h1>
+            <h1 style={{ fontSize: "26px" }}>Playgrounds</h1>
           </h1>
-          <div className="flex flex-row items-center justify-center gap-3 md:gap-4 mt-8">
+          <div className="flex flex-row items-center gap-3 md:gap-4 mt-8">
             <button
               style={{
                 background:
                   "linear-gradient(91.1deg, #26FEB2 -0.39%, #46FD3E 81.76%)",
               }}
-              className=" font-bold text-sm md:text-base py-2 px-5 md:py-3 md:px-6 rounded-full transition-transform hover:scale-105 text-black"
+              className=" font-bold  py-2 px-6 md:py-3 md:px-6 rounded-full transition-transform hover:scale-105 text-black"
             >
-              Explore What We Do
+              <span style={{ fontSize: "139%" }}>Explore What We Do</span>
             </button>
-            <button className="bg-white text-black font-bold text-sm md:text-base py-2 px-5 md:py-3 md:px-6 rounded-full transition-transform hover:scale-105">
-              Enquire Now
+            <button className="bg-white text-black font-bold  py-2 px-6 md:py-3 md:px-6 rounded-full transition-transform hover:scale-105">
+              <span style={{ fontSize: "139%" }}>Enquire Now</span>
             </button>
           </div>
         </div>
@@ -63,7 +63,7 @@ const Hero = () => {
             // src="/p1.png"
             src="https://res.cloudinary.com/dnivrv6ar/image/upload/f_auto,q_auto/v1756561431/p1_l0wsdf.png"
             alt="player 1"
-            className="absolute bottom-0 left-[20%] sm:left-[35%] -translate-x-1/2 w-[65%] max-w-[240px] h-auto z-10 transform -scale-x-100"
+            className="absolute bottom-10 left-[28%] sm:left-[35%] -translate-x-1/2 w-[70%] max-w-[260px] h-auto z-10 transform -scale-x-100"
           />
           <img
             // src="/p2.png"
@@ -75,7 +75,7 @@ const Hero = () => {
             // src="/p3.png"
             src="https://res.cloudinary.com/dnivrv6ar/image/upload/f_auto,q_auto/v1756561447/p3_l69o4n.png"
             alt="player 3"
-            className="absolute bottom-0 left-[80%] sm:left-[65%] -translate-x-1/2 w-[65%] max-w-[260px] h-auto z-10"
+            className="absolute bottom-14 left-[75%] sm:left-[65%] -translate-x-1/2 w-[70%] max-w-[260px] h-auto z-10"
           />
         </div>
 

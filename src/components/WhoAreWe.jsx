@@ -6,7 +6,6 @@ const WhoAreWe = () => {
           <div className="text-center">
             <h5
               style={{
-                fontSize: "24px",
                 background:
                   "linear-gradient(91.1deg, #26FEB2 -0.39%, #46FD3E 81.76%)",
                 WebkitBackgroundClip: "text",
@@ -21,7 +20,7 @@ const WhoAreWe = () => {
           <div className="flex flex-col lg:flex-row items-start justify-center gap-8 lg:gap-12">
             <div className="w-full lg:w-1/2 flex flex-col">
               <div className="mb-6">
-                <h2 className="text-4xl md:text-5xl font-black uppercase tracking-wide leading-tight">
+                <h5 className="text-4xl md:text-5xl font-black uppercase tracking-wide leading-tight">
                   More Than A Vendor, <br /> Your{" "}
                   <span
                     className=" bg-clip-text text-transparent"
@@ -35,7 +34,7 @@ const WhoAreWe = () => {
                     Sports
                   </span>{" "}
                   Partner.
-                </h2>
+                </h5>
                 <svg
                   className="mt-4"
                   xmlns="http://www.w3.org/2000/svg"

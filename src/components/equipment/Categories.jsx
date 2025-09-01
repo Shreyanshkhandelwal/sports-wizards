@@ -9,7 +9,6 @@ const Categories = () => {
           <div className="text-center">
             <h5
               style={{
-                fontSize: "24px",
                 background:
                   "linear-gradient(91.1deg, #26FEB2 -0.39%, #46FD3E 81.76%)",
                 WebkitBackgroundClip: "text",
@@ -89,7 +88,6 @@ const Categories = () => {
           <div className="text-center">
             <h5
               style={{
-                fontSize: "24px",
                 background:
                   "linear-gradient(91.1deg, #26FEB2 -0.39%, #46FD3E 81.76%)",
                 WebkitBackgroundClip: "text",
@@ -211,7 +209,6 @@ const Categories = () => {
           <div className="text-center mb-16">
             <h5
               style={{
-                fontSize: "24px",
                 background:
                   "linear-gradient(91.1deg, #26FEB2 -0.39%, #46FD3E 81.76%)",
                 WebkitBackgroundClip: "text",

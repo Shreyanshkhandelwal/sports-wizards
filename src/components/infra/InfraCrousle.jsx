@@ -828,7 +828,7 @@
 //           <div className="text-center">
 //             <h1
 //               style={{
-//                 fontSize: "24px",
+//
 //                 background:
 //                   "linear-gradient(91.1deg, #26FEB2 -0.39%, #46FD3E 81.76%)",
 //                 WebkitBackgroundClip: "text",
@@ -1160,7 +1160,7 @@
 //             <h2
 //               className="text-lg font-semibold mb-8 inline-block"
 //               style={{
-//                 fontSize: "24px",
+//
 //                 background: "linear-gradient(180deg, #26FEB2 0%, #46FD3E 100%)",
 //                 WebkitBackgroundClip: "text",
 //                 WebkitTextFillColor: "transparent",
@@ -1941,7 +1941,6 @@ const ImprovedCarousel = () => {
           <div className="text-center">
             <h5
               style={{
-                fontSize: "24px",
                 background:
                   "linear-gradient(91.1deg, #26FEB2 -0.39%, #46FD3E 81.76%)",
                 WebkitBackgroundClip: "text",
@@ -2296,7 +2295,6 @@ const ImprovedCarousel = () => {
             <h5
               className="text-lg font-semibold mb-8 inline-block"
               style={{
-                fontSize: "24px",
                 background: "linear-gradient(180deg, #26FEB2 0%, #46FD3E 100%)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",

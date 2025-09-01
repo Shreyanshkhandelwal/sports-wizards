@@ -26,7 +26,12 @@ const CTAReuse = ({
             }`}
         >
           <div>
-            <h3 className="text-3xl md:text-4xl font-bold uppercase">
+            <h3
+              className="text-3xl md:text-4xl font-bold uppercase"
+              style={{
+                fontSize: "16px",
+              }}
+            >
               {headingParts.map((part, i) =>
                 part === accentWord ? (
                   <h3
@@ -37,6 +42,7 @@ const CTAReuse = ({
                         " linear-gradient(180deg, #26FEB2 0%, #46FD3E 100%)",
                       WebkitBackgroundClip: "text",
                       WebkitTextFillColor: "transparent",
+                      fontSize: "16px",
                     }}
                   >
                     {part}
@@ -65,7 +71,7 @@ const CTAReuse = ({
           >
             <button
               onClick={primaryBtnClick}
-              className=" font-bold lg:min-w-[220px] text-sm md:text-base py-2 px-5 md:py-3 md:px-6 rounded-full transition-transform hover:scale-105 text-black w-fit"
+              className=" font-bold lg:min-w-[220px] text-[11px] md:text-base py-2 px-5 md:py-3 md:px-6 rounded-full transition-transform hover:scale-105 text-black w-fit"
               style={{
                 background:
                   "linear-gradient(91.1deg, #26FEB2 -0.39%, #46FD3E 81.76%)",

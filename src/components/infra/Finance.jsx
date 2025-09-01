@@ -11,7 +11,6 @@ const Finance = () => {
         <div className="text-center mb-4">
           <h5
             style={{
-              fontSize: "24px",
               background:
                 "linear-gradient(91.1deg, #26FEB2 -0.39%, #46FD3E 81.76%)",
               WebkitBackgroundClip: "text",

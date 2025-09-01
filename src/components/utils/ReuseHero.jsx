@@ -59,8 +59,9 @@ const ReuseHero = ({
               style={{
                 background:
                   "linear-gradient(91.1deg, #26FEB2 -0.39%, #46FD3E 81.76%)",
+                fontSize: "19px",
               }}
-              className=" font-bold text-sm md:text-base py-2 px-6 md:py-3 md:px-8 rounded-full transition-transform hover:scale-105 text-bg"
+              className=" font-bold   py-2 px-8 md:py-3 md:px-8 rounded-full transition-transform hover:scale-105 text-bg"
             >
               {primaryButtonText}
             </button>

@@ -143,7 +143,6 @@ const TestimonialsSection = () => {
           <div className="inline-block relative">
             <h5
               style={{
-                fontSize: "24px",
                 background:
                   "linear-gradient(91.1deg, #26FEB2 -0.39%, #46FD3E 81.76%)",
                 WebkitBackgroundClip: "text",
@@ -154,9 +153,9 @@ const TestimonialsSection = () => {
               Testimonials
             </h5>
           </div>
-          <span className="font-bold text-3xl md:text-4xl mt-4 tracking-wider uppercase block">
+          <h5 className="font-bold text-3xl md:text-4xl mt-4 tracking-wider uppercase block">
             {headingText}
-          </span>
+          </h5>
         </div>
 
         <div className="w-full">

@@ -9,7 +9,6 @@ const Story = () => {
           <div className="text-center">
             <h5
               style={{
-                fontSize: "24px",
                 background:
                   "linear-gradient(91.1deg, #26FEB2 -0.39%, #46FD3E 81.76%)",
                 WebkitBackgroundClip: "text",
@@ -69,7 +68,6 @@ const Story = () => {
           <div className="text-center">
             <h5
               style={{
-                fontSize: "24px",
                 background:
                   "linear-gradient(91.1deg, #26FEB2 -0.39%, #46FD3E 81.76%)",
                 WebkitBackgroundClip: "text",
@@ -89,7 +87,6 @@ const Story = () => {
               <h5
                 className=" text-2xl font-bold mb-3 "
                 style={{
-                  fontSize: "24px",
                   background:
                     "linear-gradient(91.1deg, #26FEB2 -0.39%, #46FD3E 81.76%)",
                   WebkitBackgroundClip: "text",
@@ -110,7 +107,6 @@ const Story = () => {
               <h5
                 className=" bg-clip-text text-transparent text-2xl font-bold mb-3"
                 style={{
-                  fontSize: "24px",
                   background:
                     "linear-gradient(91.1deg, #26FEB2 -0.39%, #46FD3E 81.76%)",
                   WebkitBackgroundClip: "text",
@@ -132,7 +128,6 @@ const Story = () => {
           <div className="text-center">
             <h5
               style={{
-                fontSize: "24px",
                 background:
                   "linear-gradient(91.1deg, #26FEB2 -0.39%, #46FD3E 81.76%)",
                 WebkitBackgroundClip: "text",
@@ -242,7 +237,6 @@ const Story = () => {
           <div className="text-center">
             <h5
               style={{
-                fontSize: "24px",
                 background:
                   "linear-gradient(91.1deg, #26FEB2 -0.39%, #46FD3E 81.76%)",
                 WebkitBackgroundClip: "text",
