@@ -169,7 +169,9 @@ const Story = () => {
                   className="flex flex-col items-center text-center p-6 rounded-[14px] flex-shrink-0 min-w-[250px] max-w-[280px]"
                   style={{
                     background: "rgba(71, 71, 71, 0.17)",
-                    border: "1.2px solid rgba(255, 255, 255, 0.12)",
+                    // border: "1.2px solid rgba(255, 255, 255, 0.12)",
+                    backdropFilter: "blur(83px)",
+                    border: "1.2px solid #FFFFFF1F",
                   }}
                 >
                   <div className="mb-4">
@@ -249,7 +251,7 @@ const Story = () => {
           </div>
           <div className="w-full  px-4 sm:px-6 lg:px-8">
             <div
-              className="flex flex-col items-start text-center  p-6 rounded-[14px] h-full w-full gap-5"
+              className="flex flex-col items-start lg:text-center  p-6 rounded-[14px] h-full w-full gap-5"
               style={{ background: " rgba(71, 71, 71, 0.17)" }}
             >
               <svg
@@ -271,6 +273,7 @@ const Story = () => {
               </p>
               <p style={{ fontSize: "18px" }}>
                 <span className="text-accent">— Abhijeet Malve,</span>
+                <br />
                 Co-Founder, Sports Wizards
               </p>
             </div>

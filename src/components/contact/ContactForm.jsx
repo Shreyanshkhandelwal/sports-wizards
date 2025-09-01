@@ -451,7 +451,12 @@ const ContactForm = ({ onSuccess }) => {
           >
             <div>
               <div className="mb-8">
-                <h5 className="text-3xl font-bold mb-2">
+                <h5
+                  className="text-3xl font-bold mb-2"
+                  style={{
+                    fontSize: "21px",
+                  }}
+                >
                   LET'S <span className="text-accent">BUILD</span> SOMETHING
                   SPORTY TOGETHER.
                 </h5>
@@ -626,8 +631,9 @@ const ContactForm = ({ onSuccess }) => {
               type="submit"
               style={{
                 background: "linear-gradient(180deg, #26FEB2 0%, #46FD3E 100%)",
+                fontSize: "18px",
               }}
-              className="w-full text-[#0B0B0B] font-bold py-4 px-6 rounded-lg mt-6"
+              className="w-full text-[#0B0B0B] font-bold py-2 px-6 rounded-lg mt-6"
             >
               Submit
             </button>
@@ -647,26 +653,63 @@ const ContactForm = ({ onSuccess }) => {
               background: "linear-gradient(180deg, #26FEB2 0%, #46FD3E 100%)",
             }}
           >
-            <h5 className="text-2xl font-bold mb-6">Contact Info</h5>
+            <span
+              className="text-2xl font-bold mb-8"
+              style={{
+                fontSize: "18px",
+              }}
+            >
+              Contact Info
+            </span>
 
             <div className="space-y-4">
               <div className="flex items-start space-x-4">
-                <MdLocationOn className="w-6 h-6 flex-shrink-0 mt-0.5" />
-                <span className="font-semibold text-lg">
+                <MdLocationOn
+                  className="w-6 h-6 flex-shrink-0 mt-0.5"
+                  style={{
+                    fontSize: "16px",
+                  }}
+                />
+                <span
+                  className="font-semibold text-lg"
+                  style={{
+                    fontSize: "16px",
+                  }}
+                >
                   Mumbai | Pan-India Projects
                 </span>
               </div>
 
               <div className="flex items-start space-x-4">
-                <FaPhone className="w-6 h-6 flex-shrink-0 mt-0.5" />
-                <span className="font-semibold text-lg">
+                <FaPhone
+                  className="w-6 h-6 flex-shrink-0 mt-0.5"
+                  style={{
+                    fontSize: "16px",
+                  }}
+                />
+                <span
+                  className="font-semibold text-lg"
+                  style={{
+                    fontSize: "16px",
+                  }}
+                >
                   +91 8655819716 | +91 8779706509
                 </span>
               </div>
 
               <div className="flex items-start space-x-4">
-                <MdEmail className="w-6 h-6 flex-shrink-0 mt-0.5" />
-                <span className="font-semibold text-lg">
+                <MdEmail
+                  className="w-6 h-6 flex-shrink-0 mt-0.5"
+                  style={{
+                    fontSize: "16px",
+                  }}
+                />
+                <span
+                  className="font-semibold text-lg"
+                  style={{
+                    fontSize: "16px",
+                  }}
+                >
                   connect@sportswizards.in
                 </span>
               </div>

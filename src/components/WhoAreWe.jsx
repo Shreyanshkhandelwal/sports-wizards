@@ -70,13 +70,18 @@ const WhoAreWe = () => {
                 alt="Children playing soccer"
                 className="w-full h-auto object-cover rounded-lg shadow-2xl order-2 lg:order-1"
               />
-              <p className="w-full text-bg-foreground-secondary text-base md:text-lg leading-relaxed text-left order-1 lg:order-2 mb-8 lg:mb-0 lg:mt-6">
+              <span
+                style={{
+                  fontSize: "15px",
+                }}
+                className="w-full text-bg-foreground-secondary text-base md:text-lg leading-relaxed text-left order-1 lg:order-2 mb-8 lg:mb-0 lg:mt-6"
+              >
                 At Sports Wizards, we build the future of play—through sports
                 infra, structured coaching, high-impact events, and quality
                 equipment supply. Whether you're a school, residential society,
                 gymkhana, or corporate—we enable access to sports with
                 world-class execution.
-              </p>
+              </span>
             </div>
           </div>
         </div>

@@ -56,7 +56,12 @@ const ProjectCard = ({ imageUrl, title }) => (
     />
     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
     <div className="absolute bottom-0 left-0 p-4 md:p-6 text-white">
-      <h5 className="text-lg md:text-xl font-bold uppercase tracking-wide font-Race">
+      <h5
+        style={{
+          fontSize: "12px",
+        }}
+        className="text-lg md:text-xl font-bold uppercase tracking-wide font-Race"
+      >
         {title}
       </h5>
       {/* <p className="mt-2 text-xs md:text-sm text-gray-300 max-w-md leading-relaxed">
@@ -185,7 +190,7 @@ export default function FeaturedProjects() {
 
         <div className="block lg:hidden py-12">
           <div className="px-4">
-            <div className="text-center mb-8">
+            <div className=" mb-8">
               <div className="inline-block mb-4">
                 <h5
                   style={{

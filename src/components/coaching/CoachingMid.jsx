@@ -84,7 +84,7 @@ const CoachingMid = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left Side - Text */}
             <div className="space-y-6">
-              <span className="text-white font-bold text-[14px] lg:text-3xl leading-relaxed uppercase">
+              <span className="text-white font-bold text-[14px] lg:text-3xl leading-relaxed uppercase font-Race">
                 While our flagship program—
                 <span
                   style={{
@@ -129,7 +129,7 @@ const CoachingMid = () => {
               ].map((service, index) => (
                 <div
                   key={index}
-                  className=" rounded-xl p-6 flex flex-col items-center justify-center text-center "
+                  className=" rounded-xl p-6 flex flex-col items-center justify-center lg:text-center "
                   style={{ background: "rgba(75, 75, 75, 0.2)" }}
                 >
                   {service.icon}
@@ -158,7 +158,10 @@ const CoachingMid = () => {
 
             {/* Right Side - Text */}
             <div className="h-full flex flex-col items-start justify-between relative">
-              <p className="text-gray-300 text-lg leading-relaxed">
+              <span
+                className="text-gray-300 text-lg leading-relaxed"
+                style={{ fontSize: "15px" }}
+              >
                 Whether you need a seasonal coaching plan, tournament-ready
                 prep, or trainer{" "}
                 <span
@@ -198,13 +201,13 @@ const CoachingMid = () => {
                 talent identification, and holistic student well-being. From
                 daily sessions to parent engagement camps—our approach is
                 academic-friendly and outcome-driven.
-              </p>
+              </span>
 
               <button
                 style={{
                   background: "linear-gradient(90deg, #26FEB2 3%, #46FD3E 85%)",
                 }}
-                className="  text-black font-bold py-3 px-8 rounded-full text-lg shadow-lg hover:shadow-green-500/25 hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300"
+                className="mt-5 lg:mt-0 text-black font-bold py-3 px-8 rounded-full text-lg shadow-lg hover:shadow-green-500/25 hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300"
               >
                 Partner with Us
               </button>

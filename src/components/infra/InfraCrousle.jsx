@@ -2225,9 +2225,9 @@ const ImprovedCarousel = () => {
                             background:
                               "linear-gradient(91.1deg, #26FEB2 -0.39%, #46FD3E 81.76%)",
                           }}
-                          className="text-center build-button font-bold text-sm md:text-base py-2 px-5 md:py-3 md:px-6 rounded-full transition-transform hover:scale-105 text-black w-[95] lg:w-[88%]"
+                          className="text-center build-button font-bold text-sm md:text-base py-2 px-5 md:py-3 md:px-6 rounded-full transition-transform hover:scale-105 text-black w-full lg:w-[88%]"
                         >
-                          <span className="text-center text-[8px]">
+                          <span className="text-center text-[8px] w-full">
                             Build My Court Now
                           </span>
                         </a>

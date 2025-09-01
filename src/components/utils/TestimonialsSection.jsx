@@ -85,12 +85,18 @@ const testimonials = [
 ];
 
 const TestimonialCard = ({ quote, name, title }) => (
-  <div className="text-center p-4 h-full flex flex-col justify-center items-center w-full">
+  <div
+    className="lg:text-center p-4 h-full flex flex-col justify-center lg:items-center w-full"
+    style={{
+      fontSize: "15px",
+    }}
+  >
     <p className="text-bg-foreground-secondary italic text-lg md:text-xl mb-6">
       "{quote}"
     </p>
-    <div>
-      <h5 className="font-bold text-lg">{name}</h5>
+    <div className="">
+      <span className="font-bold text-lg">{name}</span>
+      <br />
       <span className="text-bg-foreground-secondary text-sm">{title}</span>
     </div>
   </div>

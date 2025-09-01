@@ -48,9 +48,14 @@ const ReuseHero = ({
         </h1>
 
         {paragraph && (
-          <p className="text-white mt-4 md:mt-6 text-base md:text-2xl">
+          <span
+            className="text-white mt-4 md:mt-6 text-base md:text-2xl"
+            style={{
+              fontSize: "15px",
+            }}
+          >
             {paragraph}
-          </p>
+          </span>
         )}
 
         <div className="mt-8">

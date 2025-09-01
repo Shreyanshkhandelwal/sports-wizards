@@ -7,8 +7,8 @@ const impactData = [
 ];
 
 const StatItem = ({ number, unit, description }) => (
-  <div className="text-center p-4">
-    <h2 className="text-5xl font-extrabold italic">
+  <div className="text-center p-4 ">
+    <h2 className="text-5xl font-extrabold italic font-Race ">
       {number}
       {unit && (
         <span className="text-3xl md:text-4xl font-semibold not-italic ml-2">
@@ -64,14 +64,14 @@ const ImpactSection = () => {
 
           <div className="hidden lg:grid grid-cols-3">
             {topRowData.map((item, index) => (
-              <div
+              <h5
                 key={index}
                 className={`relative pr-4 ${
                   index < topRowData.length - 1 ? "gradient-border-r" : ""
                 }`}
               >
                 <StatItem {...item} />
-              </div>
+              </h5>
             ))}
 
             <div className="col-span-3 grid grid-cols-2">

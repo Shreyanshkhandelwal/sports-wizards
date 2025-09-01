@@ -251,7 +251,7 @@ const EventsMid = () => {
                   background:
                     " linear-gradient(91.1deg, #26FEB2 -0.39%, #46FD3E 81.76%)",
                 }}
-                className="] text-black px-6 py-2 rounded-full font-bold mt-20 "
+                className="] text-black px-6 py-2 rounded-full font-bold lg:mt-20 "
               >
                 Plan my event
               </button>
@@ -311,7 +311,7 @@ const EventsMid = () => {
             {/* mobile layout */}
             <div className="flex lg:hidden flex-col">
               <h5
-                style={{ fontSize: "24px" }}
+                // style={{ fontSize: "24px" }}
                 className="text-accent text-base font-bold uppercase tracking-widest mb-6  underline-offset-8 decoration-green-500"
               >
                 Services Included:
@@ -383,9 +383,9 @@ const EventsMid = () => {
                 <img
                   src="/spotlight2.png"
                   alt="Spotlight"
-                  className="object-fill h-20"
+                  className="object-fill w-50 lg:h-20"
                 />
-                <span className="text-2xl md:text-3xl font-bold leading-tight text-white drop-shadow-lg">
+                <span className="text-xl md:text-3xl font-bold leading-tight text-white drop-shadow-lg">
                   Sports as Your{" "}
                   <span
                     className=""
@@ -404,21 +404,22 @@ const EventsMid = () => {
 
               {/* Text Section */}
               <div className="space-y-4 text-gray-300">
-                <p className="text-base inline-block">
-                  <p
+                <span className="text-base inline-block">
+                  <span
                     className="inline"
                     style={{
                       background:
                         "linear-gradient(180deg, #26FEB2 0%, #46FD3E 100%)",
                       WebkitBackgroundClip: "text",
                       WebkitTextFillColor: "transparent",
+                      fontSize: "16px",
                     }}
                   >
                     Courtside@Work{" "}
-                  </p>
+                  </span>
                   is our corporate sports engagement format designed to boost
                   team morale,{" "}
-                  <p
+                  <span
                     className="inline"
                     style={{
                       background:
@@ -428,9 +429,9 @@ const EventsMid = () => {
                     }}
                   >
                     health{" "}
-                  </p>
+                  </span>
                   , and{" "}
-                  <p
+                  <span
                     className="inline"
                     style={{
                       background:
@@ -440,21 +441,22 @@ const EventsMid = () => {
                     }}
                   >
                     culture
-                  </p>
+                  </span>
                   . We bring a pop-up Pickleball arena to your office or event
                   space with coaches, referees, gameplay formats, music, and
                   more.
-                </p>
+                </span>
               </div>
 
               {/* CTA Buttons */}
-              <div className="flex flex-col lg:flex-row gap-6">
+              <div className="flex flex-row gap-2 lg:gap-6">
                 <button
                   style={{
                     background:
                       "linear-gradient(90deg, #26FEB2 3%, #46FD3E 85%)",
+                    fontSize: "12px",
                   }}
-                  className=" text-black font-bold py-3 px-6 rounded-full text-sm shadow-lg hover:shadow-green-500/25 hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-2 max-w-[280px]"
+                  className=" text-black font-bold py-3 px-2 lg:px-6 rounded-full text-sm shadow-lg hover:shadow-green-500/25 hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-2 max-w-[280px]"
                 >
                   <FaDownload /> Download Program Deck
                 </button>

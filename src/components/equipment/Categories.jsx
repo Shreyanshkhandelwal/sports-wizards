@@ -246,7 +246,7 @@ const Categories = () => {
                     border: "1.2px solid rgba(255, 255, 255, 0.12)",
                   }}
                 >
-                  <h5 className="text-xl font-bold uppercase mb-2 text-accent">
+                  <h5 className="text-xl font-bold uppercase mb-2 ">
                     {item.head}
                   </h5>
                   <p className="text-base text-bg-foreground-secondary">
@@ -285,7 +285,7 @@ const Categories = () => {
                       border: "1.2px solid rgba(255, 255, 255, 0.12)",
                     }}
                   >
-                    <h5 className="text-xl font-bold uppercase mb-2 text-accent">
+                    <h5 className="text-xl font-bold uppercase mb-2 ">
                       {item.head}
                     </h5>
                     <p className="text-base text-bg-foreground-secondary">

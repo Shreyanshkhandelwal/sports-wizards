@@ -5,7 +5,7 @@ const Finance = () => {
   return (
     <section
       className="py-16 px-4 sm:px-6 lg:px-8 "
-      style={{ background: "rgba(255, 255, 255, 0.09)" }}
+      // style={{ background: "rgba(255, 255, 255, 0.09)" }}
     >
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-4">
@@ -26,7 +26,7 @@ const Finance = () => {
           {/* Left Side - Content */}
           <div className="space-y-6">
             <div className="space-y-4">
-              <h5 className=" text-3xl font-bold leading-tight">
+              <span className=" lg:text-3xl font-bold leading-tight">
                 Now Build with Confidence –{" "}
                 <span
                   className=""
@@ -39,11 +39,16 @@ const Finance = () => {
                 >
                   Financing Available{" "}
                 </span>
-              </h5>
+              </span>
             </div>
 
             <div className="space-y-4 text-gray-300">
-              <p className="text-base">
+              <span
+                className="text-base"
+                style={{
+                  fontSize: "15px",
+                }}
+              >
                 Building quality sports infrastructure can be{" "}
                 <span
                   className=""
@@ -71,7 +76,7 @@ const Finance = () => {
                 </span>{" "}
                 providers to help institutions, clubs, and individuals access
                 easy, scalable financing.
-              </p>
+              </span>
 
               <div className="space-y-3">
                 {[

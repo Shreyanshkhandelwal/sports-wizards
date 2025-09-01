@@ -48,12 +48,12 @@ const Hero = () => {
                 background:
                   "linear-gradient(91.1deg, #26FEB2 -0.39%, #46FD3E 81.76%)",
               }}
-              className=" font-bold  py-2 px-6 md:py-3 md:px-6 rounded-full transition-transform hover:scale-105 text-black"
+              className=" font-bold  py-2 px-3 md:py-3 md:px-6 rounded-full transition-transform hover:scale-105 text-black"
             >
-              <span style={{ fontSize: "139%" }}>Explore What We Do</span>
+              <span style={{ fontSize: "120%" }}>Explore What We Do</span>
             </button>
             <button className="bg-white text-black font-bold  py-2 px-6 md:py-3 md:px-6 rounded-full transition-transform hover:scale-105">
-              <span style={{ fontSize: "139%" }}>Enquire Now</span>
+              <span style={{ fontSize: "120%" }}>Enquire Now</span>
             </button>
           </div>
         </div>
