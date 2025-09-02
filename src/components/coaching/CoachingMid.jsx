@@ -19,6 +19,13 @@ import "swiper/css/pagination";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 
 const CoachingMid = () => {
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = `/coaching_Download.pdf`; // path to the file
+    link.download = "SchoolSide_Deck.pdf"; // the filename when downloaded
+    link.click();
+  };
+
   const testimonials = [
     {
       id: 1,
@@ -343,6 +350,7 @@ const CoachingMid = () => {
               </div>
 
               <button
+                onClick={handleDownload}
                 style={{
                   background: "linear-gradient(90deg, #26FEB2 3%, #46FD3E 85%)",
                 }}
