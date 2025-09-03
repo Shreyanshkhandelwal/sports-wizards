@@ -1,33 +1,338 @@
+// import { useRef, useState } from "react";
+// // import { MapPin, Phone, Mail, X } from "react-icons";
+// import { MdLocationOn, MdEmail } from "react-icons/md";
+// import { FaPhone } from "react-icons/fa";
+// import { IoClose } from "react-icons/io5";
+// import { CiCircleCheck } from "react-icons/ci";
+
+// const ContactForm = ({ onSuccess }) => {
+//   const [formData, setFormData] = useState({
+//     fullName: "",
+//     organizationName: "",
+//     city: "",
+//     phone: "",
+//     email: "",
+//     interests: [],
+//     message: "",
+//   });
+
+//   const formRef = useRef(null);
+
+//   const [showModal, setShowModal] = useState(false);
+//   const [showSuccess, setShowSuccess] = useState(false);
+//   const [modalData, setModalData] = useState({
+//     fullName: "",
+//     organizationName: "",
+//     designation: "",
+//     city: "",
+//     phone: "",
+//     email: "",
+//     interestedIn: [],
+//     howDidYouHear: "",
+//   });
+
+//   const handleInputChange = (e) => {
+//     const { name, value } = e.target;
+//     setFormData((prev) => ({
+//       ...prev,
+//       [name]: value,
+//     }));
+//   };
+
+//   const handleModalInputChange = (e) => {
+//     const { name, value } = e.target;
+//     setModalData((prev) => ({
+//       ...prev,
+//       [name]: value,
+//     }));
+//   };
+
+//   const handleInterestChange = (interest) => {
+//     setFormData((prev) => ({
+//       ...prev,
+//       interests: [interest],
+//     }));
+//   };
+
+//   const handleModalInterestChange = (interest) => {
+//     setModalData((prev) => ({
+//       ...prev,
+//       interestedIn: prev.interestedIn.includes(interest)
+//         ? prev.interestedIn.filter((i) => i !== interest)
+//         : [...prev.interestedIn, interest],
+//     }));
+//   };
+
+//   const handleSubmit = () => {
+//     console.log("Form submitted:", formData);
+//     if (onSuccess) {
+//       onSuccess(); // Trigger the parent’s success modal
+//     }
+//   };
+
+//   const handleModalSubmit = () => {
+//     console.log("Modal form submitted:", modalData);
+//     setShowModal(false);
+//     setShowSuccess(true);
+//     // Reset modal form
+//     setModalData({
+//       fullName: "",
+//       organizationName: "",
+//       designation: "",
+//       city: "",
+//       phone: "",
+//       email: "",
+//       interestedIn: [],
+//       howDidYouHear: "",
+//     });
+//   };
+
+//   const closeModal = () => {
+//     setShowModal(false);
+//   };
+
+//   const closeSuccess = () => {
+//     setShowSuccess(false);
+//   };
+
+//   return (
+//     <div className="min-h-screen bg-[#0B0B0B] text-[#F2F2F2] p-6">
+//       <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-8 items-stretch">
+//         {/* Form Section */}
+//         <div className="bg-[#161616] rounded-2xl p-8 border border-[#2C2C2C] flex flex-col justify-between">
+//           <form
+//             ref={formRef}
+//             onSubmit={(e) => {
+//               e.preventDefault();
+
+//               if (!formData.interests[0]) {
+//                 alert("Please select at least one interest.");
+//                 return;
+//               }
+
+//               if (!formRef.current.checkValidity()) {
+//                 formRef.current.reportValidity();
+//                 return;
+//               }
+
+//               handleSubmit();
+//             }}
+//           >
+//             <div>
+//               <div className="mb-8">
+//                 <h1 className="text-3xl font-bold mb-2">
+//                   LET'S <span className="text-accent">BUILD</span> SOMETHING
+//                   SPORTY TOGETHER.
+//                 </h1>
+//               </div>
+
+//               <div className="space-y-6">
+//                 {/* Full Name */}
+//                 <div>
+//                   <label className="block text-sm font-medium mb-2">
+//                     Full Name
+//                   </label>
+//                   <input
+//                     type="text"
+//                     name="fullName"
+//                     required={true}
+//                     value={formData.fullName}
+//                     onChange={handleInputChange}
+//                     placeholder="Enter Full Name"
+//                     className="w-full bg-[#2C2C2C] border border-[#2C2C2C] rounded-lg px-4 py-3 text-[#F2F2F2] placeholder-[#B0B0B0] focus:outline-none focus:ring-2 focus:ring-[#00FF01] focus:border-transparent"
+//                   />
+//                 </div>
+
+//                 {/* Organization Name */}
+//                 <div>
+//                   <label className="block text-sm font-medium mb-2">
+//                     Organization Name
+//                   </label>
+//                   <input
+//                     type="text"
+//                     required={true}
+//                     name="organizationName"
+//                     value={formData.organizationName}
+//                     onChange={handleInputChange}
+//                     placeholder="Enter Organization Name"
+//                     className="w-full bg-[#2C2C2C] border border-[#2C2C2C] rounded-lg px-4 py-3 text-[#F2F2F2] placeholder-[#B0B0B0] focus:outline-none focus:ring-2 focus:ring-[#00FF01] focus:border-transparent"
+//                   />
+//                 </div>
+
+//                 {/* City and Phone */}
+//                 <div className="grid md:grid-cols-2 gap-4">
+//                   <div>
+//                     <label className="block text-sm font-medium mb-2 text-[#F2F2F2]">
+//                       City
+//                     </label>
+//                     <select
+//                       required={true}
+//                       name="city"
+//                       value={modalData.city}
+//                       onChange={handleModalInputChange}
+//                       className="w-full bg-[#2C2C2C] border border-[#2C2C2C] rounded-lg px-4 py-3 text-[#F2F2F2] focus:outline-none focus:ring-2 focus:ring-[#00FF01] focus:border-transparent"
+//                     >
+//                       <option value="">Select City</option>
+//                       <option value="Mumbai">Mumbai</option>
+//                       <option value="Delhi">Delhi</option>
+//                       <option value="Bangalore">Bangalore</option>
+//                       <option value="Chennai">Chennai</option>
+//                       <option value="Kolkata">Kolkata</option>
+//                       <option value="Pune">Pune</option>
+//                       <option value="Other">Other</option>
+//                     </select>
+//                   </div>
+//                   <div>
+//                     <label className="block text-sm font-medium mb-2">
+//                       Phone
+//                     </label>
+//                     <input
+//                       required={true}
+//                       type="tel"
+//                       name="phone"
+//                       value={formData.phone}
+//                       onChange={handleInputChange}
+//                       placeholder="Enter Phone Number"
+//                       className="w-full bg-[#2C2C2C] border border-[#2C2C2C] rounded-lg px-4 py-3 text-[#F2F2F2] placeholder-[#B0B0B0] focus:outline-none focus:ring-2 focus:ring-[#00FF01] focus:border-transparent"
+//                     />
+//                   </div>
+//                 </div>
+
+//                 {/* Email */}
+//                 <div>
+//                   <label className="block text-sm font-medium mb-2">
+//                     Email ID
+//                   </label>
+//                   <input
+//                     required={true}
+//                     type="email"
+//                     name="email"
+//                     value={formData.email}
+//                     onChange={handleInputChange}
+//                     placeholder="Enter Email ID"
+//                     className="w-full bg-[#2C2C2C] border border-[#2C2C2C] rounded-lg px-4 py-3 text-[#F2F2F2] placeholder-[#B0B0B0] focus:outline-none focus:ring-2 focus:ring-[#00FF01] focus:border-transparent"
+//                   />
+//                 </div>
+
+//                 {/* Interests */}
+//                 <div>
+//                   <label className="block text-sm font-medium mb-3">
+//                     Interested In:
+//                   </label>
+//                   <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+//                     {[
+//                       "Coaching",
+//                       "Infra",
+//                       "Events",
+//                       "Merchandise",
+//                       "Other",
+//                     ].map((interest) => (
+//                       <button
+//                         key={interest}
+//                         type="button"
+//                         onClick={() => handleInterestChange(interest)}
+//                         className={`px-4 py-2 rounded-lg border transition-all duration-200 ${
+//                           formData.interests[0] === interest
+//                             ? "bg-[#00FF01] text-[#0B0B0B] border-[#00FF01] font-semibold"
+//                             : "bg-[#2C2C2C] text-[#F2F2F2] border-[#2C2C2C] hover:border-[#00FF01]"
+//                         }`}
+//                       >
+//                         {interest}
+//                       </button>
+//                     ))}
+//                     <input
+//                       type="text"
+//                       name="interest"
+//                       value={formData.interests[0] || ""}
+//                       required
+//                       hidden
+//                       readOnly
+//                     />
+//                   </div>
+//                 </div>
+
+//                 {/* Message */}
+//                 <div>
+//                   <label className="block text-sm font-medium mb-2">
+//                     Message
+//                   </label>
+//                   <textarea
+//                     name="message"
+//                     value={formData.message}
+//                     onChange={handleInputChange}
+//                     placeholder="Tell us about your project"
+//                     rows={4}
+//                     className="w-full bg-[#2C2C2C] border border-[#2C2C2C] rounded-lg px-4 py-3 text-[#F2F2F2] placeholder-[#B0B0B0] focus:outline-none focus:ring-2 focus:ring-[#00FF01] focus:border-transparent resize-none"
+//                   />
+//                 </div>
+//               </div>
+//             </div>
+
+//             {/* Submit Button */}
+//             <button
+//               type="submit"
+//               // onClick={handleSubmit}
+//               style={{
+//                 background: "linear-gradient(180deg, #26FEB2 0%, #46FD3E 100%)",
+//               }}
+//               className="w-full  hover:opacity-90 text-[#0B0B0B] font-bold py-4 px-6 rounded-lg transition-all duration-200 transform hover:scale-[1.02] mt-6"
+//             >
+//               Submit
+//             </button>
+//           </form>
+//         </div>
+
+//         {/* Right Side Content */}
+//         <div className="space-y-6 flex flex-col">
+//           {/* Tennis Court Image Placeholder */}
+//           <div className="flex-1 min-h-[300px] lg:min-h-0 relative rounded-2xl overflow-hidden bg-gradient-to-br from-green-400 to-blue-500 flex items-center justify-center">
+//             <img src="/contact_form.jpg" className="object-cover h-full" />
+//           </div>
+
+//           {/* Contact Info */}
+//           <div
+//             className="rounded-2xl p-6 text-[#0B0B0B]"
+//             style={{
+//               background: "linear-gradient(180deg, #26FEB2 0%, #46FD3E 100%)",
+//             }}
+//           >
+//             <h3 className="text-2xl font-bold mb-6">Contact Info</h3>
+
+//             <div className="space-y-4">
+//               <div className="flex items-start space-x-4">
+//                 <MdLocationOn className="w-6 h-6 flex-shrink-0 mt-0.5" />
+//                 <span className="font-semibold text-lg">
+//                   Mumbai | Pan-India Projects
+//                 </span>
+//               </div>
+
+//               <div className="flex items-start space-x-4">
+//                 <FaPhone className="w-6 h-6 flex-shrink-0 mt-0.5" />
+//                 <span className="font-semibold text-lg">
+//                   +91 8655819716 | +91 8779706509
+//                 </span>
+//               </div>
+
+//               <div className="flex items-start space-x-4">
+//                 <MdEmail className="w-6 h-6 flex-shrink-0 mt-0.5" />
+//                 <span className="font-semibold text-lg">
+//                   connect@sportswizards.in
+//                 </span>
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default ContactForm;
+
 import { useRef, useState, useEffect } from "react";
+import { MdLocationOn, MdEmail } from "react-icons/md";
+import { FaPhone } from "react-icons/fa";
 
-// SVG Icon Components to replace react-icons
-const MdLocationOn = (props) => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" {...props}>
-    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
-  </svg>
-);
-
-const MdEmail = (props) => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" {...props}>
-    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
-  </svg>
-);
-
-const FaPhone = (props) => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" {...props}>
-    <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.02.74-.25 1.02l-2.2 2.2z" />
-  </svg>
-);
-
-const CheckCircleIcon = (props) => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
-        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-        <polyline points="22 4 12 14.01 9 11.01"></polyline>
-    </svg>
-);
-
-
-// Replace with your LocationIQ API Key if you have one
 const LOCATIONIQ_API_KEY = "pk.7ecbf6c9de4b96b9d9aa1f935f1b2f3e";
 
 const ContactForm = ({ onSuccess }) => {
@@ -42,15 +347,14 @@ const ContactForm = ({ onSuccess }) => {
   });
 
   const formRef = useRef(null);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
 
   // State for city autocomplete
   const [cityQuery, setCityQuery] = useState("");
   const [citySuggestions, setCitySuggestions] = useState([]);
+  const [loadingCities, setLoadingCities] = useState(false);
   const [typingTimeout, setTypingTimeout] = useState(null);
 
-  // Debounced fetch to LocationIQ for city autocomplete
+  // 🔹 Debounced fetch to LocationIQ
   useEffect(() => {
     if (cityQuery.length < 2) {
       setCitySuggestions([]);
@@ -61,6 +365,8 @@ const ContactForm = ({ onSuccess }) => {
 
     const timeout = setTimeout(async () => {
       try {
+        setLoadingCities(true);
+
         const url = `https://api.locationiq.com/v1/autocomplete?q=${encodeURIComponent(
           cityQuery
         )}&countrycodes=in&tag=place%3Acity&key=${LOCATIONIQ_API_KEY}`;
@@ -80,8 +386,10 @@ const ContactForm = ({ onSuccess }) => {
       } catch (err) {
         console.error("Error fetching cities:", err);
         setCitySuggestions([]);
+      } finally {
+        setLoadingCities(false);
       }
-    }, 1000); // Wait 1s after typing stops
+    }, 2000); // wait 2s after typing stops
 
     setTypingTimeout(timeout);
   }, [cityQuery]);
@@ -111,78 +419,10 @@ const ContactForm = ({ onSuccess }) => {
     }));
   };
 
-  //  Submission handler to post data to Google Forms
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    if (!formData.interests[0]) {
-      // Replaced alert with a custom message box logic if available, for now, it's console.error
-      console.error("Please select at least one interest.");
-      setIsSubmitting(false);
-      return;
-    }
-
-    if (!formRef.current.checkValidity()) {
-      formRef.current.reportValidity();
-      setIsSubmitting(false);
-      return;
-    }
-    
-    // 1. Google Form Details
-    const GOOGLE_FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLScC18b-G0mBf-k1E4r3w7yQ8zX9J6vP5fF7oN0wK1aL9jR0g/formResponse';
-    const fieldMapping = {
-      fullName: 'entry.198253134',
-      organizationName: 'entry.1480190369',
-      city: 'entry.1011537204',
-      phone: 'entry.1091569941',
-      email: 'entry.1228551469',
-      interest: 'entry.184347493',
-      message: 'entry.104044548',
-    };
-
-    // 2. Create a FormData object to send the data
-    const formDataToSubmit = new FormData();
-    formDataToSubmit.append(fieldMapping.fullName, formData.fullName);
-    formDataToSubmit.append(fieldMapping.organizationName, formData.organizationName);
-    formDataToSubmit.append(fieldMapping.city, formData.city);
-    formDataToSubmit.append(fieldMapping.phone, formData.phone);
-    formDataToSubmit.append(fieldMapping.email, formData.email);
-    formDataToSubmit.append(fieldMapping.interest, formData.interests[0]);
-    formDataToSubmit.append(fieldMapping.message, formData.message);
-
-    try {
-      // 3. Send the data to Google Forms
-      await fetch(GOOGLE_FORM_URL, {
-        method: 'POST',
-        body: formDataToSubmit,
-        mode: 'no-cors', // 'no-cors' is important to avoid CORS errors
-      });
-
-      // 4. Handle successful submission
-      setShowSuccessMessage(true);
-      setTimeout(() => setShowSuccessMessage(false), 5000); // Hide after 5 seconds
-      
-      if (onSuccess) {
-        onSuccess();
-      }
-      // Reset form fields
-      setFormData({
-        fullName: "",
-        organizationName: "",
-        city: "",
-        phone: "",
-        email: "",
-        interests: [],
-        message: "",
-      });
-      setCityQuery("");
-
-    } catch (error) {
-      console.error("Error submitting form:", error);
-      // Replaced alert with a custom message box logic if available
-    } finally {
-        setIsSubmitting(false);
+  const handleSubmit = () => {
+    console.log("Form submitted:", formData);
+    if (onSuccess) {
+      onSuccess();
     }
   };
 
@@ -191,52 +431,51 @@ const ContactForm = ({ onSuccess }) => {
       className="min-h-screen bg-[#0B0B0B] text-[#F2F2F2] p-6"
       style={{
         borderBottom: "1px solid",
-        borderImageSource: "linear-gradient(90deg, #000000 0%, #00FF01 49.05%, #000000 100%)",
+        borderImageSource:
+          "linear-gradient(90deg, #000000 0%, #00FF01 49.05%, #000000 100%)",
         borderImageSlice: 1,
       }}
     >
-        <style>{`
-            @keyframes scale-in {
-                0% { transform: scale(0.9); opacity: 0; }
-                100% { transform: scale(1); opacity: 1; }
-            }
-            .animate-scale-in {
-                animation: scale-in 0.3s ease-out forwards;
-            }
-        `}</style>
-      {/* Success Message Modal */}
-        {showSuccessMessage && (
-            <div className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 p-4">
-                <div className="bg-[#161616] text-center rounded-2xl p-8 border-2 border-[#00FF01] shadow-lg max-w-sm mx-auto animate-scale-in">
-                    <CheckCircleIcon className="w-16 h-16 text-[#00FF01] mx-auto mb-4" />
-                    <h3 className="text-2xl font-bold text-white mb-2">Submitted!</h3>
-                    <p className="text-[#B0B0B0] mb-6">Your form has been submitted successfully. We will get in touch with you shortly.</p>
-                    <button
-                        onClick={() => setShowSuccessMessage(false)}
-                        style={{ background: "linear-gradient(180deg, #26FEB2 0%, #46FD3E 100%)" }}
-                        className="text-[#0B0B0B] font-bold py-2 px-8 rounded-lg transition-transform transform hover:scale-105"
-                    >
-                        OK
-                    </button>
-                </div>
-            </div>
-        )}
-
-
       <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-8 items-stretch">
         {/* Form Section */}
         <div className="bg-[#161616] rounded-2xl p-8 border border-[#2C2C2C] flex flex-col justify-between">
-          <form ref={formRef} onSubmit={handleSubmit}>
+          <form
+            ref={formRef}
+            onSubmit={(e) => {
+              e.preventDefault();
+
+              if (!formData.interests[0]) {
+                alert("Please select at least one interest.");
+                return;
+              }
+
+              if (!formRef.current.checkValidity()) {
+                formRef.current.reportValidity();
+                return;
+              }
+
+              handleSubmit();
+            }}
+          >
             <div>
               <div className="mb-8">
-                <h5 className="text-3xl font-bold mb-2" style={{ fontSize: "21px" }}>
-                  LET'S <span className="text-accent" style={{color: '#00FF01'}}>BUILD</span> SOMETHING SPORTY TOGETHER.
+                <h5
+                  className="text-3xl font-bold mb-2"
+                  style={{
+                    fontSize: "21px",
+                  }}
+                >
+                  LET'S <span className="text-accent">BUILD</span> SOMETHING
+                  SPORTY TOGETHER.
                 </h5>
               </div>
+
               <div className="space-y-6">
                 {/* Full Name */}
                 <div>
-                  <label className="block text-sm font-medium mb-2">Full Name</label>
+                  <label className="block text-sm font-medium mb-2">
+                    Full Name
+                  </label>
                   <input
                     type="text"
                     name="fullName"
@@ -247,9 +486,12 @@ const ContactForm = ({ onSuccess }) => {
                     className="w-full bg-[#2C2C2C] rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#00FF01]"
                   />
                 </div>
+
                 {/* Organization Name */}
                 <div>
-                  <label className="block text-sm font-medium mb-2">Organization Name</label>
+                  <label className="block text-sm font-medium mb-2">
+                    Organization Name
+                  </label>
                   <input
                     type="text"
                     name="organizationName"
@@ -260,10 +502,13 @@ const ContactForm = ({ onSuccess }) => {
                     className="w-full bg-[#2C2C2C] rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#00FF01]"
                   />
                 </div>
+
                 {/* City and Phone */}
                 <div className="grid md:grid-cols-2 gap-4">
                   <div className="relative">
-                    <label className="block text-sm font-medium mb-2">City</label>
+                    <label className="block text-sm font-medium mb-2">
+                      City
+                    </label>
                     <input
                       type="text"
                       name="city"
@@ -271,7 +516,6 @@ const ContactForm = ({ onSuccess }) => {
                       value={cityQuery}
                       onChange={handleInputChange}
                       placeholder="Start typing a city"
-                      autoComplete="off"
                       className="w-full bg-[#2C2C2C] rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#00FF01]"
                     />
                     {/* Suggestions dropdown */}
@@ -286,11 +530,28 @@ const ContactForm = ({ onSuccess }) => {
                             {city}
                           </li>
                         ))}
+                        <li className="px-4 py-2 text-xs text-gray-400 border-t border-[#333]">
+                          Powered by{" "}
+                          <a
+                            href="https://locationiq.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <img
+                              src="https://locationiq.com/assets/images/logos/LocationIQ-logo.png"
+                              alt="LocationIQ"
+                              className="inline h-4 ml-1"
+                            />
+                          </a>
+                        </li>
                       </ul>
                     )}
                   </div>
+
                   <div>
-                    <label className="block text-sm font-medium mb-2">Phone</label>
+                    <label className="block text-sm font-medium mb-2">
+                      Phone
+                    </label>
                     <input
                       type="tel"
                       name="phone"
@@ -302,9 +563,12 @@ const ContactForm = ({ onSuccess }) => {
                     />
                   </div>
                 </div>
+
                 {/* Email */}
                 <div>
-                  <label className="block text-sm font-medium mb-2">Email</label>
+                  <label className="block text-sm font-medium mb-2">
+                    Email
+                  </label>
                   <input
                     type="email"
                     name="email"
@@ -315,16 +579,25 @@ const ContactForm = ({ onSuccess }) => {
                     className="w-full bg-[#2C2C2C] rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#00FF01]"
                   />
                 </div>
+
                 {/* Interests */}
                 <div>
-                  <label className="block text-sm font-medium mb-3">Interested In:</label>
+                  <label className="block text-sm font-medium mb-3">
+                    Interested In:
+                  </label>
                   <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-                    {["Coaching", "Infra", "Events", "Merchandise", "Other"].map((interest) => (
+                    {[
+                      "Coaching",
+                      "Infra",
+                      "Events",
+                      "Merchandise",
+                      "Other",
+                    ].map((interest) => (
                       <button
                         key={interest}
                         type="button"
                         onClick={() => handleInterestChange(interest)}
-                        className={`px-4 py-2 rounded-lg border transition-all duration-200 ${
+                        className={`px-4 py-2 rounded-lg border ${
                           formData.interests[0] === interest
                             ? "bg-[#00FF01] text-[#0B0B0B] border-[#00FF01] font-semibold"
                             : "bg-[#2C2C2C] text-[#F2F2F2] border-[#2C2C2C] hover:border-[#00FF01]"
@@ -333,12 +606,22 @@ const ContactForm = ({ onSuccess }) => {
                         {interest}
                       </button>
                     ))}
-                    <input type="text" value={formData.interests[0] || ""} required hidden readOnly name="interest-validation"/>
+                    <input
+                      type="text"
+                      name="interest"
+                      value={formData.interests[0] || ""}
+                      required
+                      hidden
+                      readOnly
+                    />
                   </div>
                 </div>
+
                 {/* Message */}
                 <div>
-                  <label className="block text-sm font-medium mb-2">Message</label>
+                  <label className="block text-sm font-medium mb-2">
+                    Message
+                  </label>
                   <textarea
                     name="message"
                     value={formData.message}
@@ -350,48 +633,91 @@ const ContactForm = ({ onSuccess }) => {
                 </div>
               </div>
             </div>
+
             {/* Submit Button */}
             <button
               type="submit"
-              disabled={isSubmitting}
               style={{
                 background: "linear-gradient(180deg, #26FEB2 0%, #46FD3E 100%)",
                 fontSize: "18px",
               }}
-              className="w-full text-[#0B0B0B] font-bold py-2 px-6 rounded-lg mt-6 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full text-[#0B0B0B] font-bold py-2 px-6 rounded-lg mt-6"
             >
-              {isSubmitting ? 'Submitting...' : 'Submit'}
+              Submit
             </button>
           </form>
         </div>
+
         {/* Right Side Content */}
         <div className="space-y-6 flex flex-col">
           <div className="flex-1 min-h-[300px] lg:min-h-0 relative rounded-2xl overflow-hidden bg-gradient-to-br from-green-400 to-blue-500 flex items-center justify-center">
-            <img src="https://placehold.co/600x400/0B0B0B/26FEB2?text=Sporty+Together" className="object-cover h-full w-full" alt="Contact form visual" />
+            <img src="/contact_form.jpg" className="object-cover h-full" />
           </div>
+
+          {/* Contact Info */}
           <div
             className="rounded-2xl p-6 text-[#0B0B0B]"
-            style={{ background: "linear-gradient(180deg, #26FEB2 0%, #46FD3E 100%)" }}
+            style={{
+              background: "linear-gradient(180deg, #26FEB2 0%, #46FD3E 100%)",
+            }}
           >
-            <span className="text-2xl font-bold mb-8" style={{ fontSize: "18px" }}>
+            <span
+              className="text-2xl font-bold mb-8"
+              style={{
+                fontSize: "18px",
+              }}
+            >
               Contact Info
             </span>
-            <div className="space-y-4 mt-4">
+
+            <div className="space-y-4">
               <div className="flex items-start space-x-4">
-                <MdLocationOn className="w-6 h-6 flex-shrink-0 mt-0.5" />
-                <span className="font-semibold text-lg" style={{ fontSize: "14px" }}>
+                <MdLocationOn
+                  className="w-6 h-6 flex-shrink-0 mt-0.5"
+                  style={{
+                    fontSize: "14px",
+                  }}
+                />
+                <span
+                  className="font-semibold text-lg"
+                  style={{
+                    fontSize: "14px",
+                  }}
+                >
                   Mumbai | Pan-India Projects
                 </span>
               </div>
+
               <div className="flex items-start space-x-4">
-                <FaPhone className="w-6 h-6 flex-shrink-0 mt-0.5" />
-                <span className="font-semibold text-lg" style={{ fontSize: "14px" }}>
+                <FaPhone
+                  className="w-6 h-6 flex-shrink-0 mt-0.5"
+                  style={{
+                    fontSize: "14px",
+                  }}
+                />
+                <span
+                  className="font-semibold text-lg"
+                  style={{
+                    fontSize: "14px",
+                  }}
+                >
                   +91 8655819716 | +91 8779706509
                 </span>
               </div>
+
               <div className="flex items-start space-x-4">
-                <MdEmail className="w-6 h-6 flex-shrink-0 mt-0.5" />
-                <span className="font-semibold text-lg" style={{ fontSize: "14px" }}>
+                <MdEmail
+                  className="w-6 h-6 flex-shrink-0 mt-0.5"
+                  style={{
+                    fontSize: "14px",
+                  }}
+                />
+                <span
+                  className="font-semibold text-lg"
+                  style={{
+                    fontSize: "14px",
+                  }}
+                >
                   connect@sportswizards.in
                 </span>
               </div>
@@ -404,4 +730,3 @@ const ContactForm = ({ onSuccess }) => {
 };
 
 export default ContactForm;
-
