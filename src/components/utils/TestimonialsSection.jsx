@@ -86,7 +86,8 @@ const testimonials = [
 
 const TestimonialCard = ({ quote, name, title }) => (
   <div
-    className="lg:text-center p-4 h-full flex flex-col justify-center lg:items-center w-full"
+    // UPDATED THIS LINE FOR LEFT ALIGNMENT ON LARGE SCREENS
+    className="lg:text-left p-4 h-full flex flex-col justify-center lg:items-start w-full"
     style={{
       fontSize: "15px",
     }}
@@ -178,7 +179,7 @@ const TestimonialsSection = () => {
             </span>
           ) : (
             <h5 className="font-bold text-3xl md:text-4xl mt-4 tracking-wider uppercase block">
-              headingText
+              What our Partners Say
             </h5>
           )}
         </div>
