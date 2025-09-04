@@ -39,6 +39,7 @@ const Coaching = () => {
           paragraph="Certified coaches, holistic curriculum, and NEP-aligned coaching across schools, societies, clubs, and associations."
           primaryButtonText="Partner with Us"
           backgroundImage="/coaching.jpeg"
+          primaryBtnClick="/coaching#coaching-head"
         />
         <div className="relative z-50 mt-4">
           <LogoRibbon />

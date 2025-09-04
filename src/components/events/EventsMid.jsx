@@ -28,8 +28,10 @@ import { CgGym } from "react-icons/cg";
 import { GiWhistle } from "react-icons/gi";
 import { HiDocument } from "react-icons/hi";
 import { BiPhone } from "react-icons/bi";
+import { useNavigate } from "react-router-dom";
 
 const EventsMid = ({ onDownloadClick }) => {
+  const navigate = useNavigate();
   const handleDownload = () => {
     const link = document.createElement("a");
     link.href = `/Events_download.pdf`; // path to the file
@@ -141,7 +143,7 @@ const EventsMid = ({ onDownloadClick }) => {
   return (
     <div className="bg-black text-white min-h-screen">
       {/* What We Offer Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 px-4 sm:px-6 lg:px-8" id="events-head">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h5
@@ -209,6 +211,7 @@ const EventsMid = ({ onDownloadClick }) => {
 
           {/* CTA Section */}
           <div
+            id="events-services-explore"
             className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mt-16 min-h-[500px] "
             style={{
               borderBottom: "1px solid",
@@ -263,6 +266,7 @@ const EventsMid = ({ onDownloadClick }) => {
                 experiences—end-to-end.
               </h5>
               <button
+                onClick={() => navigate("/contact#contact-head")}
                 style={{
                   background:
                     " linear-gradient(91.1deg, #26FEB2 -0.39%, #46FD3E 81.76%)",
@@ -477,7 +481,10 @@ const EventsMid = ({ onDownloadClick }) => {
                 >
                   <FaDownload /> Download Deck
                 </button>
-                <button className="bg-white text-black font-bold py-3 px-6 rounded-full text-sm shadow-lg hover:shadow-green-500/25 hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-2 max-w-[180px]">
+                <button
+                  onClick={() => navigate("/contact#contact-head")}
+                  className="bg-white text-black font-bold py-3 px-6 rounded-full text-sm shadow-lg hover:shadow-green-500/25 hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-2 max-w-[180px]"
+                >
                   <BiPhone /> Book A Call
                 </button>
               </div>
@@ -627,6 +634,7 @@ const EventsMid = ({ onDownloadClick }) => {
             }}
           >
             <button
+              onClick={() => navigate("/#featured-projects")}
               style={{
                 background: " linear-gradient(90deg, #26FEB2 3%, #46FD3E 85%)",
               }}

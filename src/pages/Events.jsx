@@ -40,6 +40,7 @@ const Events = () => {
           paragraph="We execute all types of sports events for corporates, schools, associations, clubs & communities."
           primaryButtonText="Plan my event"
           backgroundImage="/infra.jpg"
+          primaryBtnClick="/events#events-head"
         />
         <div className="relative z-50 mt-4">
           <LogoRibbon />

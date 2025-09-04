@@ -36,6 +36,7 @@ const About = () => {
           paragraph="We’re creating structured, inclusive and accessible sports experiences—through coaching, infrastructure, events, and innovation."
           primaryButtonText="Scroll to Discover"
           backgroundImage="/about_com.jpeg"
+          primaryBtnClick="/about#about-head"
         />
         <div className="relative z-50 mt-4">
           <LogoRibbon />

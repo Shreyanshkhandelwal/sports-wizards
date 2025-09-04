@@ -4,7 +4,10 @@ const Story = () => {
   return (
     <>
       {/* story */}
-      <section className="flex flex-col items-center justify-center py-12 px-4 sm:px-6 lg:px-8 mt-10">
+      <section
+        className="flex flex-col items-center justify-center py-12 px-4 sm:px-6 lg:px-8 mt-10"
+        id="about-head"
+      >
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
             <h5

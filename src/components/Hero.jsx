@@ -46,6 +46,7 @@ const Hero = () => {
           </h1>
           <div className="flex flex-row items-center gap-3 md:gap-4 mt-8">
             <button
+              onClick={() => navigate("/events#events-services-explore")}
               style={{
                 background:
                   "linear-gradient(91.1deg, #26FEB2 -0.39%, #46FD3E 81.76%)",
@@ -54,7 +55,10 @@ const Hero = () => {
             >
               <span style={{ fontSize: "120%" }}>Explore What We Do</span>
             </button>
-            <button className="bg-white text-black font-bold  py-2 px-6 md:py-3 md:px-6 rounded-full transition-transform hover:scale-105">
+            <button
+              onClick={() => navigate("/contact#contact-head")}
+              className="bg-white text-black font-bold  py-2 px-6 md:py-3 md:px-6 rounded-full transition-transform hover:scale-105"
+            >
               <span style={{ fontSize: "120%" }}>Enquire Now</span>
             </button>
           </div>
@@ -109,7 +113,7 @@ const Hero = () => {
           </h1>
           <div className="flex flex-row items-center justify-start gap-5 mt-36">
             <button
-              onClick={() => navigate("/about")}
+              onClick={() => navigate("/events#events-services-explore")}
               style={{
                 background:
                   "linear-gradient(91.1deg, #26FEB2 -0.39%, #46FD3E 81.76%)",
@@ -124,7 +128,10 @@ const Hero = () => {
                 Explore What We Do
               </span>
             </button>
-            <button className="bg-white text-black font-semibold text-base py-2 px-6 rounded-full transition-transform hover:scale-105 z-[999]">
+            <button
+              onClick={() => navigate("/contact#contact-head")}
+              className="bg-white text-black font-semibold text-base py-2 px-6 rounded-full transition-transform hover:scale-105 z-[999]"
+            >
               <span
                 style={{
                   fontSize: "20px",

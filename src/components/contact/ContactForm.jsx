@@ -307,7 +307,10 @@ const ContactForm = () => {
         </div>
       )}
 
-      <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-8 items-stretch">
+      <div
+        className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-8 items-stretch"
+        id="contact-head"
+      >
         {/* Form Section */}
         <div className="bg-[#161616] rounded-2xl p-8 border border-[#2C2C2C] flex flex-col justify-between">
           <form ref={formRef} onSubmit={handleSubmit} noValidate>

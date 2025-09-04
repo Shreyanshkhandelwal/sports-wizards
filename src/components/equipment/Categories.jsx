@@ -3,8 +3,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
+import { useNavigate } from "react-router-dom";
 
 const Categories = () => {
+  const navigate = useNavigate();
   const products = [
     { img: "/e1.jpeg", text: "Basketball Hoops & Poles " },
     { img: "/e2.jpeg", text: "Pickleball Nets & Paddles" },
@@ -16,6 +18,7 @@ const Categories = () => {
     <>
       {/* sets apart */}
       <section
+        id="equipment-head"
         className="flex flex-col items-center justify-center py-12 px-4 sm:px-6 lg:px-8 mt-10"
         style={{
           borderBottom: "1px solid",
@@ -75,7 +78,7 @@ const Categories = () => {
                       {item.text}
                     </span>
                     <a
-                      href="#"
+                      href="/contact#contact-head"
                       style={{
                         background:
                           "linear-gradient(180deg, #26FEB2 0%, #46FD3E 100%)",
@@ -123,7 +126,7 @@ const Categories = () => {
                   {item.text}
                 </span>
                 <a
-                  href="#"
+                  href="/contact#contact-head"
                   style={{
                     background:
                       " linear-gradient(180deg, #26FEB2 0%, #46FD3E 100%)",
@@ -234,6 +237,7 @@ const Categories = () => {
                 )}
               </ul>
               <button
+                onClick={() => navigate("/contact#contact-head")}
                 style={{
                   background: "linear-gradient(90deg, #26FEB2 3%, #46FD3E 85%)",
                   border: "0.56px solid rgba(255, 255, 255, 0.52)",
@@ -299,6 +303,7 @@ const Categories = () => {
                 ))}
               </ul>
               <button
+                onClick={() => navigate("/contact#contact-head")}
                 style={{
                   background: "linear-gradient(90deg, #26FEB2 3%, #46FD3E 85%)",
                   border: "0.56px solid rgba(255, 255, 255, 0.52)",

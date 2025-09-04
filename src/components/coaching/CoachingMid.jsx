@@ -17,8 +17,10 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import { useNavigate } from "react-router-dom";
 
 const CoachingMid = ({ onDownloadClick }) => {
+  const navigate = useNavigate();
   const handleDownload = () => {
     const link = document.createElement("a");
     link.href = `/coaching_Download.pdf`; // path to the file
@@ -77,6 +79,7 @@ const CoachingMid = ({ onDownloadClick }) => {
           borderImageSlice: 1,
           paddingBottom: "25px",
         }}
+        id="coaching-head"
       >
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
@@ -230,6 +233,7 @@ const CoachingMid = ({ onDownloadClick }) => {
               </span>
 
               <button
+                onClick={() => navigate("/contact#contact-head")}
                 style={{
                   background: "linear-gradient(90deg, #26FEB2 3%, #46FD3E 85%)",
                   fontSize: "15px",

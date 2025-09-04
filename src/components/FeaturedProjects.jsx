@@ -3,6 +3,7 @@ import { Pagination, Autoplay, EffectCoverflow } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/effect-coverflow";
+import { useNavigate } from "react-router-dom";
 
 const projects = [
   {
@@ -72,6 +73,7 @@ const ProjectCard = ({ imageUrl, title }) => (
 );
 
 export default function FeaturedProjects() {
+  const navigate = useNavigate();
   return (
     <>
       <style>{`
@@ -113,6 +115,7 @@ export default function FeaturedProjects() {
             "linear-gradient(90deg, #000000 0%, #00FF01 49.05%, #000000 100%)",
           borderImageSlice: 1,
         }}
+        id="featured-projects"
       >
         <div className="hidden lg:block py-16">
           <div className="max-w-7xl mx-auto px-6">
@@ -148,6 +151,7 @@ export default function FeaturedProjects() {
                     ACROSS COMMUNITIES.
                   </h1>
                   <button
+                    onClick={() => navigate("/contact#contact-head")}
                     style={{
                       background:
                         "linear-gradient(91.1deg, #26FEB2 -0.39%, #46FD3E 81.76%)",
@@ -228,6 +232,7 @@ export default function FeaturedProjects() {
                 ACROSS COMMUNITIES.
               </h5>
               <button
+                onClick={() => navigate("/contact#contact-head")}
                 style={{
                   background:
                     "linear-gradient(91.1deg, #26FEB2 -0.39%, #46FD3E 81.76%)",

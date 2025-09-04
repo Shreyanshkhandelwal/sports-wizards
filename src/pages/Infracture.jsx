@@ -40,6 +40,7 @@ const Infracture = () => {
           paragraph="We execute all types of sports events for corporates, schools, associations, clubs & communities."
           primaryButtonText="Build My Court Now"
           backgroundImage="/infra.jpeg"
+          primaryBtnClick="/infra#infra-head"
         />
         <div className="relative z-50 mt-4">
           <LogoRibbon />

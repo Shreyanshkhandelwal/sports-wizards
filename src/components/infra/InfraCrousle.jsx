@@ -1231,6 +1231,7 @@
 // export default ImprovedCarousel;
 
 import React, { useEffect, useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 // Mock images for demonstration
 // const slides = [
@@ -1767,6 +1768,7 @@ const slides = [
 ];
 
 const ImprovedCarousel = () => {
+  const navigate = useNavigate();
   const [currentSlide, setCurrentSlide] = useState(2);
   const [expandedSections, setExpandedSections] = useState({});
   const [windowSize, setWindowSize] = useState({
@@ -1984,7 +1986,7 @@ const ImprovedCarousel = () => {
 
   return (
     <>
-      <section className="py-16" ref={sectionRef}>
+      <section className="py-16" ref={sectionRef} id="infra-head">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h5
@@ -2264,7 +2266,7 @@ const ImprovedCarousel = () => {
                           })}
                         </div>
                         <a
-                          href="#"
+                          href="/contact#contact-head"
                           style={{
                             background:
                               "linear-gradient(91.1deg, #26FEB2 -0.39%, #46FD3E 81.76%)",

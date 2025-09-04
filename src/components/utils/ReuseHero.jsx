@@ -1,14 +1,16 @@
 import React from "react";
 import Header from "./Header";
+import { useNavigate } from "react-router-dom";
 
 const ReuseHero = ({
   heading = "Powering India's Playgrounds",
   accentWord = "Powering",
   paragraph = "",
   primaryButtonText = "Explore What We Do",
-  backgroundImage = "",
+  backgroundImage = "/",
   primaryBtnClick = "/",
 }) => {
+  const navigate = useNavigate();
   // Split the heading to apply special styling to accent word
   const processedHeading = heading.replace(accentWord, `|||${accentWord}|||`);
   const headingParts = processedHeading.split("|||");
@@ -62,7 +64,7 @@ const ReuseHero = ({
         <div className="mt-8">
           {primaryButtonText && (
             <button
-              onClick={primaryBtnClick}
+              onClick={() => navigate(`${primaryBtnClick}`)}
               style={{
                 background:
                   "linear-gradient(91.1deg, #26FEB2 -0.39%, #46FD3E 81.76%)",

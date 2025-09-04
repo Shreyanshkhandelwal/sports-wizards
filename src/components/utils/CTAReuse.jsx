@@ -1,5 +1,5 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const CTAReuse = ({
   heading = "Powering India's Playgrounds",
@@ -8,8 +8,9 @@ const CTAReuse = ({
   primaryButtonText = "Explore What We Do",
   secondaryButtonText = "",
   primaryBtnClick = "/",
-  secondaryBtnClick = "/",
+  secondaryBtnClick = "/contact",
 }) => {
+  const navigate = useNavigate();
   const processedHeading = heading.replace(accentWord, `|||${accentWord}|||`);
   const headingParts = processedHeading.split("|||");
 
@@ -89,7 +90,7 @@ const CTAReuse = ({
 
             {hasTwoButtons && (
               <button
-                onClick={secondaryBtnClick}
+                onClick={() => navigate("/contact#contact-head")}
                 className={`${
                   isEventsPage ? "small-btn bg-white" : "text-sm bg-white"
                 } font-bold md:text-base py-2 px-5 md:py-3 md:px-6 rounded-full transition-transform hover:scale-105 text-black w-fit shadow`}

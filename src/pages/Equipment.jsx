@@ -34,6 +34,7 @@ const Equipment = () => {
           paragraph="From premium pickleball paddles to full-scale basketball hoops — we provide B2B sports gear for infra clients, schools, and sports communitieswith end-to-end fulfilment."
           primaryButtonText="Share Requirement"
           backgroundImage="/equipment.jpg"
+          primaryBtnClick="/equipment#equipment-head"
         />
         <div className="relative z-50 mt-4">
           <LogoRibbon />
