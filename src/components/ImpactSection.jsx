@@ -1,9 +1,9 @@
 const impactData = [
-  { number: "50,000+", unit: "sqft", description: "Sports Infra Built" },
+  { number: "50,000+ ", unit: "sqft", description: "Sports Infra Built" },
   { number: "25+", unit: "", description: "Events executed" },
   { number: "150+", unit: "", description: "International Participants" },
   { number: "100+", unit: "", description: "Coaches & Crew Members" },
-  { number: "1", unit: "VISION", description: "A Sport-Playing Nation" },
+  { number: "1 ", unit: "VISION", description: "A Sport-Playing Nation" },
 ];
 
 const StatItem = ({ number, unit, description }) => (
@@ -23,7 +23,7 @@ const StatItem = ({ number, unit, description }) => (
       )}
     </h2>
     <span
-      className="mt-2 text-sm text-bg-foreground-secondary font-medium tracking-wider"
+      className="mt-2 text-sm text-bg-foreground-secondary font-medium tracking-wider font-poppins"
       style={{
         fontSize: "20px",
       }}
@@ -59,11 +59,12 @@ const ImpactSection = () => {
           >
             OUR IMPACT
           </h5>
-          <p className="mt-8 text-2xl md:text-4xl font-extrabold text-white italic font-Race">
+          <br />
+          <span className="mt-8 text-[14px] md:text-4xl font-extrabold text-white italic font-Race">
             WE'RE NOT JUST BUILDING COURTS—
             <br />
             WE'RE BUILDING CULTURE
-          </p>
+          </span>
         </div>
 
         <div className="mt-16">

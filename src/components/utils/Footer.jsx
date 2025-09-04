@@ -11,21 +11,23 @@ const Footer = () => {
               />
             </div>
             <span className="text-sm leading-relaxed mb-6 md:mb-0">
-              Wizards is building India's sporting future through turnkey sports
-              infra, structured school coaching, and high-impact events like
-              Courtside@Work. Explore our programs.
+              India's leading sports enablement brand—architecting turnkey
+              infrastructure, coaching ecosystems, and events that bring play to
+              schools, corporates, and communities. As a proudly registered
+              initiative under Wincognito Technologies (WTPL), we combine
+              agility and innovation with institutional strength and scale.
             </span>
             <div className="flex md:justify-start mt-6 space-x-4 mb-8 md:mb-0">
-              <a href="#">
+              <a href="https://www.instagram.com/sportswizardsindia/">
                 <img src="/instagram.svg" className="size-8" />
               </a>
-              <a href="#">
+              <a href="https://www.facebook.com/sportswizardsindia">
                 <img src="/fb.svg" className="size-8" />
               </a>
-              <a href="#">
+              <a href="https://www.linkedin.com/showcase/sports-wizards">
                 <img src="/x_twitter.svg" className="size-8" />
               </a>
-              <a href="#">
+              <a href="https://www.youtube.com/@sportswizards9441">
                 <img src="/yt.svg" className="size-9 pb-1" />
               </a>
             </div>

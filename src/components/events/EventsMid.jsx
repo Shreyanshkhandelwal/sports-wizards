@@ -30,6 +30,13 @@ import { HiDocument } from "react-icons/hi";
 import { BiPhone } from "react-icons/bi";
 
 const EventsMid = () => {
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = `/Events_download.pdf`; // path to the file
+    link.download = "CourtSide_Deck.pdf"; // the filename when downloaded
+    link.click();
+  };
+
   const activities = [
     {
       id: 1,
@@ -392,7 +399,7 @@ const EventsMid = () => {
                 <img
                   src="/spotlight2.png"
                   alt="Spotlight"
-                  className="object-fill w-50 lg:h-20"
+                  className="object-fill w-50 lg:w-[80%] lg:h-20"
                 />
                 <span className="text-xl md:text-3xl font-bold leading-tight text-white drop-shadow-lg">
                   Sports as Your{" "}
@@ -460,6 +467,7 @@ const EventsMid = () => {
               {/* CTA Buttons */}
               <div className="flex flex-row gap-2 lg:gap-6">
                 <button
+                  onClick={handleDownload}
                   style={{
                     background:
                       "linear-gradient(90deg, #26FEB2 3%, #46FD3E 85%)",
