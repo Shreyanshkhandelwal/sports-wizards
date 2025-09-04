@@ -29,7 +29,7 @@ import { GiWhistle } from "react-icons/gi";
 import { HiDocument } from "react-icons/hi";
 import { BiPhone } from "react-icons/bi";
 
-const EventsMid = () => {
+const EventsMid = ({ onDownloadClick }) => {
   const handleDownload = () => {
     const link = document.createElement("a");
     link.href = `/Events_download.pdf`; // path to the file
@@ -467,7 +467,7 @@ const EventsMid = () => {
               {/* CTA Buttons */}
               <div className="flex flex-row gap-2 lg:gap-6">
                 <button
-                  onClick={handleDownload}
+                  onClick={onDownloadClick}
                   style={{
                     background:
                       "linear-gradient(90deg, #26FEB2 3%, #46FD3E 85%)",

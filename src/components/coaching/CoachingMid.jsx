@@ -18,7 +18,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 
-const CoachingMid = () => {
+const CoachingMid = ({ onDownloadClick }) => {
   const handleDownload = () => {
     const link = document.createElement("a");
     link.href = `/coaching_Download.pdf`; // path to the file
@@ -350,7 +350,7 @@ const CoachingMid = () => {
               </div>
 
               <button
-                onClick={handleDownload}
+                onClick={onDownloadClick}
                 style={{
                   background: "linear-gradient(90deg, #26FEB2 3%, #46FD3E 85%)",
                 }}

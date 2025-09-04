@@ -6,11 +6,14 @@ import TestimonialsSection from "../components/utils/TestimonialsSection";
 import CTAReuse from "../components/utils/CTAReuse";
 import CoachingMid from "../components/coaching/CoachingMid";
 import NeonCursor from "../components/utils/NeonCursor";
+import CoachingCta from "../components/coaching/CoachingCta";
+import { CiCircleCheck } from "react-icons/ci";
 
 const Coaching = () => {
   const [isLargeScreen, setIsLargeScreen] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
+  const [showDownloadForm, setShowDownloadForm] = useState(false);
 
   useEffect(() => {
     const mediaQuery = window.matchMedia("(min-width: 1024px)");
@@ -40,7 +43,7 @@ const Coaching = () => {
         <div className="relative z-50 mt-4">
           <LogoRibbon />
         </div>
-        <CoachingMid />
+        <CoachingMid onDownloadClick={() => setShowDownloadForm(true)} />
         <TestimonialsSection className />
         <CTAReuse
           heading="Sport isn’t extra. It’s essential"
@@ -58,6 +61,15 @@ const Coaching = () => {
           onClose={() => setShowModal(false)}
           onSuccess={() => {
             setShowModal(false);
+            setShowSuccess(true);
+          }}
+        />
+      )}
+      {showDownloadForm && (
+        <CoachingCta
+          onClose={() => setShowDownloadForm(false)}
+          onSuccess={() => {
+            setShowDownloadForm(false);
             setShowSuccess(true);
           }}
         />

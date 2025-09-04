@@ -7,11 +7,14 @@ import CTAReuse from "../components/utils/CTAReuse";
 import NeonCursor from "../components/utils/NeonCursor";
 import EventsMid from "../components/events/EventsMid";
 import DownloadForm from "../components/contact/DownloadForm";
+import EventsCta from "../components/events/EventsCta";
+import { CiCircleCheck } from "react-icons/ci";
 
 const Events = () => {
   const [isLargeScreen, setIsLargeScreen] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
+  const [showDownloadForm, setShowDownloadForm] = useState(false);
 
   useEffect(() => {
     const mediaQuery = window.matchMedia("(min-width: 1024px)");
@@ -41,7 +44,7 @@ const Events = () => {
         <div className="relative z-50 mt-4">
           <LogoRibbon />
         </div>
-        <EventsMid />
+        <EventsMid onDownloadClick={() => setShowDownloadForm(true)} />
 
         <CTAReuse
           heading="Make Your Next Event A Winning One"
@@ -59,6 +62,16 @@ const Events = () => {
           onClose={() => setShowModal(false)}
           onSuccess={() => {
             setShowModal(false);
+            setShowSuccess(true);
+          }}
+        />
+      )}
+
+      {showDownloadForm && (
+        <EventsCta
+          onClose={() => setShowDownloadForm(false)}
+          onSuccess={() => {
+            setShowDownloadForm(false);
             setShowSuccess(true);
           }}
         />
