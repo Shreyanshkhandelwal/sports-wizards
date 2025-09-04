@@ -1,6 +1,6 @@
 import { useRef, useState, useEffect } from "react";
 
-// SVG Icon Components to replace react-icons
+// SVG Icon Components
 const MdLocationOn = (props) => (
   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" {...props}>
     <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
@@ -26,11 +26,19 @@ const CheckCircleIcon = (props) => (
     </svg>
 );
 
+const AlertTriangleIcon = (props) => (
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
+        <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+        <line x1="12" y1="9" x2="12" y2="13"></line>
+        <line x1="12" y1="17" x2="12.01" y2="17"></line>
+    </svg>
+);
 
-// Replace with your LocationIQ API Key if you have one
+
+// LocationIQ API Key
 const LOCATIONIQ_API_KEY = "pk.7ecbf6c9de4b96b9d9aa1f935f1b2f3e";
 
-const ContactForm = ({ onSuccess }) => {
+const ContactForm = () => {
   const [formData, setFormData] = useState({
     fullName: "",
     organizationName: "",
@@ -44,13 +52,14 @@ const ContactForm = ({ onSuccess }) => {
   const formRef = useRef(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+  const [submissionError, setSubmissionError] = useState(null);
 
   // State for city autocomplete
   const [cityQuery, setCityQuery] = useState("");
   const [citySuggestions, setCitySuggestions] = useState([]);
   const [typingTimeout, setTypingTimeout] = useState(null);
 
-  // Debounced fetch to LocationIQ for city autocomplete
+  // Debounced fetch for city autocomplete
   useEffect(() => {
     if (cityQuery.length < 2) {
       setCitySuggestions([]);
@@ -81,7 +90,7 @@ const ContactForm = ({ onSuccess }) => {
         console.error("Error fetching cities:", err);
         setCitySuggestions([]);
       }
-    }, 1000); // Wait 1s after typing stops
+    }, 1000);
 
     setTypingTimeout(timeout);
   }, [cityQuery]);
@@ -111,13 +120,13 @@ const ContactForm = ({ onSuccess }) => {
     }));
   };
 
-  //  Submission handler to post data to Google Forms
+  // Submission handler to post data to Google Forms
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setSubmissionError(null);
 
     if (!formData.interests[0]) {
-      // Replaced alert with a custom message box logic if available, for now, it's console.error
       console.error("Please select at least one interest.");
       setIsSubmitting(false);
       return;
@@ -129,19 +138,21 @@ const ContactForm = ({ onSuccess }) => {
       return;
     }
     
-    // 1. Google Form Details
-    const GOOGLE_FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLScC18b-G0mBf-k1E4r3w7yQ8zX9J6vP5fF7oN0wK1aL9jR0g/formResponse';
+    // 1. UPDATED Google Form URL
+    const GOOGLE_FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSdja4jD0SInOsVMW2X5NfoMtvuMv_NSMP2D7JbrHBZUzurfkQ/formResponse';
+    
+    // 2. UPDATED Field Mappings for the new form
     const fieldMapping = {
-      fullName: 'entry.198253134',
-      organizationName: 'entry.1480190369',
-      city: 'entry.1011537204',
-      phone: 'entry.1091569941',
-      email: 'entry.1228551469',
-      interest: 'entry.184347493',
-      message: 'entry.104044548',
+      fullName: 'entry.1042556776',
+      organizationName: 'entry.1931507053',
+      city: 'entry.484315254',
+      phone: 'entry.433148822',
+      email: 'entry.929181916',
+      interest: 'entry.392719309',
+      message: 'entry.1245702329',
     };
 
-    // 2. Create a FormData object to send the data
+    // 3. Create a FormData object
     const formDataToSubmit = new FormData();
     formDataToSubmit.append(fieldMapping.fullName, formData.fullName);
     formDataToSubmit.append(fieldMapping.organizationName, formData.organizationName);
@@ -152,20 +163,17 @@ const ContactForm = ({ onSuccess }) => {
     formDataToSubmit.append(fieldMapping.message, formData.message);
 
     try {
-      // 3. Send the data to Google Forms
+      // 4. Send data to Google Forms
       await fetch(GOOGLE_FORM_URL, {
         method: 'POST',
         body: formDataToSubmit,
-        mode: 'no-cors', // 'no-cors' is important to avoid CORS errors
+        mode: 'no-cors',
       });
 
-      // 4. Handle successful submission
+      // 5. Handle successful submission
       setShowSuccessMessage(true);
-      setTimeout(() => setShowSuccessMessage(false), 5000); // Hide after 5 seconds
+      setTimeout(() => setShowSuccessMessage(false), 5000);
       
-      if (onSuccess) {
-        onSuccess();
-      }
       // Reset form fields
       setFormData({
         fullName: "",
@@ -180,7 +188,7 @@ const ContactForm = ({ onSuccess }) => {
 
     } catch (error) {
       console.error("Error submitting form:", error);
-      // Replaced alert with a custom message box logic if available
+      setSubmissionError("Failed to submit the form. Please check the form URL and your internet connection, then try again.");
     } finally {
         setIsSubmitting(false);
     }
@@ -210,13 +218,30 @@ const ContactForm = ({ onSuccess }) => {
                 <div className="bg-[#161616] text-center rounded-2xl p-8 border-2 border-[#00FF01] shadow-lg max-w-sm mx-auto animate-scale-in">
                     <CheckCircleIcon className="w-16 h-16 text-[#00FF01] mx-auto mb-4" />
                     <h3 className="text-2xl font-bold text-white mb-2">Submitted!</h3>
-                    <p className="text-[#B0B0B0] mb-6">Your form has been submitted successfully. We will get in touch with you shortly.</p>
+                    <p className="text-[#B0B0B0] mb-6">Your form has been submitted successfully. We will get in touch with you soon.</p>
                     <button
                         onClick={() => setShowSuccessMessage(false)}
                         style={{ background: "linear-gradient(180deg, #26FEB2 0%, #46FD3E 100%)" }}
                         className="text-[#0B0B0B] font-bold py-2 px-8 rounded-lg transition-transform transform hover:scale-105"
                     >
-                        OK
+                        Okay
+                    </button>
+                </div>
+            </div>
+        )}
+
+      {/* Error Message Modal */}
+        {submissionError && (
+            <div className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 p-4">
+                <div className="bg-[#161616] text-center rounded-2xl p-8 border-2 border-red-500 shadow-lg max-w-sm mx-auto animate-scale-in">
+                    <AlertTriangleIcon className="w-16 h-16 text-red-500 mx-auto mb-4" />
+                    <h3 className="text-2xl font-bold text-white mb-2">Submission Failed</h3>
+                    <p className="text-[#B0B0B0] mb-6">{submissionError}</p>
+                    <button
+                        onClick={() => setSubmissionError(null)}
+                        className="bg-red-600 text-white font-bold py-2 px-8 rounded-lg transition-transform transform hover:scale-105"
+                    >
+                        Close
                     </button>
                 </div>
             </div>
@@ -243,7 +268,7 @@ const ContactForm = ({ onSuccess }) => {
                     required
                     value={formData.fullName}
                     onChange={handleInputChange}
-                    placeholder="Enter Full Name"
+                    placeholder="Enter your full name"
                     className="w-full bg-[#2C2C2C] rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#00FF01]"
                   />
                 </div>
@@ -256,7 +281,7 @@ const ContactForm = ({ onSuccess }) => {
                     required
                     value={formData.organizationName}
                     onChange={handleInputChange}
-                    placeholder="Enter Organization Name"
+                    placeholder="Enter your organization's name"
                     className="w-full bg-[#2C2C2C] rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#00FF01]"
                   />
                 </div>
@@ -270,7 +295,7 @@ const ContactForm = ({ onSuccess }) => {
                       required
                       value={cityQuery}
                       onChange={handleInputChange}
-                      placeholder="Start typing a city"
+                      placeholder="Start typing your city name"
                       autoComplete="off"
                       className="w-full bg-[#2C2C2C] rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#00FF01]"
                     />
@@ -297,7 +322,7 @@ const ContactForm = ({ onSuccess }) => {
                       required
                       value={formData.phone}
                       onChange={handleInputChange}
-                      placeholder="Enter Phone Number"
+                      placeholder="Enter your phone number"
                       className="w-full bg-[#2C2C2C] rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#00FF01]"
                     />
                   </div>
@@ -311,7 +336,7 @@ const ContactForm = ({ onSuccess }) => {
                     required
                     value={formData.email}
                     onChange={handleInputChange}
-                    placeholder="Enter Email ID"
+                    placeholder="Enter your email ID"
                     className="w-full bg-[#2C2C2C] rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#00FF01]"
                   />
                 </div>
@@ -404,4 +429,3 @@ const ContactForm = ({ onSuccess }) => {
 };
 
 export default ContactForm;
-
