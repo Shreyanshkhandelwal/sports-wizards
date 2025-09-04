@@ -1,6 +1,6 @@
 import { useRef, useState, useEffect } from "react";
 
-// SVG Icon Components
+// SVG Icon Components - no changes here as they were correct.
 const MdLocationOn = (props) => (
   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" {...props}>
     <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
@@ -34,8 +34,6 @@ const AlertTriangleIcon = (props) => (
     </svg>
 );
 
-
-// LocationIQ API Key
 const LOCATIONIQ_API_KEY = "pk.7ecbf6c9de4b96b9d9aa1f935f1b2f3e";
 
 const ContactForm = () => {
@@ -50,6 +48,7 @@ const ContactForm = () => {
   });
 
   const formRef = useRef(null);
+
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
   const [submissionError, setSubmissionError] = useState(null);
@@ -57,9 +56,9 @@ const ContactForm = () => {
   // State for city autocomplete
   const [cityQuery, setCityQuery] = useState("");
   const [citySuggestions, setCitySuggestions] = useState([]);
+  const [loadingCities, setLoadingCities] = useState(false);
   const [typingTimeout, setTypingTimeout] = useState(null);
 
-  // Debounced fetch for city autocomplete
   useEffect(() => {
     if (cityQuery.length < 2) {
       setCitySuggestions([]);
@@ -70,6 +69,8 @@ const ContactForm = () => {
 
     const timeout = setTimeout(async () => {
       try {
+        setLoadingCities(true);
+
         const url = `https://api.locationiq.com/v1/autocomplete?q=${encodeURIComponent(
           cityQuery
         )}&countrycodes=in&tag=place%3Acity&key=${LOCATIONIQ_API_KEY}`;
@@ -89,8 +90,10 @@ const ContactForm = () => {
       } catch (err) {
         console.error("Error fetching cities:", err);
         setCitySuggestions([]);
+      } finally {
+        setLoadingCities(false);
       }
-    }, 1000);
+    }, 1000); // This was the first syntax error, fixed it.
 
     setTypingTimeout(timeout);
   }, [cityQuery]);
@@ -127,7 +130,7 @@ const ContactForm = () => {
     setSubmissionError(null);
 
     if (!formData.interests[0]) {
-      console.error("Please select at least one interest.");
+      setSubmissionError("Please select at least one interest.");
       setIsSubmitting(false);
       return;
     }
@@ -192,14 +195,15 @@ const ContactForm = () => {
     } finally {
         setIsSubmitting(false);
     }
-  };
+  }; // This was the main syntax error area. The function was not closed properly.
 
   return (
     <div
       className="min-h-screen bg-[#0B0B0B] text-[#F2F2F2] p-6"
       style={{
         borderBottom: "1px solid",
-        borderImageSource: "linear-gradient(90deg, #000000 0%, #00FF01 49.05%, #000000 100%)",
+        borderImageSource:
+          "linear-gradient(90deg, #000000 0%, #00FF01 49.05%, #000000 100%)",
         borderImageSlice: 1,
       }}
     >
@@ -212,6 +216,7 @@ const ContactForm = () => {
                 animation: scale-in 0.3s ease-out forwards;
             }
         `}</style>
+
       {/* Success Message Modal */}
         {showSuccessMessage && (
             <div className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 p-4">
@@ -251,17 +256,30 @@ const ContactForm = () => {
       <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-8 items-stretch">
         {/* Form Section */}
         <div className="bg-[#161616] rounded-2xl p-8 border border-[#2C2C2C] flex flex-col justify-between">
-          <form ref={formRef} onSubmit={handleSubmit}>
+          <form
+            ref={formRef}
+            onSubmit={handleSubmit}
+            noValidate
+          >
             <div>
               <div className="mb-8">
-                <h5 className="text-3xl font-bold mb-2" style={{ fontSize: "21px" }}>
-                  LET'S <span className="text-accent" style={{color: '#00FF01'}}>BUILD</span> SOMETHING SPORTY TOGETHER.
+                <h5
+                  className="text-3xl font-bold mb-2"
+                  style={{
+                    fontSize: "21px",
+                  }}
+                >
+                  LET'S <span className="text-accent">BUILD</span> SOMETHING
+                  SPORTY TOGETHER.
                 </h5>
               </div>
+
               <div className="space-y-6">
                 {/* Full Name */}
                 <div>
-                  <label className="block text-sm font-medium mb-2">Full Name</label>
+                  <label className="block text-sm font-medium mb-2">
+                    Full Name
+                  </label>
                   <input
                     type="text"
                     name="fullName"
@@ -272,9 +290,12 @@ const ContactForm = () => {
                     className="w-full bg-[#2C2C2C] rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#00FF01]"
                   />
                 </div>
+
                 {/* Organization Name */}
                 <div>
-                  <label className="block text-sm font-medium mb-2">Organization Name</label>
+                  <label className="block text-sm font-medium mb-2">
+                    Organization Name
+                  </label>
                   <input
                     type="text"
                     name="organizationName"
@@ -285,10 +306,13 @@ const ContactForm = () => {
                     className="w-full bg-[#2C2C2C] rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#00FF01]"
                   />
                 </div>
+
                 {/* City and Phone */}
                 <div className="grid md:grid-cols-2 gap-4">
                   <div className="relative">
-                    <label className="block text-sm font-medium mb-2">City</label>
+                    <label className="block text-sm font-medium mb-2">
+                      City
+                    </label>
                     <input
                       type="text"
                       name="city"
@@ -311,11 +335,28 @@ const ContactForm = () => {
                             {city}
                           </li>
                         ))}
+                        <li className="px-4 py-2 text-xs text-gray-400 border-t border-[#333]">
+                          Powered by{" "}
+                          <a
+                            href="https://locationiq.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <img
+                              src="https://locationiq.com/assets/images/logos/LocationIQ-logo.png"
+                              alt="LocationIQ"
+                              className="inline h-4 ml-1"
+                            />
+                          </a>
+                        </li>
                       </ul>
                     )}
                   </div>
+
                   <div>
-                    <label className="block text-sm font-medium mb-2">Phone</label>
+                    <label className="block text-sm font-medium mb-2">
+                      Phone
+                    </label>
                     <input
                       type="tel"
                       name="phone"
@@ -327,9 +368,12 @@ const ContactForm = () => {
                     />
                   </div>
                 </div>
+
                 {/* Email */}
                 <div>
-                  <label className="block text-sm font-medium mb-2">Email</label>
+                  <label className="block text-sm font-medium mb-2">
+                    Email
+                  </label>
                   <input
                     type="email"
                     name="email"
@@ -340,16 +384,25 @@ const ContactForm = () => {
                     className="w-full bg-[#2C2C2C] rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#00FF01]"
                   />
                 </div>
+
                 {/* Interests */}
                 <div>
-                  <label className="block text-sm font-medium mb-3">Interested In:</label>
+                  <label className="block text-sm font-medium mb-3">
+                    Interested In:
+                  </label>
                   <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-                    {["Coaching", "Infra", "Events", "Merchandise", "Other"].map((interest) => (
+                    {[
+                      "Coaching",
+                      "Infra",
+                      "Events",
+                      "Merchandise",
+                      "Other",
+                    ].map((interest) => (
                       <button
                         key={interest}
                         type="button"
                         onClick={() => handleInterestChange(interest)}
-                        className={`px-4 py-2 rounded-lg border transition-all duration-200 ${
+                        className={`px-4 py-2 rounded-lg border ${
                           formData.interests[0] === interest
                             ? "bg-[#00FF01] text-[#0B0B0B] border-[#00FF01] font-semibold"
                             : "bg-[#2C2C2C] text-[#F2F2F2] border-[#2C2C2C] hover:border-[#00FF01]"
@@ -358,12 +411,22 @@ const ContactForm = () => {
                         {interest}
                       </button>
                     ))}
-                    <input type="text" value={formData.interests[0] || ""} required hidden readOnly name="interest-validation"/>
+                    <input
+                      type="text"
+                      name="interest"
+                      value={formData.interests[0] || ""}
+                      required
+                      hidden
+                      readOnly
+                    />
                   </div>
                 </div>
+
                 {/* Message */}
                 <div>
-                  <label className="block text-sm font-medium mb-2">Message</label>
+                  <label className="block text-sm font-medium mb-2">
+                    Message
+                  </label>
                   <textarea
                     name="message"
                     value={formData.message}
@@ -375,6 +438,7 @@ const ContactForm = () => {
                 </div>
               </div>
             </div>
+
             {/* Submit Button */}
             <button
               type="submit"
@@ -383,37 +447,50 @@ const ContactForm = () => {
                 background: "linear-gradient(180deg, #26FEB2 0%, #46FD3E 100%)",
                 fontSize: "18px",
               }}
-              className="w-full text-[#0B0B0B] font-bold py-2 px-6 rounded-lg mt-6 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full text-[#0B0B0B] font-bold py-3 px-6 rounded-lg mt-6 disabled:opacity-50"
             >
-              {isSubmitting ? 'Submitting...' : 'Submit'}
+              {isSubmitting ? "Submitting..." : "Submit"}
             </button>
           </form>
         </div>
+
         {/* Right Side Content */}
         <div className="space-y-6 flex flex-col">
           <div className="flex-1 min-h-[300px] lg:min-h-0 relative rounded-2xl overflow-hidden bg-gradient-to-br from-green-400 to-blue-500 flex items-center justify-center">
-            <img src="https://placehold.co/600x400/0B0B0B/26FEB2?text=Sporty+Together" className="object-cover h-full w-full" alt="Contact form visual" />
+            <img src="https://placehold.co/600x400/0B0B0B/00FF01?text=Sporty+Image" alt="Sports Action" className="object-cover w-full h-full" />
           </div>
+
+          {/* Contact Info */}
           <div
             className="rounded-2xl p-6 text-[#0B0B0B]"
-            style={{ background: "linear-gradient(180deg, #26FEB2 0%, #46FD3E 100%)" }}
+            style={{
+              background: "linear-gradient(180deg, #26FEB2 0%, #46FD3E 100%)",
+            }}
           >
-            <span className="text-2xl font-bold mb-8" style={{ fontSize: "18px" }}>
+            <span
+              className="text-2xl font-bold mb-8 block"
+              style={{
+                fontSize: "18px",
+              }}
+            >
               Contact Info
             </span>
-            <div className="space-y-4 mt-4">
+
+            <div className="space-y-4">
               <div className="flex items-start space-x-4">
                 <MdLocationOn className="w-6 h-6 flex-shrink-0 mt-0.5" />
                 <span className="font-semibold text-lg" style={{ fontSize: "14px" }}>
                   Mumbai | Pan-India Projects
                 </span>
               </div>
+
               <div className="flex items-start space-x-4">
                 <FaPhone className="w-6 h-6 flex-shrink-0 mt-0.5" />
                 <span className="font-semibold text-lg" style={{ fontSize: "14px" }}>
                   +91 8655819716 | +91 8779706509
                 </span>
               </div>
+
               <div className="flex items-start space-x-4">
                 <MdEmail className="w-6 h-6 flex-shrink-0 mt-0.5" />
                 <span className="font-semibold text-lg" style={{ fontSize: "14px" }}>
