@@ -7,6 +7,8 @@ import Equipment from "./pages/Equipment";
 import Infracture from "./pages/Infracture";
 import Events from "./pages/Events";
 import Coaching from "./pages/Coaching";
+import Privacy from "./pages/Privacy";
+import Terms from "./pages/Terms";
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
         <Route path="/infra" element={<Infracture />} />
         <Route path="/events" element={<Events />} />
         <Route path="/coaching" element={<Coaching />} />
+        <Route path="/privacy" element={<Privacy />} />
+        <Route path="/terms" element={<Terms />} />
       </Routes>
     </>
   );

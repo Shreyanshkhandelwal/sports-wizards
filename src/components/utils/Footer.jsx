@@ -96,7 +96,7 @@ const Footer = () => {
             <ul className="space-y-1 md:space-y-2 text-sm">
               <li>
                 <a
-                  href="#"
+                  href="/privacy"
                   className="hover:text-white transition-colors duration-300"
                 >
                   Privacy Policy
@@ -104,7 +104,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="/terms"
                   className="hover:text-white transition-colors duration-300"
                 >
                   Terms of Service
