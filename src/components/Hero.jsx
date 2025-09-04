@@ -1,7 +1,9 @@
 import Header from "./utils/Header";
 import HeroCarousel from "./HeroCarousel";
+import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
+  const navigate = useNavigate();
   return (
     <section className=" relative w-full min-h-[650px] md:min-h-[700px] lg:h-screen lg:max-h-[900px] mx-auto overflow-hidden">
       <Header />
@@ -107,6 +109,7 @@ const Hero = () => {
           </h1>
           <div className="flex flex-row items-center justify-start gap-5 mt-36">
             <button
+              onClick={() => navigate("/about")}
               style={{
                 background:
                   "linear-gradient(91.1deg, #26FEB2 -0.39%, #46FD3E 81.76%)",

@@ -7,6 +7,7 @@ const ReuseHero = ({
   paragraph = "",
   primaryButtonText = "Explore What We Do",
   backgroundImage = "",
+  primaryBtnClick = "/",
 }) => {
   // Split the heading to apply special styling to accent word
   const processedHeading = heading.replace(accentWord, `|||${accentWord}|||`);
@@ -61,6 +62,7 @@ const ReuseHero = ({
         <div className="mt-8">
           {primaryButtonText && (
             <button
+              onClick={primaryBtnClick}
               style={{
                 background:
                   "linear-gradient(91.1deg, #26FEB2 -0.39%, #46FD3E 81.76%)",
