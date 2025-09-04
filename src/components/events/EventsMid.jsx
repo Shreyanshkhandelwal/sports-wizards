@@ -282,12 +282,12 @@ const EventsMid = ({ onDownloadClick }) => {
 
             {/* desktop layout */}
             <div className="hidden lg:flex flex-col">
-              <h5
+              <span
                 style={{ fontSize: "24px" }}
-                className="text-accent text-base font-bold uppercase tracking-widest mb-6  underline-offset-8 decoration-green-500"
+                className="text-accent text-base font-bold  tracking-widest mb-6  underline-offset-8 decoration-green-500"
               >
                 Services Included:
-              </h5>
+              </span>
 
               {/* Right Side - Image */}
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
