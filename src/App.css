@@ -22,8 +22,7 @@ body {
   @apply bg-bg text-white;
   font-family: "Poppins", sans-serif;
 }
-h1,
-h2 {
+h1 {
   font-size: 44px !important;
 }
 h3,

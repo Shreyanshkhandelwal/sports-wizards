@@ -380,8 +380,7 @@ const Story = () => {
                 building people—through play."
               </p>
               <p style={{ fontSize: "18px" }}>
-                <span className="text-accent">— Abhijeet Malve,</span>
-                <br />
+                <span className="text-accent">— Abhijeet Malve, </span>
                 Co-Founder, Sports Wizards
               </p>
             </div>

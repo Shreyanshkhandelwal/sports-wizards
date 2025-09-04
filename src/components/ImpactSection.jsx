@@ -12,10 +12,10 @@ const StatItem = ({ number, unit, description }) => (
       {number}
       {unit && (
         <span
-          className={` md:text-4xl  not-italic ml-2 ${
+          className={`   not-italic ml-2 ${
             unit === "sqft"
-              ? "font-poppins text-xl font-light"
-              : "text-3xl font-semibold"
+              ? "font-poppins text-2xl font-light"
+              : "text-3xl md:text-4xl font-semibold"
           }`}
         >
           {unit}
@@ -93,7 +93,7 @@ const ImpactSection = () => {
               </h5>
             ))}
 
-            <div className="col-span-3 grid grid-cols-2">
+            <div className="col-span-3 grid grid-cols-2 px-56">
               {bottomRowData.map((item, index) => (
                 <div
                   key={index}
