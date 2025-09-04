@@ -508,7 +508,7 @@ const ContactForm = () => {
         <div className="space-y-6 flex flex-col">
           <div className="flex-1 min-h-[300px] lg:min-h-0 relative rounded-2xl overflow-hidden bg-gradient-to-br from-green-400 to-blue-500 flex items-center justify-center">
             <img
-              src="https://placehold.co/600x400/0B0B0B/00FF01?text=Sporty+Image"
+              src="/contact_form.jpg"
               alt="Sports Action"
               className="object-cover w-full h-full"
             />
