@@ -102,24 +102,22 @@ const CoachingMid = ({ onDownloadClick }) => {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left Side - Text */}
-            <div className="space-y-6">
-              <span className="text-white font-bold text-[14px] lg:text-3xl leading-relaxed uppercase font-Race">
-                While our flagship program—
-                <span
-                  style={{
-                    background:
-                      "linear-gradient(180deg, #26FEB2 0%, #46FD3E 100%)",
-                    WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent",
-                  }}
-                >
-                  SportsWizards@School
-                </span>
-                — <br />
-                is tailored for educational institutions, our coaching vertical
-                serves:
-              </span>
-            </div>
+            <div className="space-y-4">
+  <span className="text-white font-bold text-[14px] lg:text-3xl uppercase font-Race">
+    While our flagship program—
+    <span
+      style={{
+        background:
+          "linear-gradient(180deg, #26FEB2 0%, #46FD3E 100%)",
+        WebkitBackgroundClip: "text",
+        WebkitTextFillColor: "transparent",
+      }}
+    >
+      SportsWizards@School
+    </span>
+    — is tailored for educational institutions, our coaching vertical serves:
+  </span>
+</div>
 
             {/* Right Side - Image */}
             <div className="mb-8">
