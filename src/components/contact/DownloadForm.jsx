@@ -144,7 +144,7 @@ const DownloadForm = ({ onClose }) => {
 
         {isSubmitted ? (
           <div className="text-center p-8 bg-[#2C2C2C] rounded-lg">
-            <h5 className="text-2xl text-[#00FF01] font-bold mb-4">✅ Submitted Successfully!</h4>
+            <h5 className="text-2xl text-[#00FF01] font-bold mb-4">✅ Submitted Successfully!</h5>
             <p className="text-[#B0B0B0]">Your data has been saved. We will contact you shortly.</p>
             <button
               onClick={onClose}
