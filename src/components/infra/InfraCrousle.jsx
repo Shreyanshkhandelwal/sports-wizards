@@ -1742,7 +1742,7 @@ const slides = [
     ],
   },
   {
-    image: "/11.jpeg",
+    image: "/11.png",
     title: "Kids Play Area",
     heading: "Kids Play Area",
     sections: [
