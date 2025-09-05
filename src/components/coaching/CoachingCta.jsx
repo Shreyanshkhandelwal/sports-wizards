@@ -44,14 +44,14 @@ const CoachingCta = ({ onClose, onSuccess }) => {
     const formData = new FormData();
 
     // 🔹 Map form fields to Google Form entry IDs
-    formData.append("entry.1510040030", modalData.fullName);
-    formData.append("entry.1222064776", modalData.organizationName);
-    formData.append("entry.1528689650", modalData.city);
-    formData.append("entry.1877046564", modalData.phone);
-    formData.append("entry.929433826", modalData.email);
+    formData.append("entry.1951570346", modalData.fullName);
+    formData.append("entry.342704592", modalData.organizationName);
+    formData.append("entry.848877138", modalData.city);
+    formData.append("entry.1739814199", modalData.phone);
+    formData.append("entry.1315548732", modalData.email);
     try {
       await fetch(
-        "https://docs.google.com/forms/d/e/1FAIpQLSdBmcF9GMujUKASpnYSiVYv0uVvT_4otCW0WB85mDOacs4Qkw/formResponse",
+        "https://docs.google.com/forms/d/e/1FAIpQLSf4Fr9iIkyI36vYy2jnwMAsK0meEcIsxUppgqLpSCTvjmZLmA/formResponse",
         {
           method: "POST",
           body: formData,
@@ -60,19 +60,16 @@ const CoachingCta = ({ onClose, onSuccess }) => {
       );
       console.log("✅ Submitted to Google Form:", modalData);
       const link = document.createElement("a");
-      link.href = "/coaching_Download.pdf";
+      link.href = "/public/Sports Wizards@School.pdf";
       link.download = "School@Work by Sports Wizards.pdf";
       link.click();
       onSuccess();
       setModalData({
         fullName: "",
         organizationName: "",
-        designation: "",
         city: "",
         phone: "",
         email: "",
-        interestedIn: [],
-        howDidYouHear: "",
       });
       setCityQuery("");
       setCitySuggestions([]);
