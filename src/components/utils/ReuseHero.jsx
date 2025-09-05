@@ -8,12 +8,23 @@ const ReuseHero = ({
   paragraph = "",
   primaryButtonText = "Explore What We Do",
   backgroundImage = "/",
-  primaryBtnClick = "/",
+  primaryBtnClick, // This will be the function or string path
 }) => {
   const navigate = useNavigate();
   // Split the heading to apply special styling to accent word
   const processedHeading = heading.replace(accentWord, `|||${accentWord}|||`);
   const headingParts = processedHeading.split("|||");
+
+  const handleButtonClick = () => {
+    // Check if the prop is a function. If so, call it directly.
+    if (typeof primaryBtnClick === 'function') {
+      primaryBtnClick();
+    } 
+    // Otherwise, assume it's a string path and use navigate for routing.
+    else if (typeof primaryBtnClick === 'string') {
+      navigate(primaryBtnClick);
+    }
+  };
 
   return (
     <section className="relative w-full min-h-[650px] md:min-h-[700px] lg:h-screen lg:max-h-[900px] mx-auto overflow-hidden flex items-center justify-center">
@@ -22,7 +33,7 @@ const ReuseHero = ({
       {/* Backgrounds */}
       <img
         src={backgroundImage || "/bg-1.jpeg"}
-        alt="Background 1"
+        alt="Background"
         className="absolute inset-0 w-full h-full object-cover z-0"
       />
 
@@ -37,7 +48,7 @@ const ReuseHero = ({
                 key={i}
                 style={{
                   background:
-                    " linear-gradient(180deg, #26FEB2 0%, #46FD3E 100%)",
+                    "linear-gradient(180deg, #26FEB2 0%, #46FD3E 100%)",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                 }}
@@ -64,13 +75,13 @@ const ReuseHero = ({
         <div className="mt-8">
           {primaryButtonText && (
             <button
-              onClick={() => navigate(`${primaryBtnClick}`)}
+              onClick={handleButtonClick} // This is the fix.
               style={{
                 background:
                   "linear-gradient(91.1deg, #26FEB2 -0.39%, #46FD3E 81.76%)",
                 fontSize: "19px",
               }}
-              className=" font-bold   py-2 px-8 md:py-3 md:px-8 rounded-full transition-transform hover:scale-105 text-bg"
+              className="font-bold py-2 px-8 md:py-3 md:px-8 rounded-full transition-transform hover:scale-105 text-bg"
             >
               {primaryButtonText}
             </button>
