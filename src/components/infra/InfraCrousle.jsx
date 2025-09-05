@@ -1503,7 +1503,7 @@ import { useNavigate } from "react-router-dom";
 
 const slides = [
   {
-    image: "/coaching.jpg",
+    image: "/1.jpg",
     title: "Basketball Courts",
     heading: "Basketball Courts",
     sections: [
@@ -1540,7 +1540,7 @@ const slides = [
     ],
   },
   {
-    image: "/soccer-field.jpeg",
+    image: "/2.png",
     title: "Football Turfs",
     heading: "Football Tufs",
     sections: [
@@ -1556,7 +1556,7 @@ const slides = [
     ],
   },
   {
-    image: "/cricket-court.jpeg",
+    image: "/3.png",
     title: "Pickleball Courts",
     heading: "Pickleball Courts",
     sections: [
@@ -1593,7 +1593,7 @@ const slides = [
     ],
   },
   {
-    image: "/offer4.jpg",
+    image: "/4.png",
     title: "Padel Courts",
     heading: "Padel Courts",
     sections: [
@@ -1605,7 +1605,7 @@ const slides = [
     ],
   },
   {
-    image: "/badminton-court.png",
+    image: "/5.png",
     title: "Tennis Courts",
     heading: "Tennis Courts",
     sections: [
@@ -1637,7 +1637,7 @@ const slides = [
     ],
   },
   {
-    image: "/e3.png",
+    image: "/6.png",
     title: "Cricket Turfs",
     heading: "Cricket Turfs",
     sections: [
@@ -1653,7 +1653,7 @@ const slides = [
     ],
   },
   {
-    image: "/badminton.jpg",
+    image: "/7.png",
     title: "Badminton Court",
     heading: "Badminton Court",
     sections: [
@@ -1676,7 +1676,7 @@ const slides = [
     ],
   },
   {
-    image: "/offer5.jpg",
+    image: "/8.jpg",
     title: "Athletic Running Track",
     heading: "Athletic Running Track",
     sections: [
@@ -1693,7 +1693,7 @@ const slides = [
     ],
   },
   {
-    image: "/offer2.jpeg",
+    image: "/9.jpeg",
     title: "Outdoor Multisports",
     heading: "Outdoor Multisports",
     sections: [
@@ -1725,7 +1725,7 @@ const slides = [
     ],
   },
   {
-    image: "/offer3.jpeg",
+    image: "/10.jpeg",
     title: "Indoor Multisports",
     heading: "Indoor Multisports",
     sections: [
@@ -1742,7 +1742,7 @@ const slides = [
     ],
   },
   {
-    image: "/track3.jpeg",
+    image: "/11.jpeg",
     title: "Kids Play Area",
     heading: "Kids Play Area",
     sections: [
@@ -1754,7 +1754,7 @@ const slides = [
     ],
   },
   {
-    image: "/gym.jpg",
+    image: "/12.jpg",
     title: "Gym Flooring",
     heading: "Gym Flooring",
     sections: [
@@ -2330,82 +2330,82 @@ const ImprovedCarousel = () => {
       </section>
 
       <section
-        className="py-5"
+  className="py-5"
+  style={{
+    borderBottom: "1px solid",
+    borderImageSource:
+      "linear-gradient(90deg, #000000 0%, #00FF01 49.05%, #000000 100%)",
+    borderImageSlice: 1,
+  }}
+>
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div
+      className="bg-black/40 rounded-2xl p-6 sm:p-10"
+      style={{
+        border: "1.74px solid rgba(255, 255, 255, 0.12)",
+        backdropFilter: "blur(38.59733963012695px)",
+      }}
+    >
+      <h5
+        className="text-lg font-semibold mb-8 inline-block"
         style={{
-          borderBottom: "1px solid",
-          borderImageSource:
-            "linear-gradient(90deg, #000000 0%, #00FF01 49.05%, #000000 100%)",
-          borderImageSlice: 1,
+          background: "linear-gradient(180deg, #26FEB2 0%, #46FD3E 100%)",
+          WebkitBackgroundClip: "text",
+          WebkitTextFillColor: "transparent",
         }}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div
-            className="bg-black/40 rounded-2xl p-6 sm:p-10"
-            style={{
-              border: "1.74px solid rgba(255, 255, 255, 0.12)",
-              backdropFilter: "blur(38.59733963012695px)",
-            }}
-          >
-            <h5
-              className="text-lg font-semibold mb-8 inline-block"
-              style={{
-                background: "linear-gradient(180deg, #26FEB2 0%, #46FD3E 100%)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-              }}
-            >
-              Add-on services
-            </h5>
+        <span className="font-poppins">Add-on services</span>
+      </h5>
 
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 sm:gap-8 text-center">
-              <div className="flex gap-2 items-center">
-                <img
-                  src="/infraServices/1.png"
-                  alt="Lighting"
-                  className="h-[30px] w-[30px]"
-                />
-                <p className="text-white text-xl">Lighting</p>
-              </div>
-
-              <div className="flex gap-2 items-center">
-                <img
-                  src="/infraServices/2.png"
-                  alt="Netting"
-                  className="h-[30px] w-[30px]"
-                />
-                <p className="text-white text-xl">Netting</p>
-              </div>
-
-              <div className="flex gap-2 items-center">
-                <img
-                  src="/infraServices/3.png"
-                  alt="Fencing"
-                  className="h-[30px] w-[30px]"
-                />
-                <p className="text-white text-xl">Fencing</p>
-              </div>
-
-              <div className="flex gap-2 items-center">
-                <img
-                  src="/infraServices/4.png"
-                  alt="Roofing"
-                  className="h-[30px] w-[30px]"
-                />
-                <p className="text-white text-xl">Roofing</p>
-              </div>
-
-              <div className="flex gap-2 items-center">
-                <img
-                  src="/infraServices/5.png"
-                  alt="Branding Zones"
-                  className="h-[30px] w-[30px]"
-                />
-                <p className="text-white text-xl">Branding Zones</p>
-              </div>
-            </div>
-          </div>
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 sm:gap-8 text-center">
+        <div className="flex flex-col gap-2 items-center">
+          <img
+            src="/infraServices/1.png"
+            alt="Lighting"
+            className="h-[30px] w-[30px]"
+          />
+          <p className="text-white text-xl">Lighting</p>
         </div>
-      </section>
+
+        <div className="flex flex-col gap-2 items-center">
+          <img
+            src="/infraServices/2.png"
+            alt="Netting"
+            className="h-[30px] w-[30px]"
+          />
+          <p className="text-white text-xl">Netting</p>
+        </div>
+
+        <div className="flex flex-col gap-2 items-center">
+          <img
+            src="/infraServices/3.png"
+            alt="Fencing"
+            className="h-[30px] w-[30px]"
+          />
+          <p className="text-white text-xl">Fencing</p>
+        </div>
+
+        <div className="flex flex-col gap-2 items-center">
+          <img
+            src="/infraServices/4.png"
+            alt="Roofing"
+            className="h-[30px] w-[30px]"
+          />
+          <p className="text-white text-xl">Roofing</p>
+        </div>
+
+        <div className="flex flex-col gap-2 items-center">
+          <img
+            src="/infraServices/5.png"
+            alt="Branding Zones"
+            className="h-[30px] w-[30px]"
+          />
+          <p className="text-white text-xl">Branding Zones</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
     </>
   );
 };
