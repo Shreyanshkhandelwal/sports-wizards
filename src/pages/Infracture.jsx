@@ -9,7 +9,7 @@ import Footer from "../components/utils/Footer";
 import ReuseHero from "../components/utils/ReuseHero";
 // Import the new Buildcta modal component
 import { CiCircleCheck } from "react-icons/ci"; // Assuming this is needed for the success modal
-import Buildcta from "../components/infra/buildcta";
+import Buildcta from "../components/infra/Buildcta";
 
 const Infracture = () => {
   const [isLargeScreen, setIsLargeScreen] = useState(false);
