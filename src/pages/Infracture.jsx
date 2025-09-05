@@ -1,15 +1,15 @@
-import ReuseHero from "../components/utils/ReuseHero";
-import LogoRibbon from "../components/LogoRibbon";
-
-import Footer from "../components/utils/Footer";
-import CTAReuse from "../components/utils/CTAReuse";
-import NeonCursor from "../components/utils/NeonCursor";
-import WhatWeBuild from "../components/infra/WhatWeBuild";
-import MadeAMark from "../components/infra/MadeAMark";
+import { useEffect, useState } from "react";
 import Finance from "../components/infra/Finance";
 import InfraBottom from "../components/infra/InfraBottom";
 import InfraCrousle from "../components/infra/InfraCrousle";
-import { useEffect, useState } from "react";
+import MadeAMark from "../components/infra/MadeAMark";
+import LogoRibbon from "../components/LogoRibbon";
+import CTAReuse from "../components/utils/CTAReuse";
+import Footer from "../components/utils/Footer";
+import ReuseHero from "../components/utils/ReuseHero";
+// Import the new Buildcta modal component
+import { CiCircleCheck } from "react-icons/ci"; // Assuming this is needed for the success modal
+import Buildcta from "../components/infra/buildcta";
 
 const Infracture = () => {
   const [isLargeScreen, setIsLargeScreen] = useState(false);
@@ -30,17 +30,33 @@ const Infracture = () => {
       mediaQuery.removeEventListener("change", handleMediaQueryChange);
     };
   }, []);
+
+  // Handler for opening the modal
+  const handleOpenModal = () => {
+    setShowModal(true);
+  };
+  
+  // Handlers for closing and showing success
+  const handleCloseModal = () => {
+    setShowModal(false);
+  };
+
+  const handleSuccess = () => {
+    setShowModal(false);
+    setShowSuccess(true);
+  };
+
   return (
     <>
-      {/* {isLargeScreen && <NeonCursor />} */}
       <main className="w-full overflow-x-hidden">
         <ReuseHero
           heading="Surfaces That Inspire Play. Infra That Endures."
           accentWord="Inspire"
           paragraph="We execute all types of sports events for corporates, schools, associations, clubs & communities."
           primaryButtonText="Build My Court Now"
+          // Connect the button to the handleOpenModal function
           backgroundImage="/infra.jpeg"
-          primaryBtnClick="/infra#infra-head"
+          primaryBtnClick={handleOpenModal} 
         />
         <div className="relative z-50 mt-4">
           <LogoRibbon />
@@ -54,18 +70,16 @@ const Infracture = () => {
           accentWord="play zone"
           paragraph="Curious how we can transform play for your school, turf, or workplace?"
           primaryButtonText="Build my court now"
-          primaryBtnClick={() => setShowModal(true)}
+          // Connect this button to the same handler
+          primaryBtnClick={handleOpenModal}
         />
         <Footer />
       </main>
       {/* Modal here */}
       {showModal && (
-        <DownloadForm
-          onClose={() => setShowModal(false)}
-          onSuccess={() => {
-            setShowModal(false);
-            setShowSuccess(true);
-          }}
+        <Buildcta
+          onClose={handleCloseModal}
+          onSuccess={handleSuccess}
         />
       )}
 
