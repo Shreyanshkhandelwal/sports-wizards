@@ -1503,7 +1503,7 @@ import { useNavigate } from "react-router-dom";
 
 const slides = [
   {
-    image: "/1.jpg",
+    image: "/1.png",
     title: "Basketball Courts",
     heading: "Basketball Courts",
     sections: [
