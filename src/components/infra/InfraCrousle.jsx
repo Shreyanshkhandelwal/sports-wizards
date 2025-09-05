@@ -1676,7 +1676,7 @@ const slides = [
     ],
   },
   {
-    image: "/8.jpg",
+    image: "/8.png",
     title: "Athletic Running Track",
     heading: "Athletic Running Track",
     sections: [
@@ -1693,7 +1693,7 @@ const slides = [
     ],
   },
   {
-    image: "/9.jpeg",
+    image: "/9.png",
     title: "Outdoor Multisports",
     heading: "Outdoor Multisports",
     sections: [
@@ -1725,7 +1725,7 @@ const slides = [
     ],
   },
   {
-    image: "/10.jpeg",
+    image: "/10.png",
     title: "Indoor Multisports",
     heading: "Indoor Multisports",
     sections: [
@@ -1754,7 +1754,7 @@ const slides = [
     ],
   },
   {
-    image: "/12.jpg",
+    image: "/12.png",
     title: "Gym Flooring",
     heading: "Gym Flooring",
     sections: [
