@@ -8,6 +8,7 @@ import CoachingMid from "../components/coaching/CoachingMid";
 import NeonCursor from "../components/utils/NeonCursor";
 import CoachingCta from "../components/coaching/CoachingCta";
 import { CiCircleCheck } from "react-icons/ci";
+import DownloadForm from "../components/contact/DownloadForm";
 
 const Coaching = () => {
   const [isLargeScreen, setIsLargeScreen] = useState(false);

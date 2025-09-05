@@ -11,11 +11,11 @@ const Footer = () => {
               />
             </div>
             <span className="text-sm leading-relaxed mb-6 md:mb-0">
-              India's leading sports enablement brand—architecting turnkey
-              infrastructure, coaching ecosystems, and events that bring play to
-              schools, corporates, and communities. As a proudly registered
-              initiative under Wincognito Technologies (WTPL), we combine
-              agility and innovation with institutional strength and scale.
+              A proudly registered initiative under Wincognito Technologies
+              Private Limited (WTPL), we are India's leading sports enablement
+              brand—architecting turnkey infrastructure, coaching ecosystems,
+              and events that bring play to schools, corporates,
+              and communities.
             </span>
             <div className="flex md:justify-start mt-6 space-x-4 mb-8 md:mb-0">
               <a href="https://www.instagram.com/sportswizardsindia/">
