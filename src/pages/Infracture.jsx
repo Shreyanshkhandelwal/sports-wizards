@@ -56,7 +56,7 @@ const Infracture = () => {
           primaryButtonText="Build My Court Now"
           // Connect the button to the handleOpenModal function
           backgroundImage="/infra.jpeg"
-          primaryBtnClick={handleOpenModal} 
+          primaryBtnClick={handleOpenModal}
         />
         <div className="relative z-50 mt-4">
           <LogoRibbon />
