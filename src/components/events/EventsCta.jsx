@@ -42,16 +42,14 @@ const EventsCta = ({ onClose, onSuccess }) => {
 
   const handleModalSubmit = async () => {
     const formData = new FormData();
-
-    // 🔹 Map form fields to Google Form entry IDs
-    formData.append("entry.1510040030", modalData.fullName);
-    formData.append("entry.1222064776", modalData.organizationName);
-    formData.append("entry.1528689650", modalData.city);
-    formData.append("entry.1877046564", modalData.phone);
-    formData.append("entry.929433826", modalData.email);
+    formData.append("entry.255550483", modalData.fullName);
+    formData.append("entry.1382065976", modalData.organizationName);
+    formData.append("entry.1139999145", modalData.city);
+    formData.append("entry.1358854134", modalData.phone);
+    formData.append("entry.1461412893", modalData.email);
     try {
       await fetch(
-        "https://docs.google.com/forms/d/e/1FAIpQLSdBmcF9GMujUKASpnYSiVYv0uVvT_4otCW0WB85mDOacs4Qkw/formResponse",
+        "https://docs.google.com/forms/d/e/1FAIpQLSdWwOcygrpzor3KAgpbAcIsBynDKmQu51lGBIzJw-saC1pDpA/formResponse",
         {
           method: "POST",
           body: formData,
@@ -60,7 +58,7 @@ const EventsCta = ({ onClose, onSuccess }) => {
       );
       console.log("✅ Submitted to Google Form:", modalData);
       const link = document.createElement("a");
-      link.href = "/Events_download.pdf";
+      link.href = "/public/Courtside@Work by Sports Wizards.pdf";
       link.download = "Courtside@Work by Sports Wizards.pdf";
       link.click();
       onSuccess();
