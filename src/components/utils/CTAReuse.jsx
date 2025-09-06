@@ -79,7 +79,7 @@ const CTAReuse = ({
               onClick={primaryBtnClick}
               className={`${
                 isEventsPage ? "small-btn " : " text-[12px]"
-              }  font-bold lg:min-w-[300px]  md:text-base py-2 px-5 md:py-3 md:px-6 rounded-full transition-transform hover:scale-105 text-black w-[200px]`}
+              }  font-bold lg:min-w-[220px]  md:text-base py-2 px-5 md:py-3 md:px-6 rounded-full transition-transform hover:scale-105 text-black w-fit`}
               style={{
                 background:
                   "linear-gradient(91.1deg, #26FEB2 -0.39%, #46FD3E 81.76%)",
@@ -93,7 +93,7 @@ const CTAReuse = ({
                 onClick={() => navigate("/contact#contact-head")}
                 className={`${
                   isEventsPage ? "small-btn bg-white" : "text-sm bg-white"
-                } font-bold lg:min-w-[300px] md:text-base py-2 px-5 md:py-3 md:px-6 rounded-full transition-transform hover:scale-105 text-black w-[150px] shadow`}
+                } font-bold md:text-base py-2 px-5 md:py-3 md:px-6 rounded-full transition-transform hover:scale-105 text-black w-fit shadow`}
               >
                 {secondaryButtonText}
               </button>
