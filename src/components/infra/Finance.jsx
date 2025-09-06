@@ -1,5 +1,4 @@
-import React from "react";
-import { FaBolt, FaBook, FaBullseye, FaTrophy, FaUsers } from "react-icons/fa";
+import { FaBook, FaBullseye, FaTrophy, FaUsers } from "react-icons/fa";
 
 const Finance = () => {
   return (
@@ -24,7 +23,7 @@ const Finance = () => {
             }}
             className="inline-block text-center text-base font-bold uppercase tracking-widest mb-6 underline underline-offset-8 decoration-green-500"
           >
-            Embedded Finance
+            
           </h5>
         </div>
 
@@ -68,7 +67,7 @@ const Finance = () => {
                   capital-intensive
                 </span>{" "}
                 —but we’ve got you covered. Sports Wizards now partners with
-                leading
+                leading{" "}
                 <span
                   className=""
                   style={{
