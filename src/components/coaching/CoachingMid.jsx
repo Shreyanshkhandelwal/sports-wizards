@@ -1,23 +1,17 @@
-import React from "react";
 import {
-  FaCheck,
-  FaUsers,
-  FaTrophy,
-  FaBullseye,
-  FaBook,
   FaBolt,
+  FaBook,
+  FaBullseye,
   FaDownload,
-  FaBuilding,
-  FaGlobe,
+  FaTrophy,
+  FaUsers
 } from "react-icons/fa";
-import { IoMdMegaphone } from "react-icons/io";
-import { CgGym } from "react-icons/cg";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { useNavigate } from "react-router-dom";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
-import { useNavigate } from "react-router-dom";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 const CoachingMid = ({ onDownloadClick }) => {
   const navigate = useNavigate();
@@ -103,21 +97,21 @@ const CoachingMid = ({ onDownloadClick }) => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left Side - Text */}
             <div className="space-y-4">
-  <span className="text-white font-bold text-[14px] lg:text-3xl uppercase font-Race">
-    While our flagship program—
-    <span
-      style={{
-        background:
-          "linear-gradient(180deg, #26FEB2 0%, #46FD3E 100%)",
-        WebkitBackgroundClip: "text",
-        WebkitTextFillColor: "transparent",
-      }}
-    >
-      SportsWizards@School
-    </span>
-    — is tailored for educational institutions, our coaching vertical serves:
-  </span>
-</div>
+              <span className="text-white font-bold text-[14px] lg:text-3xl uppercase font-Race">
+                While our flagship program—
+                <span
+                  style={{
+                    background:
+                      "linear-gradient(180deg, #26FEB2 0%, #46FD3E 100%)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                  }}
+                >
+                  SportsWizards@School
+                </span>
+                — is tailored for educational institutions, our coaching vertical serves:
+              </span>
+            </div>
 
             {/* Right Side - Image */}
             <div className="mb-8">
@@ -177,14 +171,14 @@ const CoachingMid = ({ onDownloadClick }) => {
               <img
                 src="/coach-talk.jpg"
                 alt="Custom team apparel and training bibs"
-                className="w-full h-full object-cover rounded-lg shadow-xl"
+                className="w-full h-[300px] object-cover rounded-lg shadow-xl"
               />
               {/* </div> */}
               {/* </div> */}
             </div>
 
             {/* Right Side - Text */}
-            <div className="h-full flex flex-col items-start justify-between relative">
+            <div className="h-full flex flex-col mt-14 items-start justify-between relative">
               <span
                 className="text-gray-300 text-lg leading-relaxed"
                 style={{ fontSize: "15px" }}
@@ -236,7 +230,7 @@ const CoachingMid = ({ onDownloadClick }) => {
                   background: "linear-gradient(90deg, #26FEB2 3%, #46FD3E 85%)",
                   fontSize: "15px",
                 }}
-                className="mt-10 lg:mt-0 text-black font-bold py-2 px-8 rounded-full text-lg shadow-lg hover:shadow-green-500/25 hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300"
+                className="mb-16 text-black font-bold py-2 px-8 rounded-full text-lg shadow-lg hover:shadow-green-500/25 hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300"
               >
                 Partner with Us
               </button>
@@ -259,7 +253,7 @@ const CoachingMid = ({ onDownloadClick }) => {
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
               }}
-              className="inline-block text-center text-base font-bold uppercase tracking-widest mb-6 underline underline-offset-8 decoration-green-500"
+              className="inline-block text-center text-base font-bold uppercase tracking-widest underline underline-offset-8 decoration-green-500"
             >
               Flagship Program
             </h5>
