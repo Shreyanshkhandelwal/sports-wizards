@@ -225,7 +225,10 @@ export default function FeaturedProjects() {
                   Featured Projects
                 </h5>
               </div>
-              <h5 className="text-2xl sm:text-3xl font-bold text-white leading-tight mb-6">
+              <h5
+                className="text-2xl sm:text-3xl font-bold text-white leading-tight mb-6 
+             text-left md:text-center"
+              >
                 SHOWCASING OUR SIGNATURE
                 <br />
                 <span
@@ -240,18 +243,19 @@ export default function FeaturedProjects() {
                 </span>{" "}
                 ACROSS COMMUNITIES.
               </h5>
-              <button
-                onClick={handleOpenModal} // Updated onClick handler
-                style={{
-                  background:
-                    "linear-gradient(91.1deg, #26FEB2 -0.39%, #46FD3E 81.76%)",
-                }}
-                className="font-bold text-sm md:text-base py-2 px-5 md:py-3 md:px-6 rounded-full transition-transform hover:scale-105 text-black"
-              >
-                Build my Court
-              </button>
+              <div className="text-left md:text-center">
+                <button
+                  onClick={handleOpenModal}
+                  style={{
+                    background:
+                      "linear-gradient(91.1deg, #26FEB2 -0.39%, #46FD3E 81.76%)",
+                  }}
+                  className="font-bold text-sm md:text-base py-2 px-5 md:py-3 md:px-6 rounded-full transition-transform hover:scale-105 text-black"
+                >
+                  Build my Court
+                </button>
+              </div>
             </div>
-
             <div className="w-full mt-12">
               <Swiper
                 className="featured-projects-swiper"
