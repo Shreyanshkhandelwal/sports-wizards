@@ -5,7 +5,8 @@ import { useNavigate } from "react-router-dom";
 const Hero = () => {
   const navigate = useNavigate();
   return (
-    <section className="relative w-full min-h-[450px] sm:min-h-[550px] md:min-h-[700px] lg:h-screen lg:max-h-[900px] mx-auto overflow-hidden">
+    <section className=" relative w-full min-h-[650px] md:min-h-[700px] lg:h-screen lg:max-h-[900px] mx-auto overflow-hidden">
+
       <Header />
       <img
         src="/bg-1.jpeg"
@@ -63,7 +64,8 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="relative w-full h-40 sm:h-64 md:h-96 ">
+        {/*<div className="relative w-full h-40 sm:h-64 md:h-96 ">*/}
+        <div className="relative w-full h-80 md:h-90 mt-6 flex justify-center">
           <img
             // src="/p1.png"
             src="https://res.cloudinary.com/dnivrv6ar/image/upload/f_auto,q_auto/v1756561431/p1_l0wsdf.png"
