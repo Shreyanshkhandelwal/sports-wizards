@@ -265,22 +265,32 @@ const EventsMid = ({ onDownloadClick }) => {
                 formats, infra, referees, emcees, branding, and
                 experiences—end-to-end.
               </h5>
-              <button
+                  <button
                 onClick={() => navigate("/contact#contact-head")}
                 style={{
                   background:
-                    " linear-gradient(91.1deg, #26FEB2 -0.39%, #46FD3E 81.76%)",
+                    "linear-gradient(91.1deg, #26FEB2 -0.39%, #46FD3E 81.76%)",
                 }}
-                className="] text-black px-6 py-2 rounded-full font-bold lg:mt-20 "
-              >
+                className="text-black 
+                font-bold
+                rounded-full 
+                px-6 py-3   
+                text-lg     
+                w-[250px]
+                h-[50px]    
+                mt-6
+                lg:px-10 lg:py-4  /* desktop ke liye padding increase */
+                lg:text-lg-80         /* desktop pe bada text */
+                lg:w-[250px]       /* desktop width */
+                lg:h-[60px]        /* desktop height */
+                lg:mt-20"
+                 >
                 Plan my event
               </button>
               {/* <button className="bg-gradient-to-r from-[#26FEB2]  to-[#46FD3E] font-bold text-sm md:text-base py-2 px-6 md:py-3 md:px-8 rounded-full transition-transform hover:scale-105 text-bg">
                 {primaryButtonText}
               </button> */}
             </div>
-
-            {/* desktop layout */}
             <div className="hidden lg:flex flex-col">
               <span
                 style={{ fontSize: "24px" }}
@@ -288,13 +298,10 @@ const EventsMid = ({ onDownloadClick }) => {
               >
                 Services Included:
               </span>
-
-              {/* Right Side - Image */}
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {[
                   {
                     icon: (
-                      // <PiCourtBasketballFill className="text-accent w-14 h-14" />
                       <img src="/events/1.png" className="" />
                     ),
                     title: "Infra setup (courts, nets, lights).",
@@ -550,7 +557,7 @@ const EventsMid = ({ onDownloadClick }) => {
               }}
               className="inline-block text-center text-base font-bold uppercase tracking-widest mb-6 underline underline-offset-8 decoration-green-500"
             >
-              OUR PROVEN RESULTS
+              OUR TRACK RESULTS
             </h5>
           </div>
 
@@ -638,7 +645,7 @@ const EventsMid = ({ onDownloadClick }) => {
               style={{
                 background: " linear-gradient(90deg, #26FEB2 3%, #46FD3E 85%)",
               }}
-              className=" text-black px-8 py-3 rounded-full font-semibold "
+              className=" text-black px-8 py-3 rounded-full font-bold "
             >
               See Highlights
             </button>
