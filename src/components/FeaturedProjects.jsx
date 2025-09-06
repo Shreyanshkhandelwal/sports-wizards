@@ -4,7 +4,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/effect-coverflow";
 import { useState } from "react";
-import Buildcta from "../components/infra/buildcta"; // Path ko apne file structure ke according adjust kar lein
+import Buildcta from "../components/infra/Buildcta"; // Path ko apne file structure ke according adjust kar lein
 import { CiCircleCheck } from "react-icons/ci";
 
 const projects = [
