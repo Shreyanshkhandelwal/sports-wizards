@@ -3,7 +3,9 @@ import { Pagination, Autoplay, EffectCoverflow } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/effect-coverflow";
-import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import Buildcta from "../components/infra/buildcta"; // Path ko apne file structure ke according adjust kar lein
+import { CiCircleCheck } from "react-icons/ci";
 
 const projects = [
   {
@@ -65,15 +67,22 @@ const ProjectCard = ({ imageUrl, title }) => (
       >
         {title}
       </h5>
-      {/* <p className="mt-2 text-xs md:text-sm text-gray-300 max-w-md leading-relaxed">
-        {description}
-      </p> */}
     </div>
   </div>
 );
 
 export default function FeaturedProjects() {
-  const navigate = useNavigate();
+  const [showModal, setShowModal] = useState(false);
+  const [showSuccess, setShowSuccess] = useState(false);
+
+  // Handlers for modal
+  const handleOpenModal = () => setShowModal(true);
+  const handleCloseModal = () => setShowModal(false);
+  const handleSuccess = () => {
+    setShowModal(false);
+    setShowSuccess(true);
+  };
+
   return (
     <>
       <style>{`
@@ -151,7 +160,7 @@ export default function FeaturedProjects() {
                     ACROSS COMMUNITIES.
                   </h1>
                   <button
-                    onClick={() => navigate("/contact#contact-head")}
+                    onClick={handleOpenModal} // Updated onClick handler
                     style={{
                       background:
                         "linear-gradient(91.1deg, #26FEB2 -0.39%, #46FD3E 81.76%)",
@@ -216,16 +225,13 @@ export default function FeaturedProjects() {
                   Featured Projects
                 </h5>
               </div>
-              <h5
-                className="text-2xl sm:text-3xl font-bold text-white leading-tight mb-6 
-             text-left md:text-center"
-              >
+              <h5 className="text-2xl sm:text-3xl font-bold text-white leading-tight mb-6">
                 SHOWCASING OUR SIGNATURE
                 <br />
                 <span
                   style={{
                     background:
-                      "linear-gradient(90deg, #45FD3D 0%, #26FDAC 27.4%)",
+                      " linear-gradient(90deg, #45FD3D 0%, #26FDAC 27.4%)",
                     WebkitBackgroundClip: "text",
                     WebkitTextFillColor: "transparent",
                   }}
@@ -234,19 +240,18 @@ export default function FeaturedProjects() {
                 </span>{" "}
                 ACROSS COMMUNITIES.
               </h5>
-              <div className="text-left md:text-center">
-                <button
-                  onClick={() => navigate("/contact#contact-head")}
-                  style={{
-                    background:
-                      "linear-gradient(91.1deg, #26FEB2 -0.39%, #46FD3E 81.76%)",
-                  }}
-                  className="font-bold text-sm md:text-base py-2 px-5 md:py-3 md:px-6 rounded-full transition-transform hover:scale-105 text-black"
-                >
-                  Build my Court
-                </button>
-              </div>
+              <button
+                onClick={handleOpenModal} // Updated onClick handler
+                style={{
+                  background:
+                    "linear-gradient(91.1deg, #26FEB2 -0.39%, #46FD3E 81.76%)",
+                }}
+                className="font-bold text-sm md:text-base py-2 px-5 md:py-3 md:px-6 rounded-full transition-transform hover:scale-105 text-black"
+              >
+                Build my Court
+              </button>
             </div>
+
             <div className="w-full mt-12">
               <Swiper
                 className="featured-projects-swiper"
@@ -274,6 +279,38 @@ export default function FeaturedProjects() {
           </div>
         </div>
       </div>
+
+      {/* Modal here */}
+      {showModal && (
+        <Buildcta
+          onClose={handleCloseModal}
+          onSuccess={handleSuccess}
+        />
+      )}
+
+      {/* Success Modal */}
+      {showSuccess && (
+        <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center p-4 z-50">
+          <div className="bg-[#161616] rounded-2xl p-8 max-w-sm w-full text-center border border-[#2C2C2C]">
+            <div className="mb-6">
+              <CiCircleCheck className="w-16 h-16 text-[#00FF01] mx-auto mb-4" />
+              <h3 className="text-2xl font-bold text-[#F2F2F2] mb-2">
+                Success!
+              </h3>
+              <p className="text-[#B0B0B0]">
+                Your form has been submitted successfully. We'll get back to you
+                soon!
+              </p>
+            </div>
+            <button
+              onClick={() => setShowSuccess(false)}
+              className="w-full bg-gradient-to-r from-green-400 to-green-500 hover:opacity-90 text-[#0B0B0B] font-bold py-3 px-6 rounded-lg transition-all duration-200"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
     </>
   );
 }
