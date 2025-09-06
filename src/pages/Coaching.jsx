@@ -52,7 +52,7 @@ const Coaching = () => {
           accentWord="essential"
           paragraph="“Partner with Sports Wizards to build a culture of play on campus.”"
           primaryButtonText="Talk To A Program Advisor"
-          secondaryButtonText="Schedule Campus Walkthrough"
+          secondaryButtonText="Campus Walkthrough Now"
           primaryBtnClick={() => setShowModal(true)}
         />
         <Footer />
